@@ -1,0 +1,53 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+interface Props {
+  top?: boolean
+  bottom?: boolean
+  end?: boolean
+  textSize?: 'sm' | 'md' | 'lg'
+}
+
+defineProps<Props>()
+
+const { t, locale, availableLocales, fallbackLocale } = useI18n()
+</script>
+
+<template>
+  <div
+    :class="{
+      'dropdown': true,
+      'dropdown-top': top,
+      'dropdown-end': end,
+      'dropdown-bottom': bottom,
+    }"
+  >
+    <label
+      :tabindex="0"
+      class="btn btn-ghost btn-sm m-1"
+    >
+      {{ t(`commons.labels.languages.${locale}`) }}
+    </label>
+    <ul
+      :tabindex="0"
+      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+    >
+      <li
+        v-for="availableLocale in availableLocales"
+        :key="availableLocale"
+      >
+        <NuxtLink
+          :class="{
+            'bg-secondary': locale === availableLocale,
+            'text-white': locale === availableLocale,
+          }"
+          :to="{
+            path: `/${availableLocale === fallbackLocale ? '' : availableLocale}`
+          }"
+        >
+          {{ t(`commons.labels.languages.${availableLocale}`) }}
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
+</template>

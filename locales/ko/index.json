@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "title": "블로그",
+    "applicationName": "Nuxt 블로그",
+    "description": "Nuxt 블로그입니다."
+  },
+  "menus": {
+    "home": "홈",
+    "blogs": "블로그",
+    "Showcases": "쇼케이스",
+    "contact": "연락"
+  },
+  "labels": {
+    "blogFilter": {
+      "locales": "언어",
+      "categories": "카테고리",
+      "tags": "태그"
+    },
+    "categories": {
+      "example": "예제",
+      "development": "개발",
+      "web": "웹"
+    },
+    "tags": {
+      "Node Js": "Node Js",
+      "Get Started": "시작하기",
+      "Typescript": "타입스크립트",
+      "Gatsby": "Gatsby",
+      "JavaScript": "자바스크립트",
+      "Next": "Next",
+      "Nuxt": "Nuxt",
+      "MDX": "MDX"
+    }
+  },
+  "views": {
+    "home": {
+      "Lorem": "로렘"
+    }
+  }
+}

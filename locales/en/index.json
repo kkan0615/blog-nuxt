@@ -1,0 +1,40 @@
+{
+  "seo": {
+    "title": "Youngjin Kwak blog",
+    "applicationName": "Nuxt - Blog",
+    "description": "This blog is made by Nuxt"
+  },
+  "menus": {
+    "home": "home",
+    "blogs": "blogs",
+    "Showcases": "Showcases",
+    "contact": "contact"
+  },
+  "labels": {
+    "blogFilter": {
+      "locales": "Locales",
+      "categories": "Categories",
+      "tags": "Tags"
+    },
+    "categories": {
+      "example": "example",
+      "development": "development",
+      "web": "web"
+    },
+    "tags": {
+      "Node Js": "Node Js",
+      "Get Started": "Get Started",
+      "Typescript": "Typescript",
+      "Gatsby": "Gatsby",
+      "JavaScript": "JavaScript",
+      "Next": "Next",
+      "Nuxt": "Nuxt",
+      "MDX": "MDX"
+    }
+  },
+  "views": {
+    "home": {
+      "Lorem": "Lorem"
+    }
+  }
+}
