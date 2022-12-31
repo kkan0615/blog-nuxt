@@ -33,8 +33,14 @@
     }
   },
   "views": {
+    "sidebar": {
+      "title": "Requiem",
+      "description": "Greetings, traveler.\nIt's Requiem Blog."
+    },
     "home": {
-      "Lorem": "Lorem"
+      "Lorem": "Lorem",
+      "title": "Requiem",
+      "description": "Hello, I am Full-stack developer."
     }
   }
 }

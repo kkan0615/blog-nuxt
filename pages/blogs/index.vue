@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useAsyncData, useRoute } from '#app'
+import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
-import { useI18n } from '#imports'
 
 const route = useRoute()
 const { locale } = useI18n()
@@ -26,12 +26,14 @@ const { data: list, refresh } = await useAsyncData('blogs', () =>
 </script>
 
 <template>
-  <div>
+  <div
+    class="max-w-7xl mx-auto"
+  >
     <Navbar
       @search="refresh"
     />
     <div
-      class="grid grid-cols-4 gap-4"
+      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
     >
       <!--      <ContentList-->
       <!--        v-slot="{ list }"-->
@@ -44,6 +46,14 @@ const { data: list, refresh } = await useAsyncData('blogs', () =>
         class="card bg-base-300"
       />
       <!--      </ContentList>-->
+    </div>
+    <div
+      class="mt-4 text-center"
+    >
+      <Pagination
+        :active-number="1"
+        :max="20"
+      />
     </div>
   </div>
 </template>

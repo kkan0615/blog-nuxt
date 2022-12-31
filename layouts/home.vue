@@ -4,16 +4,22 @@ import Header from '~/layouts/home/Header.vue'
 </script>
 <template>
   <div class="drawer">
+    <NuxtImg
+      class="opacity-10 -z-10 fixed h-screen w-screen"
+      src="/assets/home/background.jpg"
+      alt="background"
+      priority
+    />
     <input
       id="home-layout-drawer"
       type="checkbox"
       class="drawer-toggle"
     >
-    <div class="drawer-content">
+    <div class="drawer-content h-screen flex flex-col">
       <!-- Page content here -->
       <Header />
       <div
-        class="p-2 lg:p-4"
+        class="p-2 lg:p-4 flex-grow h-1"
       >
         <slot />
       </div>

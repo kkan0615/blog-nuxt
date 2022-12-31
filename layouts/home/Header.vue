@@ -5,11 +5,11 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
 </script>
 <template>
   <header
-    class="navbar bg-base-100"
+    class="navbar"
   >
     <label
       for="home-layout-drawer"
-      class="btn btn-ghost btn-sm drawer-button hidden lg:block"
+      class="btn btn-ghost btn-sm drawer-button block lg:hidden"
     >
       <span
         class="text-2xl"
@@ -23,7 +23,7 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
       class="ml-auto"
     />
     <div
-      class="space-x-2"
+      class="space-x-2 hidden lg:flex"
     >
       <MenuItem
         to="/"

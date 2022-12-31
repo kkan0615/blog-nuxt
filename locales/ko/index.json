@@ -33,8 +33,14 @@
     }
   },
   "views": {
+    "sidebar": {
+      "title": "Requiem",
+      "description": "레퀴엠의 블로그에 오신걸 환영합니다."
+    },
     "home": {
-      "Lorem": "로렘"
+      "Lorem": "로렘",
+      "title": "Requiem",
+      "description": "안녕하세요. 풀스택 개발자입니다."
     }
   }
 }
