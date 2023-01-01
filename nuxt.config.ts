@@ -33,6 +33,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  image: {
+    provider: 'netlify'
+  },
   content: {
     markdown: {
       remarkPlugins: ['remark-reading-time'],

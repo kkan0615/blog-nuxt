@@ -41,7 +41,8 @@ NUXT_PUBLIC_API_BASE="/api"
 ├─ layouts/                     #
 ├─ locales/                     #
 ├─ node_modules/                # node modules
-├─ pages/
+├─ pages/                       #
+├─ plugins/                     #
 ├─ public/                      #
 │  ├─ logo/                     #
 │  ├─ assets/                   #
@@ -61,13 +62,11 @@ NUXT_PUBLIC_API_BASE="/api"
 
 ## Sponsors
 
-# 사이트
-- [JP - Official website](https://www.lovelive-anime.jp/)
-- [스쿠패스 2 나무위키](https://namu.wiki/w/%EB%9F%AC%EB%B8%8C%EB%9D%BC%EC%9D%B4%EB%B8%8C!%20%EC%8A%A4%EC%BF%A8%20%EC%95%84%EC%9D%B4%EB%8F%8C%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%202%20MIRACLE%20LIVE!)
-- [Love live fandom wiki](https://love-live.fandom.com/wiki/Main_Page)
-- [love live fandom wiki - color](https://colorcodedstuff.fandom.com/wiki/Love_Live!)
-
-
 # Sites
 [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+
+# TODO
+## Errors
+### Uncaught ReferenceError: defineAppConfig is not defined at defu.mjs:45:2
+- Plugin 이랑 같이 쓰면 에러남

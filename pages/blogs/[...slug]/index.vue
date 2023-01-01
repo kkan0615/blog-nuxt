@@ -1,6 +1,6 @@
 <template>
   <div
-    class="prose"
+    class="prose mx-auto"
   >
     <ContentDoc
       v-slot="{ doc }"
@@ -17,16 +17,14 @@
 import { useAsyncData, useHead } from '#app'
 import { useContentHead } from '#imports'
 
-const { data: page } = await useAsyncData('page-data', queryContent('/blogs/ko-12-23-2022-21-45').findOne)
+const route = useRoute()
+const { t } = useI18n()
+const { data: page } = await useAsyncData('page-data', queryContent(`/blogs/${route.params.slug}`).findOne)
 // SEO
 useHead({
-  title: `${page.value?.title} | Nuxt-study`,
+  title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
-    { name: 'application-name', content: 'Nuxt-study' },
-    { name: 'description', content: 'It is Nuxt study website' },
-    { name: 'author', content: 'Requiem' },
-    { name: 'publisher', content: 'Requiem' },
-    { name: 'robots', content: 'index, follow' }
+    { name: 'description', content: page.value?.description },
   ],
 })
 </script>

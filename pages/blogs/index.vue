@@ -5,7 +5,15 @@ import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
 
 const route = useRoute()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
+
+// SEO
+useHead({
+  title: `${t('menus.blogs')} | ${t('seo.title')}`,
+  meta: [
+    { name: 'description', content: 'It is Nuxt study website' },
+  ],
+})
 
 const { data: list, refresh } = await useAsyncData('blogs', () =>
   queryContent('/blogs')

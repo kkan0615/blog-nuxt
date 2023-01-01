@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, useI18n } from '#imports'
-import { useAppConfig, useRoute, useRouter } from '#app'
 import MultiSelect from '~/components/forms/MultiSelect.vue'
 
 const route = useRoute()

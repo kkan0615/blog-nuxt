@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="uppercase font-black first-letter:text-primary"
+    class="capitalize font-black first-letter:text-primary"
     :to="localePath(to)"
   >
     <slot />

@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "0.0.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,7 +16,8 @@
     "daisyui": "^2.46.0",
     "dayjs": "^1.11.7",
     "fast-glob": "^3.2.12",
-    "remark-reading-time": "^2.0.1"
+    "remark-reading-time": "^2.0.1",
+    "vue-gtag": "^2.0.1"
   },
   "devDependencies": {
     "@iconify/vue": "^4.0.2",

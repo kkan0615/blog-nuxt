@@ -23,7 +23,7 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
       class="ml-auto"
     />
     <div
-      class="space-x-2 hidden lg:flex"
+      class="space-x-4 hidden lg:flex"
     >
       <MenuItem
         to="/"
