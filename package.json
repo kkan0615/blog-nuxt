@@ -33,6 +33,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
     "nuxt": "3.0.0",
-    "typescript": "*"
+    "typescript": "*",
+    "vue-gtag-next": "^1.14.0"
   }
 }
