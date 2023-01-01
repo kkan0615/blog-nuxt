@@ -11,7 +11,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
   ],
   runtimeConfig: {
-    GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID
+    GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
+    public: {
+      GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID
+    }
   },
   i18n: {
     defaultLocale: 'en',
