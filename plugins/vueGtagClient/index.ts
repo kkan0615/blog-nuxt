@@ -11,7 +11,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   }, nuxtApp.$router)
 })
 
-//@TODO: 위에 꺼 작동하면 아래꺼 삭제
+//@MEMO: Offciail website using following code
 // import VueGtag from 'vue-gtag-next'
 //
 // export default defineNuxtPlugin((nuxtApp) => {

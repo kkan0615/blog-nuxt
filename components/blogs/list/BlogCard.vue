@@ -49,6 +49,7 @@ const isNew = computed(() => {
           :width="blog.image.width || DefaultNuxtImageWidth"
           preload
         />
+        <!-- @TODO: No width and height may generate performance issue -->
         <NuxtImg
           v-else
           class="aspect-video"
