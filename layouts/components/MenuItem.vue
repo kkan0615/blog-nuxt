@@ -1,7 +1,12 @@
 <template>
   <NuxtLink
-    class="opacity-70 uppercase font-black px-2"
-    active-class="border-l-2 border-primary opacity-100"
+    class="opacity-70 font-black px-2"
+    :class="{
+      'border-l-2': active,
+      'border-primary': active,
+      'opacity-100': active,
+    }
+    "
     :to="localePath(to)"
   >
     <slot />
@@ -10,7 +15,8 @@
 <script setup lang="ts">
 
 interface Props {
-  to: string
+  to: string,
+  active: boolean
 }
 
 defineProps<Props>()

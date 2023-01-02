@@ -2,7 +2,7 @@
   "seo": {
     "title": "레퀴엠 블로그",
     "applicationName": "레퀴엠 블로그",
-    "description": "Nuxt 블로그입니다."
+    "description": "Nuxt 로 만든 블로그입니다."
   },
   "menus": {
     "home": "홈",

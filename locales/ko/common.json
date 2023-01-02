@@ -7,7 +7,9 @@
       "edit": "수정",
       "delete": "삭제",
       "ok": "확인",
-      "back": "뒤로가기"
+      "back": "뒤로가기",
+      "copy": "복사",
+      "copyURL": "URL 복사"
     },
     "btns": {
       "add": "추가",
@@ -19,6 +21,7 @@
       "search": "검색",
       "send": "보내기",
       "reset": "초기화",
+      "copy": "복사",
       "copyURL": "URL 복사",
       "start": "시작"
     },
@@ -62,6 +65,8 @@
     },
     "labels": {
       "action": "행동",
+      "search": "검색",
+      "editOnGithub": "Github 에서 페이지 수정",
       "languages": {
         "en": "English",
         "ko": "한국어"

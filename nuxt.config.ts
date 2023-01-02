@@ -1,8 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
 
 export default defineNuxtConfig({
+  dev: process.env.NUXT_PUBLIC_MODE === 'development',
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
@@ -12,9 +14,6 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
-    // public: {
-    //   GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID
-    // }
   },
   i18n: {
     defaultLocale: 'en',
@@ -43,8 +42,23 @@ export default defineNuxtConfig({
     provider: 'netlify'
   },
   content: {
+    // highlight: {
+    //   theme: 'min-dark'
+    // },
     markdown: {
-      remarkPlugins: ['remark-reading-time'],
+      toc: {
+        depth: 6,
+        searchDepth: 6,
+      },
+      remarkPlugins: {
+        'remark-reading-time': {
+
+        },
+        'remark-autolink-headings': false,
+      },
+      rehypePlugins: [
+        'rehype-highlight',
+      ]
     },
   },
 })

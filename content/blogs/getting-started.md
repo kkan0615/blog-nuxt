@@ -25,6 +25,8 @@ Some text
 const test = 'abc'
 console.log(test)
 ```
+## This?
+```WHAT ABOUT THIS KIND OF CODE?```
 
 # Image
 ![random image 1](https://picsum.photos/1280/720)
