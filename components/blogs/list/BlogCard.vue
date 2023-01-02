@@ -33,11 +33,9 @@ const isNew = computed(() => {
 
 </script>
 <template>
-  <div
-    class="card bg-base-300"
-  >
+  <div class="card bg-base-300">
     <NuxtLink
-      :href="blog._path"
+      :to="localePath(blog._path)"
     >
       <figure>
         <NuxtImg
@@ -59,9 +57,7 @@ const isNew = computed(() => {
           :alt="DefaultNuxtImageAlt"
         />
       </figure>
-      <div
-        class="card-body"
-      >
+      <div class="card-body">
         <div
           v-if="isNew"
           class="badge badge-secondary"
@@ -72,9 +68,7 @@ const isNew = computed(() => {
           {{ blog.title }}
         </h2>
         <p>{{ blog.description }}</p>
-        <div
-          class="mt-2 card-actions"
-        >
+        <div class="mt-2 card-actions">
           <Icon icon="material-symbols:folder-open-outline-rounded" />
           <div
             v-for="category in blog.categories"
@@ -84,9 +78,7 @@ const isNew = computed(() => {
             {{ t(`labels.categories.${category}`) }}
           </div>
         </div>
-        <div
-          class="mt-1 card-actions text-md lg:text-sm"
-        >
+        <div class="mt-1 card-actions text-md lg:text-sm">
           <div
             v-for="tag in blog.tags"
             :key="tag"
@@ -95,15 +87,11 @@ const isNew = computed(() => {
             {{ t(`labels.tags.${tag}`) }}
           </div>
         </div>
-        <div
-          class="mt-2 card-actions text-md lg:text-sm"
-        >
+        <div class="mt-2 card-actions text-md lg:text-sm">
           <div>
             {{ blog.readingTime.text }}
           </div>
-          <div
-            class="ml-auto"
-          >
+          <div class="ml-auto">
             {{ timeFromNow }}
           </div>
         </div>

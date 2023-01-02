@@ -28,7 +28,7 @@ const handleShare = async () => {
 </script>
 <template>
   <div
-    class="flex items-center"
+    class="flex items-center mt-4"
   >
     <a
       :href="`${appConfig.github}/blob/main/content/${filepath}`"

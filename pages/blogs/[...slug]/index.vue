@@ -3,6 +3,8 @@ import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import TableOfContent from '~/components/TableOfContent.vue'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
+import Tags from '~/components/blogs/detail/Tags.vue'
+import Categories from '~/components/blogs/detail/Categories.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -11,10 +13,8 @@ const DefaultNuxtImageWidth = 500
 
 const route = useRoute()
 const { t } = useI18n()
-
 const { data: page } = await useAsyncData('page-data', queryContent(`/blogs/${route.params.slug}`).findOne)
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
-console.log(page.value)
 // SEO
 useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
@@ -28,7 +28,9 @@ useHead({
   <div
     class="max-w-4xl mx-auto flex flex-col-reverse justify-between gap-6 xl:flex-row"
   >
-    <div>
+    <div
+      class="flex-1"
+    >
       <h1
         class="text-3xl font-bold mb-4"
       >
@@ -67,8 +69,11 @@ useHead({
           v-else
           preload
           fit="fill"
+          class="w-full"
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
+          :height="DefaultNuxtImageHeight"
+          :width="DefaultNuxtImageWidth"
         />
       </figure>
       <hr
@@ -77,16 +82,20 @@ useHead({
       <div
         class="prose"
       >
-        <ContentDoc
-          v-slot="{ doc }"
-          :head="false"
-        >
-          <ContentRenderer
-            id="article"
-            :value="doc"
-          />
-        </ContentDoc>
+        <ContentRenderer
+          id="article"
+          :value="page"
+        />
       </div>
+      <hr
+        class="my-4"
+      >
+      <Categories
+        :categories="page.categories"
+      />
+      <Tags
+        :tags="page.tags"
+      />
       <BottomNavbar
         :filepath="page._file"
       />
@@ -94,9 +103,17 @@ useHead({
     <div
       class="w-60 sticky top-4 h-1 hidden lg:block"
     >
-      <TableOfContent
-        article-id="article"
-      />
+      <client-only>
+        <TableOfContent
+          article-id="article"
+        />
+      </client-only>
     </div>
   </div>
 </template>
+<style lang="scss">
+.youtube-player {
+  @apply w-full;
+  @apply aspect-video;
+}
+</style>

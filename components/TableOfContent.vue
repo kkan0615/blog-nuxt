@@ -48,7 +48,7 @@ onMounted(() =>{
     class="px-2 w-full"
   >
     <div
-      class="text-xl mb-2"
+      class="font-bold mb-2"
     >
       Table of Content
     </div>

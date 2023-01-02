@@ -78,8 +78,6 @@ NUXT_PUBLIC_API_BASE="/api"
   - h2, h3 에 링크 빼기
   - TOC 추가
     - 광고 추가
-  - 이미지 추가
-  - 변경 날짜, Reading time 추가
 - Showcase List
 - Showcases Detail
 - Contact page

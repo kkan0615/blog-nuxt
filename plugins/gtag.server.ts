@@ -1,6 +1,5 @@
 import { defineNuxtPlugin } from 'nuxt/app'
 // import VueGtag from 'vue-gtag'
-
 // export default defineNuxtPlugin((nuxtApp) => {
 //   const config = useRuntimeConfig()
 //

@@ -22,7 +22,7 @@ const handleCopy = () => {
 }
 
 onMounted(() => {
-  hljs.initHighlightingOnLoad()
+  hljs.highlightAll()
   loading.value = false
 })
 
