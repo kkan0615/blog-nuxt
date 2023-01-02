@@ -7,7 +7,9 @@
       "edit": "edit",
       "delete": "delete",
       "ok": "ok",
-      "back": "back"
+      "back": "back",
+      "copy": "copy",
+      "copyURL": "copy URL"
     },
     "btns": {
       "add": "add",
@@ -19,6 +21,7 @@
       "search": "search",
       "send": "send",
       "reset": "reset",
+      "copy": "copy",
       "copyURL": "copy URL",
       "start": "start"
     },
@@ -63,6 +66,7 @@
     "labels": {
       "action": "action",
       "search": "search",
+      "editOnGithub": "Edit on Github",
       "languages": {
         "en": "English",
         "ko": "한국어"

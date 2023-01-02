@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
     "@nuxtjs/i18n": "^8.0.0-beta.7",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@pinia/nuxt": "^0.4.6",
@@ -16,8 +17,11 @@
     "daisyui": "^2.46.0",
     "dayjs": "^1.11.7",
     "fast-glob": "^3.2.12",
+    "highlight.js": "^11.7.0",
+    "rehype-highlight": "^6.0.0",
     "remark-reading-time": "^2.0.1",
-    "vue-gtag": "^2.0.1"
+    "vue-gtag": "^2.0.1",
+    "vue-gtag-next": "^1.14.0"
   },
   "devDependencies": {
     "@iconify/vue": "^4.0.2",
@@ -33,6 +37,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
     "nuxt": "3.0.0",
+    "sass": "^1.57.1",
     "typescript": "*"
   }
 }

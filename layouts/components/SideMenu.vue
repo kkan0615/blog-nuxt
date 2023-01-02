@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import MenuItem from '~/layouts/components/MenuItem.vue'
+import LanguageSelect from '~/components/forms/LanguageSelect.vue'
+
+const { t } = useI18n()
+const route = useRoute()
+
+</script>
 <template>
   <div
     class="menu w-64 bg-base-200"
@@ -24,6 +32,7 @@
         <MenuItem
           to="/"
           icon="material-symbols:home-outline-rounded"
+          :active="route.name.includes('index')"
         >
           <span>home</span>
         </MenuItem>
@@ -32,6 +41,7 @@
         <MenuItem
           to="/blogs"
           icon="material-symbols:menu-rounded"
+          :active="route.name.includes('blogs')"
         >
           <span>blogs</span>
         </MenuItem>
@@ -40,6 +50,7 @@
         <MenuItem
           to="/"
           icon="material-symbols:menu-rounded"
+          :active="route.name.includes('showcases')"
         >
           <span>showcases</span>
         </MenuItem>
@@ -48,6 +59,7 @@
         <MenuItem
           to="/"
           icon="mdi:donation-outline"
+          :active="route.name.includes('contact')"
         >
           <span>contact</span>
         </MenuItem>
@@ -63,10 +75,3 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import MenuItem from '~/layouts/components/MenuItem.vue'
-import LanguageSelect from '~/components/forms/LanguageSelect.vue'
-
-const { t } = useI18n()
-</script>

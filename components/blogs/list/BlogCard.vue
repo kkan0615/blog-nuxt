@@ -96,13 +96,13 @@ const isNew = computed(() => {
           </div>
         </div>
         <div
-          className="mt-2 card-actions text-md lg:text-sm"
+          class="mt-2 card-actions text-md lg:text-sm"
         >
           <div>
             {{ blog.readingTime.text }}
           </div>
           <div
-            className="ml-auto"
+            class="ml-auto"
           >
             {{ timeFromNow }}
           </div>

@@ -71,13 +71,13 @@ NUXT_PUBLIC_API_BASE="/api"
   - Public 에서 그냥으로 가져오는걸로 변경했는데 되지는 계속 테스트
 - Theme changer
 - Side bar content 추가하기
-  - Blog detail 페이지 active 작동 안하는 버그 수정
 - Home
   - Contact redirect
   - Content 추가하기
 - Blog Detail
-  - 크기 맞추기
+  - h2, h3 에 링크 빼기
   - TOC 추가
+    - 광고 추가
   - 이미지 추가
   - 변경 날짜, Reading time 추가
 - Showcase List
