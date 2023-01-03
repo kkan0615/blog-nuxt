@@ -49,7 +49,7 @@ const route = useRoute()
       </li>
       <li>
         <MenuItem
-          to="/"
+          to="/showcases"
           icon="material-symbols:menu-rounded"
           :active="route.name.includes('showcases')"
         >

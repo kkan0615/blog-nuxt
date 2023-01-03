@@ -7,8 +7,14 @@
   "menus": {
     "home": "home",
     "blogs": "blogs",
-    "Showcases": "Showcases",
-    "contact": "contact"
+    "showcases": "showcases",
+    "contact": "contact",
+    "descriptions": {
+      "home": "home",
+      "blogs": "Blogs displays list of showcase",
+      "showcases": "Showcases displays list of showcase",
+      "contact": "contact"
+    }
   },
   "tooltips": {
     "linkedIn": "LinkedIn",

@@ -14,7 +14,7 @@ const { t } = useI18n()
       <div class="mt-2 flex text-3xl space-x-2">
         <div
           class="tooltip"
-          :data-tip="t('tooltips.LinkedIn')"
+          :data-tip="t('tooltips.linkedIn')"
         >
           <a
             href="https://www.linkedin.com/in/youngjin-kwak-91658323a/"

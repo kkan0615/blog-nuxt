@@ -11,7 +11,7 @@ const { t, locale } = useI18n()
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: 'It is Nuxt study website' },
+    { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
 })
 

@@ -7,7 +7,7 @@
   "menus": {
     "home": "홈",
     "blogs": "블로그",
-    "Showcases": "쇼케이스",
+    "showcases": "쇼케이스",
     "contact": "연락"
   },
   "tooltips": {
