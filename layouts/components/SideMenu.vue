@@ -58,7 +58,7 @@ const route = useRoute()
       </li>
       <li>
         <MenuItem
-          to="/"
+          to="/contact"
           icon="mdi:donation-outline"
           :active="route.name.includes('contact')"
         >

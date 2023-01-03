@@ -10,6 +10,11 @@
     "Showcases": "쇼케이스",
     "contact": "연락"
   },
+  "tooltips": {
+    "linkedIn": "LinkedIn",
+    "indeed": "indeed",
+    "Github": "Github"
+  },
   "labels": {
     "blogFilter": {
       "locales": "언어",
@@ -41,6 +46,16 @@
       "Lorem": "로렘",
       "title": "Requiem",
       "description": "안녕하세요. 풀스택 개발자입니다."
+    },
+    "contact": {
+      "profileCard": {
+        "title": "프로필"
+      },
+      "requestCard": {
+        "title": "request software",
+        "description": "나만의 앱 혹은 웹사이트가 만들고 싶으시면 아래 버튼을 눌러 현재 판매중인 서비스를 확인해보세요!",
+        "requestBtn": "요청 하러 가기"
+      }
     }
   }
 }

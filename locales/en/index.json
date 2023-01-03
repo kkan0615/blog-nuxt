@@ -10,6 +10,11 @@
     "Showcases": "Showcases",
     "contact": "contact"
   },
+  "tooltips": {
+    "linkedIn": "LinkedIn",
+    "indeed": "indeed",
+    "github": "Github"
+  },
   "labels": {
     "blogFilter": {
       "locales": "Locales",
@@ -41,6 +46,16 @@
       "Lorem": "Lorem",
       "title": "Requiem",
       "description": "Hello, I am Full-stack developer."
+    },
+    "contact": {
+      "profileCard": {
+        "title": "Profile"
+      },
+      "requestCard": {
+        "title": "request software",
+        "description": "Are you looking for someone to create your own App or Website Click following button to see more details",
+        "requestBtn": "go to request"
+      }
     }
   }
 }
