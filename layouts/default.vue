@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import SideMenu from '~/layouts/components/SideMenu.vue'
 import Header from '~/layouts/default/Header.vue'
+import Footer from '~/layouts/default/Footer.vue'
+
 </script>
 <template>
   <div class="drawer drawer-mobile">
@@ -9,14 +11,15 @@ import Header from '~/layouts/default/Header.vue'
       type="checkbox"
       class="drawer-toggle"
     >
-    <div class="drawer-content">
+    <div class="drawer-content relative min-h-screen flex flex-col">
       <!-- Page content here -->
       <Header />
       <div
-        class="p-2 lg:p-4"
+        class="flex-grow p-2 lg:p-4"
       >
         <slot />
       </div>
+      <Footer />
     </div>
     <div class="drawer-side">
       <label

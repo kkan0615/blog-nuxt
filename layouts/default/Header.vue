@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect'
+import { useLayoutStore } from '~/stores/layout'
+
+const layoutStore = useLayoutStore()
+
 </script>
 <template>
   <header
@@ -18,6 +22,11 @@ import LanguageSelect from '~/components/forms/LanguageSelect'
         />
       </span>
     </label>
+    <div
+      class="capitalize font-bold truncate"
+    >
+      {{ layoutStore.headerTitle }}
+    </div>
     <div
       class="ml-auto"
     />

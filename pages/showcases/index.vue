@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { useAsyncData, useRoute } from '#app'
 import { useI18n } from '#imports'
+import { useLayoutStore } from '~/stores/layout'
 
 const route = useRoute()
 const { t, locale } = useI18n()
+const layoutStore = useLayoutStore()
 
 // SEO
 useHead({
@@ -12,6 +14,8 @@ useHead({
     { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
   ],
 })
+
+layoutStore.setHeaderTitle(t('menus.showcases'))
 
 const { data: list, refresh } = await useAsyncData('showcases', () =>
   queryContent('/showcases')

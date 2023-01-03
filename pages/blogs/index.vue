@@ -3,9 +3,11 @@ import { useAsyncData, useRoute } from '#app'
 import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
+import { useLayoutStore } from '~/stores/layout'
 
 const route = useRoute()
 const { t, locale } = useI18n()
+const layoutStore = useLayoutStore()
 
 // SEO
 useHead({
@@ -14,6 +16,8 @@ useHead({
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
 })
+
+layoutStore.setHeaderTitle(t('menus.blogs'))
 
 const { data: list, refresh } = await useAsyncData('blogs', () =>
   queryContent('/blogs')
