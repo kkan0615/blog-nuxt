@@ -2,6 +2,7 @@
 import { useAsyncData, useRoute } from '#app'
 import { useI18n } from '#imports'
 import { useLayoutStore } from '~/stores/layout'
+import ShowcaseCard from '~/components/showcases/list/ShowcaseCard.vue'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -35,7 +36,23 @@ const { data: list, refresh } = await useAsyncData('showcases', () =>
 )
 </script>
 <template>
-  <div>
-    Showcases
+  <div
+    class="max-w-7xl mx-auto"
+  >
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
+    >
+      <!--      <ContentList-->
+      <!--        v-slot="{ list }"-->
+      <!--        :query="query"-->
+      <!--      >-->
+      <ShowcaseCard
+        v-for="blog in list"
+        :key="blog._path"
+        :blog="blog"
+        class="card bg-base-300"
+      />
+      <!--      </ContentList>-->
+    </div>
   </div>
 </template>

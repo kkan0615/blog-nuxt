@@ -36,7 +36,7 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
         blogs
       </MenuItem>
       <MenuItem
-        to="/"
+        to="/showcases"
       >
         showcases
       </MenuItem>
