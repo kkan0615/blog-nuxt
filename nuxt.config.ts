@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
+    NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL
   },
   i18n: {
     defaultLocale: 'en',
@@ -46,19 +47,13 @@ export default defineNuxtConfig({
     //   theme: 'min-dark'
     // },
     markdown: {
-      toc: {
-        depth: 6,
-        searchDepth: 6,
-      },
+      anchorLinks: false,
       remarkPlugins: {
-        'remark-reading-time': {
-
-        },
-        'remark-autolink-headings': false,
+        'remark-reading-time': {},
       },
-      rehypePlugins: [
-        'rehype-highlight',
-      ]
+      rehypePlugins: {
+        'rehype-highlight': {}
+      }
     },
   },
 })

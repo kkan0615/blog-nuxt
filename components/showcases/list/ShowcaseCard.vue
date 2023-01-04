@@ -2,7 +2,6 @@
 import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
-import { PostList } from '~/types/post'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -12,25 +11,10 @@ const DefaultNuxtImageWidth = 500
 const { t } = useI18n()
 
 interface Props {
-  blog: PostList
+  blog: any
 }
 
 const props = defineProps<Props>()
-
-const timeFromNow = computed(() => {
-  const now = dayjs()
-  const targetDate = dayjs(props.blog.date)
-  if (targetDate.diff(now, 'dates') < 7) {
-    return targetDate.fromNow()
-  }
-  return targetDate.format('ll')
-})
-
-const isNew = computed(() => {
-  const now = dayjs()
-  const targetDate = dayjs(props.blog.date)
-  return now.diff(targetDate, 'day') < 2
-})
 
 </script>
 <template>
@@ -59,12 +43,6 @@ const isNew = computed(() => {
         />
       </figure>
       <div class="card-body">
-        <div
-          v-if="isNew"
-          class="badge badge-secondary"
-        >
-          NEW
-        </div>
         <h2 class="card-title">
           {{ blog.title }}
         </h2>
@@ -89,11 +67,8 @@ const isNew = computed(() => {
           </div>
         </div>
         <div class="mt-2 card-actions text-md lg:text-sm">
-          <div>
-            {{ blog.readingTime.text }}
-          </div>
           <div class="ml-auto">
-            {{ timeFromNow }}
+            {{ dayjs(blog.date) }}
           </div>
         </div>
       </div>

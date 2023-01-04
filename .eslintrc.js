@@ -31,7 +31,7 @@ module.exports = {
     'no-unused-vars': 'off',
     'space-before-blocks': 'error', // Ex) if (a){ => if (a) {
     'no-trailing-spaces': 'error', // No trailing spaces important!!
-    'max-len': ['error', { 'code': 120 }], // limit max length
+    'max-len': ['error', { 'code': 150 }], // limit max length
     // For Typescript
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

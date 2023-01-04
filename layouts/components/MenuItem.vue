@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="opacity-70 font-black px-2"
+    class="opacity-70 font-black px-2 capitalize"
     :class="{
       'border-l-2': active,
       'border-primary': active,

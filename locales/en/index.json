@@ -7,8 +7,19 @@
   "menus": {
     "home": "home",
     "blogs": "blogs",
-    "Showcases": "Showcases",
-    "contact": "contact"
+    "showcases": "showcases",
+    "contact": "contact",
+    "descriptions": {
+      "home": "home",
+      "blogs": "Blogs page displays list of Blogs",
+      "showcases": "Showcases page displays list of showcase",
+      "contact": "contact"
+    }
+  },
+  "tooltips": {
+    "linkedIn": "LinkedIn",
+    "indeed": "indeed",
+    "github": "Github"
   },
   "labels": {
     "blogFilter": {
@@ -41,6 +52,16 @@
       "Lorem": "Lorem",
       "title": "Requiem",
       "description": "Hello, I am Full-stack developer."
+    },
+    "contact": {
+      "profileCard": {
+        "title": "Profile"
+      },
+      "requestCard": {
+        "title": "request software",
+        "description": "Are you looking for someone to create your own App or Website Click following button to see more details",
+        "requestBtn": "go to request"
+      }
     }
   }
 }

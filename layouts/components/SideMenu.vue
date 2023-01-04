@@ -49,7 +49,7 @@ const route = useRoute()
       </li>
       <li>
         <MenuItem
-          to="/"
+          to="/showcases"
           icon="material-symbols:menu-rounded"
           :active="route.name.includes('showcases')"
         >
@@ -58,7 +58,7 @@ const route = useRoute()
       </li>
       <li>
         <MenuItem
-          to="/"
+          to="/contact"
           icon="mdi:donation-outline"
           :active="route.name.includes('contact')"
         >

@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { useAsyncData, useRoute } from '#app'
 import { useI18n } from '#imports'
-import Navbar from '~/components/blogs/list/Navbar.vue'
-import BlogCard from '~/components/blogs/list/BlogCard.vue'
 import { useLayoutStore } from '~/stores/layout'
-import { PostList } from '~/types/post'
+import ShowcaseCard from '~/components/showcases/list/ShowcaseCard.vue'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -12,16 +10,16 @@ const layoutStore = useLayoutStore()
 
 // SEO
 useHead({
-  title: `${t('menus.blogs')} | ${t('seo.title')}`,
+  title: `${t('menus.showcases')} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
+    { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
   ],
 })
 
-layoutStore.setHeaderTitle(t('menus.blogs'))
+layoutStore.setHeaderTitle(t('menus.showcases'))
 
-const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
-  queryContent<PostList>('/blogs')
+const { data: list, refresh } = await useAsyncData('showcases', () =>
+  queryContent('/showcases')
     .where({
       title: { $contains: route.query.search } as any,
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,
@@ -36,17 +34,11 @@ const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
     })
     .find()
 )
-
-console.log(list.value ? list.value[0].tags : 'no')
 </script>
-
 <template>
   <div
     class="max-w-7xl mx-auto"
   >
-    <Navbar
-      @search="refresh"
-    />
     <div
       class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
     >
@@ -54,21 +46,13 @@ console.log(list.value ? list.value[0].tags : 'no')
       <!--        v-slot="{ list }"-->
       <!--        :query="query"-->
       <!--      >-->
-      <BlogCard
+      <ShowcaseCard
         v-for="blog in list"
         :key="blog._path"
         :blog="blog"
         class="card bg-base-300"
       />
       <!--      </ContentList>-->
-    </div>
-    <div
-      class="mt-4 text-center"
-    >
-      <Pagination
-        :active-number="1"
-        :max="20"
-      />
     </div>
   </div>
 </template>
