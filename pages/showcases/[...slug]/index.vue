@@ -6,6 +6,7 @@ import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import { useLayoutStore } from '~/stores/layout'
+import { PostDetail } from '~/types/post'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -16,7 +17,10 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-const { data: page } = await useAsyncData('page-data', queryContent(`/showcases/${route.params.slug}`).findOne)
+const { data: page } = await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug}`).findOne, {
+  server: true
+})
+console.log(page)
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
 // SEO
 useHead({

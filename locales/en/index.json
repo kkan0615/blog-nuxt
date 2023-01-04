@@ -11,8 +11,8 @@
     "contact": "contact",
     "descriptions": {
       "home": "home",
-      "blogs": "Blogs displays list of showcase",
-      "showcases": "Showcases displays list of showcase",
+      "blogs": "Blogs page displays list of Blogs",
+      "showcases": "Showcases page displays list of showcase",
       "contact": "contact"
     }
   },

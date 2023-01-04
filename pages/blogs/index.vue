@@ -4,6 +4,7 @@ import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
 import { useLayoutStore } from '~/stores/layout'
+import { PostList } from '~/types/post'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -19,8 +20,8 @@ useHead({
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
-const { data: list, refresh } = await useAsyncData('blogs', () =>
-  queryContent('/blogs')
+const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
+  queryContent<PostList>('/blogs')
     .where({
       title: { $contains: route.query.search } as any,
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,
@@ -35,6 +36,8 @@ const { data: list, refresh } = await useAsyncData('blogs', () =>
     })
     .find()
 )
+
+console.log(list.value ? list.value[0].tags : 'no')
 </script>
 
 <template>

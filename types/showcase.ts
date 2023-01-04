@@ -1,3 +1,5 @@
+import { ParsedContent } from '@nuxt/content/dist/runtime/types'
+
 export interface ShowcaseFrontMatterImage {
   path: string
   alt: string
@@ -7,8 +9,7 @@ export interface ShowcaseFrontMatterImage {
 }
 
 export interface ShowcaseFrontMatter {
-  slug: string
-  title: string
+  title?: string
   description: string
   lastUpdated: string
   categories: string[]
@@ -23,3 +24,33 @@ export interface ShowcaseFrontMatter {
   website?: string // If demo website is existed
 }
 
+export interface ShowcaseList extends ParsedContent, ShowcaseFrontMatter{
+  // id: string
+  // excerpt: string
+  slug: string
+  readingTime: {
+    minutes: number
+    text: string
+    time: number
+    words: number
+  }
+}
+
+export interface ShowcaseListFilter {
+  search?: string
+  tags?: string[]
+  categories?: string[]
+  locales?: string[]
+}
+
+export interface ShowcaseDetail {
+  frontmatter: ShowcaseFrontMatter,
+  //
+  readingTime: {
+    minutes: number
+    text: string
+    time: number
+    words: number
+  },
+  lastUpdated: string
+}

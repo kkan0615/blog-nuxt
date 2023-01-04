@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Toc } from '@nuxt/content/dist/runtime/types'
 
 interface TOC {
   title: string,
@@ -52,10 +51,13 @@ onMounted(() =>{
     >
       Table of Content
     </div>
-    <ul>
+    <ul
+      class="space-y-1"
+    >
       <li
         v-for="content in toc"
         :key="content.hash"
+        class="text-sm"
         :class="{
           'ml-2': content.nodeName === 'H2',
           'ml-4': content.nodeName === 'H3',

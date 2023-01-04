@@ -8,7 +8,13 @@
     "home": "홈",
     "blogs": "블로그",
     "showcases": "쇼케이스",
-    "contact": "연락"
+    "contact": "연락",
+    "descriptions": {
+      "home": "홈",
+      "blogs": "포스트 목록을 볼 수 있는 블로그 페이지입니다.",
+      "showcases": "쇼케이스 목록을 볼 수 있는 블로그 페이지입니다.",
+      "contact": "contact"
+    }
   },
   "tooltips": {
     "linkedIn": "LinkedIn",

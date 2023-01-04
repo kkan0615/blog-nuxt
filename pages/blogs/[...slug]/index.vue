@@ -6,6 +6,7 @@ import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import { useLayoutStore } from '~/stores/layout'
+import type { PostDetail } from '~/types/post'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -16,13 +17,17 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-const { data: page } = await useAsyncData('page-data', queryContent(`/blogs/${route.params.slug}`).findOne)
-// const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
+// const { data: page } = await useAsyncData<PostDetail>('page-data', () =>
+//   queryContent<PostDetail>(`/blogs/${route.params.slug}`)
+//     .findOne()
+// )
+const page = await queryContent<PostDetail>(`/blogs/${route.params.slug}`).findOne()
+
 // SEO
 useHead({
-  title: `${page.value?.title} | ${t('seo.title')}`,
+  title: `${page.title} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: page.value?.description },
+    { name: 'description', content: page.description },
   ],
 })
 
@@ -85,7 +90,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
         class="my-4"
       >
       <div
-        class="prose"
+        class="prose max-w-full"
       >
         <ContentRenderer
           id="article"
@@ -106,7 +111,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
       />
     </div>
     <div
-      class="w-60 sticky top-4 h-1 hidden lg:block"
+      class="w-40 sticky top-4 h-1 hidden lg:block"
     >
       <client-only>
         <TableOfContent

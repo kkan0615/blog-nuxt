@@ -2,6 +2,7 @@
 import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
+import { PostList } from '~/types/post'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -11,7 +12,7 @@ const DefaultNuxtImageWidth = 500
 const { t } = useI18n()
 
 interface Props {
-  blog: any
+  blog: PostList
 }
 
 const props = defineProps<Props>()

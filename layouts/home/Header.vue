@@ -2,6 +2,9 @@
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect'
 import MenuItem from '~/layouts/home/MenuItem.vue'
+
+const { t } = useI18n()
+
 </script>
 <template>
   <header
@@ -19,6 +22,11 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
         />
       </span>
     </label>
+    <div
+      class="text-lg font-bold ml-2"
+    >
+      {{ t('seo.title') }}
+    </div>
     <div
       class="ml-auto"
     />
