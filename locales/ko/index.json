@@ -43,6 +43,14 @@
       "MDX": "MDX"
     }
   },
+  "components": {
+    "donations": {
+      "title": "후원해주셔서 감사합니다",
+      "titleSm": "후원하기",
+      "dialogTitle": "후원",
+      "dialogDescription": "후원해주셔서 정말로 감사합니다."
+    }
+  },
   "views": {
     "sidebar": {
       "title": "Requiem",
@@ -61,6 +69,11 @@
         "title": "request software",
         "description": "나만의 앱 혹은 웹사이트가 만들고 싶으시면 아래 버튼을 눌러 현재 판매중인 서비스를 확인해보세요!",
         "requestBtn": "요청 하러 가기"
+      }
+    },
+    "blogs": {
+      "slug": {
+        "posted": "포스팅"
       }
     }
   }

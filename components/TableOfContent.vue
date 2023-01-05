@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+import Donation from '~/components/advertisements/Donation.vue'
+
 interface TOC {
   title: string,
   hash: string,
@@ -71,6 +73,9 @@ onMounted(() =>{
         </NuxtLink>
       </li>
     </ul>
+    <div class="mt-4">
+      <Donation sm />
+    </div>
   </div>
 </template>
 
