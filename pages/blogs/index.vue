@@ -37,7 +37,6 @@ const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
     .find()
 )
 
-console.log(list.value ? list.value[0].tags : 'no')
 </script>
 
 <template>
