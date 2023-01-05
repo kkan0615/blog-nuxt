@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { useAsyncData, useRoute } from '#app'
+const displayPosts = 20
+
 import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList } from '~/types/post'
 
+const router = useRouter()
 const route = useRoute()
 const { t, locale } = useI18n()
 const layoutStore = useLayoutStore()
@@ -20,8 +22,11 @@ useHead({
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
-const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
-  queryContent<PostList>('/blogs')
+const { data, refresh } = await useAsyncData<{
+  length: number,
+  list: PostList[]
+}>('blogs', async () => {
+  const list = await queryContent<PostList>('/blogs')
     .where({
       title: { $contains: route.query.search } as any,
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,
@@ -35,38 +40,52 @@ const { data: list, refresh } = await useAsyncData<PostList[]>('blogs', () =>
       } as any,
     })
     .find()
-)
+
+  const currPageNum = (Number(route.query.page) || 1)
+  return {
+    length: list.length,
+    list: list.slice((currPageNum - 1) * displayPosts, currPageNum * displayPosts),
+  }
+})
+
+const maxPagination = computed(() => parseInt(((data.value && data.value.length ? data.value.length : 0) / displayPosts).toString()) + 1)
+
+const handleClickPagination = async (newPageNum: number) => {
+  await router.push({
+    query: {
+      ...route.query,
+      page: newPageNum,
+    }
+  })
+
+  refresh()
+}
 
 </script>
 
 <template>
-  <div
-    class="max-w-7xl mx-auto"
-  >
+  <div class="max-w-7xl mx-auto">
     <Navbar
       @search="refresh"
     />
-    <div
-      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
-    >
+    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0">
       <!--      <ContentList-->
       <!--        v-slot="{ list }"-->
       <!--        :query="query"-->
       <!--      >-->
       <BlogCard
-        v-for="blog in list"
+        v-for="blog in data?.list"
         :key="blog._path"
         :blog="blog"
         class="card bg-base-300"
       />
       <!--      </ContentList>-->
     </div>
-    <div
-      class="mt-4 text-center"
-    >
+    <div class="mt-4 text-center">
       <Pagination
-        :active-number="1"
-        :max="20"
+        :active-number="Number(route.query.page) || 1"
+        :max="maxPagination"
+        @click="handleClickPagination"
       />
     </div>
   </div>
