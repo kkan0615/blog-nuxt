@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
+import Donation from '~/components/advertisements/Donation.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
@@ -8,13 +9,17 @@ const route = useRoute()
 
 </script>
 <template>
-  <div class="menu w-64 bg-base-200">
+  <!-- "menu class" is moved to middle -->
+  <div class="flex flex-col w-64 bg-base-200">
     <div class="text-center p-4 mt-4">
       <div class="avatar flex justify-center mb-4">
         <div class="w-1/2 rounded-full border">
-          <NuxtImg
+          <img
             :src="appConfig.profile.image"
-          />
+            height="300"
+            width="300"
+            alt="Profile image"
+          >
         </div>
       </div>
       <div class="text-2xl font-bold">
@@ -28,49 +33,58 @@ const route = useRoute()
         Beta
       </div>
     </div>
-    <ul class="px-4">
-      <li>
-        <MenuItem
-          to="/"
-          icon="material-symbols:home-outline-rounded"
-          :active="route.name.includes('index')"
-        >
-          <span>home</span>
-        </MenuItem>
-      </li>
-      <li>
-        <MenuItem
-          to="/blogs"
-          icon="material-symbols:menu-rounded"
-          :active="route.name.includes('blogs')"
-        >
-          <span>blogs</span>
-        </MenuItem>
-      </li>
-      <li>
-        <MenuItem
-          to="/showcases"
-          icon="material-symbols:menu-rounded"
-          :active="route.name.includes('showcases')"
-        >
-          <span>showcases</span>
-        </MenuItem>
-      </li>
-      <li>
-        <MenuItem
-          to="/contact"
-          icon="mdi:donation-outline"
-          :active="route.name.includes('contact')"
-        >
-          <span>contact</span>
-        </MenuItem>
-      </li>
-    </ul>
-    <div class="mt-auto text-center p-4">
-      <LanguageSelect
-        class="block lg:hidden"
-        top
-      />
+    <div class="menu">
+      <ul class="px-4">
+        <li>
+          <MenuItem
+            to="/"
+            icon="material-symbols:home-outline-rounded"
+            :active="route.name.includes('index')"
+          >
+            <span>home</span>
+          </MenuItem>
+        </li>
+        <li>
+          <MenuItem
+            to="/blogs"
+            icon="material-symbols:menu-rounded"
+            :active="route.name.includes('blogs')"
+          >
+            <span>blogs</span>
+          </MenuItem>
+        </li>
+        <li>
+          <MenuItem
+            to="/showcases"
+            icon="material-symbols:menu-rounded"
+            :active="route.name.includes('showcases')"
+          >
+            <span>showcases</span>
+          </MenuItem>
+        </li>
+        <li>
+          <MenuItem
+            to="/contact"
+            icon="mdi:donation-outline"
+            :active="route.name.includes('contact')"
+          >
+            <span>contact</span>
+          </MenuItem>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-auto p-4">
+      <div class="text-center">
+        <LanguageSelect
+          class="block lg:hidden"
+          top
+        />
+      </div>
+      <div
+        class="mt-2"
+      >
+        <Donation sm />
+      </div>
     </div>
   </div>
 </template>

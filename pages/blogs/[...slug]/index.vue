@@ -7,6 +7,7 @@ import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import { useLayoutStore } from '~/stores/layout'
 import type { PostDetail } from '~/types/post'
+import Donation from '~/components/advertisements/Donation.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -38,30 +39,20 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
   <div
     class="max-w-4xl mx-auto flex flex-col-reverse justify-between gap-6 xl:flex-row"
   >
-    <div
-      class="flex-1"
-    >
-      <h1
-        class="text-3xl font-bold mb-4"
-      >
+    <div class="flex-1">
+      <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
-      <div
-        class="flex text-sm mb-2"
-      >
+      <div class="flex text-sm mb-2">
         <div>
-          <span
-            class="mr-1"
-          >
-            Posted:
+          <span class="mr-1 capitalize">
+            {{ t('views.blogs.slug.posted') }}:
           </span>
           <span>
             {{ dayjs(page?.date).format('ll') }}
           </span>
         </div>
-        <div
-          class="ml-auto"
-        >
+        <div class="ml-auto">
           {{ page.readingTime.text }}
         </div>
       </div>
@@ -86,20 +77,17 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
           :width="DefaultNuxtImageWidth"
         />
       </figure>
-      <hr
-        class="my-4"
-      >
-      <div
-        class="prose max-w-full"
-      >
+      <hr class="my-4">
+      <div class="prose max-w-full">
         <ContentRenderer
           id="article"
           :value="page"
         />
       </div>
-      <hr
-        class="my-4"
-      >
+      <hr class="my-4">
+      <div>
+        <Donation />
+      </div>
       <Categories
         :categories="page.categories"
       />
@@ -110,9 +98,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
         :filepath="page._file"
       />
     </div>
-    <div
-      class="w-40 sticky top-4 h-1 hidden lg:block"
-    >
+    <div class="w-40 sticky top-4 h-1 hidden lg:block">
       <client-only>
         <TableOfContent
           article-id="article"

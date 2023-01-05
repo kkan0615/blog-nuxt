@@ -43,6 +43,14 @@
       "MDX": "MDX"
     }
   },
+  "components": {
+    "donations": {
+      "title": "Thank you for support",
+      "titleSm": "Support me",
+      "dialogTitle": "Donation",
+      "dialogDescription": "Thank you for supporting!"
+    }
+  },
   "views": {
     "sidebar": {
       "title": "Requiem",
@@ -61,6 +69,11 @@
         "title": "request software",
         "description": "Are you looking for someone to create your own App or Website Click following button to see more details",
         "requestBtn": "go to request"
+      }
+    },
+    "blogs": {
+      "slug": {
+        "posted": "posted"
       }
     }
   }
