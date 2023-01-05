@@ -66,6 +66,7 @@
     "labels": {
       "action": "action",
       "search": "search",
+      "option": "option",
       "editOnGithub": "Edit on Github",
       "languages": {
         "en": "English",

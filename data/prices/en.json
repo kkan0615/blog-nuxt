@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Website without Database",
+    "description": "Build your website without Database",
+    "startPrice": 121,
+    "extraPrices": [
+      {
+        "optional": false,
+        "content": "Maintain Fee",
+        "price": 20
+      },
+      {
+        "optional": true,
+        "content": "Custom domain",
+        "price": 5
+      }
+    ],
+    "details": [
+      "Responsive Design",
+      "SEO friendly",
+      "Fully secured",
+      "Fast performance"
+    ],
+    "links": [{
+      "title": "Fiverr",
+      "link": "https://www.fiverr.com/share/lAg6rR"
+    }]
+  }
+]

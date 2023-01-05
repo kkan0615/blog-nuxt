@@ -66,6 +66,7 @@
     "labels": {
       "action": "행동",
       "search": "검색",
+      "option": "옵션",
       "editOnGithub": "Github 에서 페이지 수정",
       "languages": {
         "en": "English",
