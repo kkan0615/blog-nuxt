@@ -41,6 +41,22 @@
       "Next": "Next",
       "Nuxt": "Nuxt",
       "MDX": "MDX"
+    },
+    "showcaseCategories": {
+      "example": "예제",
+      "desktop": "데스크탑 앱",
+      "web": "웹",
+      "mobileApp":  "모바일 앱"
+    },
+    "showcaseTags": {
+      "Node Js": "Node Js",
+      "Typescript": "타입스크립트",
+      "Gatsby": "Gatsby",
+      "JavaScript": "자바스크립트",
+      "Next": "Next",
+      "Nuxt": "Nuxt",
+      "react": "React",
+      "vue": "Vue"
     }
   },
   "components": {

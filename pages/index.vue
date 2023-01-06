@@ -26,9 +26,13 @@ const { t } = useI18n()
           {{ t('views.home.description') }}
         </p>
 
-        <button class="btn btn-primary">
-          contact
-        </button>
+        <NuxtLink
+          href="/contact"
+        >
+          <button class="btn btn-primary">
+            contact
+          </button>
+        </NuxtLink>
       </div>
     </div>
   </div>

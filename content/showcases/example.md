@@ -3,8 +3,8 @@ title: 'Example'
 description: 'Example'
 lastUpdated: '2022-12-17'
 locale: 'en'
-categories: [development]
-tags: [React]
+categories: [web]
+tags: [react]
 github: 'https://github.com/kkan0615'
 downloads: [
     {  title: 'Title 1', link: 'link1'  }

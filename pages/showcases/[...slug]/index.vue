@@ -2,9 +2,9 @@
 import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import TableOfContent from '~/components/TableOfContent.vue'
-import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
-import Tags from '~/components/blogs/detail/Tags.vue'
-import Categories from '~/components/blogs/detail/Categories.vue'
+import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
+import Tags from '~/components/showcases/detail/Tags.vue'
+import Categories from '~/components/showcases/detail/Categories.vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostDetail } from '~/types/post'
 
@@ -20,7 +20,6 @@ const layoutStore = useLayoutStore()
 const { data: page } = await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug}`).findOne, {
   server: true
 })
-console.log(page)
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
 // SEO
 useHead({

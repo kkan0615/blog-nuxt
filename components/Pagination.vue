@@ -30,6 +30,10 @@ const pageNums = computed(() => {
 })
 
 
+const handleClick = (newPageNum: number) => {
+  emit('click', newPageNum)
+}
+
 </script>
 <template>
   <div class="btn-group mt-4">
@@ -38,6 +42,7 @@ const pageNums = computed(() => {
       :class="{
         'btn-disabled': activeNumber === 1
       }"
+      @click="() => handleClick(1)"
     >
       «
     </button>
@@ -48,6 +53,7 @@ const pageNums = computed(() => {
       :class="{
         'btn-active': activeNumber === pageNum
       }"
+      @click="() => handleClick(pageNum)"
     >
       {{ pageNum }}
     </button>
@@ -56,6 +62,7 @@ const pageNums = computed(() => {
       :class="{
         'btn-disabled': activeNumber === max
       }"
+      @click="() => handleClick(max)"
     >
       »
     </button>

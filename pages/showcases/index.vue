@@ -3,6 +3,7 @@ import { useAsyncData, useRoute } from '#app'
 import { useI18n } from '#imports'
 import { useLayoutStore } from '~/stores/layout'
 import ShowcaseCard from '~/components/showcases/list/ShowcaseCard.vue'
+import Navbar from '~/components/showcases/list/Navbar.vue'
 
 const route = useRoute()
 const { t, locale } = useI18n()
@@ -39,7 +40,11 @@ const { data: list, refresh } = await useAsyncData('showcases', () =>
   <div
     class="max-w-7xl mx-auto"
   >
+    <Navbar
+      @search="refresh"
+    />
     <div
+      v-if="list && list.length > 0"
       class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
     >
       <!--      <ContentList-->
@@ -53,6 +58,16 @@ const { data: list, refresh } = await useAsyncData('showcases', () =>
         class="card bg-base-300"
       />
       <!--      </ContentList>-->
+    </div>
+    <div
+      v-else
+      class="flex justify-center items-center h-64"
+    >
+      <div
+        class="text-4xl font-bold capitalize"
+      >
+        {{ t('commons.placeholders.noSearchData') }}
+      </div>
     </div>
   </div>
 </template>
