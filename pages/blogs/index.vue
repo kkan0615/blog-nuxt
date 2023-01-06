@@ -48,6 +48,7 @@ const { data, refresh } = await useAsyncData<{
   }
 })
 
+// 페이지 최대 값
 const maxPagination = computed(() => parseInt(((data.value && data.value.length ? data.value.length : 0) / displayPosts).toString()) + 1)
 
 const handleClickPagination = async (newPageNum: number) => {
@@ -68,21 +69,35 @@ const handleClickPagination = async (newPageNum: number) => {
     <Navbar
       @search="refresh"
     />
-    <div class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0">
+    <div
+      v-if="data.list && data.list.length > 0"
+      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
+    >
       <!--      <ContentList-->
       <!--        v-slot="{ list }"-->
       <!--        :query="query"-->
       <!--      >-->
       <BlogCard
-        v-for="blog in data?.list"
+        v-for="blog in data.list"
         :key="blog._path"
         :blog="blog"
         class="card bg-base-300"
       />
       <!--      </ContentList>-->
     </div>
+    <div
+      v-else
+      class="flex justify-center items-center h-64"
+    >
+      <div
+        class="text-4xl font-bold capitalize"
+      >
+        {{ t('commons.placeholders.noSearchData') }}
+      </div>
+    </div>
     <div class="mt-4 text-center">
       <Pagination
+        v-if="data.list && data.list.length > 0"
         :active-number="Number(route.query.page) || 1"
         :max="maxPagination"
         @click="handleClickPagination"

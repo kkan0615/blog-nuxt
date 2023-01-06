@@ -60,8 +60,9 @@
       }
     },
     "placeholders": {
-      "noData": "No data",
-      "search": "search"
+      "noData": "no data",
+      "search": "search",
+      "noSearchData": "no search data"
     },
     "labels": {
       "action": "action",

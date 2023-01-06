@@ -41,6 +41,22 @@
       "Next": "Next",
       "Nuxt": "Nuxt",
       "MDX": "MDX"
+    },
+    "showcaseCategories": {
+      "example": "example",
+      "desktop": "desktop",
+      "web": "web",
+      "mobileApp":  "mobile app"
+    },
+    "showcaseTags": {
+      "Node Js": "Node Js",
+      "Typescript": "Typescript",
+      "Gatsby": "Gatsby",
+      "JavaScript": "JavaScript",
+      "Next": "Next",
+      "Nuxt": "Nuxt",
+      "react": "React",
+      "vue": "vue"
     }
   },
   "components": {

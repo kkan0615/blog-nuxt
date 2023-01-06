@@ -15,6 +15,22 @@ export default defineAppConfig({
     'Nuxt',
     'MDX'
   ],
+  showcaseCategories: [
+    'example',
+    'desktop',
+    'web',
+    'mobileApp',
+  ],
+  showcaseTags: [
+    'Node Js',
+    'typescript',
+    'gatsby',
+    'javaScript',
+    'next',
+    'nuxt',
+    'react',
+    'vue'
+  ],
   profile: {
     image: 'https://avatars.githubusercontent.com/u/46660361?v=4',
     email: 'kkan0615@gmail.com',
