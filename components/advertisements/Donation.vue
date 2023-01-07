@@ -8,7 +8,7 @@ withDefaults(defineProps<Props>(), {
   sm: false
 })
 
-const { t } =useI18n()
+const { t } = useI18n()
 
 const modalRef = ref<HTMLDialogElement | undefined>(undefined)
 
@@ -48,9 +48,7 @@ const toggleOpen = () => {
         width="32"
         height="32"
       />
-      <span
-        class="ml-4 text-2xl"
-      >
+      <span class="ml-4 text-2xl">
         {{ t('components.donations.title') }}
       </span>
     </div>
@@ -60,12 +58,8 @@ const toggleOpen = () => {
     class="bg-base-100 text-base-content rounded p-0"
   >
     <div>
-      <div
-        class="flex items-center bg-primary text-white px-2 py-3"
-      >
-        <h3
-          class="text-2xl"
-        >
+      <div class="flex items-center bg-primary text-white px-2 py-3">
+        <h3 class="text-2xl">
           {{ t('components.donations.dialogTitle') }}
         </h3>
         <button
@@ -76,15 +70,25 @@ const toggleOpen = () => {
         </button>
       </div>
       <div class="card">
-        <div
-          class="card-body pt-4"
-        >
+        <div class="card-body pt-4">
           <p class="text-center mb-4">
             {{ t('components.donations.dialogDescription') }}
           </p>
-          <ul class="text-center">
-            <li>
+          <ul class="flex flex-col space-y-4">
+            <li class="text-center">
               <BuyMeACoffee />
+            </li>
+            <li>
+              <span class="text-lg">
+                Paypal
+              </span>
+              <NuxtImg
+                class="mt-2"
+                src="/donations/paypal-qrcode.png"
+                alt="paypal-qrcode"
+                :width="250"
+                :height="250"
+              />
             </li>
           </ul>
         </div>

@@ -54,7 +54,7 @@ const props = defineProps<Props>()
             :key="category"
             class="badge badge-outline badge-md lg:badge-sm"
           >
-            {{ t(`labels.categories.${category}`) }}
+            {{ t(`labels.showcaseCategories.${category}`) }}
           </div>
         </div>
         <div class="mt-1 card-actions text-md lg:text-sm">
@@ -63,7 +63,7 @@ const props = defineProps<Props>()
             :key="tag"
             class="badge badge-outline badge-md lg:badge-sm"
           >
-            {{ t(`labels.tags.${tag}`) }}
+            {{ t(`labels.showcaseTags.${tag}`) }}
           </div>
         </div>
         <div class="mt-2 card-actions text-md lg:text-sm">

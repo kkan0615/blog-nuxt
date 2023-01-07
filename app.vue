@@ -17,6 +17,9 @@ useHead({
     { name: 'publisher', content: 'Requiem' },
     { name: 'robots', content: 'index, follow' }
   ],
+  htmlAttrs: {
+    'data-theme': 'base-dark'
+  }
 })
 // initial app setting
 </script>
