@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const appSetting = useAppConfig()
 </script>
 <template>
@@ -10,9 +9,10 @@ const appSetting = useAppConfig()
     rel="noopener noreferrer"
     class="github-corner -scale-x-100"
   >
+    <!-- change width and height using under -->
     <svg
-      width="80"
-      height="80"
+      width="65"
+      height="65"
       viewbox="0 0 250 250"
       style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
     ><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" /><path
