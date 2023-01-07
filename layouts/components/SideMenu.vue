@@ -2,6 +2,7 @@
 import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import Donation from '~/components/advertisements/Donation.vue'
+import AnimatedOctocats from '~/components/icons/animatedOctocats.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
@@ -11,6 +12,7 @@ const route = useRoute()
 <template>
   <!-- "menu class" is moved to middle -->
   <div class="flex flex-col w-64 bg-base-200">
+    <AnimatedOctocats />
     <div class="text-center p-4 mt-4">
       <div class="avatar flex justify-center mb-4">
         <div class="w-1/2 rounded-full border">
