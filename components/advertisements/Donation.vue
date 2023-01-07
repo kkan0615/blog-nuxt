@@ -82,9 +82,21 @@ const toggleOpen = () => {
           <p class="text-center mb-4">
             {{ t('components.donations.dialogDescription') }}
           </p>
-          <ul class="text-center">
-            <li>
+          <ul class="flex flex-col space-y-4">
+            <li class="text-center">
               <BuyMeACoffee />
+            </li>
+            <li>
+              <span class="text-lg">
+                Paypal
+              </span>
+              <NuxtImg
+                class="mt-2"
+                src="/donations/paypal-qrcode.png"
+                alt="paypal-qrcode"
+                :width="250"
+                :height="250"
+              />
             </li>
           </ul>
         </div>
