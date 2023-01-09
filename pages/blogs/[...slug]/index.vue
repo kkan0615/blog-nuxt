@@ -37,7 +37,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
 </script>
 <template>
   <div
-    class="max-w-4xl mx-auto flex flex-col-reverse justify-between gap-6 xl:flex-row"
+    class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row"
   >
     <div class="flex-1 w-1">
       <h1 class="text-3xl font-bold mb-4">
@@ -99,7 +99,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
         :filepath="page._file"
       />
     </div>
-    <div class="w-40 sticky top-4 h-1 hidden lg:block">
+    <div class="w-52 sticky top-4 h-1 hidden lg:block">
       <client-only>
         <TableOfContent
           article-id="article"
