@@ -39,6 +39,7 @@ const { data, refresh } = await useAsyncData<{
         undefined
       } as any,
     })
+    .sort({ date: -1 })
     .find()
 
   const currPageNum = (Number(route.query.page) || 1)

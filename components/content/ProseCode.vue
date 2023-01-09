@@ -31,10 +31,9 @@ onMounted(() => {
 <template>
   <div
     v-show="!loading"
+    class="max-w-full"
   >
-    <div
-      class="code-container"
-    >
+    <div class="code-container max-w-full overflow-x-auto">
       <div
         class="flex items-center p-1 pl-3"
       >

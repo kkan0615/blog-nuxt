@@ -39,7 +39,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
   <div
     class="max-w-4xl mx-auto flex flex-col-reverse justify-between gap-6 xl:flex-row"
   >
-    <div class="flex-1">
+    <div class="flex-1 w-1">
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
@@ -81,6 +81,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
       <div class="prose max-w-full">
         <ContentRenderer
           id="article"
+          class="max-w-full"
           :value="page"
         />
       </div>
