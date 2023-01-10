@@ -1,8 +1,9 @@
-import { defineNuxtPlugin } from 'nuxt/app'
+// import { defineNuxtPlugin } from 'nuxt/app'
 // import VueGtag from 'vue-gtag'
+// import { useRuntimeConfig } from '#app'
+//
 // export default defineNuxtPlugin((nuxtApp) => {
 //   const config = useRuntimeConfig()
-//
 //   nuxtApp.vueApp.use(VueGtag, {
 //     config: {
 //       id: config.GOOGLE_ANALYTICS_ID,
