@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const appSetting = useAppConfig()
+
 </script>
 <template>
   <!-- Flipped element by -scale-x-100 -->
@@ -28,7 +29,6 @@ const appSetting = useAppConfig()
   </a>
 </template>
 <style>
-/* <![CDATA[ */
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out
 }
@@ -53,5 +53,4 @@ const appSetting = useAppConfig()
     animation: octocat-wave 560ms ease-in-out
   }
 }
-/* ]]> */
 </style>
