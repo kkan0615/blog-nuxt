@@ -6,13 +6,13 @@ export default defineAppConfig({
     'web'
   ],
   blogTags: [
-    'Node Js',
-    'Get Started',
-    'Typescript',
-    'Gatsby',
-    'JavaScript',
-    'Next',
-    'Nuxt',
+    'node Js',
+    'get Started',
+    'typescript',
+    'gatsby',
+    'javaScript',
+    'next',
+    'nuxt',
     'MDX'
   ],
   showcaseCategories: [
@@ -22,7 +22,7 @@ export default defineAppConfig({
     'mobileApp',
   ],
   showcaseTags: [
-    'Node Js',
+    'node Js',
     'typescript',
     'gatsby',
     'javaScript',

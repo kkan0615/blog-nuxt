@@ -26,7 +26,7 @@ const { data, refresh } = await useAsyncData<{
   length: number,
   list: PostList[]
 }>('blogs', async () => {
-  const list = await queryContent<PostList>('/blogs')
+  const list = await queryContent<PostList>('blogs/')
     .where({
       title: { $contains: route.query.search } as any,
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,

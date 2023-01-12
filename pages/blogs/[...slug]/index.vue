@@ -22,7 +22,8 @@ const layoutStore = useLayoutStore()
 //   queryContent<PostDetail>(`/blogs/${route.params.slug}`)
 //     .findOne()
 // )
-const page = await queryContent<PostDetail>(`/blogs/${route.params.slug}`).findOne()
+/* slug return array like [en, en-1010100] */
+const page = await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`).findOne()
 
 // SEO
 useHead({
@@ -36,9 +37,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
 
 </script>
 <template>
-  <div
-    class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row"
-  >
+  <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
     <div class="flex-1 w-1">
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}

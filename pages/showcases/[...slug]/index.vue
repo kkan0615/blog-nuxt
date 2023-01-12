@@ -17,9 +17,10 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-const { data: page } = await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug}`).findOne, {
-  server: true
-})
+const { data: page } =
+    await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug[0]}/${route.params.slug[1]}`).findOne, {
+      server: true
+    })
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
 // SEO
 useHead({
@@ -33,33 +34,21 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
 
 </script>
 <template>
-  <div
-    class="max-w-4xl mx-auto flex flex-col-reverse justify-between gap-6 xl:flex-row"
-  >
-    <div
-      class="flex-1"
-    >
-      <h1
-        class="text-3xl font-bold mb-4"
-      >
+  <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
+    <div class="flex-1">
+      <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
-      <div
-        class="flex text-sm mb-2"
-      >
+      <div class="flex text-sm mb-2">
         <div>
-          <span
-            class="mr-1"
-          >
+          <span class="mr-1">
             Posted:
           </span>
           <span>
             {{ dayjs(page?.date).format('ll') }}
           </span>
         </div>
-        <div
-          class="ml-auto"
-        >
+        <div class="ml-auto">
           {{ page.readingTime.text }}
         </div>
       </div>
@@ -84,14 +73,11 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
           :width="DefaultNuxtImageWidth"
         />
       </figure>
-      <hr
-        class="my-4"
-      >
-      <div
-        class="prose"
-      >
+      <hr class="my-4">
+      <div class="prose max-w-full">
         <ContentRenderer
           id="article"
+          class="max-w-full"
           :value="page"
         />
       </div>
@@ -108,9 +94,7 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
         :filepath="page._file"
       />
     </div>
-    <div
-      class="w-60 sticky top-4 h-1 hidden lg:block"
-    >
+    <div class="w-52 sticky top-4 h-1 hidden lg:block">
       <client-only>
         <TableOfContent
           article-id="article"
