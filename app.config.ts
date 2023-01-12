@@ -3,7 +3,8 @@ export default defineAppConfig({
   blogCategories: [
     'example',
     'development',
-    'web'
+    'web',
+    'desktopApp'
   ],
   blogTags: [
     'node Js',

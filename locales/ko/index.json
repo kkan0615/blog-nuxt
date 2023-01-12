@@ -30,7 +30,8 @@
     "categories": {
       "example": "예제",
       "development": "개발",
-      "web": "웹"
+      "web": "웹",
+      "desktopApp": "데스크탑 앱"
     },
     "tags": {
       "node Js": "Node Js",
@@ -56,7 +57,8 @@
       "next": "Next",
       "nuxt": "Nuxt",
       "react": "React",
-      "vue": "Vue"
+      "vue": "Vue",
+      "electron": "Electron"
     }
   },
   "components": {

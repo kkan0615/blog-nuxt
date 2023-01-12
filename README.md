@@ -93,3 +93,6 @@ NUXT_PUBLIC_BASE_URL
 ### Uncaught ReferenceError: defineAppConfig is not defined at defu.mjs:45:2
 - Plugin 이랑 같이 쓰면 에러남
 - .server.ts 로 변경했더니 현재는 괜찮음
+
+# ref
+- [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)

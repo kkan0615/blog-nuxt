@@ -46,17 +46,18 @@
       "example": "example",
       "desktop": "desktop",
       "web": "web",
-      "mobileApp":  "mobile app"
+      "desktopApp":  "desktop app"
     },
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "Typescript",
       "gatsby": "Gatsby",
-      "JavaScript": "JavaScript",
-      "Next": "Next",
-      "Nuxt": "Nuxt",
-      "React": "React",
-      "Vue": "vue"
+      "javaScript": "JavaScript",
+      "next": "Next",
+      "nuxt": "Nuxt",
+      "react": "React",
+      "vue": "vue",
+      "electron": "Electron"
     }
   },
   "components": {
