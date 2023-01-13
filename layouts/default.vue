@@ -2,6 +2,7 @@
 import SideMenu from '~/layouts/components/SideMenu.vue'
 import Header from '~/layouts/default/Header.vue'
 import Footer from '~/layouts/default/Footer.vue'
+import BtnsScrollTop from '~/components/btns/ScrollTop'
 
 </script>
 <template>
@@ -11,7 +12,15 @@ import Footer from '~/layouts/default/Footer.vue'
       type="checkbox"
       class="drawer-toggle"
     >
-    <div class="drawer-content relative min-h-screen flex flex-col">
+    <div
+      id="base-content"
+      class="drawer-content relative min-h-screen flex flex-col"
+    >
+      <ClientOnly>
+        <BtnsScrollTop
+          class="fixed bottom-10 right-10"
+        />
+      </ClientOnly>
       <!-- Page content here -->
       <Header />
       <div

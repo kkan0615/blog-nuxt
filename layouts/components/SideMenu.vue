@@ -2,7 +2,7 @@
 import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import Donation from '~/components/advertisements/Donation.vue'
-import AnimatedOctocats from '~/components/icons/animatedOctocats.vue'
+import AnimatedOctocats from '~/components/icons/AnimatedOctocats.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
@@ -34,6 +34,11 @@ const route = useRoute()
       <div class="mt-2 badge badge-primary text-white">
         Beta
       </div>
+    </div>
+    <div
+      class="px-4"
+    >
+      <Donation sm />
     </div>
     <div class="menu">
       <ul class="px-4">
@@ -81,11 +86,6 @@ const route = useRoute()
           class="block lg:hidden"
           top
         />
-      </div>
-      <div
-        class="mt-2"
-      >
-        <Donation sm />
       </div>
     </div>
   </div>

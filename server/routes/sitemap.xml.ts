@@ -1,6 +1,5 @@
 import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
-import { useRuntimeConfig } from '#app'
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig()

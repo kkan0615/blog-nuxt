@@ -1,14 +1,13 @@
 # Blog - Nuxt
-Move to Next 13 After Next 13 is stable
+Personal blog made by [Nuxt](https://nuxt.com/)
+Click [Link](https://requiem-blog.netlify.app/) to see the page
 
 # Setup
 Make sure to install the dependencies:
 ```bash
-# yarn
 yarn install
 ````
 ## Development Server
-
 ```bash
 yarn dev
 ```
@@ -24,14 +23,26 @@ yarn preview
 
 # .env
 ```text
-NUXT_PUBLIC_MODE=development
-NUXT_PUBLIC_API_BASE="/api"
+NUXT_PUBLIC_MODE
+NUXT_PUBLIC_GOOGLE_ANALYTICS_ID
+NUXT_PUBLIC_BASE_URL
 ```
 
 # Packages
+- [tailwindcss](https://tailwindcss.com/)= Tailwind css
 - [daisyui](https://daisyui.com/) - Tailwind based UI Framework
-- [theme-change](https://github.com/saadeghi/theme-change): Change theme with daisyui
-- [Pinia](https://nuxt.com/modules/pinia)
+- [theme-change](https://github.com/saadeghi/theme-change) - Change theme with daisyui
+- [pinia](https://nuxt.com/modules/pinia) - Client side State management
+- [@nuxtjs/i18n]() - Nuxt i18n
+- [@vueuse/nuxt]() - vueuse nuxt version
+- [dayjs]() 
+- [fast-glob]() - Find all files under specific directory
+- ~~[vue-gtag]()~~
+- [vue-gtag-next]()
+## Content part
+- [highlight.js]() - Add highlight for code section
+- [rehype-highlight]() - Add highlight for code section (not working)
+- [remark-reading-time]() - Add reading time
 
 # :file_folder: Folder structure
 ```text
@@ -72,20 +83,16 @@ NUXT_PUBLIC_API_BASE="/api"
 - Theme changer
 - Side bar content 추가하기
 - Home
-  - Contact redirect
   - Content 추가하기
-- Blog Detail
-  - h2, h3 에 링크 빼기
-  - TOC 추가
-    - 광고 추가
-- Showcase List
-- Showcases Detail
-- Contact page
 - Order page
-- 도네이션 기능 추가
 - Advertisement 추가
   - EN - fiverr
   - Ko - 크몽
-## Errors
+- Move to Next 13 After Next 13 is stable
+## Known Issues
 ### Uncaught ReferenceError: defineAppConfig is not defined at defu.mjs:45:2
 - Plugin 이랑 같이 쓰면 에러남
+- .server.ts 로 변경했더니 현재는 괜찮음
+
+# ref
+- [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)

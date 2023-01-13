@@ -3,16 +3,17 @@ export default defineAppConfig({
   blogCategories: [
     'example',
     'development',
-    'web'
+    'web',
+    'desktopApp'
   ],
   blogTags: [
-    'Node Js',
-    'Get Started',
-    'Typescript',
-    'Gatsby',
-    'JavaScript',
-    'Next',
-    'Nuxt',
+    'node Js',
+    'get Started',
+    'typescript',
+    'gatsby',
+    'javaScript',
+    'next',
+    'nuxt',
     'MDX'
   ],
   showcaseCategories: [
@@ -22,14 +23,15 @@ export default defineAppConfig({
     'mobileApp',
   ],
   showcaseTags: [
-    'Node Js',
+    'node Js',
     'typescript',
     'gatsby',
     'javaScript',
     'next',
     'nuxt',
     'react',
-    'vue'
+    'vue',
+    'electron'
   ],
   profile: {
     image: 'https://avatars.githubusercontent.com/u/46660361?v=4',

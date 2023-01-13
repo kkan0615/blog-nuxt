@@ -30,16 +30,17 @@
     "categories": {
       "example": "예제",
       "development": "개발",
-      "web": "웹"
+      "web": "웹",
+      "desktopApp": "데스크탑 앱"
     },
     "tags": {
-      "Node Js": "Node Js",
-      "Get Started": "시작하기",
-      "Typescript": "타입스크립트",
-      "Gatsby": "Gatsby",
-      "JavaScript": "자바스크립트",
-      "Next": "Next",
-      "Nuxt": "Nuxt",
+      "node Js": "Node Js",
+      "get Started": "시작하기",
+      "typescript": "타입스크립트",
+      "gatsby": "Gatsby",
+      "javaScript": "자바스크립트",
+      "next": "Next",
+      "nuxt": "Nuxt",
       "MDX": "MDX"
     },
     "showcaseCategories": {
@@ -49,14 +50,15 @@
       "mobileApp":  "모바일 앱"
     },
     "showcaseTags": {
-      "Node Js": "Node Js",
-      "Typescript": "타입스크립트",
-      "Gatsby": "Gatsby",
-      "JavaScript": "자바스크립트",
-      "Next": "Next",
-      "Nuxt": "Nuxt",
+      "node Js": "Node Js",
+      "typescript": "타입스크립트",
+      "gatsby": "Gatsby",
+      "javaScript": "자바스크립트",
+      "next": "Next",
+      "nuxt": "Nuxt",
       "react": "React",
-      "vue": "Vue"
+      "vue": "Vue",
+      "electron": "Electron"
     }
   },
   "components": {

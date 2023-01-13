@@ -36,6 +36,7 @@ const isNew = computed(() => {
 <template>
   <div class="card bg-base-300">
     <NuxtLink
+      class="flex flex-col h-full"
       :to="localePath(blog._path)"
     >
       <figure>

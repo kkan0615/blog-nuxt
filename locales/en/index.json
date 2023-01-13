@@ -33,30 +33,31 @@
       "web": "web"
     },
     "tags": {
-      "Node Js": "Node Js",
-      "Get Started": "Get Started",
-      "Typescript": "Typescript",
-      "Gatsby": "Gatsby",
-      "JavaScript": "JavaScript",
-      "Next": "Next",
-      "Nuxt": "Nuxt",
+      "node Js": "Node Js",
+      "get Started": "Get Started",
+      "typescript": "Typescript",
+      "gatsby": "Gatsby",
+      "javaScript": "JavaScript",
+      "next": "Next",
+      "nuxt": "Nuxt",
       "MDX": "MDX"
     },
     "showcaseCategories": {
       "example": "example",
       "desktop": "desktop",
       "web": "web",
-      "mobileApp":  "mobile app"
+      "desktopApp":  "desktop app"
     },
     "showcaseTags": {
-      "Node Js": "Node Js",
-      "Typescript": "Typescript",
-      "Gatsby": "Gatsby",
-      "JavaScript": "JavaScript",
-      "Next": "Next",
-      "Nuxt": "Nuxt",
+      "node Js": "Node Js",
+      "typescript": "Typescript",
+      "gatsby": "Gatsby",
+      "javaScript": "JavaScript",
+      "next": "Next",
+      "nuxt": "Nuxt",
       "react": "React",
-      "vue": "vue"
+      "vue": "vue",
+      "electron": "Electron"
     }
   },
   "components": {

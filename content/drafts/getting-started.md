@@ -26,7 +26,8 @@ const test = 'abc'
 console.log(test)
 ```
 ## This?
-```WHAT ABOUT THIS KIND OF CODE?```
+```WHAT ABOUT THIS KIND OF CODE?``` <br />
+```const x = test```
 
 # Image
 ![random image 1](https://picsum.photos/1280/720)

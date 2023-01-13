@@ -20,6 +20,7 @@ const props = defineProps<Props>()
 <template>
   <div class="card bg-base-300">
     <NuxtLink
+      class="flex flex-col h-full"
       :to="localePath(blog._path)"
     >
       <figure>
@@ -43,32 +44,34 @@ const props = defineProps<Props>()
         />
       </figure>
       <div class="card-body">
-        <h2 class="card-title">
+        <h2 class="card-title ">
           {{ blog.title }}
         </h2>
         <p>{{ blog.description }}</p>
-        <div class="mt-2 card-actions">
-          <Icon icon="material-symbols:folder-open-outline-rounded" />
-          <div
-            v-for="category in blog.categories"
-            :key="category"
-            class="badge badge-outline badge-md lg:badge-sm"
-          >
-            {{ t(`labels.showcaseCategories.${category}`) }}
+        <div class="">
+          <div class="mt-2 card-actions">
+            <Icon icon="material-symbols:folder-open-outline-rounded" />
+            <div
+              v-for="category in blog.categories"
+              :key="category"
+              class="badge badge-outline badge-md lg:badge-sm"
+            >
+              {{ t(`labels.showcaseCategories.${category}`) }}
+            </div>
           </div>
-        </div>
-        <div class="mt-1 card-actions text-md lg:text-sm">
-          <div
-            v-for="tag in blog.tags"
-            :key="tag"
-            class="badge badge-outline badge-md lg:badge-sm"
-          >
-            {{ t(`labels.showcaseTags.${tag}`) }}
+          <div class="mt-2 card-actions text-md lg:text-sm">
+            <div
+              v-for="tag in blog.tags"
+              :key="tag"
+              class="badge badge-outline badge-md lg:badge-sm"
+            >
+              {{ t(`labels.showcaseTags.${tag}`) }}
+            </div>
           </div>
-        </div>
-        <div class="mt-2 card-actions text-md lg:text-sm">
-          <div class="ml-auto">
-            {{ dayjs(blog.date) }}
+          <div class="mt-2 card-actions text-md lg:text-sm">
+            <div class="ml-auto">
+              {{ dayjs(blog.lastUpdated).format('ll') }}
+            </div>
           </div>
         </div>
       </div>
