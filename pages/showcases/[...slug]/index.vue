@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
+import { Icon } from '@iconify/vue'
 import TableOfContent from '~/components/TableOfContent.vue'
 import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
 import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostDetail } from '~/types/post'
+import DownloadsDropdown from '~/components/showcases/detail/DownloadsDropdown.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -21,6 +22,7 @@ const { data: page } =
     await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug[0]}/${route.params.slug[1]}`).findOne, {
       server: true
     })
+console.log(page)
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
 // SEO
 useHead({
@@ -40,14 +42,35 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
         {{ page.title }}
       </h1>
       <div class="flex text-sm mb-2">
-        <div>
-          <span class="mr-1">
-            Posted:
-          </span>
-          <span>
-            {{ dayjs(page?.date).format('ll') }}
-          </span>
+        <div
+          v-if="page.github"
+          class="mr-4"
+        >
+          <a
+            class="link inline-flex items-center"
+            :href="page.github"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon
+              icon="mdi:github"
+              class="text-xl mr-1"
+            />
+            Github Link
+          </a>
         </div>
+        <DownloadsDropdown
+          v-if="page.downloads"
+          :downloads="page.downloads"
+        />
+      </div>
+      <div class="flex text-sm mb-2">
+        <span class="mr-1 capitalize">
+          {{ t('commons.labels.lastUpdated') }}:
+        </span>
+        <span>
+          {{ dayjs(page.lastUpdated).format('ll') }}
+        </span>
         <div class="ml-auto">
           {{ page.readingTime.text }}
         </div>

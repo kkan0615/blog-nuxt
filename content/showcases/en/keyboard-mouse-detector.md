@@ -4,7 +4,7 @@ description: Listen events like click, press from keyboard, mouse and wheel
 lastUpdated: 2022-11-12
 locale: en
 categories: [desktopApp]
-tags: [Vue, Electron]
+tags: [vue, electron]
 github: 'https://github.com/kkan0615/keyboard-mouse-detector'
 ---
 

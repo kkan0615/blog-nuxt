@@ -70,6 +70,8 @@
       "option": "옵션",
       "editOnGithub": "Github 에서 페이지 수정",
       "toc": "목차",
+      "lastUpdated": "마지막 수정일",
+      "downloads": "다운로드",
       "languages": {
         "en": "English",
         "ko": "한국어"

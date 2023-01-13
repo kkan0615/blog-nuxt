@@ -70,6 +70,8 @@
       "option": "option",
       "editOnGithub": "Edit on Github",
       "toc": "table of content",
+      "lastUpdated": "last updated",
+      "downloads": "downloads",
       "languages": {
         "en": "English",
         "ko": "한국어"
