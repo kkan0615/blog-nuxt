@@ -30,7 +30,8 @@ export default defineAppConfig({
     'next',
     'nuxt',
     'react',
-    'vue'
+    'vue',
+    'electron'
   ],
   profile: {
     image: 'https://avatars.githubusercontent.com/u/46660361?v=4',
