@@ -1,5 +1,5 @@
-# Blog - Nuxt
-Personal blog made by [Nuxt](https://nuxt.com/)
+# Nuxt 3 + Tailwind CSS Blog
+Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
 # Setup
@@ -46,42 +46,39 @@ NUXT_PUBLIC_BASE_URL
 
 # :file_folder: Folder structure
 ```text
-├─ assets/                      #
-├─ components/                  #
-├─ content/                     #
-├─ layouts/                     #
-├─ locales/                     #
+├─ assets/                      # Assets (Videos, fonts ...)
+├─ components/                  # Components
+├─ content/                     # Content ( .md, .mdx ...)
+├─ layouts/                     # Layouts
+├─ locales/                     # i18n locales files
 ├─ node_modules/                # node modules
-├─ pages/                       #
-├─ plugins/                     #
-├─ public/                      #
-│  ├─ logo/                     #
-│  ├─ assets/                   #
-├─ server/
-│  ├─ api/                      # Assets for renderer.
+├─ pages/                       # Pages
+├─ plugins/                     # Vue Plugins (Server, Client), Automatically adjust
+├─ public/                      # Assets (images ...)
+├─ server/                      # Server files
+│  ├─ api/                      # API, File name will be path
+│  ├─ routes/                   # Generate sitemaps
 ├─ .eslintrc.js                 # Eslint.
 ├─ .gitignore                   # gitignore.
 ├─ app.vue                      # App vue file
-├─ nuxt.config.ts               # config for nuxt.
-├─ package.json                 #
-├─ README.md                    #
-├─ tailwind.config.js           # Eslint.
-├─ tsconfig.json                # .
+├─ app.config.ts                # App config
+├─ nuxt.config.ts               # Nuxt 3 config
+├─ package.json                 # Pacakge json
+├─ README.md                    # README.md
+├─ tailwind.config.js           # Tailwind CSS Config.
+├─ tsconfig.json                # Typescript config
 ```
 
-# Supports
-
-## Sponsors
+# Contributors
+Thank you for helping me to make better blog
 
 # Sites
-[Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
-[deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+- [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
+- [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
 
 # TODO
 - Google 애널리틱스 계속 테스트 해보기
-  - Public 에서 그냥으로 가져오는걸로 변경했는데 되지는 계속 테스트
 - Theme changer
-- Side bar content 추가하기
 - Home
   - Content 추가하기
 - Order page
@@ -90,9 +87,6 @@ NUXT_PUBLIC_BASE_URL
   - Ko - 크몽
 - Move to Next 13 After Next 13 is stable
 ## Known Issues
-### Uncaught ReferenceError: defineAppConfig is not defined at defu.mjs:45:2
-- Plugin 이랑 같이 쓰면 에러남
-- .server.ts 로 변경했더니 현재는 괜찮음
 
 # ref
 - [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)

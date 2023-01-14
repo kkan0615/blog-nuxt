@@ -43,9 +43,6 @@ export default defineNuxtConfig({
     provider: 'netlify'
   },
   content: {
-    // highlight: {
-    //   theme: 'min-dark'
-    // },
     markdown: {
       anchorLinks: false,
       remarkPlugins: {
