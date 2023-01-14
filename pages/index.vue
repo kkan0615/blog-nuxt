@@ -27,7 +27,7 @@ const { t } = useI18n()
         </p>
 
         <NuxtLink
-          href="/contact"
+          :to="localePath('/contact')"
         >
           <button class="btn btn-primary">
             contact
