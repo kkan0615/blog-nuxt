@@ -14,12 +14,12 @@ const { t } = useI18n()
       <NuxtImg
         src="/assets/home/hero.jpg"
         alt="left-image"
-        class="max-w-sm rounded-full shadow-2xl"
-        height="300"
-        width="300"
+        class="max-w-sm rounded-full shadow-2xl animate__animated animate__fadeIn"
+        height="250"
+        width="250"
       />
       <div>
-        <h1 class="text-5xl font-bold">
+        <h1 class="text-5xl font-bold animate__animated animate__bounce">
           {{ t('views.home.title') }}
         </h1>
         <p class="py-6 text-xl">
@@ -30,7 +30,7 @@ const { t } = useI18n()
           :to="localePath('/contact')"
         >
           <button class="btn btn-primary">
-            contact
+            {{ t('menus.contact') }}
           </button>
         </NuxtLink>
       </div>

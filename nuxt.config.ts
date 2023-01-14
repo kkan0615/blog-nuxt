@@ -16,6 +16,12 @@ export default defineNuxtConfig({
     GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
     NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL
   },
+  css: [
+    'animate.css'
+  ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   i18n: {
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
