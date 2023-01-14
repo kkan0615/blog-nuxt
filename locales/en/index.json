@@ -28,9 +28,9 @@
       "tags": "Tags"
     },
     "categories": {
-      "example": "example",
-      "development": "development",
-      "web": "web"
+      "example": "Example",
+      "development": "Development",
+      "web": "Web"
     },
     "tags": {
       "node Js": "Node Js",

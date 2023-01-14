@@ -22,7 +22,7 @@ const categoryOptions = computed(() => {
       label: t(`labels.categories.${category}`),
       value: category,
     }
-  })
+  }).sort((a, b) => a.label.localeCompare(b.label))
 })
 
 const tagOptions = computed(() => {
@@ -31,7 +31,7 @@ const tagOptions = computed(() => {
       label: t(`labels.tags.${tag}`),
       value: tag,
     }
-  })
+  }).sort((a, b) => a.label.localeCompare(b.label))
 })
 
 const localeOptions = computed(() => {

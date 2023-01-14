@@ -30,8 +30,7 @@
     "categories": {
       "example": "예제",
       "development": "개발",
-      "web": "웹",
-      "desktopApp": "데스크탑 앱"
+      "web": "웹"
     },
     "tags": {
       "node Js": "Node Js",
