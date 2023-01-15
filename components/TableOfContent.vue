@@ -19,7 +19,6 @@ const toc = ref<TOC[]>([])
 
 const createToc = () => {
   const article = document.getElementById(props.articleId)
-  console.log('article', article)
   if (!article) {
     throw new Error('No article')
   }
@@ -42,7 +41,7 @@ const handleClick = (content: TOC) => {
 }
 
 onMounted(async () =>{
-  await nextTick(() => createToc())
+  createToc()
 })
 
 </script>

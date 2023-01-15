@@ -7,6 +7,13 @@ const { t } = useI18n()
 
 const layoutStore = useLayoutStore()
 
+definePageMeta({
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+  }
+})
+
 layoutStore.setHeaderTitle(t('menus.contact'))
 
 </script>

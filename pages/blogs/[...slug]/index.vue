@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
+import { useLayoutStore } from '~/stores/layout'
+import type { PostDetail } from '~/types/post'
 import TableOfContent from '~/components/TableOfContent.vue'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
-import { useLayoutStore } from '~/stores/layout'
-import type { PostDetail } from '~/types/post'
 import Donation from '~/components/advertisements/Donation.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
@@ -18,18 +18,18 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-// const { data: page } = await useAsyncData<PostDetail>('page-data', () =>
-//   queryContent<PostDetail>(`/blogs/${route.params.slug}`)
-//     .findOne()
-// )
-/* slug return array like [en, en-1010100] */
-const page = await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`).findOne()
+const { data: page } = await useAsyncData<PostDetail>('page-data', () =>
+  queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`)
+    .findOne()
+)
+/* slug parameter return array like [en, en-1010100] */
+// const page = await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`).findOne()
 
 // SEO
 useHead({
-  title: `${page.title} | ${t('seo.title')}`,
+  title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: page.description },
+    { name: 'description', content: page.value?.description },
   ],
 })
 
@@ -38,7 +38,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="flex-1 w-1">
+    <div class="flex-1 w-full sm:w-1">
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
@@ -99,11 +99,9 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
       />
     </div>
     <div class="w-52 sticky top-4 h-1 hidden lg:block">
-      <client-only>
-        <TableOfContent
-          article-id="article"
-        />
-      </client-only>
+      <TableOfContent
+        article-id="article"
+      />
     </div>
   </div>
 </template>
