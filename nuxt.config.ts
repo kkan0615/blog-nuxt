@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   css: [
     'animate.css'
   ],
-  app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
-  },
+  // app: {
+  //   pageTransition: { name: 'page', mode: 'out-in' }
+  // },
   i18n: {
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
