@@ -19,6 +19,7 @@ const toc = ref<TOC[]>([])
 
 const createToc = () => {
   const article = document.getElementById(props.articleId)
+  console.log('article', article)
   if (!article) {
     throw new Error('No article')
   }
@@ -40,8 +41,8 @@ const handleClick = (content: TOC) => {
   content.el.scrollIntoView({ behavior: 'smooth' })
 }
 
-onMounted(() =>{
-  createToc()
+onMounted(async () =>{
+  await nextTick(() => createToc())
 })
 
 </script>
