@@ -2,7 +2,9 @@
 import { Icon } from '@iconify/vue'
 import { onBeforeUnmount, onMounted } from '#imports'
 
-const visible = ref(true)
+const router = useRouter()
+
+const visible = ref(false)
 const contentDiv = ref<HTMLDivElement | null>(null)
 
 onMounted(() => {
@@ -33,10 +35,10 @@ const handleClick = () => {
 
 </script>
 <template>
-  <div class="fixed bottom-10 right-10">
+  <div class="fixed bottom-5 right-5 sm:bottom-12 sm:right-12">
     <button
       v-if="visible"
-      class="btn btn-circle"
+      class="btn btn-circle animate__animated animate__fadeIn btn-sm sm:btn-md"
       @click="handleClick"
     >
       <Icon icon="material-symbols:keyboard-arrow-up" />
