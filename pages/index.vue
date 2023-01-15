@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { definePageMeta, useI18n } from '#imports'
-
 definePageMeta({
   layout: 'home'
 })
@@ -25,7 +23,6 @@ const { t } = useI18n()
         <p class="py-6 text-xl">
           {{ t('views.home.description') }}
         </p>
-
         <NuxtLink
           :to="localePath('/contact')"
         >

@@ -22,7 +22,6 @@ const { data: page } =
     await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug[0]}/${route.params.slug[1]}`).findOne, {
       server: true
     })
-console.log(page)
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
 // SEO
 useHead({

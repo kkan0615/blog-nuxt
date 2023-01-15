@@ -38,10 +38,12 @@ const handleClick = () => {
   <div class="fixed bottom-5 right-5 sm:bottom-12 sm:right-12">
     <button
       v-if="visible"
-      class="btn btn-circle animate__animated animate__fadeIn btn-sm sm:btn-md"
+      class="btn btn-circle btn-outline animate__animated animate__fadeIn btn-sm sm:btn-md"
       @click="handleClick"
     >
-      <Icon icon="material-symbols:keyboard-arrow-up" />
+      <span class="text-md sm:text-xl">
+        <Icon icon="material-symbols:keyboard-arrow-up" />
+      </span>
     </button>
   </div>
 </template>

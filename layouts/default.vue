@@ -17,9 +17,7 @@ import BtnsScrollTop from '~/components/btns/ScrollTop'
       class="drawer-content relative min-h-screen flex flex-col"
     >
       <ClientOnly>
-        <BtnsScrollTop
-          class="fixed bottom-10 right-10"
-        />
+        <BtnsScrollTop />
       </ClientOnly>
       <!-- Page content here -->
       <Header />
