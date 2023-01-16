@@ -7,6 +7,7 @@ import BtnsScrollTop from '~/components/btns/ScrollTop'
 </script>
 <template>
   <div class="drawer drawer-mobile">
+    <CookiePopup />
     <input
       id="default-layout-drawer"
       type="checkbox"
