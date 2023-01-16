@@ -6,8 +6,9 @@
 </template>
 <script setup lang="ts">
 import './libs/dayjs'
-const { t } = useI18n()
 
+const { t } = useI18n()
+const themeCookie = useCookie('theme')
 // SEO
 useHead({
   title: t('seo.title'),
@@ -19,7 +20,7 @@ useHead({
     { name: 'robots', content: 'index, follow' }
   ],
   htmlAttrs: {
-    'data-theme': 'base-dark'
+    'data-theme': themeCookie.value || 'base-dark'
   }
 })
 // initial app setting

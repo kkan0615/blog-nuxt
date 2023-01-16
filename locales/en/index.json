@@ -22,6 +22,12 @@
     "github": "Github"
   },
   "labels": {
+    "theme": "theme",
+    "themes": {
+      "default": "default",
+      "light": "light",
+      "dark": "dark"
+    },
     "blogFilter": {
       "locales": "Locales",
       "categories": "Categories",

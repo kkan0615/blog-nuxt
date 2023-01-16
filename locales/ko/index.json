@@ -22,6 +22,12 @@
     "Github": "Github"
   },
   "labels": {
+    "theme": "테마",
+    "themes": {
+      "default": "기본",
+      "light": "라이트",
+      "dark": "다크"
+    },
     "blogFilter": {
       "locales": "언어",
       "categories": "카테고리",

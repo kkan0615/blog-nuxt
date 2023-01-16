@@ -2,6 +2,7 @@
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect'
 import { useLayoutStore } from '~/stores/layout'
+import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 
 const layoutStore = useLayoutStore()
 
@@ -29,6 +30,10 @@ const layoutStore = useLayoutStore()
     </div>
     <div
       class="ml-auto"
+    />
+    <ThemeSelect
+      class="hidden lg:block"
+      end
     />
     <LanguageSelect
       class="hidden lg:block"
