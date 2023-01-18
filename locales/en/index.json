@@ -81,8 +81,8 @@
     },
     "home": {
       "Lorem": "Lorem",
-      "title": "Requiem",
-      "description": "Hello, I am Full-stack developer."
+      "title": "Requiem Blog",
+      "description": "Welcome to Requiem's blog. This blog is made by Nuxt 3 with Daisy UI based Tailwind CSS \n You can contact with me by clicking bottom contact button"
     },
     "contact": {
       "profileCard": {

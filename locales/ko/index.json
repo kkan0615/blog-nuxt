@@ -76,13 +76,13 @@
   },
   "views": {
     "sidebar": {
-      "title": "Requiem",
+      "title": "Requiem 블로그",
       "description": "레퀴엠의 블로그에 오신걸 환영합니다."
     },
     "home": {
       "Lorem": "로렘",
       "title": "Requiem",
-      "description": "안녕하세요. 풀스택 개발자입니다."
+      "description": "Requiem 블로그에 오신걸 환영합니다. Tailwind CSS 기반 Daisy UI을 메인으로 Nuxt 3로 개발되어 있습니다. \n 아래 Contact 버튼을 눌러 저와 연락할 수 있습니다."
     },
     "contact": {
       "profileCard": {
