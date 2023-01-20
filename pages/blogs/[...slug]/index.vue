@@ -31,16 +31,13 @@ useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value?.description },
-    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
-      ? { name: 'og:image', content: page.value
-        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
-        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
-      : {},
-    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
-      ? { name: 'twitter:image', content: page.value
-        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
-        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
-      : {},
+    { name: 'date', content:  dayjs(page.value?.date).format('ll') },
+    { name: 'og:image', content: page.value?.image
+      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
+    { name: 'twitter:image', content: page.value
+      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
   ],
 })
 

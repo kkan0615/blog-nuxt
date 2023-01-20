@@ -18,27 +18,24 @@ const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
-
 const { data: page } =
     await useAsyncData('page-data', queryContent<PostDetail>(`/showcases/${route.params.slug[0]}/${route.params.slug[1]}`).findOne, {
       server: true
     })
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
+console.log(runtimeConfig)
 // SEO
 useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value?.description },
-    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
-      ? { name: 'og:image', content: page.value
-        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
-        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
-      : {},
-    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
-      ? { name: 'twitter:image', content: page.value
-        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
-        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
-      : {},
+    { name: 'date', content: dayjs(page.value?.lastUpdated).format('ll') },
+    { name: 'og:image', content: page.value?.image
+      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
+    { name: 'twitter:image', content: page.value
+      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
   ],
 })
 
