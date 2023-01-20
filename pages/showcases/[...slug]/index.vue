@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
 import { Icon } from '@iconify/vue'
+import { useLayoutStore } from '~/stores/layout'
+import { PostDetail } from '~/types/post'
 import TableOfContent from '~/components/TableOfContent.vue'
 import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
 import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
-import { useLayoutStore } from '~/stores/layout'
-import { PostDetail } from '~/types/post'
 import DownloadsDropdown from '~/components/showcases/detail/DownloadsDropdown.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
@@ -14,6 +14,7 @@ const DefaultNuxtImageAlt = 'NuxtImage'
 const DefaultNuxtImageHeight = 800
 const DefaultNuxtImageWidth = 500
 
+const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
@@ -28,6 +29,16 @@ useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value?.description },
+    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
+      ? { name: 'og:image', content: page.value
+        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
+        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
+      : {},
+    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
+      ? { name: 'twitter:image', content: page.value
+        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
+        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
+      : {},
   ],
 })
 

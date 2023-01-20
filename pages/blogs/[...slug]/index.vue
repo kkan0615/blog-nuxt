@@ -14,6 +14,7 @@ const DefaultNuxtImageAlt = 'NuxtImage'
 const DefaultNuxtImageHeight = 800
 const DefaultNuxtImageWidth = 500
 
+const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
@@ -30,6 +31,16 @@ useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value?.description },
+    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
+      ? { name: 'og:image', content: page.value
+        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
+        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
+      : {},
+    runtimeConfig.NUXT_PUBLIC_MODE === 'production'
+      ? { name: 'twitter:image', content: page.value
+        ? `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${page.value.image}`
+        : `${runtimeConfig.NUXT_PUBLIC_BASE_URL}/${DefaultNuxtImagePath}` }
+      : {},
   ],
 })
 
