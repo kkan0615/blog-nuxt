@@ -5,7 +5,7 @@ import Header from '~/layouts/home/Header.vue'
 <template>
   <div class="drawer">
     <NuxtImg
-      class="opacity-10 -z-10 fixed h-screen w-screen"
+      class="opacity-60 -z-10 fixed h-screen w-screen"
       src="/assets/home/background.jpg"
       alt="background"
       priority
@@ -18,9 +18,7 @@ import Header from '~/layouts/home/Header.vue'
     <div class="drawer-content h-screen flex flex-col">
       <!-- Page content here -->
       <Header />
-      <div
-        class="p-2 lg:p-4 flex-grow h-1"
-      >
+      <div class="p-4 flex-grow h-1">
         <slot />
       </div>
     </div>

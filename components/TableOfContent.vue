@@ -40,7 +40,7 @@ const handleClick = (content: TOC) => {
   content.el.scrollIntoView({ behavior: 'smooth' })
 }
 
-onMounted(() =>{
+onMounted(async () =>{
   createToc()
 })
 

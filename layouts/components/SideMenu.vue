@@ -3,6 +3,7 @@ import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import AnimatedOctocats from '~/components/icons/AnimatedOctocats.vue'
+import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
@@ -81,7 +82,11 @@ const route = useRoute()
       </ul>
     </div>
     <div class="mt-auto p-4">
-      <div class="text-center">
+      <div class="flex items-center justify-center">
+        <ThemeSelect
+          class="block lg:hidden"
+          top
+        />
         <LanguageSelect
           class="block lg:hidden"
           top

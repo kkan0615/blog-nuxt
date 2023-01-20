@@ -12,6 +12,13 @@ const route = useRoute()
 const { t, locale } = useI18n()
 const layoutStore = useLayoutStore()
 
+definePageMeta({
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+  }
+})
+
 // SEO
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,

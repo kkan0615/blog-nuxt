@@ -4,7 +4,6 @@ export default defineAppConfig({
     'example',
     'development',
     'web',
-    'desktopApp'
   ],
   blogTags: [
     'node Js',

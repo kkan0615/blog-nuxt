@@ -14,6 +14,18 @@ const { t } = useI18n()
       <div class="mt-2 flex text-3xl space-x-2">
         <div
           class="tooltip"
+          :data-tip="appConfig.profile.email"
+        >
+          <a
+            :href="`mailto:${appConfig.profile.email}`"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon="ic:outline-email" />
+          </a>
+        </div>
+        <div
+          class="tooltip"
           :data-tip="t('tooltips.linkedIn')"
         >
           <a

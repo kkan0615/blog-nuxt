@@ -30,7 +30,7 @@ const toggleOpen = () => {
         src="/assets/donation-64px.png"
         alt="Donation"
         width="24"
-        height="24&quot;"
+        height="24"
       />
       <span
         class="ml-2"
