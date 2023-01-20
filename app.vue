@@ -7,6 +7,7 @@
 <script setup lang="ts">
 import './libs/dayjs'
 
+const appConfig = useAppConfig()
 const { t } = useI18n()
 const themeCookie = useCookie('theme')
 // SEO
@@ -20,6 +21,7 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { name: 'target', content: 'all' },
     { name: 'rating', content: 'General' },
+    { name: 'og:image', content: appConfig.profile.image },
   ],
   htmlAttrs: {
     'data-theme': themeCookie.value || 'base-dark'
