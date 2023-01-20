@@ -17,7 +17,9 @@ useHead({
     { name: 'description', content: t('seo.description') },
     { name: 'author', content: 'Requiem' },
     { name: 'publisher', content: 'Requiem' },
-    { name: 'robots', content: 'index, follow' }
+    { name: 'robots', content: 'index, follow' },
+    { name: 'target', content: 'all' },
+    { name: 'rating', content: 'General' },
   ],
   htmlAttrs: {
     'data-theme': themeCookie.value || 'base-dark'
