@@ -23,7 +23,11 @@ const { data: page } =
       server: true
     })
 // const page = await queryContent(`/blogs/${route.params.slug}`).findOne()
-console.log(runtimeConfig)
+
+/* Error handling - 404 */
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
+}
 // SEO
 useHead({
   title: `${page.value?.title} | ${t('seo.title')}`,
