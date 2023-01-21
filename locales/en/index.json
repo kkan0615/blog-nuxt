@@ -46,7 +46,8 @@
       "javaScript": "JavaScript",
       "next": "Next",
       "nuxt": "Nuxt",
-      "MDX": "MDX"
+      "MDX": "MDX",
+      "HTML": "HTML"
     },
     "showcaseCategories": {
       "example": "example",

@@ -13,7 +13,8 @@ export default defineAppConfig({
     'javaScript',
     'next',
     'nuxt',
-    'MDX'
+    'MDX',
+    'HTML'
   ],
   showcaseCategories: [
     'example',

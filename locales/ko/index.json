@@ -46,7 +46,8 @@
       "javaScript": "자바스크립트",
       "next": "Next",
       "nuxt": "Nuxt",
-      "MDX": "MDX"
+      "MDX": "MDX",
+      "HTML": "HTML"
     },
     "showcaseCategories": {
       "example": "예제",
