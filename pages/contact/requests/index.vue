@@ -3,6 +3,7 @@ import { useAsyncData } from '#app'
 import PriceCard from '~/components/requests/PriceCard.vue'
 
 const appConfig = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 
 const { data: list, refresh } = await useFetch('/api/prices', {
@@ -17,6 +18,9 @@ useHead({
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
+  link: [
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/contact/requests` },
+  ]
 })
 
 </script>

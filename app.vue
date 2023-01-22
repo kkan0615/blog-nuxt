@@ -20,7 +20,6 @@ useHead({
     { name: 'publisher', content: 'Requiem' },
     { name: 'robots', content: 'index, follow' },
     { name: 'target', content: 'all' },
-    { name: 'rating', content: 'General' },
     { name: 'og:image', content: appConfig.profile.image },
     { name: 'language', content: locale },
     { name: 'keywords', content: 'blogs showcases contact website' },

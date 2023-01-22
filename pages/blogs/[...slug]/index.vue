@@ -45,6 +45,9 @@ useHead({
       : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
     { name: 'language', content: page.value.locale }
   ],
+  link: [
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/blogs/${route.params.slug[0]}/${route.params.slug[1]}` },
+  ]
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))

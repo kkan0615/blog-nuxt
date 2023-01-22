@@ -9,6 +9,7 @@ import { PostList } from '~/types/post'
 
 const router = useRouter()
 const route = useRoute()
+const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 const layoutStore = useLayoutStore()
 
@@ -25,6 +26,9 @@ useHead({
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
+  link: [
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/blogs` },
+  ]
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
