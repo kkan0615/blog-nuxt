@@ -22,11 +22,9 @@ export default defineNuxtConfig({
     NUXT_PUBLIC_MODE: process.env.NUXT_PUBLIC_MODE,
   },
   css: [
-    'animate.css'
+    'animate.css',
+    '@/styles/libs/animate.css'
   ],
-  // app: {
-  //   pageTransition: { name: 'page', mode: 'out-in' }
-  // },
   i18n: {
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
