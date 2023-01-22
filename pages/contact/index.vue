@@ -19,9 +19,6 @@ useHead({
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
-  link: [
-    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/contact` },
-  ]
 })
 layoutStore.setHeaderTitle(t('menus.contact'))
 

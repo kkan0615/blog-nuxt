@@ -24,7 +24,7 @@ useHead({
     { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
   ],
   link: [
-    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/showcases` },
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
   ]
 })
 
