@@ -93,7 +93,6 @@ const handleClickPagination = async (newPageNum: number) => {
         v-for="blog in data.list"
         :key="blog._path"
         :blog="blog"
-        class="card bg-base-300"
       />
       <!--      </ContentList>-->
     </div>

@@ -26,7 +26,8 @@
       "start": "시작",
       "accept": "동의",
       "back": "뒤로가기",
-      "backHome": "홈으로 돌아가기"
+      "backHome": "홈으로 돌아가기",
+      "more": "더보기"
     },
     "titles": {
       "version": "버전",

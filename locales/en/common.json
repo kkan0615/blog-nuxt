@@ -26,7 +26,8 @@
       "start": "start",
       "accept": "accept",
       "back": "back",
-      "backHome": "back home"
+      "backHome": "back home",
+      "more": "more"
     },
     "titles": {
       "version": "version",

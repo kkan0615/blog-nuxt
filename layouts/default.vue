@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import SideMenu from '~/layouts/components/SideMenu.vue'
 import Header from '~/layouts/default/Header.vue'
-import Footer from '~/layouts/default/Footer.vue'
+import Footer from '~/layouts/components/Footer.vue'
 import BtnsScrollTop from '~/components/btns/ScrollTop'
 
 </script>

@@ -7,9 +7,7 @@ const { t } = useI18n()
 
 </script>
 <template>
-  <header
-    class="navbar"
-  >
+  <header class="navbar absolute top-0">
     <label
       for="home-layout-drawer"
       class="btn btn-ghost btn-sm drawer-button block lg:hidden"

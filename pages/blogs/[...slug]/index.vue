@@ -19,7 +19,7 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-const { data: page, error } = await useAsyncData<PostDetail>('page-data', () =>
+const { data: page, error } = await useAsyncData('page-data', () =>
   queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`)
     .findOne()
 )
