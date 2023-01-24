@@ -8,7 +8,7 @@
 import './libs/dayjs'
 
 const appConfig = useAppConfig()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const themeCookie = useCookie('theme')
 // SEO
 useHead({
@@ -20,8 +20,9 @@ useHead({
     { name: 'publisher', content: 'Requiem' },
     { name: 'robots', content: 'index, follow' },
     { name: 'target', content: 'all' },
-    { name: 'rating', content: 'General' },
     { name: 'og:image', content: appConfig.profile.image },
+    { name: 'language', content: locale },
+    { name: 'keywords', content: 'blogs showcases contact website' },
   ],
   htmlAttrs: {
     'data-theme': themeCookie.value || 'base-dark'

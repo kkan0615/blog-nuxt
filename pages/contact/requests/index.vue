@@ -3,6 +3,7 @@ import { useAsyncData } from '#app'
 import PriceCard from '~/components/requests/PriceCard.vue'
 
 const appConfig = useAppConfig()
+const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 
 const { data: list, refresh } = await useFetch('/api/prices', {

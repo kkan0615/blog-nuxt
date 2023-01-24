@@ -13,9 +13,13 @@ const { t } = useI18n()
 
 interface Props {
   blog: PostList
+  dense?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  blog: () => { return {} as PostList },
+  dense: false,
+})
 
 const timeFromNow = computed(() => {
   const now = dayjs()
@@ -69,7 +73,9 @@ const isNew = computed(() => {
         <h2 class="card-title">
           {{ blog.title }}
         </h2>
-        <p>{{ blog.description }}</p>
+        <p v-if="!dense">
+          {{ blog.description }}
+        </p>
         <div class="mt-2 card-actions">
           <Icon icon="material-symbols:folder-open-outline-rounded" />
           <div
@@ -89,7 +95,10 @@ const isNew = computed(() => {
             {{ t(`labels.tags.${tag}`) }}
           </div>
         </div>
-        <div class="mt-2 card-actions text-md lg:text-sm">
+        <div
+          v-if="!dense"
+          class="mt-2 card-actions text-md lg:text-sm"
+        >
           <div>
             {{ blog.readingTime.text }}
           </div>

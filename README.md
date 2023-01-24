@@ -39,6 +39,9 @@ NUXT_PUBLIC_BASE_URL
 - [fast-glob]() - Find all files under specific directory
 - ~~[vue-gtag]()~~
 - [vue-gtag-next]()
+- [js-cookie]() - Control cookie
+- [animate.css]() - Animation list
+
 ## Content part
 - [highlight.js]() - Add highlight for code section
 - [rehype-highlight]() - Add highlight for code section (not working)
@@ -75,18 +78,6 @@ Thank you for helping me to make better blog
 # Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
-
-# TODO
-- Google 애널리틱스 계속 테스트 해보기
-- Theme changer
-- Home
-  - Content 추가하기
-- Order page
-- Advertisement 추가
-  - EN - fiverr
-  - Ko - 크몽
-- Move to Next 13 After Next 13 is stable
-## Known Issues
 
 # ref
 - [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)

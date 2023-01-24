@@ -24,7 +24,10 @@
       "copy": "copy",
       "copyURL": "copy URL",
       "start": "start",
-      "accept": "accept"
+      "accept": "accept",
+      "back": "back",
+      "backHome": "back home",
+      "more": "more"
     },
     "titles": {
       "version": "version",
@@ -59,7 +62,11 @@
       "questions": {
         "delete": "Would you like to delete?"
       },
-      "cookieAccept": "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media,\n        advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services."
+      "cookieAccept": "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media,\n        advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
+      "errors": {
+        "404": "Page Not Found. Please check the URL",
+        "500": "There is error to connect with server. Try again after some time later"
+      }
     },
     "placeholders": {
       "noData": "no data",

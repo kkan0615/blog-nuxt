@@ -46,7 +46,8 @@
       "javaScript": "JavaScript",
       "next": "Next",
       "nuxt": "Nuxt",
-      "MDX": "MDX"
+      "MDX": "MDX",
+      "HTML": "HTML"
     },
     "showcaseCategories": {
       "example": "example",
@@ -82,7 +83,17 @@
     "home": {
       "Lorem": "Lorem",
       "title": "Requiem Blog",
-      "description": "Welcome to Requiem's blog. This blog is made by Nuxt 3 with Daisy UI based Tailwind CSS \n You can contact with me by clicking bottom contact button"
+      "description": "Welcome to Requiem's blog. This blog is made by Nuxt 3 with Daisy UI based Tailwind CSS \n You can contact with me by clicking bottom contact button",
+      "sections": {
+        "blogs": {
+          "title": "blogs",
+          "description": "Recent blog list"
+        },
+        "showcases": {
+          "title": "showcases",
+          "description": "Recent showcase list"
+        }
+      }
     },
     "contact": {
       "profileCard": {

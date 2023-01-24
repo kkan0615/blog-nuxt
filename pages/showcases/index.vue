@@ -6,6 +6,7 @@ import ShowcaseCard from '~/components/showcases/list/ShowcaseCard.vue'
 import Navbar from '~/components/showcases/list/Navbar.vue'
 
 const route = useRoute()
+const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 const layoutStore = useLayoutStore()
 
@@ -22,6 +23,9 @@ useHead({
   meta: [
     { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
   ],
+  link: [
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
+  ]
 })
 
 layoutStore.setHeaderTitle(t('menus.showcases'))

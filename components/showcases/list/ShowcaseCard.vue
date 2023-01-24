@@ -11,10 +11,14 @@ const DefaultNuxtImageWidth = 500
 const { t } = useI18n()
 
 interface Props {
-  blog: any
+  blog: any,
+  dense?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  blog: () => { return {} as any },
+  dense: false,
+})
 
 </script>
 <template>
@@ -47,7 +51,9 @@ const props = defineProps<Props>()
         <h2 class="card-title ">
           {{ blog.title }}
         </h2>
-        <p>{{ blog.description }}</p>
+        <p v-if="!dense">
+          {{ blog.description }}
+        </p>
         <div class="">
           <div class="mt-2 card-actions">
             <Icon icon="material-symbols:folder-open-outline-rounded" />
