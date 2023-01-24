@@ -87,9 +87,7 @@ onBeforeUnmount(() => {
     >
       <h2 class="text-3xl font-bold capitalize">
         {{ t('views.home.sections.blogs.title') }}
-        <NuxtLink
-          :to="localePath('/blogs')"
-        >
+        <NuxtLink :to="localePath('/blogs')">
           <button
             class="btn btn-outline btn-primary btn-sm"
             type="button"
