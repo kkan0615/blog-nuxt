@@ -18,7 +18,7 @@ export default defineAppConfig({
   ],
   showcaseCategories: [
     'example',
-    'desktop',
+    'desktopApp',
     'web',
     'mobileApp',
   ],

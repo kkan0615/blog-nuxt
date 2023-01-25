@@ -4,7 +4,6 @@ import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
 
 export default defineNuxtConfig({
-  dev: process.env.NUXT_PUBLIC_MODE === 'development',
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',

@@ -2,16 +2,26 @@
   {
     "name": "Website without Database",
     "description": "Build your website without Database",
-    "startPrice": 121,
+    "startPrice": {
+      "locales": "en-US",
+      "currency": "USD",
+      "price": 100
+    },
     "extraPrices": [
       {
         "optional": false,
         "content": "Maintain Fee",
+        "locales": "en-US",
+        "currency": "USD",
+        "period": "month",
         "price": 20
       },
       {
         "optional": true,
         "content": "Custom domain",
+        "locales": "en-US",
+        "currency": "USD",
+        "period": "year",
         "price": 5
       }
     ],

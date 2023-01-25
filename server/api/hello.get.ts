@@ -1,8 +1,8 @@
 import { defineEventHandler } from 'h3'
-import fg from 'fast-glob'
 import dayjs from 'dayjs'
 
 export default defineEventHandler(async (event) => {
+  const storage = useStorage()
   const query = getQuery(event)
   const cookies = parseCookies(event)
 
@@ -11,6 +11,6 @@ export default defineEventHandler(async (event) => {
     query,
     cookies,
     cwd:  process.cwd(),
-    folders: fg.sync('./**/*.??')
+    keys: await storage.getKeys(),
   }
 })

@@ -1,56 +1,50 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-
-interface PriceCardData {
-  name: string
-  description: string
-  startPrice: number
-  extraPrices: {
-    optional: boolean
-    content: string
-    price: number
-  }[],
-  details: string[]
-  links?: {
-    'title': string
-    'link': string
-  }[]
-}
+import { PriceCard, PriceCardExtraPrices } from '~/types/PriceCard'
 
 interface Props {
-  readonly data: PriceCardData
+  readonly data: PriceCard
 }
 
 const props = defineProps<Props>()
 const { t } = useI18n()
 
+const pricesWithCurrency = computed(() => {
+  const formatter = new Intl.NumberFormat(props.data.startPrice.locales, {
+    style: 'currency',
+    currency: props.data.startPrice.currency,
+  })
+
+  return formatter.format(props.data.startPrice.price)
+})
+
+const getExtraPriceWithCurrency = ({ price, currency, locales }: PriceCardExtraPrices) => {
+  const formatter = new Intl.NumberFormat(locales, {
+    style: 'currency',
+    currency: currency,
+  })
+
+  return formatter.format(price)
+}
+
 </script>
 <template>
-  <div
-    class="card bg-base-200"
-  >
-    <div
-      class="card-body"
-    >
-      <h1
-        class="card-title"
-      >
+  <div class="card bg-base-200">
+    <div class="card-body">
+      <h1 class="card-title">
         {{ data.name }}
       </h1>
-      <p
-        class="opacity-80"
-      >
+      <p class="opacity-80">
         {{ data.description }}
       </p>
-      <p
-        class="mt-4"
-      >
-        <span
-          class="text-3xl font-bold text-primary"
-        >
-          {{ data.startPrice }}
+      <div class="mt-2">
+        <div class="capitalize">
+          start
+        </div>
+        <span class="text-3xl font-bold text-primary">
+          {{ pricesWithCurrency }}
         </span>
-      </p>
+      </div>
       <ul>
         <li
           v-for="extraPrice in data.extraPrices"
@@ -65,15 +59,14 @@ const { t } = useI18n()
           <span>
             {{ extraPrice.content }}
           </span>
-          <span
-            class="ml-2"
-          >
-            {{ extraPrice.price }}
+          <span class="ml-2">
+            {{ getExtraPriceWithCurrency(extraPrice) }}
           </span>
           <span
+            v-if="extraPrice.period"
             class="text-sm"
           >
-            /Monthly
+            / {{ t(`labels.periods.${extraPrice.period}`) }}
           </span>
         </li>
       </ul>
@@ -86,16 +79,12 @@ const { t } = useI18n()
           class="flex items-center"
         >
           <Icon icon="ph:circle-wavy-check" />
-          <span
-            class="ml-2"
-          >
+          <span class="ml-2">
             {{ detail }}
           </span>
         </li>
       </ul>
-      <div
-        class="flex gap-2 mt-2"
-      >
+      <div class="flex gap-2 mt-2">
         <a
           v-for="link in data.links"
           :key="link.link"

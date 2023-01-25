@@ -19,10 +19,14 @@
   "tooltips": {
     "linkedIn": "LinkedIn",
     "indeed": "indeed",
-    "Github": "Github"
+    "github": "Github"
   },
   "labels": {
     "theme": "테마",
+    "periods": {
+      "month": "달",
+      "year": "년"
+    },
     "themes": {
       "default": "기본",
       "light": "라이트",
@@ -51,7 +55,7 @@
     },
     "showcaseCategories": {
       "example": "예제",
-      "desktop": "데스크탑 앱",
+      "desktopApp": "데스크탑 앱",
       "web": "웹",
       "mobileApp":  "모바일 앱"
     },
@@ -100,7 +104,7 @@
         "title": "프로필"
       },
       "requestCard": {
-        "title": "request software",
+        "title": "프로그램 요청",
         "description": "나만의 앱 혹은 웹사이트가 만들고 싶으시면 아래 버튼을 눌러 현재 판매중인 서비스를 확인해보세요!",
         "requestBtn": "요청 하러 가기"
       }

@@ -23,6 +23,10 @@
   },
   "labels": {
     "theme": "theme",
+    "periods": {
+      "month": "month",
+      "year": "year"
+    },
     "themes": {
       "default": "default",
       "light": "light",
@@ -51,9 +55,9 @@
     },
     "showcaseCategories": {
       "example": "example",
-      "desktop": "desktop",
+      "desktopApp": "desktop app",
       "web": "web",
-      "desktopApp":  "desktop app"
+      "mobileApp":  "Mobile"
     },
     "showcaseTags": {
       "node Js": "Node Js",

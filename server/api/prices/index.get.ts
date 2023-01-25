@@ -1,15 +1,19 @@
-import { defineEventHandler, getQuery } from 'h3'
-import fsp from 'fs/promises'
+import { defineEventHandler } from 'h3'
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event)
-  const locale = query.locale || 'en'
+  const storage = useStorage()
+  const cookies = parseCookies(event)
+  // If there is cookie set to 'en'
+  if (!cookies.i18n_redirected) cookies.i18n_redirected = 'en'
 
   // Get json file by locale
-  let files = await fsp.readFile(`./data/prices/${locale}.json`)
-  // If no data, bring "en"
-  if (!files && locale !== 'en') {
-    files = await fsp.readFile('./data/prices/en.json')
-  }
-  return files
+  let filePaths: string[] = await storage.getKeys('assets:public:data:prices')
+  // Found filepath by current lang
+  let foundFilePath = filePaths.find(filePath => filePath.includes(cookies.i18n_redirected))
+  // If no file, return english
+  if (!foundFilePath) foundFilePath = 'assets:public:data:prices:en.json'
+
+  const found = await storage.getItem(foundFilePath.replaceAll(':', '/'))
+
+  return found
 })

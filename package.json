@@ -17,7 +17,6 @@
     "animate.css": "^4.1.1",
     "daisyui": "^2.47.0",
     "dayjs": "^1.11.7",
-    "fast-glob": "^3.2.12",
     "highlight.js": "^11.7.0",
     "js-cookie": "^3.0.1",
     "rehype-highlight": "^6.0.0",
@@ -39,7 +38,8 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
-    "nuxt": "3.0.0",
+    "nuxt": "3.1.0",
+    "postcss-custom-properties": "^13.1.0",
     "sass": "^1.57.1",
     "sitemap": "^7.1.1",
     "typescript": "*"

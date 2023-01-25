@@ -23,9 +23,9 @@ yarn preview
 
 # .env
 ```text
-NUXT_PUBLIC_MODE
-NUXT_PUBLIC_GOOGLE_ANALYTICS_ID
-NUXT_PUBLIC_BASE_URL
+NUXT_PUBLIC_MODE="MODE"
+NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GA"
+NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 ```
 
 # Packages
@@ -41,6 +41,7 @@ NUXT_PUBLIC_BASE_URL
 - [vue-gtag-next]()
 - [js-cookie]() - Control cookie
 - [animate.css]() - Animation list
+- [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
 
 ## Content part
 - [highlight.js]() - Add highlight for code section
@@ -63,12 +64,13 @@ NUXT_PUBLIC_BASE_URL
 │  ├─ routes/                   # Generate sitemaps
 ├─ .eslintrc.js                 # Eslint.
 ├─ .gitignore                   # gitignore.
+├─ nitro.config.ts              # Nitro build config.
 ├─ app.vue                      # App vue file
 ├─ app.config.ts                # App config
 ├─ nuxt.config.ts               # Nuxt 3 config
-├─ package.json                 # Pacakge json
+├─ package.json                 # Package.json
 ├─ README.md                    # README.md
-├─ tailwind.config.js           # Tailwind CSS Config.
+├─ tailwind.config.js           # Tailwind CSS config.
 ├─ tsconfig.json                # Typescript config
 ```
 
@@ -78,6 +80,7 @@ Thank you for helping me to make better blog
 # Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
+- [Github - Nuxt](https://github.com/nuxt/nuxt)
 
 # ref
 - [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)
