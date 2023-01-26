@@ -10,7 +10,6 @@ const emit = defineEmits<{
   (e: 'search',): void
 }>()
 
-
 const search = ref(route.query.search)
 const locales = ref<string[]>(((route.query.locales || locale.value) as string).split(',').filter((el) => !!el))
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
@@ -58,16 +57,10 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <nav
-    class="mb-4"
-  >
-    <form
-      @submit.prevent="handleSubmit"
-    >
-      <div
-        class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4"
-      >
-        <div class="hidden lg:flex form-control w-full">
+  <nav class="mb-4">
+    <form @submit.prevent="handleSubmit">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
+        <div class="form-control w-full">
           <label class="label">
             <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
           </label>

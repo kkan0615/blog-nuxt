@@ -78,9 +78,7 @@ const handleClickPagination = async (newPageNum: number) => {
 
 <template>
   <div class="max-w-7xl mx-auto">
-    <Navbar
-      @search="refresh"
-    />
+    <Navbar @search="refresh" />
     <div
       v-if="data.list && data.list.length > 0"
       class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
