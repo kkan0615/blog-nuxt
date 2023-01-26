@@ -11,6 +11,7 @@ import './libs/dayjs'
 const appConfig = useAppConfig()
 const { t, locale } = useI18n()
 const themeCookie = useCookie('theme')
+
 const router = useRouter()
 // SEO
 useHead({
@@ -26,9 +27,9 @@ useHead({
     { name: 'language', content: locale },
     { name: 'keywords', content: 'blogs showcases contact website' },
   ],
-  htmlAttrs: {
-    'data-theme': themeCookie.value || 'base-dark'
-  }
+  // htmlAttrs: {
+  // 'data-theme': themeCookie.value || 'base-dark'
+  // }
 })
 // GA-Tracker
 trackRouter(router)
