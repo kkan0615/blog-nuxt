@@ -9,7 +9,6 @@ const { t, locale } = useI18n()
 const { data: list, pending } = await useFetch('/api/prices', {
   headers: useRequestHeaders(['cookie']) as any, // handle Type error
 })
-console.log(list.value)
 // SEO
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,

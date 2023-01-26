@@ -28,7 +28,6 @@ useHead({
     'data-theme': themeCookie.value || 'base-dark'
   }
 })
-console.log('run?')
 // initial app setting
 </script>
 <style>
