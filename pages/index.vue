@@ -33,7 +33,6 @@ onMounted(() => {
 
   observer.value = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      console.log('entry', entry.isIntersecting)
       const intersecting = entry.isIntersecting
       if (intersecting) {
         entry.target.classList.add('animate__fadeInDown')

@@ -6,12 +6,9 @@ const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 
-const { data: list, refresh } = await useFetch('/api/prices', {
-  query: {
-    locale,
-  }
+const { data: list, pending } = await useFetch('/api/prices', {
+  headers: useRequestHeaders(['cookie']) as any, // handle Type error
 })
-
 // SEO
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,
@@ -38,7 +35,10 @@ useHead({
         </div>
       </div>
     </div>
-    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-4">
+    <div
+      v-if="!pending"
+      class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2.5 lg:gap-4"
+    >
       <PriceCard
         v-for="(data, index) in list"
         :key="index"

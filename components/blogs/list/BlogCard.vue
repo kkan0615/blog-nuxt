@@ -76,7 +76,10 @@ const isNew = computed(() => {
         <p v-if="!dense">
           {{ blog.description }}
         </p>
-        <div class="mt-2 card-actions">
+        <div
+          v-if="blog.categories.length"
+          class="mt-2 card-actions"
+        >
           <Icon icon="material-symbols:folder-open-outline-rounded" />
           <div
             v-for="category in blog.categories"
@@ -86,7 +89,10 @@ const isNew = computed(() => {
             {{ t(`labels.categories.${category}`) }}
           </div>
         </div>
-        <div class="mt-1 card-actions text-md lg:text-sm">
+        <div
+          v-if="blog.tags.length"
+          class="mt-1 card-actions text-md lg:text-sm"
+        >
           <div
             v-for="tag in blog.tags"
             :key="tag"
@@ -99,9 +105,7 @@ const isNew = computed(() => {
           v-if="!dense"
           class="mt-2 card-actions text-md lg:text-sm"
         >
-          <div>
-            {{ blog.readingTime.text }}
-          </div>
+          <div>{{ blog.readingTime.text }}</div>
           <div class="ml-auto">
             {{ timeFromNow }}
           </div>

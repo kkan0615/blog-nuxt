@@ -48,12 +48,8 @@ const { data: list, refresh } = await useAsyncData('showcases', () =>
 )
 </script>
 <template>
-  <div
-    class="max-w-7xl mx-auto"
-  >
-    <Navbar
-      @search="refresh"
-    />
+  <div class="max-w-7xl mx-auto">
+    <Navbar @search="refresh" />
     <div
       v-if="list && list.length > 0"
       class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"

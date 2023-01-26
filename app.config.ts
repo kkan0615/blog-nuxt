@@ -8,17 +8,19 @@ export default defineAppConfig({
   blogTags: [
     'node Js',
     'get Started',
-    'typescript',
-    'gatsby',
     'javaScript',
+    'typescript',
+    'react',
+    'vue',
     'next',
     'nuxt',
     'MDX',
-    'HTML'
+    'HTML',
+    'gatsby',
   ],
   showcaseCategories: [
     'example',
-    'desktop',
+    'desktopApp',
     'web',
     'mobileApp',
   ],

@@ -24,7 +24,7 @@ layoutStore.setHeaderTitle(t('menus.contact'))
 
 </script>
 <template>
-  <div class="max-w-4xl">
+  <div class="max-w-7xl mx-auto">
     <ProfileCard />
     <RequestCard />
   </div>

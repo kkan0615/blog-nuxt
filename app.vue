@@ -5,11 +5,13 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
+import { trackRouter } from 'vue-gtag-next'
 import './libs/dayjs'
 
 const appConfig = useAppConfig()
 const { t, locale } = useI18n()
-const themeCookie = useCookie('theme')
+
+const router = useRouter()
 // SEO
 useHead({
   title: t('seo.title'),
@@ -24,10 +26,10 @@ useHead({
     { name: 'language', content: locale },
     { name: 'keywords', content: 'blogs showcases contact website' },
   ],
-  htmlAttrs: {
-    'data-theme': themeCookie.value || 'base-dark'
-  }
 })
+// GA-Tracker
+trackRouter(router)
+
 // initial app setting
 </script>
 <style>

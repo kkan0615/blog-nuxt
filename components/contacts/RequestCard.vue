@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
-
-const appConfig = useAppConfig()
 const { t } = useI18n()
 
 </script>
@@ -14,11 +11,9 @@ const { t } = useI18n()
       <p>
         {{ t('views.contact.requestCard.description') }}
       </p>
-      <div
-        class="card-actions"
-      >
+      <div class="card-actions">
         <NuxtLink
-          href="/contact/requests"
+          :to="localePath('/contact/requests')"
           class="btn btn-sm btn-primary"
         >
           {{ t('views.contact.requestCard.requestBtn') }}

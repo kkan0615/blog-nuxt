@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import Cookies from 'js-cookie'
 
 interface Props {
   top?: boolean
@@ -14,13 +13,12 @@ const { t } = useI18n()
 
 const currTheme = ref(themeCookie.value || '')
 
-const handleClick = (newTheme?: string) => {
+const handleClick = async (newTheme?: string) => {
   if (!newTheme) {
-    Cookies.remove('theme')
-    themeCookie.v
+    themeCookie.value = null
     document.documentElement.setAttribute('data-theme', 'base-dark')
   } else {
-    Cookies.set('theme', newTheme)
+    themeCookie.value = newTheme
     document.documentElement.setAttribute('data-theme', newTheme)
   }
 

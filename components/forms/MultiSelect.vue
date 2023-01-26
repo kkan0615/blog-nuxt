@@ -11,7 +11,6 @@ const emit = defineEmits<{
   (e: 'update:modelValue', newValues: any[]): void
 }>()
 
-
 const displayValues = computed(() => {
   return props.options.filter((option) => {
     return props.modelValue.includes(option.value)
@@ -19,9 +18,11 @@ const displayValues = computed(() => {
 })
 
 const handleChange = (option: { label: string, value: any }) => {
+  // Uncheck
   if (props.modelValue.includes(option.value)) {
     emit('update:modelValue', props.modelValue.filter(value => value !== option.value))
   } else {
+  // Check
     emit('update:modelValue', [ ...props.modelValue, option.value ])
   }
 }
@@ -45,7 +46,7 @@ const handleChange = (option: { label: string, value: any }) => {
         :key="option.value"
       >
         <div class="form-control items-start p-0">
-          <label class="label cursor-pointer space-x-2">
+          <label class="label cursor-pointer space-x-2 w-full justify-start">
             <input
               type="checkbox"
               :checked="modelValue.includes(option.value)"

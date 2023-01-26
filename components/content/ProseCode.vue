@@ -21,7 +21,7 @@ const handleCopy = () => {
   copy(props.code)
 }
 
-onMounted(() => {
+onMounted(async () => {
   hljs.highlightAll()
   loading.value = false
 })
@@ -34,12 +34,8 @@ onMounted(() => {
     class="max-w-full"
   >
     <div class="code-container max-w-full overflow-x-auto">
-      <div
-        class="flex items-center p-1 pl-3"
-      >
-        <div
-          class="mr-auto capitalize text-sm"
-        >
+      <div class="flex items-center p-1 pl-3">
+        <div class="mr-auto uppercase text-sm">
           {{ language }}
         </div>
         <div
@@ -55,9 +51,7 @@ onMounted(() => {
               v-if="copied"
               class="text-lg"
             >
-              <Icon
-                icon="material-symbols:check-small-rounded"
-              />
+              <Icon icon="material-symbols:check-small-rounded" />
             </span>
             <span
               v-else
@@ -68,9 +62,7 @@ onMounted(() => {
           </button>
         </div>
       </div>
-      <div
-        class="whitespace-pre-wrap"
-      >
+      <div class="whitespace-pre-wrap">
         <slot />
       </div>
     </div>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MultiSelect from '~/components/forms/MultiSelect.vue'
+import { LocaleCodeList } from '~/types/locale'
 
 const route = useRoute()
 const router = useRouter()
@@ -10,37 +11,30 @@ const emit = defineEmits<{
   (e: 'search',): void
 }>()
 
-
 const search = ref(route.query.search)
 const locales = ref<string[]>(((route.query.locales || locale.value) as string).split(',').filter((el) => !!el))
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
 const tags = ref<string[]>(((route.query.tags || '') as string).split(',').filter((el) => !!el))
 
-const categoryOptions = computed(() => {
-  return appConfig.showcaseCategories.map(category => {
-    return {
-      label: t(`labels.showcaseCategories.${category}`),
-      value: category,
-    }
-  }).sort((a, b) => a.label.localeCompare(b.label))
-})
+const categoryOptions = appConfig.showcaseCategories.map(category => {
+  return {
+    label: t(`labels.showcaseCategories.${category}`),
+    value: category,
+  }
+}).sort((a, b) => a.label.localeCompare(b.label))
 
-const tagOptions = computed(() => {
-  return appConfig.showcaseTags.map(tag => {
-    return {
-      label: t(`labels.showcaseTags.${tag}`),
-      value: tag,
-    }
-  }).sort((a, b) => a.label.localeCompare(b.label))
-})
+const tagOptions = appConfig.showcaseTags.map(tag => {
+  return {
+    label: t(`labels.showcaseTags.${tag}`),
+    value: tag,
+  }
+}).sort((a, b) => a.label.localeCompare(b.label))
 
-const localeOptions = computed(() => {
-  return [ 'en', 'ko' ].map(lang => {
-    return {
-      label: t(`commons.labels.languages.${lang}`),
-      value: lang,
-    }
-  })
+const localeOptions = LocaleCodeList.map(lang => {
+  return {
+    label: t(`commons.labels.languages.${lang}`),
+    value: lang,
+  }
 })
 
 const handleSubmit = async () => {
@@ -58,16 +52,10 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <nav
-    class="mb-4"
-  >
-    <form
-      @submit.prevent="handleSubmit"
-    >
-      <div
-        class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4"
-      >
-        <div class="hidden lg:flex form-control w-full">
+  <nav class="mb-4">
+    <form @submit.prevent="handleSubmit">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
+        <div class="form-control w-full">
           <label class="label">
             <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
           </label>
@@ -106,9 +94,7 @@ const handleSubmit = async () => {
           >
         </div>
       </div>
-      <div
-        class="mt-4"
-      >
+      <div class="mt-4">
         <button
           class="btn-sm btn-primary rounded-btn"
           type="submit"
