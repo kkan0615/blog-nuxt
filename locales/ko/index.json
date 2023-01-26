@@ -45,15 +45,15 @@
     "tags": {
       "node Js": "Node Js",
       "get Started": "시작하기",
-      "typescript": "타입스크립트",
-      "gatsby": "Gatsby",
       "javaScript": "자바스크립트",
+      "typescript": "타입스크립트",
       "react": "React",
       "vue": "Vue",
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML"
+      "HTML": "HTML",
+      "gatsby": "Gatsby"
     },
     "showcaseCategories": {
       "example": "예제",

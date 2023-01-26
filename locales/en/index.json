@@ -45,15 +45,15 @@
     "tags": {
       "node Js": "Node Js",
       "get Started": "Get Started",
-      "typescript": "Typescript",
-      "gatsby": "Gatsby",
       "javaScript": "JavaScript",
+      "typescript": "Typescript",
       "react": "React",
       "vue": "Vue",
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML"
+      "HTML": "HTML",
+      "gatsby": "Gatsby"
     },
     "showcaseCategories": {
       "example": "example",

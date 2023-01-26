@@ -10,13 +10,13 @@ export default defineAppConfig({
     'get Started',
     'javaScript',
     'typescript',
-    'gatsby',
     'react',
     'vue',
     'next',
     'nuxt',
     'MDX',
-    'HTML'
+    'HTML',
+    'gatsby',
   ],
   showcaseCategories: [
     'example',

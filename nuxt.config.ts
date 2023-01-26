@@ -2,6 +2,7 @@
 
 import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
+import { DefaultLocale } from './types/locale'
 
 export default defineNuxtConfig({
   modules: [
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
     '@/styles/libs/animate.css'
   ],
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
     locales: [
@@ -40,7 +41,7 @@ export default defineNuxtConfig({
     ],
     vueI18n: {
       legacy: false,
-      fallbackLocale: 'en',
+      fallbackLocale: DefaultLocale,
       messages: {
         en: enMessage,
         ko: koMessage,
