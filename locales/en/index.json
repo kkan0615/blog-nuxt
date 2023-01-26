@@ -48,6 +48,8 @@
       "typescript": "Typescript",
       "gatsby": "Gatsby",
       "javaScript": "JavaScript",
+      "react": "React",
+      "vue": "Vue",
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",

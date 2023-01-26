@@ -8,9 +8,11 @@ export default defineAppConfig({
   blogTags: [
     'node Js',
     'get Started',
+    'javaScript',
     'typescript',
     'gatsby',
-    'javaScript',
+    'react',
+    'vue',
     'next',
     'nuxt',
     'MDX',

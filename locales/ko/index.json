@@ -48,6 +48,8 @@
       "typescript": "타입스크립트",
       "gatsby": "Gatsby",
       "javaScript": "자바스크립트",
+      "react": "React",
+      "vue": "Vue",
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",

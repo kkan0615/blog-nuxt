@@ -35,7 +35,7 @@ const handleClick = () => {
 
 </script>
 <template>
-  <div class="fixed bottom-5 right-5 sm:bottom-12 sm:right-12">
+  <div class="fixed bottom-5 right-5 sm:bottom-12 sm:right-12 z-10">
     <button
       v-if="visible"
       class="btn btn-circle btn-outline animate__animated animate__fadeIn btn-sm sm:btn-md"
