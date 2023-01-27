@@ -19,8 +19,9 @@ const route = useRoute()
 const { t } = useI18n()
 const layoutStore = useLayoutStore()
 
-const { data: page, error } = await useAsyncData('page-data', () =>
-  queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`)
+/* slug parameter return array like [en, en-1010100] */
+const { data: page, error } = await useAsyncData<PostDetail>('page-data', async () =>
+  await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`)
     .findOne()
 )
 /* slug parameter return array like [en, en-1010100] */
@@ -29,10 +30,10 @@ const { data: page, error } = await useAsyncData('page-data', () =>
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
-console.log(page)
+
 // SEO
 useHead({
-  title: `${page.value?.title} | ${t('seo.title')}`,
+  title: `${page.value.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value.description },
     { name: 'date', content:  dayjs(page.value.date).format('ll') },

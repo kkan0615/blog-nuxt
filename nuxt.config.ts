@@ -3,7 +3,7 @@
 import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
 import { DefaultLocale } from './types/locale'
-
+import rehypeHighlight from 'rehype-highlight'
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   },
   css: [
     'animate.css',
-    '@/styles/libs/animate.css'
+    '~/styles/libs/animate.css',
+    '~/styles/libs/tokyo-night-dark.min.css',
   ],
   i18n: {
     defaultLocale: DefaultLocale,
@@ -58,7 +59,7 @@ export default defineNuxtConfig({
         'remark-reading-time': {},
       },
       rehypePlugins: {
-        'rehype-highlight': {}
+        'rehype-highlight': rehypeHighlight,
       }
     },
   },

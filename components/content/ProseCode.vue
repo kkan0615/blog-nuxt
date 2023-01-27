@@ -15,24 +15,18 @@ const props = defineProps<Props>()
 const { t } = useI18n()
 const { copy, copied, text } = useClipboard()
 
-const loading = ref(true)
-
 const handleCopy = () => {
   copy(props.code)
 }
 
-onMounted(async () => {
+onMounted(() => {
   hljs.highlightAll()
-  loading.value = false
 })
 
 </script>
 
 <template>
-  <div
-    v-show="!loading"
-    class="max-w-full"
-  >
+  <div class="max-w-full">
     <div class="code-container max-w-full overflow-x-auto">
       <div class="flex items-center p-1 pl-3">
         <div class="mr-auto uppercase text-sm">
@@ -62,21 +56,14 @@ onMounted(async () => {
           </button>
         </div>
       </div>
-      <div class="whitespace-pre-wrap">
-        <slot />
-      </div>
+      <!--      <div class="whitespace-pre-wrap">-->
+      <slot />
+      <!--      </div>-->
     </div>
-  </div>
-  <div
-    v-show="loading"
-    class="text-center"
-  >
-    Loading...
   </div>
 </template>
 
 <style lang="scss">
-@import "tokyo-night-dark.min.css";
 .code-container {
   background: #1a1b26;
 
