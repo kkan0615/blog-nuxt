@@ -51,6 +51,7 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [remark-reading-time]() - Add reading time
 
 # :file_folder: Folder structure
+See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
 ```text
 ├─ assets/                      # Assets (Videos, fonts ...)
 ├─ components/                  # Components
