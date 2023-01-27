@@ -1,4 +1,4 @@
-# Nuxt 3 + Tailwind CSS Blog
+# Nuxt 3 + Tailwind CSS + DaisyUI Personal Website
 Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
