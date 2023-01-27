@@ -3,7 +3,7 @@
 import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
 import { DefaultLocale } from './types/locale'
-import rehypeHighlight from 'rehype-highlight'
+// import rehypeHighlight from 'rehype-highlight'
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -59,7 +59,7 @@ export default defineNuxtConfig({
         'remark-reading-time': {},
       },
       rehypePlugins: {
-        'rehype-highlight': rehypeHighlight,
+        // 'rehype-highlight': rehypeHighlight,
       }
     },
   },
