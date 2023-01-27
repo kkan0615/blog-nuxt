@@ -48,7 +48,7 @@ const { t } = useI18n()
           showcases
         </MenuItem>
         <MenuItem
-          to="/"
+          to="/contact"
         >
           contact
         </MenuItem>

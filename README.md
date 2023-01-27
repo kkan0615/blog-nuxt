@@ -33,12 +33,14 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [daisyui](https://daisyui.com/) - Tailwind based UI Framework
 - [theme-change](https://github.com/saadeghi/theme-change) - Change theme with daisyui
 - [pinia](https://nuxt.com/modules/pinia) - Client side State management
-- [@nuxtjs/i18n]() - Nuxt i18n
-- [@vueuse/nuxt]() - vueuse nuxt version
+- [@nuxtjs/i18n]() - vueI18n for Nuxt 3
+- [@vueuse/nuxt]() - vueuse for Nuxt 3
+- [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind setting for Nuxt 3
+- [@pinia/nuxt]() - Pinia for Nuxt 3
 - [dayjs]() 
 - [fast-glob]() - Find all files under specific directory
-- ~~[vue-gtag]()~~
-- [vue-gtag-next]()
+- [vue-gtag]()
+- ~~[vue-gtag-next]()~~
 - [js-cookie]() - Control cookie
 - [animate.css]() - Animation list
 - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
