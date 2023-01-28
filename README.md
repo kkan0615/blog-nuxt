@@ -84,6 +84,3 @@ Thank you for helping me to make better blog
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
 - [Github - Nuxt](https://github.com/nuxt/nuxt)
-
-# ref
-- [harlan-zw/harlanzw.com](https://github.com/harlan-zw/harlanzw.com)
