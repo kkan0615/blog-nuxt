@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import MultiSelect from '~/components/forms/MultiSelect.vue'
 import { LocaleCodeList } from '~/types/locale'
+import MultiSelect from '~/components/forms/MultiSelect.vue'
 
 const route = useRoute()
 const router = useRouter()
