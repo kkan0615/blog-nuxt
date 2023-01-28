@@ -13,6 +13,8 @@ const { t, locale } = useI18n()
 useHead({
   title: t('seo.title'),
   meta: [
+    // Google search console
+    { name: 'google-site-verification', content: 'duPDxBWhVaaRC3sGCeasbfDI5vAc4yWZ785rilMrgPs' },
     { name: 'application-name', content: t('seo.applicationName') },
     { name: 'description', content: t('seo.description') },
     { name: 'author', content: 'Requiem' },
@@ -24,8 +26,6 @@ useHead({
     { name: 'keywords', content: 'blogs showcases contact website' },
   ],
 })
-
-
 // initial app setting
 </script>
 <style>
