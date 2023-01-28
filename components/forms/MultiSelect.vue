@@ -37,26 +37,29 @@ const handleChange = (option: { label: string, value: any }) => {
       :placeholder="placeholder"
       class="input input-bordered input-sm w-full"
     >
-    <ul
+    <div
       :tabIndex="0"
-      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-56 max-h-64 overflow-y-auto"
     >
-      <li
-        v-for="option in options"
-        :key="option.value"
-      >
-        <div class="form-control items-start p-0">
-          <label class="label cursor-pointer space-x-2 w-full justify-start">
-            <input
-              type="checkbox"
-              :checked="modelValue.includes(option.value)"
-              class="checkbox checkbox-primary mr-2"
-              @change="() => handleChange(option)"
-            >
-            <span class="label-text">{{ option.label }}</span>
-          </label>
-        </div>
-      </li>
-    </ul>
+      <!-- Without div ul and li will break flex -->
+      <div>
+        <ul
+          v-for="option in options"
+          :key="option.value"
+        >
+          <li class="form-control items-start p-0">
+            <label class="label cursor-pointer space-x-2 w-full justify-start py-2">
+              <input
+                type="checkbox"
+                :checked="modelValue.includes(option.value)"
+                class="checkbox checkbox-primary mr-2"
+                @change="() => handleChange(option)"
+              >
+              <span class="label-text">{{ option.label }}</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>

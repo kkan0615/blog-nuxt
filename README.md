@@ -1,4 +1,4 @@
-# Nuxt 3 + Tailwind CSS Blog
+# Nuxt 3 + Tailwind CSS + DaisyUI Personal Website
 Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
@@ -51,6 +51,7 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [remark-reading-time]() - Add reading time
 
 # :file_folder: Folder structure
+See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
 ```text
 ├─ assets/                      # Assets (Videos, fonts ...)
 ├─ components/                  # Components

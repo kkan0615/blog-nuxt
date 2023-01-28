@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   },
   css: [
     'animate.css',
-    '@/styles/libs/animate.css'
+    '~/styles/libs/animate.css',
+    '~/styles/libs/tokyo-night-dark.min.css',
   ],
   i18n: {
     defaultLocale: DefaultLocale,
@@ -58,7 +59,7 @@ export default defineNuxtConfig({
         'remark-reading-time': {},
       },
       rehypePlugins: {
-        'rehype-highlight': {}
+        // 'rehype-highlight': rehypeHighlight,
       }
     },
   },

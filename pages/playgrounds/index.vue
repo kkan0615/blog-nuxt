@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+const nodeEnv = process.env.NODE_ENV
 
 </script>
 <template>
@@ -8,7 +9,7 @@ const runtimeConfig = useRuntimeConfig()
       Playground page for test
     </h1>
     <div>
-      {{ runtimeConfig.NUXT_PUBLIC_MODE }}
+      {{ nodeEnv }}
     </div>
     <div>
       {{ runtimeConfig.NUXT_PUBLIC_BASE_URL }}

@@ -23,11 +23,14 @@ const layoutStore = useLayoutStore()
         />
       </span>
     </label>
-    <div
-      class="capitalize font-bold truncate"
-    >
-      {{ layoutStore.headerTitle }}
-    </div>
+    <!-- Resolve header hydration error -->
+    <ClientOnly>
+      <div
+        class="capitalize font-bold truncate"
+      >
+        {{ layoutStore.headerTitle }}
+      </div>
+    </ClientOnly>
     <div
       class="ml-auto"
     />
