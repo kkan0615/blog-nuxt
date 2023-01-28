@@ -11,6 +11,8 @@ const emit = defineEmits<{
   (e: 'search',): void
 }>()
 
+// Collapse checkbox to handle overflow error
+const toggle = ref(true)
 const search = ref(route.query.search)
 const locales = ref<string[]>(((route.query.locales || locale.value) as string).split(',').filter((el) => !!el))
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
@@ -52,17 +54,22 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <div class="collapse collapse-arrow mb-4">
+  <div
+    class="collapse collapse-arrow mb-4"
+    :class="{
+      'overflow-visible': toggle
+    }"
+  >
     <input
+      v-model="toggle"
       class="min-h-0"
-      checked
       type="checkbox"
     >
     <div class="collapse-title text-xl font-medium capitalize px-0 py-2 min-h-0">
       {{ t('commons.labels.search') }}
     </div>
-    <div class="collapse-content px-0">
-      <nav class="mb-4">
+    <div class="collapse-content px-0 overflow-visible">
+      <nav>
         <form @submit.prevent="handleSubmit">
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
             <div class="form-control w-full">
@@ -74,7 +81,7 @@ const handleSubmit = async () => {
                 :options="localeOptions"
               />
             </div>
-            <div class="hidden lg:flex form-control w-full">
+            <div class="form-control w-full">
               <label class="label">
                 <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>
               </label>
@@ -83,7 +90,7 @@ const handleSubmit = async () => {
                 :options="categoryOptions"
               />
             </div>
-            <div class="hidden lg:flex form-control w-full">
+            <div class="form-control w-full">
               <label class="label">
                 <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>
               </label>

@@ -4,7 +4,6 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const runtimeConfig = useRuntimeConfig()
 const { t } = useI18n()
 
 const handleError = () => clearError({ redirect: '/' })
@@ -16,18 +15,15 @@ const handleError = () => clearError({ redirect: '/' })
         <h1 class="text-7xl font-bold">
           {{ error.statusCode }}
         </h1>
-        <p
-          v-if="runtimeConfig.NUXT_PUBLIC_MODE === 'production'"
-          class="py-6"
-        >
+        <p class="py-6">
           {{ t(`commons.messages.errors.${error.statusCode.toString()}`) }}
         </p>
-        <p
-          v-else
-          class="py-6"
-        >
-          {{ error.message }}
-        </p>
+        <!-- Display full message if it's dev mode -->
+        <DevOnly>
+          <p class="py-6">
+            {{ error.message }}
+          </p>
+        </DevOnly>
         <button
           type="button"
           class="btn btn-primary"
