@@ -23,7 +23,6 @@ yarn preview
 
 # .env
 ```text
-NUXT_PUBLIC_MODE="MODE"
 NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GA"
 NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 ```
@@ -79,6 +78,9 @@ See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt
 
 # Contributors
 Thank you for helping me to make better blog
+
+# Supports
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
 # Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)

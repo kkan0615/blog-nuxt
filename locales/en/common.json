@@ -83,7 +83,8 @@
       "downloads": "downloads",
       "languages": {
         "en": "English",
-        "ko": "한국어"
+        "ko": "한국어",
+        "jp": "日本語"
       },
       "dayOfWeek":{
         "sunday": "sunday",
