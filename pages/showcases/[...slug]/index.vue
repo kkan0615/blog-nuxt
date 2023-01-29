@@ -8,6 +8,7 @@ import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
 import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
 import DownloadsDropdown from '~/components/showcases/detail/DownloadsDropdown.vue'
+import Back from '~/components/btns/Back.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -53,7 +54,8 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="flex-1">
+    <div class="flex-1 w-full sm:w-1">
+      <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
