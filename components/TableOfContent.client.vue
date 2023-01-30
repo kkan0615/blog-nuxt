@@ -59,10 +59,8 @@ const observeHeaders = () => {
     entries.forEach(entry => {
       if (!ulRef.value) return
       // Find link elements under link ul element
-      const liELs = ulRef.value.querySelectorAll('li')
-      if (!liELs.length) return
       // find element by id
-      const found = Array.from(liELs).find(liEl => liEl.id === entry.target.id)
+      const found = Array.from( ulRef.value.querySelectorAll('li') || []).find(liEl => liEl.id === entry.target.id)
       if(!found) return
       if (entry.isIntersecting) {
         found.classList.add('opacity-100')
