@@ -5,9 +5,35 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
 
 const { t } = useI18n()
 
+const contentDiv = ref<HTMLDivElement | null>(null)
+const top = ref(true)
+
+onMounted(() => {
+  const found = document.getElementById('base-content')
+  if (found) {
+    contentDiv.value = found as HTMLDivElement
+    contentDiv.value.addEventListener('scroll', handleScroll)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (contentDiv.value)
+    contentDiv.value.removeEventListener('scroll', handleScroll)
+})
+
+const handleScroll = () => {
+  if (!contentDiv.value) return
+  top.value = contentDiv.value.scrollTop === 0
+}
+
 </script>
 <template>
-  <header class="navbar absolute top-0">
+  <header
+    class="navbar bg-base-300 z-10 fixed top-0 transition duration-500 ease-in-out"
+    :class="{
+      'bg-transparent': top,
+    }"
+  >
     <nav class="max-w-4xl mx-auto flex w-full">
       <label
         for="home-layout-drawer"
