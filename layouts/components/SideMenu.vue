@@ -36,9 +36,7 @@ const route = useRoute()
         Beta
       </div>
     </div>
-    <div
-      class="px-4"
-    >
+    <div class="px-4">
       <Donation sm />
     </div>
     <div class="menu">

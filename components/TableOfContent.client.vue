@@ -16,6 +16,9 @@ const props = defineProps<Props>()
 const { t } = useI18n()
 
 const toc = ref<TOC[]>([])
+const observer = ref<IntersectionObserver | null>(null)
+/** Links template ref */
+const ulRef = ref<HTMLUListElement | null>(null)
 
 const createToc = () => {
   const article = document.getElementById(props.articleId)
@@ -40,8 +43,51 @@ const handleClick = (content: TOC) => {
   content.el.scrollIntoView({ behavior: 'smooth' })
 }
 
+const observeHeaders = () => {
+
+  const article = document.getElementById(props.articleId)
+  if (!article) {
+    throw new Error('No article')
+  }
+
+  const headerEls = article.querySelectorAll('h1, h2, h3')
+  if (!headerEls.length) {
+    throw createError({ statusCode: 404 })
+  }
+
+  observer.value = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!ulRef.value) return
+      // Find link elements under link ul element
+      const liELs = ulRef.value.querySelectorAll('li')
+      if (!liELs.length) return
+      // find element by id
+      const found = Array.from(liELs).find(liEl => liEl.id === entry.target.id)
+      if(!found) return
+      if (entry.isIntersecting) {
+        found.classList.add('opacity-100')
+        found.classList.remove('opacity-70')
+      } else {
+        found.classList.add('opacity-70')
+        found.classList.remove('opacity-100')
+      }
+    })
+  })
+  headerEls.forEach(headerEl => observer.value?.observe(headerEl))
+}
+
 onMounted(async () =>{
-  createToc()
+  await nextTick(() => {
+    createToc()
+    observeHeaders()
+  })
+})
+
+onBeforeUnmount(() => {
+  if (observer.value) {
+    observer.value.disconnect()
+    observer.value = null
+  }
 })
 
 </script>
@@ -50,11 +96,15 @@ onMounted(async () =>{
     <div class="font-bold mb-2 capitalize">
       {{ t('commons.labels.toc') }}
     </div>
-    <ul class="space-y-1">
+    <ul
+      ref="ulRef"
+      class="space-y-1"
+    >
       <li
         v-for="content in toc"
+        :id="content.hash"
         :key="content.hash"
-        class="link"
+        class="opacity-70"
         :class="{
           'ml-2': content.nodeName === 'H2',
           'ml-4': content.nodeName === 'H3',

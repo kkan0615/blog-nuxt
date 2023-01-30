@@ -3,7 +3,7 @@ import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import { useLayoutStore } from '~/stores/layout'
 import type { PostDetail } from '~/types/post'
-import TableOfContent from '~/components/TableOfContent.vue'
+import TableOfContent from '~/components/TableOfContent.client.vue'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
@@ -119,9 +119,11 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
       />
     </div>
     <div class="w-52 sticky top-4 h-1 hidden lg:block">
-      <TableOfContent
-        article-id="article"
-      />
+      <ClientOnly>
+        <TableOfContent
+          article-id="article"
+        />
+      </ClientOnly>
     </div>
   </div>
 </template>
