@@ -40,7 +40,7 @@ const localeOptions = LocaleCodeList.map(lang => {
 })
 
 const handleSubmit = async () => {
-  await router.push({
+  await router.replace({
     query: {
       search: search.value || undefined,
       locales: locales.value.length === 0 ? undefined : locales.value.join(','),
@@ -50,6 +50,13 @@ const handleSubmit = async () => {
   })
 
   emit('search')
+}
+
+const handleReset = () => {
+  search.value = ''
+  locales.value = [locale.value]
+  categories.value = []
+  tags.value = []
 }
 </script>
 
@@ -70,7 +77,10 @@ const handleSubmit = async () => {
     </div>
     <div class="collapse-content px-0 overflow-visible">
       <nav>
-        <form @submit.prevent="handleSubmit">
+        <form
+          @submit.prevent="handleSubmit"
+          @reset="handleReset"
+        >
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
             <div class="form-control w-full">
               <label class="label">
@@ -111,12 +121,18 @@ const handleSubmit = async () => {
               >
             </div>
           </div>
-          <div class="mt-4">
+          <div class="mt-4 flex space-x-4">
             <button
               class="btn-sm btn-primary rounded-btn"
               type="submit"
             >
               {{ t('commons.btns.search') }}
+            </button>
+            <button
+              class="btn-sm btn-error btn-outline rounded-btn"
+              type="reset"
+            >
+              {{ t('commons.btns.reset') }}
             </button>
           </div>
         </form>
