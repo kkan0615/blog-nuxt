@@ -30,11 +30,11 @@ useHead({
 
 layoutStore.setHeaderTitle(t('menus.showcases'))
 
-const { data: list, refresh } = await useAsyncData('showcases', () =>
-  queryContent('/showcases')
+const { data: list, refresh } = await useAsyncData('showcases', async () =>
+  await queryContent('/showcases')
     .where({
-      title: { $contains: route.query.search } as any,
-      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,
+      title: { $contains: route.query.search as string },
+      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?
         (route.query.categories as string).split(',').filter((el) => !!el) :
         undefined

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const displayPosts = 20
+const displayPosts = 1
 
 import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
@@ -34,12 +34,30 @@ useHead({
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
 const { data, refresh } = await useAsyncData<{
-  length: number,
+  maxPagination: number
   list: PostList[]
 }>('blogs', async () => {
+  const currPageNum = (Number(route.query.page) || 1)
+
+  const maxLength = (await queryContent<PostList>('blogs/')
+    .where({
+      title: { $contains: route.query.search as string },
+      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
+      categories: { $in: route.query.categories ?
+        (route.query.categories as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+      tags: { $in: route.query.tags ?
+        (route.query.tags as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+    })
+    .only(['_id'])
+    .find()).length
+
   const list = await queryContent<PostList>('blogs/')
     .where({
-      title: { $contains: route.query.search } as any,
+      title: { $contains: route.query.search as string },
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?
         (route.query.categories as string).split(',').filter((el) => !!el) :
@@ -51,27 +69,27 @@ const { data, refresh } = await useAsyncData<{
       } as any,
     })
     .sort({ date: -1 })
+    .skip((currPageNum - 1) * displayPosts)
+    .limit(displayPosts)
     .find()
 
-  const currPageNum = (Number(route.query.page) || 1)
   return {
-    length: list.length,
-    list: list.slice((currPageNum - 1) * displayPosts, currPageNum * displayPosts),
+    // maximum page number
+    maxPagination: parseInt((maxLength / displayPosts).toString()),
+    // List
+    list,
   }
 })
 
-// 페이지 최대 값
-const maxPagination = computed(() => parseInt(((data.value && data.value.length ? data.value.length : 0) / displayPosts).toString()) + 1)
-
 const handleClickPagination = async (newPageNum: number) => {
-  await router.push({
+  await router.replace({
     query: {
       ...route.query,
       page: newPageNum,
     }
   })
 
-  refresh()
+  await refresh()
 }
 
 </script>
@@ -106,7 +124,7 @@ const handleClickPagination = async (newPageNum: number) => {
       <Pagination
         v-if="data.list && data.list.length > 0"
         :active-number="Number(route.query.page) || 1"
-        :max="maxPagination"
+        :max="data.maxPagination"
         @click="handleClickPagination"
       />
     </div>
