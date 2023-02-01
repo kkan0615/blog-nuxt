@@ -22,9 +22,7 @@ import BtnsScrollTop from '~/components/btns/ScrollTop'
       </ClientOnly>
       <!-- Page content here -->
       <Header />
-      <div
-        class="flex-grow p-2 lg:p-4"
-      >
+      <div class="flex-grow p-2 lg:p-4">
         <slot />
       </div>
       <Footer />

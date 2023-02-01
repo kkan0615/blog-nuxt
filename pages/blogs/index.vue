@@ -20,26 +20,67 @@ definePageMeta({
   }
 })
 
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
+
 // SEO
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
+    ...(head.value.meta || []).map(metaEl => {
+      return {
+        name: metaEl.name,
+        property: metaEl.property,
+        content: metaEl.content,
+      }
+    })
   ],
   link: [
     { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
+    ...(head.value.link || []).map(linkEl => {
+      return {
+        id: linkEl.id,
+        rel: linkEl.rel,
+        href: linkEl.href,
+        hreflang: linkEl.hreflang
+      }
+    })
   ]
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
 const { data, refresh } = await useAsyncData<{
-  length: number,
+  maxPagination: number
   list: PostList[]
 }>('blogs', async () => {
+  const currPageNum = (Number(route.query.page) || 1)
+
+  const maxLength = (await queryContent<PostList>('blogs/')
+    .where({
+      _draft: { $not: true },
+      title: { $contains: route.query.search as string },
+      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
+      categories: { $in: route.query.categories ?
+        (route.query.categories as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+      tags: { $in: route.query.tags ?
+        (route.query.tags as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+    })
+    .only(['_id'])
+    .find()).length
+
   const list = await queryContent<PostList>('blogs/')
     .where({
-      title: { $contains: route.query.search } as any,
+      _draft: { $not: true },
+      title: { $contains: route.query.search as string },
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?
         (route.query.categories as string).split(',').filter((el) => !!el) :
@@ -51,27 +92,27 @@ const { data, refresh } = await useAsyncData<{
       } as any,
     })
     .sort({ date: -1 })
+    .skip((currPageNum - 1) * displayPosts)
+    .limit(displayPosts)
     .find()
 
-  const currPageNum = (Number(route.query.page) || 1)
   return {
-    length: list.length,
-    list: list.slice((currPageNum - 1) * displayPosts, currPageNum * displayPosts),
+    // maximum page number
+    maxPagination: parseInt((maxLength / displayPosts).toString()),
+    // List
+    list,
   }
 })
 
-// 페이지 최대 값
-const maxPagination = computed(() => parseInt(((data.value && data.value.length ? data.value.length : 0) / displayPosts).toString()) + 1)
-
 const handleClickPagination = async (newPageNum: number) => {
-  await router.push({
+  await router.replace({
     query: {
       ...route.query,
       page: newPageNum,
     }
   })
 
-  refresh()
+  await refresh()
 }
 
 </script>
@@ -104,9 +145,9 @@ const handleClickPagination = async (newPageNum: number) => {
     </div>
     <div class="mt-4 text-center">
       <Pagination
-        v-if="data.list && data.list.length > 0"
+        v-if="data.maxPagination"
         :active-number="Number(route.query.page) || 1"
-        :max="maxPagination"
+        :max="data.maxPagination"
         @click="handleClickPagination"
       />
     </div>

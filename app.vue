@@ -8,10 +8,19 @@
 import './libs/dayjs'
 
 const appConfig = useAppConfig()
-const { t, locale } = useI18n()
+const { t } = useI18n()
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
 // SEO
 useHead({
   title: t('seo.title'),
+  htmlAttrs: {
+    'dir': head.value.htmlAttrs?.dir,
+    'lang': head.value.htmlAttrs?.lang,
+  },
   meta: [
     // Google search console
     { name: 'google-site-verification', content: 'duPDxBWhVaaRC3sGCeasbfDI5vAc4yWZ785rilMrgPs' },
@@ -22,8 +31,25 @@ useHead({
     { name: 'robots', content: 'index, follow' },
     { name: 'target', content: 'all' },
     { name: 'og:image', content: appConfig.profile.image },
-    { name: 'language', content: locale },
+    { name: 'language', content:  head.value.htmlAttrs?.lang },
     { name: 'keywords', content: 'blogs showcases contact website' },
+    ...(head.value.meta || []).map(metaEl => {
+      return {
+        name: metaEl.name,
+        property: metaEl.property,
+        content: metaEl.content,
+      }
+    })
+  ],
+  link: [
+    ...(head.value.link || []).map(linkEl => {
+      return {
+        id: linkEl.id,
+        rel: linkEl.rel,
+        href: linkEl.href,
+        hreflang: linkEl.hreflang
+      }
+    })
   ],
 })
 // initial app setting

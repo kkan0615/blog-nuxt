@@ -13,11 +13,13 @@ const { t } = useI18n()
 
 interface Props {
   blog: PostList
+  noImage?: boolean
   dense?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   blog: () => { return {} as PostList },
+  noImage: false,
   dense: false,
 })
 
@@ -43,7 +45,9 @@ const isNew = computed(() => {
       class="flex flex-col h-full"
       :to="localePath(blog._path)"
     >
-      <figure>
+      <figure
+        v-if="!noImage"
+      >
         <NuxtImg
           v-if="blog.image && blog.image.path"
           class="aspect-video"

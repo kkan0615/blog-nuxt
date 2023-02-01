@@ -23,7 +23,6 @@ yarn preview
 
 # .env
 ```text
-NUXT_PUBLIC_MODE="MODE"
 NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GA"
 NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 ```
@@ -36,6 +35,7 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [@nuxtjs/i18n]() - vueI18n for Nuxt 3
 - [@vueuse/nuxt]() - vueuse for Nuxt 3
 - [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind setting for Nuxt 3
+- [nuxt-security](https://nuxt-security.vercel.app/getting-started/quick-start) - Security config for Nuxt 3
 - [@pinia/nuxt]() - Pinia for Nuxt 3
 - [dayjs]() 
 - [fast-glob]() - Find all files under specific directory
@@ -64,6 +64,7 @@ See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt
 ├─ public/                      # Assets (images ...)
 ├─ server/                      # Server files
 │  ├─ api/                      # API, File name will be path
+│  ├─ public/                   # Data for server
 │  ├─ routes/                   # Generate sitemaps
 ├─ .eslintrc.js                 # Eslint.
 ├─ .gitignore                   # gitignore.
@@ -79,6 +80,9 @@ See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt
 
 # Contributors
 Thank you for helping me to make better blog
+
+# Supports
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
 # Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)

@@ -8,6 +8,11 @@ import Navbar from '~/components/showcases/list/Navbar.vue'
 const route = useRoute()
 const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
 const layoutStore = useLayoutStore()
 
 definePageMeta({
@@ -22,19 +27,34 @@ useHead({
   title: `${t('menus.showcases')} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
+    ...(head.value.meta || []).map(metaEl => {
+      return {
+        name: metaEl.name,
+        property: metaEl.property,
+        content: metaEl.content,
+      }
+    })
   ],
   link: [
     { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
+    ...(head.value.link || []).map(linkEl => {
+      return {
+        id: linkEl.id,
+        rel: linkEl.rel,
+        href: linkEl.href,
+        hreflang: linkEl.hreflang
+      }
+    })
   ]
 })
 
 layoutStore.setHeaderTitle(t('menus.showcases'))
 
-const { data: list, refresh } = await useAsyncData('showcases', () =>
-  queryContent('/showcases')
+const { data: list, refresh } = await useAsyncData('showcases', async () =>
+  await queryContent('/showcases')
     .where({
-      title: { $contains: route.query.search } as any,
-      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) } as any,
+      title: { $contains: route.query.search as string },
+      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?
         (route.query.categories as string).split(',').filter((el) => !!el) :
         undefined

@@ -5,6 +5,7 @@ date: '2022-12-30'
 locale: 'en'
 categories: [development]
 tags: [Node Js, Get Started]
+_draft: true
 ---
 
 # Heading 1
@@ -31,6 +32,7 @@ console.log(test)
 
 # Image
 ![random image 1](https://picsum.photos/1280/720)
+![Static Image](/logos/javascript-logo.jpeg)
 
 # Task
 - [x] Write the press release

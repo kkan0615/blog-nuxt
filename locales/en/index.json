@@ -22,6 +22,7 @@
     "github": "Github"
   },
   "labels": {
+    "furtherReading": "further reading",
     "theme": "theme",
     "periods": {
       "month": "month",

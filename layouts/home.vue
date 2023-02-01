@@ -3,13 +3,16 @@ import SideMenu from '~/layouts/components/SideMenu.vue'
 import Header from '~/layouts/home/Header.vue'
 </script>
 <template>
-  <div class="drawer lg:h-fit">
+  <div class="drawer">
     <input
       id="home-layout-drawer"
       type="checkbox"
       class="drawer-toggle"
     >
-    <div class="drawer-content relative">
+    <div
+      id="base-content"
+      class="drawer-content relative"
+    >
       <!-- Page content here -->
       <Header />
       <div>

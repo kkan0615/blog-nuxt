@@ -58,6 +58,13 @@ const handleClick = (newPageNum: number) => {
       {{ pageNum }}
     </button>
     <button
+      v-if="!pageNums.includes(max)"
+      class="btn btn-sm bg-base-300"
+      @click="() => handleClick(max)"
+    >
+      ...{{ max }}
+    </button>
+    <button
       class="btn btn-sm bg-base-300"
       :class="{
         'btn-disabled': activeNumber === max

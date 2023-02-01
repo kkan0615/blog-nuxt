@@ -22,6 +22,7 @@
     "github": "Github"
   },
   "labels": {
+    "furtherReading": "다른 글 읽기",
     "theme": "테마",
     "periods": {
       "month": "달",

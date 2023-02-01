@@ -3,11 +3,12 @@ import dayjs from 'dayjs'
 import { Icon } from '@iconify/vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostDetail } from '~/types/post'
-import TableOfContent from '~/components/TableOfContent.vue'
+import TableOfContent from '~/components/TableOfContent.client.vue'
 import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
 import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
 import DownloadsDropdown from '~/components/showcases/detail/DownloadsDropdown.vue'
+import Back from '~/components/btns/Back.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -53,7 +54,8 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="flex-1">
+    <div class="w-full">
+      <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>

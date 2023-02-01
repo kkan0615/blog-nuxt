@@ -4,8 +4,12 @@ import ProfileCard from '~/components/contacts/ProfileCard.vue'
 import RequestCard from '~/components/contacts/RequestCard.vue'
 
 const { t } = useI18n()
-const runtimeConfig = useRuntimeConfig()
 const layoutStore = useLayoutStore()
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
 
 definePageMeta({
   pageTransition: {
@@ -18,6 +22,23 @@ useHead({
   title: `${t('menus.contact')} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
+    ...(head.value.meta || []).map(metaEl => {
+      return {
+        name: metaEl.name,
+        property: metaEl.property,
+        content: metaEl.content,
+      }
+    })
+  ],
+  link: [
+    ...(head.value.link || []).map(linkEl => {
+      return {
+        id: linkEl.id,
+        rel: linkEl.rel,
+        href: linkEl.href,
+        hreflang: linkEl.hreflang
+      }
+    })
   ],
 })
 layoutStore.setHeaderTitle(t('menus.contact'))

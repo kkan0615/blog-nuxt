@@ -17,12 +17,12 @@ const route = useRoute()
     <div class="text-center p-4 mt-4">
       <div class="avatar flex justify-center mb-4">
         <div class="w-1/2 rounded-full border">
-          <img
+          <NuxtImg
             :src="appConfig.profile.image"
             height="300"
             width="300"
             alt="Profile image"
-          >
+          />
         </div>
       </div>
       <div class="text-2xl font-bold">
@@ -36,9 +36,7 @@ const route = useRoute()
         Beta
       </div>
     </div>
-    <div
-      class="px-4"
-    >
+    <div class="px-4">
       <Donation sm />
     </div>
     <div class="menu">

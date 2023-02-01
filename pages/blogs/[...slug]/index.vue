@@ -3,11 +3,14 @@ import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import { useLayoutStore } from '~/stores/layout'
 import type { PostDetail } from '~/types/post'
-import TableOfContent from '~/components/TableOfContent.vue'
+import { PostList } from '~/types/post'
+import TableOfContent from '~/components/TableOfContent.client.vue'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
+import Back from '~/components/btns/Back.vue'
+import BlogCard from '~/components/blogs/list/BlogCard.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -16,7 +19,8 @@ const DefaultNuxtImageWidth = 500
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
-const { t } = useI18n()
+const router = useRouter()
+const { t, locale } = useI18n()
 const layoutStore = useLayoutStore()
 
 /* slug parameter return array like [en, en-1010100] */
@@ -30,6 +34,31 @@ const { data: page, error } = await useAsyncData<PostDetail>('page-data', async 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 }
+
+/*
+* Get similar blogs
+* @TODO: Add random feature when there are many contents
+*/
+const { data: similarBlogs } = await useAsyncData('blogs', async () => {
+  const list = await queryContent<PostList>('blogs/')
+    .where({
+      locale: { $in: ((route.query.locales || route.params.slug[0]) as string).split(',').filter((el) => !!el) },
+      // @TODO: Open following codes when there are many contents
+      // categories: { $in: route.query.categories ?
+      //       (route.query.categories as string).split(',').filter((el) => !!el) :
+      //       undefined
+      // } as any,
+      // tags: { $in: route.query.tags ?
+      //       (route.query.tags as string).split(',').filter((el) => !!el) :
+      //       undefined
+      // } as any,
+    })
+    .limit(4) // For in case, there are same blog content as current blog
+    .sort({ date: -1 })
+    .find()
+
+  return list.filter(blog => blog._id !== page.value?._id).slice(0, 3)
+})
 
 // SEO
 useHead({
@@ -52,11 +81,21 @@ useHead({
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
+console.log(page.value)
+// Resolve scroll behavior from similar blogs
+router.beforeEach(() => {
+  const contentDiv = document.getElementById('base-content')
+  if (!contentDiv) return
+  contentDiv.scrollTo({
+    top: 0,
+  })
+})
 
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="flex-1 w-full sm:w-1">
+    <div class="w-full">
+      <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
       </h1>
@@ -103,9 +142,6 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
         />
       </div>
       <hr class="my-4">
-      <div>
-        <Donation />
-      </div>
       <Categories
         :categories="page.categories"
       />
@@ -115,11 +151,31 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
       <BottomNavbar
         :filepath="page._file"
       />
+      <div class="mt-8">
+        <Donation />
+      </div>
+      <h3 class="mt-4 text-xl font-bold opacity-80">
+        {{ t('labels.furtherReading') }}
+      </h3>
+      <div
+        v-if="similarBlogs && similarBlogs.length > 0"
+        class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-0 md:p-4 md:p-0 mt-2"
+      >
+        <BlogCard
+          v-for="blog in similarBlogs"
+          :key="blog._path"
+          dense
+          no-image
+          :blog="blog"
+        />
+      </div>
     </div>
     <div class="w-52 sticky top-4 h-1 hidden lg:block">
-      <TableOfContent
-        article-id="article"
-      />
+      <ClientOnly>
+        <TableOfContent
+          article-id="article"
+        />
+      </ClientOnly>
     </div>
   </div>
 </template>
