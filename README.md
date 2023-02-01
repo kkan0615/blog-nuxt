@@ -63,6 +63,7 @@ See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt
 ├─ public/                      # Assets (images ...)
 ├─ server/                      # Server files
 │  ├─ api/                      # API, File name will be path
+│  ├─ public/                   # Data for server
 │  ├─ routes/                   # Generate sitemaps
 ├─ .eslintrc.js                 # Eslint.
 ├─ .gitignore                   # gitignore.
