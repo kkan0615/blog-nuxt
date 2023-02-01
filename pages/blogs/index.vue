@@ -122,7 +122,7 @@ const handleClickPagination = async (newPageNum: number) => {
     </div>
     <div class="mt-4 text-center">
       <Pagination
-        v-if="data.list && data.list.length > 0"
+        v-if="data.maxPagination"
         :active-number="Number(route.query.page) || 1"
         :max="data.maxPagination"
         @click="handleClickPagination"
