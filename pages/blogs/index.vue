@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const displayPosts = 1
+const displayPosts = 20
 
 import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
