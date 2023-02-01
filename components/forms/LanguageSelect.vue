@@ -8,7 +8,8 @@ interface Props {
 
 defineProps<Props>()
 
-const { t, locale, availableLocales, fallbackLocale } = useI18n()
+const { t, locale, availableLocales, fallbackLocale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
@@ -40,7 +41,7 @@ const { t, locale, availableLocales, fallbackLocale } = useI18n()
             'text-white': locale === availableLocale,
           }"
           :to="{
-            path: `/${availableLocale === fallbackLocale ? '' : availableLocale}`
+            path: switchLocalePath(availableLocale)
           }"
         >
           {{ t(`commons.labels.languages.${availableLocale}`) }}

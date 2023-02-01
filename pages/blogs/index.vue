@@ -20,14 +20,35 @@ definePageMeta({
   }
 })
 
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+})
+
 // SEO
 useHead({
   title: `${t('menus.blogs')} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
+    ...(head.value.meta || []).map(metaEl => {
+      return {
+        name: metaEl.name,
+        property: metaEl.property,
+        content: metaEl.content,
+      }
+    })
   ],
   link: [
     { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
+    ...(head.value.link || []).map(linkEl => {
+      return {
+        id: linkEl.id,
+        rel: linkEl.rel,
+        href: linkEl.href,
+        hreflang: linkEl.hreflang
+      }
+    })
   ]
 })
 
