@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
+    'nuxt-security'
   ],
   runtimeConfig: {
     public:{
@@ -27,6 +28,10 @@ export default defineNuxtConfig({
     '~/styles/libs/animate.css',
     '~/styles/libs/tokyo-night-dark.min.css',
   ],
+  security: {
+    corsHandler: false,
+    headers: false,
+  },
   i18n: {
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
@@ -51,7 +56,7 @@ export default defineNuxtConfig({
     }
   },
   image: {
-    provider: 'netlify'
+    provider: 'netlify',
   },
   content: {
     markdown: {

@@ -19,6 +19,7 @@
     "dayjs": "^1.11.7",
     "highlight.js": "^11.7.0",
     "js-cookie": "^3.0.1",
+    "nuxt-security": "^0.10.2",
     "rehype-highlight": "^6.0.0",
     "remark-reading-time": "^2.0.1",
     "vue-gtag": "^2.0.1",

@@ -54,7 +54,7 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="flex-1 w-full sm:w-1">
+    <div class="w-full">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}

@@ -62,6 +62,7 @@ const { data, refresh } = await useAsyncData<{
 
   const maxLength = (await queryContent<PostList>('blogs/')
     .where({
+      _draft: { $not: true },
       title: { $contains: route.query.search as string },
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?
@@ -78,6 +79,7 @@ const { data, refresh } = await useAsyncData<{
 
   const list = await queryContent<PostList>('blogs/')
     .where({
+      _draft: { $not: true },
       title: { $contains: route.query.search as string },
       locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
       categories: { $in: route.query.categories ?

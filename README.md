@@ -35,6 +35,7 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [@nuxtjs/i18n]() - vueI18n for Nuxt 3
 - [@vueuse/nuxt]() - vueuse for Nuxt 3
 - [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind setting for Nuxt 3
+- [nuxt-security](https://nuxt-security.vercel.app/getting-started/quick-start) - Security config for Nuxt 3
 - [@pinia/nuxt]() - Pinia for Nuxt 3
 - [dayjs]() 
 - [fast-glob]() - Find all files under specific directory
