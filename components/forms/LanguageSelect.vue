@@ -5,10 +5,9 @@ interface Props {
   end?: boolean
   textSize?: 'sm' | 'md' | 'lg'
 }
-
 defineProps<Props>()
 
-const { t, locale, availableLocales, fallbackLocale, locales } = useI18n()
+const { t, locale, availableLocales, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 </script>
 
@@ -40,9 +39,7 @@ const switchLocalePath = useSwitchLocalePath()
             'bg-secondary': locale === availableLocale,
             'text-white': locale === availableLocale,
           }"
-          :to="{
-            path: switchLocalePath(availableLocale)
-          }"
+          :to="{ path: switchLocalePath(availableLocale) }"
         >
           {{ t(`commons.labels.languages.${availableLocale}`) }}
         </NuxtLink>
