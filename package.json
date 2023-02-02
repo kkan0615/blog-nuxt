@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.9-canary.3",
+  "version": "0.0.9",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
