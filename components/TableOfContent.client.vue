@@ -102,7 +102,7 @@ onBeforeUnmount(() => {
         v-for="content in toc"
         :id="content.hash"
         :key="content.hash"
-        class="opacity-70"
+        class="opacity-70 text-sm"
         :class="{
           'ml-2': content.nodeName === 'H2',
           'ml-4': content.nodeName === 'H3',

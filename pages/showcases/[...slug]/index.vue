@@ -54,7 +54,7 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="w-full">
+    <div class="grow w-1 px-0 md:px-12">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
@@ -135,7 +135,7 @@ layoutStore.setHeaderTitle(t('menus.showcases'))
         :filepath="page._file"
       />
     </div>
-    <div class="w-52 sticky top-4 h-1 hidden lg:block">
+    <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
       <client-only>
         <TableOfContent
           article-id="article"

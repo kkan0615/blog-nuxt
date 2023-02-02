@@ -42,6 +42,7 @@ if (!page.value) {
 const { data: similarBlogs } = await useAsyncData('blogs', async () => {
   const list = await queryContent<PostList>('blogs/')
     .where({
+      _draft: { $not: true },
       locale: { $in: ((route.query.locales || route.params.slug[0]) as string).split(',').filter((el) => !!el) },
       // @TODO: Open following codes when there are many contents
       // categories: { $in: route.query.categories ?
@@ -81,7 +82,6 @@ useHead({
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
-console.log(page.value)
 // Resolve scroll behavior from similar blogs
 router.beforeEach(() => {
   const contentDiv = document.getElementById('base-content')
@@ -93,8 +93,8 @@ router.beforeEach(() => {
 
 </script>
 <template>
-  <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">
-    <div class="w-full">
+  <div class="max-w-5xl mx-auto flex">
+    <div class="grow w-1 px-0 md:px-12">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
         {{ page.title }}
@@ -115,6 +115,7 @@ router.beforeEach(() => {
       <figure>
         <NuxtImg
           v-if="page.image && page.image.path"
+          class="w-full"
           :src="page.image.path"
           :alt="page.image.alt || DefaultNuxtImageAlt"
           :height="page.image.height || DefaultNuxtImageHeight"
@@ -170,7 +171,7 @@ router.beforeEach(() => {
         />
       </div>
     </div>
-    <div class="w-52 sticky top-4 h-1 hidden lg:block">
+    <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
       <ClientOnly>
         <TableOfContent
           article-id="article"
