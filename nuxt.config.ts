@@ -57,6 +57,7 @@ export default defineNuxtConfig({
     provider: 'netlify',
   },
   content: {
+    // ignores: ['ghost'],
     markdown: {
       anchorLinks: false,
       remarkPlugins: {
@@ -66,5 +67,13 @@ export default defineNuxtConfig({
         // 'rehype-highlight'
       ]
     },
+    highlight: {
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+      }
+    }
   },
 })
