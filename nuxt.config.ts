@@ -67,13 +67,19 @@ export default defineNuxtConfig({
         // 'rehype-highlight'
       ]
     },
-    highlight: {
-      theme: {
-        // Default theme (same as single string)
-        default: 'github-light',
-        // Theme used if `html.dark`
-        dark: 'github-dark',
-      }
-    }
+    // highlight: {
+    //   theme: {
+    //     default: 'github-dark',
+    //     'base-dark': 'github-dark',
+    //     'base-light': 'github-light',
+    //   },
+    //   preload: [
+    //     'c',
+    //     'cpp',
+    //     'java',
+    //     'javascript',
+    //     'typescript',
+    //   ]
+    // }
   },
 })

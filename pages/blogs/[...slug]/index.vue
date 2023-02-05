@@ -11,6 +11,7 @@ import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
+import hljs from 'highlight.js'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -84,6 +85,8 @@ useHead({
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
 onMounted(() => {
+  // Code block highlight
+  hljs.highlightAll()
   // When user enter the page with hash, scroll down to hash
   if (route.hash) {
     const contentDiv = document.getElementById('base-content')
