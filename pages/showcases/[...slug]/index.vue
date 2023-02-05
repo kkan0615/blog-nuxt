@@ -9,6 +9,7 @@ import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
 import DownloadsDropdown from '~/components/showcases/detail/DownloadsDropdown.vue'
 import Back from '~/components/btns/Back.vue'
+import hljs from 'highlight.js'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -52,6 +53,8 @@ useHead({
 layoutStore.setHeaderTitle(t('menus.showcases'))
 
 onMounted(() => {
+  // Code block highlight
+  hljs.highlightAll()
   // When user enter the page with hash, scroll down to hash
   if (route.hash) {
     const contentDiv = document.getElementById('base-content')
