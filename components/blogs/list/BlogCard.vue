@@ -22,6 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
   noImage: false,
   dense: false,
 })
+const route = useRoute()
 
 const timeFromNow = computed(() => {
   const now = dayjs()
@@ -43,7 +44,10 @@ const isNew = computed(() => {
   <div class="card bg-base-300">
     <NuxtLink
       class="flex flex-col h-full"
-      :to="localePath(blog._path)"
+      :to="{
+        path: localePath(blog._path),
+        query: route.query
+      }"
     >
       <figure
         v-if="!noImage"

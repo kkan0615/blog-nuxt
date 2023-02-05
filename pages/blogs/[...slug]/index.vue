@@ -46,14 +46,14 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
       _draft: { $not: true },
       locale: { $in: ((route.query.locales || route.params.slug[0]) as string).split(',').filter((el) => !!el) },
       // @TODO: Open following codes when there are many contents
-      // categories: { $in: route.query.categories ?
-      //       (route.query.categories as string).split(',').filter((el) => !!el) :
-      //       undefined
-      // } as any,
-      // tags: { $in: route.query.tags ?
-      //       (route.query.tags as string).split(',').filter((el) => !!el) :
-      //       undefined
-      // } as any,
+      categories: { $in: route.query.categories ?
+        (route.query.categories as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+      tags: { $in: route.query.tags ?
+        (route.query.tags as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
     })
     .limit(4) // For in case, there are same blog content as current blog
     .sort({ date: -1 })
