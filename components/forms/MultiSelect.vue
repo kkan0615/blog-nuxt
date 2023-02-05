@@ -32,13 +32,13 @@ const handleChange = (option: { label: string, value: any }) => {
 
 <template>
   <div class="dropdown">
-    <input
-      readOnly
+    <div
+      :tabindex="0"
       type="text"
-      :value="displayValues"
-      :placeholder="placeholder"
-      class="input input-bordered input-sm w-full"
+      class="input input-bordered input-sm w-full cursor-pointer"
     >
+      {{ displayValues || placeholder }}
+    </div>
     <div
       :tabIndex="0"
       class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-56 max-h-64 overflow-y-auto"
