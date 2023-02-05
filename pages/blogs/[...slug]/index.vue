@@ -82,8 +82,24 @@ useHead({
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
+
+onMounted(() => {
+  // When user enter the page with hash, scroll down to hash
+  if (route.hash) {
+    const contentDiv = document.getElementById('base-content')
+    if (!contentDiv) return
+    const hashEl = document.getElementById(route.hash.replace('#', ''))
+    if (!hashEl) return
+    contentDiv.scrollTo({
+      top: hashEl.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+})
+
 // Resolve scroll behavior from similar blogs
-router.beforeEach(() => {
+router.beforeEach((guard) => {
+  if (guard.hash) return
   const contentDiv = document.getElementById('base-content')
   if (!contentDiv) return
   contentDiv.scrollTo({

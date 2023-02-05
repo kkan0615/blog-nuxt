@@ -51,6 +51,20 @@ useHead({
 
 layoutStore.setHeaderTitle(t('menus.showcases'))
 
+onMounted(() => {
+  // When user enter the page with hash, scroll down to hash
+  if (route.hash) {
+    const contentDiv = document.getElementById('base-content')
+    if (!contentDiv) return
+    const hashEl = document.getElementById(route.hash.replace('#', ''))
+    if (!hashEl) return
+    contentDiv.scrollTo({
+      top: hashEl.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+})
+
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex flex-col-reverse justify-between gap-x-10 xl:flex-row">

@@ -109,9 +109,7 @@ onBeforeUnmount(() => {
         }"
         @click="() => handleClick(content)"
       >
-        <NuxtLink
-          :href="`#${content.hash}`"
-        >
+        <NuxtLink :href="`#${content.hash}`">
           {{ content.title }}
         </NuxtLink>
       </li>
