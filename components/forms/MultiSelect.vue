@@ -12,6 +12,8 @@ const emit = defineEmits<{
 }>()
 
 const displayValues = computed(() => {
+  if (!props.modelValue || !props.modelValue.length) return ''
+
   return props.options.filter((option) => {
     return props.modelValue.includes(option.value)
   }).map(option => option.label).join(', ')
