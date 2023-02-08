@@ -2,13 +2,12 @@
 import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import Donation from '~/components/advertisements/Donation.vue'
-import AnimatedOctocats from '~/components/icons/AnimatedOctocats.vue'
 import ThemeSelect from '~/components/forms/ThemeSelect.vue'
+import AnimatedOctocats from '~/components/icons/AnimatedOctocats.client.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
 const route = useRoute()
-
 </script>
 <template>
   <!-- "menu class" is moved to middle -->

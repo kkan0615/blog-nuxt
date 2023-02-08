@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.0.9",
+  "version": "0.1.0-canary.1",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
@@ -18,7 +18,6 @@
     "daisyui": "^2.49.0",
     "dayjs": "^1.11.7",
     "highlight.js": "^11.7.0",
-    "js-cookie": "^3.0.1",
     "nuxt-security": "^0.10.2",
     "rehype-highlight": "^6.0.0",
     "remark-reading-time": "^2.0.1",
@@ -30,7 +29,6 @@
     "@nuxt/content": "2.4.2",
     "@nuxt/image-edge": "^1.0.0-27840416.dc1ed65",
     "@tailwindcss/typography": "^0.5.8",
-    "@types/js-cookie": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.47.0",
     "eslint": "^8.0.1",

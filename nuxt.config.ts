@@ -57,14 +57,29 @@ export default defineNuxtConfig({
     provider: 'netlify',
   },
   content: {
+    // ignores: ['ghost'],
     markdown: {
       anchorLinks: false,
       remarkPlugins: {
         'remark-reading-time': {},
       },
-      rehypePlugins: {
-        // 'rehype-highlight': rehypeHighlight,
-      }
+      rehypePlugins: [
+        // 'rehype-highlight'
+      ]
     },
+    // highlight: {
+    //   theme: {
+    //     default: 'github-dark',
+    //     'base-dark': 'github-dark',
+    //     'base-light': 'github-light',
+    //   },
+    //   preload: [
+    //     'c',
+    //     'cpp',
+    //     'java',
+    //     'javascript',
+    //     'typescript',
+    //   ]
+    // }
   },
 })

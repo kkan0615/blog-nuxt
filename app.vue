@@ -8,18 +8,21 @@
 import './libs/dayjs'
 
 const appConfig = useAppConfig()
+const themeCookie = useCookie('theme')
 const { t } = useI18n()
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true
 })
+
 // SEO
 useHead({
   title: t('seo.title'),
   htmlAttrs: {
     'dir': head.value.htmlAttrs?.dir,
     'lang': head.value.htmlAttrs?.lang,
+    'data-theme': themeCookie.value || '',
   },
   meta: [
     // Google search console

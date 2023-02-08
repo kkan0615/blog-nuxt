@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import Cookies from 'js-cookie'
-
 const acceptCookie = useCookie('accept')
 const { t } = useI18n()
 
 const visible = ref(!acceptCookie.value)
 
 const handleAccept = () => {
-  Cookies.set('accept', 'Y')
+  acceptCookie.value = 'Y'
   visible.value = false
 }
 </script>

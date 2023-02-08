@@ -11,6 +11,7 @@ import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
+import hljs from 'highlight.js'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -45,14 +46,14 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
       _draft: { $not: true },
       locale: { $in: ((route.query.locales || route.params.slug[0]) as string).split(',').filter((el) => !!el) },
       // @TODO: Open following codes when there are many contents
-      // categories: { $in: route.query.categories ?
-      //       (route.query.categories as string).split(',').filter((el) => !!el) :
-      //       undefined
-      // } as any,
-      // tags: { $in: route.query.tags ?
-      //       (route.query.tags as string).split(',').filter((el) => !!el) :
-      //       undefined
-      // } as any,
+      categories: { $in: route.query.categories ?
+        (route.query.categories as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
+      tags: { $in: route.query.tags ?
+        (route.query.tags as string).split(',').filter((el) => !!el) :
+        undefined
+      } as any,
     })
     .limit(4) // For in case, there are same blog content as current blog
     .sort({ date: -1 })
@@ -82,8 +83,26 @@ useHead({
 })
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
+
+onMounted(() => {
+  // Code block highlight
+  hljs.highlightAll()
+  // When user enter the page with hash, scroll down to hash
+  if (route.hash) {
+    const contentDiv = document.getElementById('base-content')
+    if (!contentDiv) return
+    const hashEl = document.getElementById(route.hash.replace('#', ''))
+    if (!hashEl) return
+    contentDiv.scrollTo({
+      top: hashEl.offsetTop,
+      behavior: 'smooth'
+    })
+  }
+})
+
 // Resolve scroll behavior from similar blogs
-router.beforeEach(() => {
+router.beforeEach((guard) => {
+  if (guard.hash) return
   const contentDiv = document.getElementById('base-content')
   if (!contentDiv) return
   contentDiv.scrollTo({

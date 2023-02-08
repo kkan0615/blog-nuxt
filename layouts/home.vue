@@ -24,7 +24,7 @@ import Header from '~/layouts/home/Header.vue'
         for="home-layout-drawer"
         class="drawer-overlay"
       />
-      <SideMenu />
+      <!--      <SideMenu />-->
     </div>
   </div>
 </template>

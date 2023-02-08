@@ -19,10 +19,6 @@ const handleCopy = () => {
   copy(props.code)
 }
 
-onMounted(() => {
-  hljs.highlightAll()
-})
-
 </script>
 
 <template>

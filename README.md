@@ -41,7 +41,6 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [fast-glob]() - Find all files under specific directory
 - ~~[vue-gtag]()~~
 - [vue-gtag-next]()
-- [js-cookie]() - Control cookie
 - [animate.css]() - Animation list
 - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
 
