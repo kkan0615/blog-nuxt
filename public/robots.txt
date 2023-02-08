@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://requiem-blog.netlify.app/sitemap.xml
