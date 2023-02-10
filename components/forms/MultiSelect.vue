@@ -59,6 +59,7 @@ const handleChange = (option: { label: string, value: any }) => {
               <input
                 type="checkbox"
                 :checked="modelValue.includes(option.value)"
+                :aria-checked="modelValue.includes(option.value)"
                 class="checkbox checkbox-primary"
                 @change="() => handleChange(option)"
               >
