@@ -41,7 +41,7 @@ const isNew = computed(() => {
 
 </script>
 <template>
-  <div class="card bg-base-300">
+  <div class="card bg-base-200">
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
@@ -49,9 +49,7 @@ const isNew = computed(() => {
         query: route.query
       }"
     >
-      <figure
-        v-if="!noImage"
-      >
+      <figure v-if="!noImage">
         <NuxtImg
           v-if="blog.image && blog.image.path"
           class="aspect-video"
@@ -66,7 +64,6 @@ const isNew = computed(() => {
           v-else
           class="aspect-video"
           preload
-          fit="fill"
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
         />

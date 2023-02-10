@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 </script>
 <template>
-  <div class="card bg-base-300">
+  <div class="card bg-base-200">
     <NuxtLink
       class="flex flex-col h-full"
       :to="localePath(blog._path)"
