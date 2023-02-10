@@ -37,7 +37,7 @@ const localeOptions = LocaleCodeList.map(lang => {
     label: t(`commons.labels.languages.${lang}`),
     value: lang,
   }
-}).sort((a, b) => a.label.localeCompare(b.label))
+})
 
 const handleSubmit = async () => {
   await router.replace({
@@ -120,7 +120,7 @@ const handleReset = () => {
                 v-model="search"
                 class="input input-bordered input-sm w-full"
                 type="text"
-                :placeholder="t('commons.labels.search')"
+                :placeholder="t('commons.placeholders.search')"
               >
             </div>
           </div>
