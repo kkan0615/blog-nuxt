@@ -44,7 +44,6 @@ const handleClick = (content: TOC) => {
 }
 
 const observeHeaders = () => {
-
   const article = document.getElementById(props.articleId)
   if (!article) {
     throw new Error('No article')
