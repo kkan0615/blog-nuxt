@@ -42,10 +42,11 @@ const localeOptions = LocaleCodeList.map(lang => {
 const handleSubmit = async () => {
   await router.replace({
     query: {
-      search: search.value || undefined,
-      locales: locales.value.length === 0 || locales.value[0] === locale.value ? undefined : locales.value.join(','),
+      locales: locales.value.length === 0 || (locales.value.length === 1 && locales.value[0] === locale.value)
+        ? undefined : locales.value.join(','),
       categories: categories.value.length === 0 ? undefined : categories.value.join(','),
       tags: tags.value.length === 0 ? undefined : tags.value.join(','),
+      search: search.value || undefined,
     }
   })
 
