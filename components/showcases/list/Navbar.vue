@@ -43,7 +43,7 @@ const handleSubmit = async () => {
   await router.replace({
     query: {
       search: search.value || undefined,
-      locales: locales.value.length === 0 ? undefined : locales.value.join(','),
+      locales: locales.value.length === 0 || locales.value[0] === locale.value ? undefined : locales.value.join(','),
       categories: categories.value.length === 0 ? undefined : categories.value.join(','),
       tags: tags.value.length === 0 ? undefined : tags.value.join(','),
     }
@@ -98,6 +98,7 @@ const handleReset = () => {
               <MultiSelect
                 v-model="categories"
                 :options="categoryOptions"
+                :placeholder="t('labels.blogFilter.categories')"
               />
             </div>
             <div class="form-control w-full">
@@ -107,6 +108,7 @@ const handleReset = () => {
               <MultiSelect
                 v-model="tags"
                 :options="tagOptions"
+                :placeholder="t('labels.blogFilter.tags')"
               />
             </div>
             <div class="form-control w-full">
@@ -115,9 +117,9 @@ const handleReset = () => {
               </label>
               <input
                 v-model="search"
-                type="text"
-                placeholder="search"
                 class="input input-bordered input-sm w-full"
+                type="text"
+                :placeholder="t('commons.labels.search')"
               >
             </div>
           </div>

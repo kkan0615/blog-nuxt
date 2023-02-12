@@ -5,7 +5,7 @@ const { t } = useI18n()
 <template>
   <div class="card bg-base-300 mb-4">
     <div class="card-body">
-      <h2 class="card-title">
+      <h2 class="card-title capitalize">
         {{ t('views.contact.requestCard.title') }}
       </h2>
       <p>

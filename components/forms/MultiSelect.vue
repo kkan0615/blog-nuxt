@@ -34,14 +34,19 @@ const handleChange = (option: { label: string, value: any }) => {
   <div class="dropdown">
     <div
       :tabindex="0"
-      type="text"
       class="input input-bordered input-sm w-full cursor-pointer"
     >
-      {{ displayValues || placeholder }}
+      <span
+        :class="{
+          'opacity-70': !displayValues,
+        }"
+      >
+        {{ displayValues || placeholder }}
+      </span>
     </div>
     <div
       :tabIndex="0"
-      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-56 max-h-64 overflow-y-auto"
+      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full max-w-lg max-h-64 overflow-y-auto"
     >
       <!-- Without div ul and li will break flex -->
       <div>
@@ -54,7 +59,8 @@ const handleChange = (option: { label: string, value: any }) => {
               <input
                 type="checkbox"
                 :checked="modelValue.includes(option.value)"
-                class="checkbox checkbox-primary mr-2"
+                :aria-checked="modelValue.includes(option.value)"
+                class="checkbox checkbox-primary"
                 @change="() => handleChange(option)"
               >
               <span class="label-text">{{ option.label }}</span>

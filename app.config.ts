@@ -10,6 +10,7 @@ export default defineAppConfig({
     'get Started',
     'javaScript',
     'typescript',
+    'css',
     'react',
     'vue',
     'next',
