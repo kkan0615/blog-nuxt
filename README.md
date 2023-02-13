@@ -3,10 +3,14 @@ Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
 # Setup
-Make sure to install the dependencies:
+## Install dependencies
 ```bash
 yarn install
 ````
+## Nuxt DevTools
+```bash
+npx nuxi@latest devtools enable
+```
 ## Development Server
 ```bash
 yarn dev
