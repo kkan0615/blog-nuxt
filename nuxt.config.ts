@@ -17,15 +17,28 @@ export default defineNuxtConfig({
     public:{
       GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
       NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL,
+      CA_PUB: process.env.NUXT_PUBLIC_CA_PUB,
     },
     GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
     NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL,
+    CA_PUB: process.env.NUXT_PUBLIC_CA_PUB,
   },
   css: [
     'animate.css',
     '~/styles/libs/animate.css',
     '~/styles/libs/tokyo-night-dark.min.css',
   ],
+  app: {
+    head: {
+      script: [
+        {
+          async: true,
+          src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.NUXT_PUBLIC_CA_PUB}`,
+          crossorigin: 'anonymous',
+        },
+      ],
+    },
+  },
   security: {
     corsHandler: false,
     headers: false,
