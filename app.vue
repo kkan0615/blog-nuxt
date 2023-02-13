@@ -52,10 +52,9 @@ useHead({
         href: linkEl.href,
         hreflang: linkEl.hreflang
       }
-    })
+    }),
   ],
 })
-// initial app setting
 </script>
 <style>
 .page-enter-active,
