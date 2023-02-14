@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from '#app'
-import { Icon } from '@iconify/vue'
+import CopyBtn from '~/components/btns/Copy.vue'
+import ShareBtn from '~/components/btns/Share.vue'
 
 interface Props {
   filepath: string
@@ -12,24 +13,9 @@ const appConfig = useAppConfig()
 const { t } = useI18n()
 const route = useRoute()
 
-const handleCopyLink = async () => {
-  if (route.path)
-    await navigator.clipboard.writeText(`${location.origin}${route.path}`)
-}
-
-const handleShare = async () => {
-  if (navigator.share && route.path) {
-    await navigator.share({
-      title: 'Share',
-      url: `${location.origin}${route.path}`
-    })
-  }
-}
 </script>
 <template>
-  <div
-    class="flex items-center mt-4"
-  >
+  <div class="flex items-center mt-4">
     <a
       :href="`${appConfig.github}/blob/main/content/${filepath}`"
       rel="noopener noreferrer"
@@ -42,24 +28,10 @@ const handleShare = async () => {
       class="lg:block hidden ml-auto tooltip"
       :data-tip="t('commons.tooltips.copyURL')"
     >
-      <button
-        class="btn btn-sm btn-ghost"
-        type="button"
-        @click="handleCopyLink"
-      >
-        <Icon icon="mdi:link-variant" />
-      </button>
+      <CopyBtn :path="route.path" />
     </div>
-    <div
-      class="lg:hidden ml-auto"
-    >
-      <button
-        class="btn btn-sm btn-ghost"
-        type="button"
-        @click="handleShare"
-      >
-        <Icon icon="material-symbols:share" />
-      </button>
+    <div class="lg:hidden ml-auto">
+      <ShareBtn :path="route.path" />
     </div>
   </div>
 </template>
