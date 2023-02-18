@@ -15,7 +15,7 @@
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.9.0",
     "animate.css": "^4.1.1",
-    "daisyui": "^2.49.0",
+    "daisyui": "2.50.1",
     "dayjs": "^1.11.7",
     "highlight.js": "^11.7.0",
     "nuxt-security": "^0.10.2",
