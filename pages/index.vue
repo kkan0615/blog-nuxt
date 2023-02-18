@@ -151,6 +151,6 @@ onBeforeUnmount(() => {
 </template>
 <style>
 .parallax-img {
-  background-image: url("../public/assets/home/background.jpg");
+  background-image: url("/assets/home/background.jpg");
 }
 </style>
