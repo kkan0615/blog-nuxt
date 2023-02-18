@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
-    'nuxt-security'
+    // 'nuxt-security'
   ],
   runtimeConfig: {
     public:{
@@ -39,10 +39,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-  security: {
-    corsHandler: false,
-    headers: false,
-  },
+  // security: {
+  //   corsHandler: false,
+  //   headers: false,
+  // },
   i18n: {
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
