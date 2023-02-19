@@ -3,7 +3,7 @@ title: 'Example'
 description: 'Example'
 lastUpdated: '2022-12-17'
 locale: 'en'
-categories: [web]
+categories: [programming]
 tags: [react]
 github: 'https://github.com/kkan0615'
 downloads: [

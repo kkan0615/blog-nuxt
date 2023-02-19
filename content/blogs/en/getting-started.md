@@ -3,7 +3,7 @@ title: 'Next.js blog getting started'
 description: 'How to use pages in Next.js exploring the options'
 date: '2022-12-30'
 locale: 'en'
-categories: [development]
+categories: [programming]
 tags: [Node Js, Get Started]
 _draft: true
 ---

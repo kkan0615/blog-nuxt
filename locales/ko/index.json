@@ -40,10 +40,10 @@
     },
     "categories": {
       "example": "예제",
-      "development": "개발",
-      "web": "웹"
+      "programming": "개발"
     },
     "tags": {
+      "web": "웹",
       "node Js": "Node Js",
       "get Started": "시작하기",
       "javaScript": "자바스크립트",
