@@ -166,6 +166,7 @@ router.beforeEach((guard) => {
         :categories="page.categories"
       />
       <Tags
+        :categories="page.categories"
         :tags="page.tags"
       />
       <BottomNavbar
