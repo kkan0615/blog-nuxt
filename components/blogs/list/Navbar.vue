@@ -134,6 +134,7 @@ const handleReset = () => {
                 v-model="tags"
                 :options="tagOptions"
                 :placeholder="t('labels.blogFilter.tags')"
+                :no-data-placeholder="t('placeholders.noSelectedCategory')"
               />
             </div>
             <div class="form-control w-full">
