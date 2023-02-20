@@ -75,6 +75,9 @@
       "electron": "Electron"
     }
   },
+  "placeholders": {
+    "noSelectedCategory": "카테고리를 선택해 주세요."
+  },
   "components": {
     "donations": {
       "title": "후원해주셔서 감사합니다",

@@ -75,6 +75,9 @@
       "electron": "Electron"
     }
   },
+  "placeholders": {
+    "noSelectedCategory": "Select Category first"
+  },
   "components": {
     "donations": {
       "title": "Thank you for support",

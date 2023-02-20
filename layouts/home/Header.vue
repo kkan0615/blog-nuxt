@@ -63,10 +63,34 @@ const handleScroll = () => {
         >
           home
         </MenuItem>
+        <!-- @TODO: Open following code when other categories are ready -->
+        <!--        <div class="dropdown dropdown-open">-->
+        <!--          <div-->
+        <!--            :tabindex="0"-->
+        <!--            class="capitalize font-black first-letter:text-primary cursor-pointer"-->
+        <!--          >-->
+        <!--            blogs-->
+        <!--          </div>-->
+        <!--          <ul-->
+        <!--            :tabindex="0"-->
+        <!--            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box max-w-52"-->
+        <!--          >-->
+        <!--            <li>-->
+        <!--              <MenuItem-->
+        <!--                class="px-2 py-1"-->
+        <!--                to="/blogs"-->
+        <!--                :query="{categories: 'programming'}"-->
+        <!--              >-->
+        <!--                Programming-->
+        <!--              </MenuItem>-->
+        <!--            </li>-->
+        <!--          </ul>-->
+        <!--        </div>-->
         <MenuItem
           to="/blogs"
+          :query="{categories: 'programming'}"
         >
-          blogs
+          Programming
         </MenuItem>
         <MenuItem
           to="/showcases"
