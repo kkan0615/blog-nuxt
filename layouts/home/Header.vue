@@ -90,7 +90,7 @@ const handleScroll = () => {
           to="/blogs"
           :query="{categories: 'programming'}"
         >
-          Programming
+          Blogs
         </MenuItem>
         <MenuItem
           to="/showcases"

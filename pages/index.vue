@@ -9,6 +9,7 @@ definePageMeta({
 const { t, locale } = useI18n()
 const { data: blogList } = await useAsyncData<PostList[] >('blogs', async () => await queryContent<PostList>('blogs/')
   .where({
+    _draft: { $not: true },
     locale: locale.value,
   })
   .sort({ date: -1 })
@@ -17,6 +18,7 @@ const { data: blogList } = await useAsyncData<PostList[] >('blogs', async () => 
 
 const { data: showcaseList } = await useAsyncData<PostList[] >('showcases', async () => await queryContent<PostList>('showcases/')
   .where({
+    _draft: { $not: true },
     locale: locale.value,
   })
   .sort({ date: -1 })
@@ -97,7 +99,7 @@ onBeforeUnmount(() => {
       </p>
       <div
         v-if="blogList.length"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:p-4 md:p-0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <BlogsListBlogCard
           v-for="blog in blogList"
@@ -131,7 +133,7 @@ onBeforeUnmount(() => {
       </p>
       <div
         v-if="showcaseList.length"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:p-4 md:p-0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <ShowcasesListShowcaseCard
           v-for="showcase in showcaseList"

@@ -72,7 +72,7 @@ const { data: list, refresh } = await useAsyncData('showcases', async () =>
     <Navbar @search="refresh" />
     <div
       v-if="list && list.length > 0"
-      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
+      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:py-4 md:p-0"
     >
       <!--      <ContentList-->
       <!--        v-slot="{ list }"-->

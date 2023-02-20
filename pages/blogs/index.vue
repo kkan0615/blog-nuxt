@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const displayPosts = 20
-
 import { useI18n } from '#imports'
 import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList } from '~/types/post'
+
+const displayPosts = 20
 
 const router = useRouter()
 const route = useRoute()
@@ -122,7 +122,7 @@ const handleClickPagination = async (newPageNum: number) => {
     <Navbar @search="refresh" />
     <div
       v-if="data.list && data.list.length > 0"
-      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:p-4 md:p-0"
+      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:py-4 md:p-0"
     >
       <!--      <ContentList-->
       <!--        v-slot="{ list }"-->
