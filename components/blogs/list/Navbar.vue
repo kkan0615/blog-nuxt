@@ -20,7 +20,7 @@ const tags = ref<string[]>(((route.query.tags || '') as string).split(',').filte
 
 const categoryOptions = appConfig.blogCategories.map(category => {
   return {
-    label: t(`labels.categories.${category}`),
+    label: t(`labels.blogCategories.${category}`),
     value: category,
   }
 }).sort((a, b) => a.label.localeCompare(b.label))
@@ -35,7 +35,7 @@ const tagOptions = computed(() => {
 
   return tags.map(tag => {
     return {
-      label: t(`labels.tags.${tag}`),
+      label: t(`labels.blogTags.${tag}`),
       value: tag,
     }
   }).sort((a, b) => a.label.localeCompare(b.label))

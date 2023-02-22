@@ -38,11 +38,11 @@
       "categories": "카테고리",
       "tags": "태그"
     },
-    "categories": {
+    "blogCategories": {
       "example": "예제",
       "programming": "개발"
     },
-    "tags": {
+    "blogTags": {
       "web": "웹",
       "node Js": "Node Js",
       "get Started": "시작하기",
