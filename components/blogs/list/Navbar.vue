@@ -25,12 +25,22 @@ const categoryOptions = appConfig.blogCategories.map(category => {
   }
 }).sort((a, b) => a.label.localeCompare(b.label))
 
-const tagOptions = appConfig.blogTags.map(tag => {
-  return {
-    label: t(`labels.tags.${tag}`),
-    value: tag,
+const tagOptions = computed(() => {
+  let tags: string[] = []
+  let key: keyof typeof appConfig.blogTags
+  for (key in appConfig.blogTags) {
+    if (categories.value.includes(key))
+      tags = [...tags, ...appConfig.blogTags[key]]
   }
-}).sort((a, b) => a.label.localeCompare(b.label))
+
+  return tags.map(tag => {
+    return {
+      label: t(`labels.tags.${tag}`),
+      value: tag,
+    }
+  }).sort((a, b) => a.label.localeCompare(b.label))
+
+})
 
 const localeOptions = LocaleCodeList.map(lang => {
   return {
@@ -38,6 +48,18 @@ const localeOptions = LocaleCodeList.map(lang => {
     value: lang,
   }
 })
+
+const handleUpdateCategories = () => {
+  tags.value = tags.value.filter(tag => {
+    let tagsInFilter: string[] = []
+    let key: keyof typeof appConfig.blogTags
+    for (key in appConfig.blogTags) {
+      if (categories.value.includes(key))
+        tagsInFilter = [...tagsInFilter, ...appConfig.blogTags[key]]
+    }
+    return tagsInFilter.includes(tag)
+  })
+}
 
 const handleSubmit = async () => {
   await router.replace({
@@ -101,6 +123,7 @@ const handleReset = () => {
                 v-model="categories"
                 :options="categoryOptions"
                 :placeholder="t('labels.blogFilter.categories')"
+                @update:model-value="handleUpdateCategories"
               />
             </div>
             <div class="form-control w-full">
@@ -111,6 +134,7 @@ const handleReset = () => {
                 v-model="tags"
                 :options="tagOptions"
                 :placeholder="t('labels.blogFilter.tags')"
+                :no-data-placeholder="t('placeholders.noSelectedCategory')"
               />
             </div>
             <div class="form-control w-full">

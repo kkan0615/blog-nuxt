@@ -2,6 +2,7 @@
 import { Icon } from '@iconify/vue'
 
 interface Props {
+  categories: string[]
   tags: string[]
 }
 
@@ -22,6 +23,7 @@ const { t } = useI18n()
         path: localePath('blogs'),
         query: {
           locales: route.query.locales,
+          categories: categories.join(','),
           tags: tag,
         }
       }"

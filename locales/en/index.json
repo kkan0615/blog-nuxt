@@ -40,10 +40,10 @@
     },
     "categories": {
       "example": "Example",
-      "development": "Development",
-      "web": "Web"
+      "programming": "Programming"
     },
     "tags": {
+      "web": "Web",
       "node Js": "Node Js",
       "get Started": "Get Started",
       "javaScript": "JavaScript",
@@ -74,6 +74,9 @@
       "vue": "vue",
       "electron": "Electron"
     }
+  },
+  "placeholders": {
+    "noSelectedCategory": "Select Category first"
   },
   "components": {
     "donations": {

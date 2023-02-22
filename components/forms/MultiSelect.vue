@@ -3,9 +3,13 @@ interface Props {
   modelValue: any[]
   options: {label: string, value: any}[]
   placeholder?: string
+  noDataPlaceholder?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  placeholder: '',
+  noDataPlaceholder: 'No data'
+})
 
 const emit = defineEmits<{
   (e: 'update:modelValue', newValues: any[]): void
@@ -49,7 +53,7 @@ const handleChange = (option: { label: string, value: any }) => {
       class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full max-w-lg max-h-64 overflow-y-auto"
     >
       <!-- Without div ul and li will break flex -->
-      <div>
+      <div v-if="options.length">
         <ul
           v-for="option in options"
           :key="option.value"
@@ -67,6 +71,12 @@ const handleChange = (option: { label: string, value: any }) => {
             </label>
           </li>
         </ul>
+      </div>
+      <div
+        v-else
+        class="text-center p-2"
+      >
+        {{ noDataPlaceholder }}
       </div>
     </div>
   </div>

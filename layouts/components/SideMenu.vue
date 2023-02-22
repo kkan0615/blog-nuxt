@@ -52,6 +52,7 @@ const route = useRoute()
         <li>
           <MenuItem
             to="/blogs"
+            :query="{categories: 'programming'}"
             icon="material-symbols:menu-rounded"
             :active="route.name.includes('blogs')"
           >

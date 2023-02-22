@@ -1,3 +1,13 @@
+<script setup lang="ts">
+
+interface Props {
+  to: string,
+  active: boolean
+  query?: Record<string, any>
+}
+
+defineProps<Props>()
+</script>
 <template>
   <NuxtLink
     class="opacity-70 font-black px-2 capitalize"
@@ -7,17 +17,11 @@
       'opacity-100': active,
     }
     "
-    :to="localePath(to)"
+    :to="{
+      path: localePath(to),
+      query: query
+    }"
   >
     <slot />
   </NuxtLink>
 </template>
-<script setup lang="ts">
-
-interface Props {
-  to: string,
-  active: boolean
-}
-
-defineProps<Props>()
-</script>
