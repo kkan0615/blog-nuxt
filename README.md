@@ -48,6 +48,8 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [vue-gtag-next]()
 - [animate.css]() - Animation list
 - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
+- [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
+- [vite-pwa](https://github.com/vite-pwa/nuxt)
 
 ## Content part
 - [highlight.js]() - Add highlight for code section

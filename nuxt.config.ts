@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
+    '@vite-pwa/nuxt',
     // 'nuxt-security'
   ],
   runtimeConfig: {
@@ -37,6 +38,48 @@ export default defineNuxtConfig({
           crossorigin: 'anonymous',
         },
       ],
+    },
+  },
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Requiem blog',
+      short_name: 'Requiem_blog',
+      theme_color: '#1E1E1E',
+      icons: [
+        {
+          src: 'app/logo_color-128.png',
+          sizes: '128x128',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-256.png',
+          sizes: '256x256',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    },
+    client: {
+      installPrompt: true,
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
     },
   },
   // security: {

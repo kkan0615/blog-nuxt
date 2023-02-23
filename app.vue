@@ -1,8 +1,11 @@
 <template>
-  <NuxtLayout>
+  <div>
+    <VitePwaManifest />
     <NuxtLoadingIndicator />
-    <NuxtPage />
-  </NuxtLayout>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 <script setup lang="ts">
 import './libs/dayjs'
@@ -45,6 +48,7 @@ useHead({
     })
   ],
   link: [
+    { rel: 'icon', type: 'image/png', href: 'app/logo_color-128.png' },
     ...(head.value.link || []).map(linkEl => {
       return {
         id: linkEl.id,
