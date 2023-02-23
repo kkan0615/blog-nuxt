@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const appSetting = useAppConfig()
-console.log('animated')
 </script>
 <template>
   <!-- Flipped element by -scale-x-100 -->
@@ -8,7 +7,8 @@ console.log('animated')
     :href="appSetting.github"
     target="_blank"
     rel="noopener noreferrer"
-    class="github-corner -scale-x-100"
+    class="github-corner -scale-x-100 text-primary"
+    aria-label="View source on GitHub"
   >
     <!-- change width and height using under -->
     <svg
