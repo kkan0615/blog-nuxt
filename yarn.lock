@@ -1214,7 +1214,7 @@
     vite-plugin-checker "^0.5.4"
     vue-bundle-renderer "^1.0.0"
 
-"@nuxtjs/i18n@^8.0.0-beta.9":
+"@nuxtjs/i18n@8.0.0-beta.9":
   version "8.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/@nuxtjs/i18n/-/i18n-8.0.0-beta.9.tgz#6bccff4f900a09a9cb220f35dfa22f248a0a0d0c"
   integrity sha512-Vz90kpmr1WJIPqAhlLWD3Yov8/DWCUQiT/5Xu8Kuqw+iZ47ZI7HI2W6BzwusHSRHn+fINxg/lKgs0uWw38PfKw==
@@ -8356,9 +8356,9 @@ vue-gtag@^2.0.1:
   integrity sha512-aM4A58FVL0wV2ptYi+xzAjeg+pQVRyUcfBc5UkXAwQrR4t3WBhor50Izp2I+3Oo7+l+vWJ7u78DGcNzReb8S/A==
 
 vue-i18n-routing@^0.10.2:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/vue-i18n-routing/-/vue-i18n-routing-0.10.2.tgz#93c20232334facfedf7917cede4c3ae233aa09d9"
-  integrity sha512-TnGUmRsciC/SJSysOAeoY0BBp3S35LFF1EfvPCybd8vU/vsOwHIyJF/Z5tPlAo4I0Y5AyJSa5WMaqpXs8F9DdQ==
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/vue-i18n-routing/-/vue-i18n-routing-0.10.3.tgz#708191af565b27744fb74e5af357409dc8c3b690"
+  integrity sha512-U+tD43Lbv1+ZrMW2lDwF/suYfHc+ezeDZXSkyQOMcmsm/Brfw8CwpAx822Ur8SKYeUjsNLhIyEn9QX8df/Ey+Q==
   dependencies:
     "@intlify/shared" next
     "@intlify/vue-i18n-bridge" "^0.8.0"

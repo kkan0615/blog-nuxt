@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "0.1.1-canary.4",
+  "version": "0.1.1-canary.5",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.9",
+    "@nuxtjs/i18n": "8.0.0-beta.9",
     "@nuxtjs/tailwindcss": "6.4.0",
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.9.0",

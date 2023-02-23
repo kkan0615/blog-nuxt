@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const appSetting = useAppConfig()
-
+console.log('animated')
 </script>
 <template>
   <!-- Flipped element by -scale-x-100 -->
