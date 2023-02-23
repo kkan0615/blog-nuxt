@@ -9,6 +9,7 @@ yarn install
 ````
 ## Nuxt DevTools
 ```bash
+
 npx nuxi@latest devtools enable
 ```
 ## Development Server
