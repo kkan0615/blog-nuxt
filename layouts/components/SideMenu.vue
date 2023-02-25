@@ -5,6 +5,7 @@ import Donation from '~/components/advertisements/Donation.vue'
 import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 // import AnimatedOctocats from '~/components/icons/AnimatedOctocats.client.vue'
 import AnimatedOctocats from '~/components/icons/AnimatedOctocats.vue'
+import SideMenuContracts from '~/layouts/components/SideMenuContracts.vue'
 
 const { t } = useI18n()
 const appConfig = useAppConfig()
@@ -81,6 +82,7 @@ const route = useRoute()
       </ul>
     </div>
     <div class="mt-auto p-4">
+      <SideMenuContracts />
       <div class="flex items-center justify-center">
         <ThemeSelect
           class="block lg:hidden"
