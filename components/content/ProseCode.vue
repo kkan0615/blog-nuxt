@@ -22,7 +22,7 @@ const handleCopy = () => {
 </script>
 
 <template>
-  <div class="max-w-full">
+  <div class="max-w-full mb-4">
     <div class="code-container max-w-full overflow-x-auto">
       <div class="flex items-center p-1 pl-3">
         <div class="mr-auto uppercase text-sm">
