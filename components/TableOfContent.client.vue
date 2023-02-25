@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import Donation from '~/components/advertisements/Donation.vue'
 
+type TOCNodeName = 'H1' | 'H2' | 'H3' | 'H4'
+
 interface TOC {
   title: string,
   hash: string,
-  nodeName: 'H1' | 'H2' | 'H3' | 'H4'
+  nodeName: TOCNodeName
   el: Element
 }
 
 interface Props {
   articleId: string
 }
+
+const HeaderSelectors = 'h1, h2, h3, h4'
+
 const props = defineProps<Props>()
 
 const { t } = useI18n()
@@ -20,18 +25,21 @@ const observer = ref<IntersectionObserver | null>(null)
 /** Links template ref */
 const ulRef = ref<HTMLUListElement | null>(null)
 
+/**
+ * Create Table of content. Push the headers to toc array
+ */
 const createToc = () => {
   const article = document.getElementById(props.articleId)
-  if (!article) {
-    throw new Error('No article')
-  }
+  if (!article) throw new Error('No article')
+
   const newToc: TOC[] = []
-  const headers = article.querySelectorAll('h1, h2, h3, h4')
+  const headers = article.querySelectorAll(HeaderSelectors)
+
   headers.forEach(header => {
     newToc.push({
       title: header.textContent || '',
       hash: header.id,
-      nodeName: header.nodeName as ('H1' | 'H2' | 'H3' | 'H4'),
+      nodeName: header.nodeName as TOCNodeName,
       el: header,
     })
   })
@@ -39,6 +47,10 @@ const createToc = () => {
   toc.value = newToc
 }
 
+/**
+ * Click the toc element
+ * @param {TOC} content - clicked content
+ */
 const handleClick = (content: TOC) => {
   content.el.scrollIntoView({ behavior: 'smooth' })
 }
@@ -47,7 +59,7 @@ const observeHeaders = () => {
   const article = document.getElementById(props.articleId)
   if (!article) throw new Error('No article')
 
-  const headerEls = article.querySelectorAll('h1, h2, h3, h4')
+  const headerEls = article.querySelectorAll(HeaderSelectors)
   if (!headerEls.length) throw createError({ statusCode: 404 })
 
   observer.value = new IntersectionObserver((entries, observer) => {
@@ -70,6 +82,7 @@ const observeHeaders = () => {
 }
 
 onMounted(async () =>{
+  // Client is required to use with nextTick function
   await nextTick(() => {
     createToc()
     observeHeaders()
