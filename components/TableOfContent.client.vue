@@ -4,7 +4,7 @@ import Donation from '~/components/advertisements/Donation.vue'
 interface TOC {
   title: string,
   hash: string,
-  nodeName: 'H1' | 'H2' | 'H3'
+  nodeName: 'H1' | 'H2' | 'H3' | 'H4'
   el: Element
 }
 
@@ -31,7 +31,7 @@ const createToc = () => {
     newToc.push({
       title: header.textContent || '',
       hash: header.id,
-      nodeName: header.nodeName as ('H1' | 'H2' | 'H3'),
+      nodeName: header.nodeName as ('H1' | 'H2' | 'H3' | 'H4'),
       el: header,
     })
   })
@@ -45,14 +45,10 @@ const handleClick = (content: TOC) => {
 
 const observeHeaders = () => {
   const article = document.getElementById(props.articleId)
-  if (!article) {
-    throw new Error('No article')
-  }
+  if (!article) throw new Error('No article')
 
-  const headerEls = article.querySelectorAll('h1, h2, h3')
-  if (!headerEls.length) {
-    throw createError({ statusCode: 404 })
-  }
+  const headerEls = article.querySelectorAll('h1, h2, h3, h4')
+  if (!headerEls.length) throw createError({ statusCode: 404 })
 
   observer.value = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
