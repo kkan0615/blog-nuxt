@@ -26,7 +26,7 @@ const createToc = () => {
     throw new Error('No article')
   }
   const newToc: TOC[] = []
-  const headers = article.querySelectorAll('h1, h2, h3')
+  const headers = article.querySelectorAll('h1, h2, h3, h4')
   headers.forEach(header => {
     newToc.push({
       title: header.textContent || '',
@@ -104,6 +104,7 @@ onBeforeUnmount(() => {
         class="opacity-70 text-sm"
         :class="{
           'ml-4': content.nodeName === 'H3',
+          'ml-8': content.nodeName === 'H4',
         }"
         @click="() => handleClick(content)"
       >
