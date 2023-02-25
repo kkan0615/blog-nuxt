@@ -8,15 +8,15 @@ tags: [vue, electron]
 github: 'https://github.com/kkan0615/keyboard-mouse-detector'
 ---
 
-# Keyboard mouse detector
+## Keyboard mouse detector
 Detect Mouse, Keyboard or Wheel events!
 
-# Supporting Languages
+## Supporting Languages
 - English
 - Korean [Developing...]
 - Chinese [Developing...]
 
-# Events Types
+## Events Types
 | Event name     | Description            |
 |----------------|------------------------|
 | KEY_PRESSED    | When key is pressed    |
@@ -27,10 +27,10 @@ Detect Mouse, Keyboard or Wheel events!
 | MOUSE_MOVED    | When mouse is moved    |
 | MOUSE_WHEEL    | When wheel is worked   |
 
-# Develop
-## Known issue
+## Develop
+### Known issue
 - Use "yarn" for package manager. "pnpm has issue with native dependencies"
 
-# Feature we might add
+## Feature we might add
 - Dark mode
 - More languages

@@ -3,7 +3,8 @@ import { PostList } from '~/types/post'
 import Footer from '~/layouts/components/Footer.vue'
 
 definePageMeta({
-  layout: 'home'
+  layout: 'home',
+  scrollToTop: true,
 })
 
 const { t, locale } = useI18n()

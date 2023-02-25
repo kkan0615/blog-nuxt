@@ -91,7 +91,7 @@ const isNew = computed(() => {
             :key="category"
             class="badge badge-outline badge-md lg:badge-sm"
           >
-            {{ t(`labels.categories.${category}`) }}
+            {{ t(`labels.blogCategories.${category}`) }}
           </div>
         </div>
         <div
@@ -103,7 +103,7 @@ const isNew = computed(() => {
             :key="tag"
             class="badge badge-outline badge-md lg:badge-sm"
           >
-            {{ t(`labels.tags.${tag}`) }}
+            {{ t(`labels.blogTags.${tag}`) }}
           </div>
         </div>
         <div

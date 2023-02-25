@@ -41,6 +41,9 @@ export default defineAppConfig({
   profile: {
     image: 'https://avatars.githubusercontent.com/u/46660361?v=4',
     email: 'kkan0615@gmail.com',
-    github: 'https://github.com/kkan0615'
+    socials: {
+      linkedIn: 'https://www.linkedin.com/in/youngjin-kwak-91658323a/',
+      github: 'https://github.com/kkan0615',
+    }
   },
 })

@@ -26,7 +26,7 @@ const { t } = useI18n()
         }
       }"
     >
-      {{ t(`labels.categories.${category}`) }}
+      {{ t(`labels.blogCategories.${category}`) }}
     </NuxtLink>
   </div>
 </template>

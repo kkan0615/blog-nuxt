@@ -38,11 +38,11 @@
       "categories": "Categories",
       "tags": "Tags"
     },
-    "categories": {
+    "blogCategories": {
       "example": "Example",
       "programming": "Programming"
     },
-    "tags": {
+    "blogTags": {
       "web": "Web",
       "node Js": "Node Js",
       "get Started": "Get Started",
