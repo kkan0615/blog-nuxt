@@ -1,3 +1,5 @@
+<!-- This component is deprecated, so remove it before upgrad next version -->
+
 <script setup lang="ts">
 import Donation from '~/components/advertisements/Donation.vue'
 

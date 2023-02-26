@@ -153,11 +153,15 @@ onMounted(() => {
       />
     </div>
     <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
-      <client-only>
-        <TableOfContent
-          article-id="article"
-        />
-      </client-only>
+      <!--      <client-only>-->
+      <!--        <TableOfContent-->
+      <!--          article-id="article"-->
+      <!--        />-->
+      <!--      </client-only>-->
+      <TOC
+        article-id="article"
+        :toc="page.body.toc"
+      />
     </div>
   </div>
 </template>

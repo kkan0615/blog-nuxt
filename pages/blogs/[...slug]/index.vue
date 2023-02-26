@@ -1,17 +1,16 @@
 <script setup lang="ts">
 import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
+import hljs from 'highlight.js'
 import { useLayoutStore } from '~/stores/layout'
 import type { PostDetail } from '~/types/post'
 import { PostList } from '~/types/post'
-import TableOfContent from '~/components/TableOfContent.client.vue'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
-import hljs from 'highlight.js'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -175,7 +174,7 @@ router.beforeEach((guard) => {
       <div class="mt-8">
         <Donation />
       </div>
-      <h3 class="mt-4 text-xl font-bold opacity-80">
+      <h3 class="mt-4 text-xl font-bold opacity-80 capitalize">
         {{ t('labels.furtherReading') }}
       </h3>
       <div
@@ -192,11 +191,15 @@ router.beforeEach((guard) => {
       </div>
     </div>
     <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
-      <ClientOnly>
-        <TableOfContent
-          article-id="article"
-        />
-      </ClientOnly>
+      <!--      <ClientOnly>-->
+      <!--        <TableOfContent-->
+      <!--          article-id="article"-->
+      <!--        />-->
+      <!--      </ClientOnly>-->
+      <TOC
+        article-id="article"
+        :toc="page.body.toc"
+      />
     </div>
   </div>
 </template>
