@@ -1,10 +1,9 @@
 import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { LocaleCodeList, DefaultLocale, LocaleCodes } from '~/types/locale'
-import dayjs from 'dayjs'
 
-/** Path list which will be added in sitemap*/
-const paths: string[] = [
+/** Route list which will be added in sitemap*/
+const routes: string[] = [
   '/',
   '/blogs',
   '/showcases',
@@ -25,10 +24,11 @@ export default defineEventHandler(async (event) => {
       localeCodeEl = ''
     }
     // Write sitemap
-    paths.map(pathEl => {
+    routes.map(routeEl => {
       sitemap.write({
-        url: `${localeCodeEl}${pathEl}`,
-        // changefreq: 'daily'
+        url: `${localeCodeEl}${routeEl}`,
+        // changefreq: 'daily',
+        // priority: 1.0,
       }, error => {
         if (error) {
           console.error(error)
