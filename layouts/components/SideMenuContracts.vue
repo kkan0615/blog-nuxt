@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import ContactLink from '~/components/links/ContactLink.vue'
 
 const appConfig = useAppConfig()
