@@ -1,38 +1,48 @@
-# Nuxt 3 + Tailwind CSS + DaisyUI Personal Website
+# Nuxt 3 + Tailwind CSS + DaisyUI Website
 Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
-# Setup
-## Install dependencies
+## Setup
+### Install dependencies
 ```bash
 yarn install
 ````
-## Nuxt DevTools
-```bash
 
+### Nuxt DevTools (> 3.2.0 not supported yet!)
+```bash
 npx nuxi@latest devtools enable
 ```
-## Development Server
+
+### Development Server
 ```bash
 yarn dev
 ```
-## Production
+The website will be opened with port 3005
+
+### Production
 Build the application for production:
 ```bash
 yarn build
 ```
-Locally preview production build:
+
+### Locally preview production build:
 ```bash
 yarn preview
 ```
 
-# .env
+## config
+### .env
 ```text
-NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GA"
-NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
+NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GOOGLE ANALYTICS KEY"
+NUXT_PUBLIC_BASE_URL="PUBLIC URL"
+NUXT_PUBLIC_CA_PUB="GOOGLE CONSOLE KEY"
+```
+### app.config.ts
+```text
+github: ""
 ```
 
-# Packages
+## Packages
 - [tailwindcss](https://tailwindcss.com/)= Tailwind css
 - [daisyui](https://daisyui.com/) - Tailwind based UI Framework
 - [theme-change](https://github.com/saadeghi/theme-change) - Change theme with daisyui
@@ -51,13 +61,13 @@ NUXT_PUBLIC_BASE_URL="http:somebaseurl.com"
 - [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
 - [vite-pwa](https://github.com/vite-pwa/nuxt)
 
-## Content part
+### Relative with Content
 - [highlight.js]() - Add highlight for code section
 - [rehype-highlight]() - Add highlight for code section (not working)
 - [remark-reading-time]() - Add reading time
 
-# :file_folder: Folder structure
-See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
+## :file_folder: Folder structure
+See more detail to click the [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
 ```text
 ├─ assets/                      # Assets (Videos, fonts ...)
 ├─ components/                  # Components
@@ -84,13 +94,13 @@ See more detail with [Link](https://nuxt.com/docs/guide/directory-structure/nuxt
 ├─ tsconfig.json                # Typescript config
 ```
 
-# Contributors
+## Contributors
 Thank you for helping me to make better blog
 
-# Supports
+## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
-# Sites
+## Reference Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
 - [Github - Nuxt](https://github.com/nuxt/nuxt)

@@ -39,28 +39,18 @@ const handleScroll = () => {
         for="home-layout-drawer"
         class="btn btn-ghost btn-sm drawer-button block lg:hidden"
       >
-        <span
-          class="text-2xl"
-        >
+        <span class="text-2xl">
           <Icon
             icon="material-symbols:menu-rounded"
           />
         </span>
       </label>
-      <div
-        class="text-lg font-bold ml-2"
-      >
+      <div class="text-lg font-bold ml-2">
         {{ t('seo.title') }}
       </div>
-      <div
-        class="ml-auto"
-      />
-      <div
-        class="space-x-4 hidden lg:flex"
-      >
-        <MenuItem
-          to="/"
-        >
+      <div class="ml-auto" />
+      <div class="space-x-4 hidden lg:flex">
+        <MenuItem to="/">
           home
         </MenuItem>
         <!-- @TODO: Open following code when other categories are ready -->

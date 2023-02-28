@@ -43,6 +43,7 @@ export default defineAppConfig({
     email: 'kkan0615@gmail.com',
     socials: {
       linkedIn: 'https://www.linkedin.com/in/youngjin-kwak-91658323a/',
+      indeed: 'https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage&_ga=2.229680351.2145071738.1672341480-1054300716.1666887722',
       github: 'https://github.com/kkan0615',
     }
   },

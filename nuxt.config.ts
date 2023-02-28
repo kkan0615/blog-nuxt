@@ -113,8 +113,10 @@ export default defineNuxtConfig({
     provider: 'netlify',
   },
   content: {
-    // ignores: ['ghost'],
     markdown: {
+      toc: {
+        depth: 5, searchDepth: 5
+      },
       anchorLinks: false,
       remarkPlugins: {
         'remark-reading-time': {},

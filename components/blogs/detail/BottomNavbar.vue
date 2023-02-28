@@ -2,6 +2,7 @@
 import { useRoute } from '#app'
 import CopyBtn from '~/components/btns/Copy.vue'
 import ShareBtn from '~/components/btns/Share.vue'
+import EditOnGithub from '~/components/links/EditOnGithub.vue'
 
 interface Props {
   filepath: string
@@ -9,21 +10,13 @@ interface Props {
 
 defineProps<Props>()
 
-const appConfig = useAppConfig()
 const { t } = useI18n()
 const route = useRoute()
 
 </script>
 <template>
   <div class="flex items-center mt-4">
-    <a
-      :href="`${appConfig.github}/blob/main/content/${filepath}`"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="link"
-    >
-      {{ t('commons.labels.editOnGithub') }}
-    </a>
+    <EditOnGithub :filepath="filepath" />
     <div
       class="lg:block hidden ml-auto tooltip"
       :data-tip="t('commons.tooltips.copyURL')"
