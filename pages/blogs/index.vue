@@ -4,6 +4,7 @@ import Navbar from '~/components/blogs/list/Navbar.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList } from '~/types/post'
+import { QueryBuilderWhere } from '@nuxt/content/dist/runtime/types'
 
 const displayPosts = 20
 
@@ -60,37 +61,27 @@ const { data, refresh } = await useAsyncData<{
 }>('blogs', async () => {
   const currPageNum = (Number(route.query.page) || 1)
 
+  const queryBuilderWhere: QueryBuilderWhere = {
+    _draft: { $not: true },
+    title: { $contains: route.query.search as string },
+    locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
+    categories: { $in: route.query.categories ?
+      (route.query.categories as string).split(',').filter((el) => !!el) :
+      undefined
+    } as any,
+    tags: { $in: route.query.tags ?
+      (route.query.tags as string).split(',').filter((el) => !!el) :
+      undefined
+    } as any,
+  }
+
   const maxLength = (await queryContent<PostList>('blogs/')
-    .where({
-      _draft: { $not: true },
-      title: { $contains: route.query.search as string },
-      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
-      categories: { $in: route.query.categories ?
-        (route.query.categories as string).split(',').filter((el) => !!el) :
-        undefined
-      } as any,
-      tags: { $in: route.query.tags ?
-        (route.query.tags as string).split(',').filter((el) => !!el) :
-        undefined
-      } as any,
-    })
+    .where(queryBuilderWhere)
     .only(['_id'])
     .find()).length
 
   const list = await queryContent<PostList>('blogs/')
-    .where({
-      _draft: { $not: true },
-      title: { $contains: route.query.search as string },
-      locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
-      categories: { $in: route.query.categories ?
-        (route.query.categories as string).split(',').filter((el) => !!el) :
-        undefined
-      } as any,
-      tags: { $in: route.query.tags ?
-        (route.query.tags as string).split(',').filter((el) => !!el) :
-        undefined
-      } as any,
-    })
+    .where(queryBuilderWhere)
     .sort({ date: -1 })
     .skip((currPageNum - 1) * displayPosts)
     .limit(displayPosts)

@@ -2,6 +2,8 @@
 import { PostList } from '~/types/post'
 import Footer from '~/layouts/components/Footer.vue'
 
+const LIMIT_CARDS = 3
+
 definePageMeta({
   layout: 'home',
   scrollToTop: true,
@@ -14,7 +16,7 @@ const { data: blogList } = await useAsyncData<PostList[] >('blogs', async () => 
     locale: locale.value,
   })
   .sort({ date: -1 })
-  .limit(3)
+  .limit(LIMIT_CARDS)
   .find())
 
 const { data: showcaseList } = await useAsyncData<PostList[] >('showcases', async () => await queryContent<PostList>('showcases/')
@@ -23,16 +25,14 @@ const { data: showcaseList } = await useAsyncData<PostList[] >('showcases', asyn
     locale: locale.value,
   })
   .sort({ date: -1 })
-  .limit(3)
+  .limit(LIMIT_CARDS)
   .find())
 
 const observer = ref<IntersectionObserver | null>(null)
 
 onMounted(() => {
   const sectionEls = document.querySelectorAll('section')
-  if (!sectionEls.length) {
-    throw createError({ statusCode: 404 })
-  }
+  if (!sectionEls.length) throw createError({ statusCode: 404 })
 
   observer.value = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
