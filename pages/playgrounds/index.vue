@@ -11,8 +11,5 @@ const nodeEnv = process.env.NODE_ENV
     <div>
       {{ nodeEnv }}
     </div>
-    <div>
-      {{ runtimeConfig.NUXT_PUBLIC_BASE_URL }}
-    </div>
   </div>
 </template>
