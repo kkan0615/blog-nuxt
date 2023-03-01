@@ -38,7 +38,7 @@ onMounted(() => {
     entries.forEach(entry => {
       const intersecting = entry.isIntersecting
       if (intersecting) {
-        entry.target.classList.add('animate__fadeInDown')
+        entry.target.classList.add('animate__fadeIn')
         observer.unobserve(entry.target)
       }
     })
@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
     </div>
     <section
       class="max-w-4xl mx-auto p-4 lg:py-4 animate__animated"
-      data-animate="animate__fadeInDown"
+      data-animate="animate__fadeIn"
     >
       <h2 class="text-3xl font-bold capitalize">
         {{ t('views.home.sections.blogs.title') }}
