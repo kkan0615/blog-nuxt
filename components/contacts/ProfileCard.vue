@@ -35,7 +35,7 @@ const { t } = useI18n()
           v-if="appConfig.profile.socials.github"
           icon="ri:github-fill"
           :tooltip="t('tooltips.github')"
-          :href="appConfig.profile.socials.linkedIn"
+          :href="appConfig.profile.socials.github"
         />
       </div>
     </div>
