@@ -31,15 +31,18 @@ const { data: showcaseList } = await useAsyncData<PostList[] >('showcases', asyn
 const observer = ref<IntersectionObserver | null>(null)
 
 onMounted(() => {
-  const sectionEls = document.querySelectorAll('section')
+  const sectionEls = document.querySelectorAll('[data-animate]:not([value=""])')
   if (!sectionEls.length) throw createError({ statusCode: 404 })
 
   observer.value = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       const intersecting = entry.isIntersecting
       if (intersecting) {
-        entry.target.classList.add('animate__fadeIn')
-        observer.unobserve(entry.target)
+        const animate = entry.target.getAttribute('data-animate')
+        if (animate) {
+          entry.target.classList.add(animate)
+          observer.unobserve(entry.target)
+        }
       }
     })
   }, {
@@ -73,7 +76,7 @@ onBeforeUnmount(() => {
           <NuxtLink
             :to="localePath('/contact')"
           >
-            <button class="btn btn-primary btn-sm lg:btn-md animate__animated animate__fadeIn animate__delay-1s">
+            <button class="btn btn-primary btn-sm lg:btn-md swing-in-top-fwd">
               {{ t('menus.contact') }}
             </button>
           </NuxtLink>
@@ -81,10 +84,12 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <section
-      class="max-w-4xl mx-auto p-4 lg:py-4 animate__animated"
-      data-animate="animate__fadeIn"
+      class="max-w-4xl mx-auto p-4 lg:py-4"
     >
-      <h2 class="text-3xl font-bold capitalize">
+      <h2
+        class="text-3xl font-bold capitalize animate__animated"
+        data-animate="animate__fadeInUp"
+      >
         {{ t('views.home.sections.blogs.title') }}
         <NuxtLink :to="localePath('/blogs')">
           <button
@@ -99,8 +104,9 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.blogs.description') }}
       </p>
       <div
-        v-if="blogList.length"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
+        v-show="blogList.length !== 0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0 animate__animated"
+        data-animate="animate__fadeIn"
       >
         <BlogsListBlogCard
           v-for="blog in blogList"
@@ -109,14 +115,17 @@ onBeforeUnmount(() => {
         />
       </div>
       <p
-        v-else
+        v-show="blogList.length === 0"
         class="py-4 text-center"
       >
         {{ t('commons.placeholders.noData') }}
       </p>
     </section>
-    <section class="max-w-4xl mx-auto p-4 lg:py-4 animate__animated">
-      <h2 class="text-3xl font-bold capitalize">
+    <section class="max-w-4xl mx-auto p-4 lg:py-4">
+      <h2
+        class="text-3xl font-bold capitalize animate__animated"
+        data-animate="animate__fadeInUp"
+      >
         {{ t('views.home.sections.showcases.title') }}
         <NuxtLink
           :to="localePath('/showcases')"
@@ -133,8 +142,9 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.showcases.description') }}
       </p>
       <div
-        v-if="showcaseList.length"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
+        v-show="showcaseList.length !== 0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0 animate__animated"
+        data-animate="animate__fadeIn"
       >
         <ShowcasesListShowcaseCard
           v-for="showcase in showcaseList"
@@ -143,7 +153,7 @@ onBeforeUnmount(() => {
         />
       </div>
       <p
-        v-else
+        v-show="showcaseList.length === 0"
         class="py-4 text-center"
       >
         {{ t('commons.placeholders.noData') }}

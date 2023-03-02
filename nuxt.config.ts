@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   },
   css: [
     'animate.css',
+    '~/styles/global.scss',
     '~/styles/libs/animate.css',
     '~/styles/libs/tokyo-night-dark.min.css',
   ],
