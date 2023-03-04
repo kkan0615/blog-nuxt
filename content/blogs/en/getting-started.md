@@ -1,45 +1,64 @@
 ---
-title: 'Next.js blog getting started'
+title: 'Example'
 description: 'How to use pages in Next.js exploring the options'
-date: '2022-12-30'
+date: '2022-02-10'
 locale: 'en'
-categories: [programming]
-tags: [Node Js, Get Started]
+categories: [example]
+tags: [typescript]
 _draft: true
 ---
 
 # Heading 1
-Head 1
+Heading 1
 ## Heading 2
-Head 2
+Heading 2
 ### Heading 3
-Head 3
-Some text
+Heading 3
+#### Heading 4
+Heading 4
 
-# List
+## Text
+- normal
+- **bold**
+- *Italic*.
+
+## List
+### Number
+1. One
+2. Two
+3. Three
+
+### Ordered List
 - list item 1
 - list item 2
 - list item 3
 
-# Code
+## Blockquotes
+> This is a blockquotes
+
+### Nested Blockquotes 
+> Parent
+>> Child
+
+## Code
 ```typescript
 const test = 'abc'
 console.log(test)
 ```
-## This?
+## inline code?
 ```WHAT ABOUT THIS KIND OF CODE?``` <br />
 ```const x = test```
 
-# Image
+## Images
 ![random image 1](https://picsum.photos/1280/720)
 ![Static Image](/logos/javascript-logo.jpeg)
 
-# Task
+## Task
 - [x] Write the press release
 - [ ] Update the website
 - [ ] Contact the media
 
-# Table
+## Table
 Table example
 
 | Column1 | Column2 | Column3 | Column4 | Column5 |
@@ -48,4 +67,26 @@ Table example
 | Row2    | Row2-2  | Row2-3  | Row2-4  | Row2-5  |
 | Row3    | Row3-2  | Row3-3  | Row3-4  | Row3-5  |
 
+## Link
 [My website](http://localhost:3000/)
+
+## Horizontal Rules
+```markdown
+***
+
+---
+
+_________________
+```
+***
+
+---
+
+_________________
+
+## Others
+### HTML
+<div>
+    Hello world
+</div>
+It's wrapped by div tag in console.
