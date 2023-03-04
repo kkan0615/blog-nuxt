@@ -89,6 +89,7 @@ export default defineNuxtConfig({
   //   headers: false,
   // },
   i18n: {
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
@@ -99,9 +100,14 @@ export default defineNuxtConfig({
       },
       {
         code: 'ko',
-        iso: 'ko-KR'
+        iso: 'ko'
       },
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     vueI18n: {
       legacy: false,
       fallbackLocale: DefaultLocale,
