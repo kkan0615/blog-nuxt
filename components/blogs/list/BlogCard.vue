@@ -8,8 +8,8 @@ const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
 const DefaultNuxtImageHeight = 800
 const DefaultNuxtImageWidth = 500
-
-const { t } = useI18n()
+// NEW Tag blog
+const NewDay = 2
 
 interface Props {
   blog: PostList
@@ -23,6 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
   dense: false,
 })
 const route = useRoute()
+const { t } = useI18n()
 
 const timeFromNow = computed(() => {
   const now = dayjs()
@@ -36,12 +37,12 @@ const timeFromNow = computed(() => {
 const isNew = computed(() => {
   const now = dayjs()
   const targetDate = dayjs(props.blog.date)
-  return now.diff(targetDate, 'day') < 2
+  return now.diff(targetDate, 'day') < NewDay
 })
 
 </script>
 <template>
-  <div class="card bg-base-200">
+  <div class="card bg-base-200 hover:scale-105 transition ease-in-out duration-300">
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
@@ -49,7 +50,16 @@ const isNew = computed(() => {
         query: route.query
       }"
     >
-      <figure v-if="!noImage">
+      <figure
+        v-if="!noImage"
+        class="relative"
+      >
+        <div
+          v-if="isNew"
+          class="badge badge-accent absolute right-2 top-2 shadow-2xl"
+        >
+          NEW
+        </div>
         <NuxtImg
           v-if="blog.image && blog.image.path"
           class="aspect-video"
@@ -69,12 +79,6 @@ const isNew = computed(() => {
         />
       </figure>
       <div class="card-body">
-        <div
-          v-if="isNew"
-          class="badge badge-secondary"
-        >
-          NEW
-        </div>
         <h2 class="card-title">
           {{ blog.title }}
         </h2>

@@ -13,6 +13,7 @@ import './libs/dayjs'
 const appConfig = useAppConfig()
 const themeCookie = useCookie('theme')
 const { t } = useI18n()
+
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',

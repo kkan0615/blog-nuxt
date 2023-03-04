@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import ContactLink from '~/components/links/ContactLink.vue'
 
 const appConfig = useAppConfig()
@@ -26,7 +25,7 @@ const { t } = useI18n()
         v-if="appConfig.profile.socials.github"
         icon="ri:github-fill"
         :tooltip="t('tooltips.github')"
-        :href="appConfig.profile.socials.linkedIn"
+        :href="appConfig.profile.socials.github"
       />
     </div>
   </div>

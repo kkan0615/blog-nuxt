@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   },
   css: [
     'animate.css',
+    '~/styles/global.scss',
     '~/styles/libs/animate.css',
     '~/styles/libs/tokyo-night-dark.min.css',
   ],
@@ -71,7 +72,8 @@ export default defineNuxtConfig({
       ],
     },
     workbox: {
-      navigateFallback: '/',
+      // @todo: There is a bug for "navigateFallback".
+      // navigateFallback: '/',
       globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
     },
     client: {
@@ -87,6 +89,7 @@ export default defineNuxtConfig({
   //   headers: false,
   // },
   i18n: {
+    baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
@@ -97,9 +100,14 @@ export default defineNuxtConfig({
       },
       {
         code: 'ko',
-        iso: 'ko-KR'
+        iso: 'ko'
       },
     ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
     vueI18n: {
       legacy: false,
       fallbackLocale: DefaultLocale,

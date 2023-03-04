@@ -15,12 +15,8 @@ const pageNums = computed(() => {
   let minLoop = props.activeNumber - 2
   let maxLoop = props.activeNumber + 2
 
-  while (minLoop <= 0) {
-    ++minLoop
-  }
-  while (maxLoop > props.max) {
-    --maxLoop
-  }
+  while (minLoop <= 0) ++minLoop
+  while (maxLoop > props.max) --maxLoop
 
   for (let i = minLoop; i <= maxLoop; i++) {
     result.push(i)

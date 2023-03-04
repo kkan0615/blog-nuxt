@@ -2,7 +2,6 @@
 const appSetting = useAppConfig()
 </script>
 <template>
-  <!-- Flipped element by -scale-x-100 -->
   <a
     :href="appSetting.github"
     target="_blank"

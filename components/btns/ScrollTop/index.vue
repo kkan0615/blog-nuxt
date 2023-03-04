@@ -2,8 +2,6 @@
 import { Icon } from '@iconify/vue'
 import { onBeforeUnmount, onMounted } from '#imports'
 
-const router = useRouter()
-
 const visible = ref(false)
 const contentDiv = ref<HTMLDivElement | null>(null)
 
