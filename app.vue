@@ -30,7 +30,7 @@ useHead({
   },
   meta: [
     // Google search console
-    { name: 'google-site-verification', content: 'duPDxBWhVaaRC3sGCeasbfDI5vAc4yWZ785rilMrgPs' },
+    { name: 'google-site-verification', content: 'u9R2rBecskR2Nejhsg5SuG6Ost-uel7q2IJGjXgddbA' },
     { name: 'application-name', content: t('seo.applicationName') },
     { name: 'description', content: t('seo.description') },
     { name: 'author', content: 'Requiem' },
