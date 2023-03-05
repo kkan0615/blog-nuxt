@@ -73,9 +73,7 @@ onBeforeUnmount(() => {
           <p class="py-6 text-xl lg:text-2xl animate__animated animate__fadeIn animate__delay-1s">
             {{ t('views.home.description') }}
           </p>
-          <NuxtLink
-            :to="localePath('/contact')"
-          >
+          <NuxtLink :to="localePath('/contact')">
             <button class="btn btn-primary btn-sm lg:btn-md swing-in-top-fwd">
               {{ t('menus.contact') }}
             </button>
@@ -83,9 +81,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
-    <section
-      class="max-w-4xl mx-auto p-4 lg:py-4"
-    >
+    <section class="max-w-4xl mx-auto p-4 lg:py-4">
       <h2
         class="text-3xl font-bold capitalize animate__animated"
         data-animate="animate__fadeInUp"
@@ -105,12 +101,13 @@ onBeforeUnmount(() => {
       </p>
       <div
         v-show="blogList.length !== 0"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0 animate__animated"
-        data-animate="animate__fadeIn"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <BlogsListBlogCard
           v-for="blog in blogList"
           :key="blog._path"
+          class="animate__animated"
+          data-animate="animate__fadeIn"
           :blog="blog"
         />
       </div>
@@ -127,9 +124,7 @@ onBeforeUnmount(() => {
         data-animate="animate__fadeInUp"
       >
         {{ t('views.home.sections.showcases.title') }}
-        <NuxtLink
-          :to="localePath('/showcases')"
-        >
+        <NuxtLink :to="localePath('/showcases')">
           <button
             class="btn btn-outline btn-primary btn-sm"
             type="button"
@@ -143,13 +138,14 @@ onBeforeUnmount(() => {
       </p>
       <div
         v-show="showcaseList.length !== 0"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0 animate__animated"
-        data-animate="animate__fadeIn"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <ShowcasesListShowcaseCard
           v-for="showcase in showcaseList"
           :key="showcase._path"
           :blog="showcase"
+          class="animate__animated"
+          data-animate="animate__fadeIn"
         />
       </div>
       <p
