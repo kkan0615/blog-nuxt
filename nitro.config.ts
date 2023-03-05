@@ -7,5 +7,10 @@ export default defineNitroConfig({
       baseName: 'public',
       dir: './public'
     }
-  ]
+  ],
+  prerender: {
+    routes: [
+      '/sitemap.xml'
+    ]
+  }
 })
