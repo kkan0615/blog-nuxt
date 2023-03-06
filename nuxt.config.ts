@@ -71,11 +71,10 @@ export default defineNuxtConfig({
         },
       ],
     },
-    workbox: {
-      // @todo: There is a bug for "navigateFallback".
-      // navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
-    },
+    // workbox: {
+    // navigateFallback: '/',
+    //   globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    // },
     client: {
       installPrompt: true,
     },
