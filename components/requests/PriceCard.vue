@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { PriceCard, PriceCardExtraPrices } from '~/types/PriceCard'
+import { PriceCard, PriceCardExtraPrices } from '~/types/priceCard'
 
 interface Props {
   readonly data: PriceCard
