@@ -97,7 +97,7 @@
       "description": "Requiem 블로그에 오신걸 환영합니다. Tailwind CSS 기반 Daisy UI을 메인으로 Nuxt 3로 개발되어 있습니다. \n 아래 Contact 버튼을 눌러 저와 연락할 수 있습니다.",
       "sections": {
         "blogs": {
-          "title": "블로그",
+          "title": "최근 블로그",
           "description": "최근 포스팅 목록"
         },
         "showcases": {
