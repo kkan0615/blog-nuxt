@@ -1,3 +1,8 @@
-export type LocaleCodes = 'en' | 'ko'
-export const LocaleCodeList: LocaleCodes[] = ['en', 'ko']
-export const DefaultLocale: LocaleCodes = 'en'
+/** Local code list */
+export const LocaleCodeList = ['en', 'ko'] as const
+
+/** LocaleCodeList to LocaleCodes type */
+export type LocaleCode = typeof LocaleCodeList[number]
+
+/** @const {LocaleCodes} Default Locale code */
+export const DefaultLocale: LocaleCode = 'en'
