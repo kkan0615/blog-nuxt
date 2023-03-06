@@ -13,7 +13,7 @@ const appConfig = useAppConfig()
     :href="`${appConfig.github}/edit/main/content/${filepath}`"
     rel="noopener noreferrer"
     target="_blank"
-    class="link"
+    class="link hover:text-primary transition duration-200 ease-in-out"
   >
     {{ t('commons.labels.editOnGithub') }}
   </a>
