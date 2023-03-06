@@ -63,7 +63,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <main>
-    <div class="relative h-screen">
+    <div class="relative h-screen mb-4">
       <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat opacity-30 lg:opacity-60 bg-fixed parallax-img" />
       <div class="h-full flex justify-center items-center">
         <div class="max-w-4xl p-4 lg:p-0 flex flex-col">
