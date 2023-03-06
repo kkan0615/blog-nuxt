@@ -5,7 +5,6 @@ interface Props {
 
 defineProps<Props>()
 const { t } = useI18n()
-
 const appConfig = useAppConfig()
 </script>
 <template>
