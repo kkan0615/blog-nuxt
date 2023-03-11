@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
             {{ t('views.home.description') }}
           </p>
           <NuxtLink :to="localePath('/contact')">
-            <button class="btn btn-primary btn-sm lg:btn-md swing-in-top-fwd">
+            <button class="btn btn-primary swing-in-top-fwd">
               {{ t('menus.contact') }}
             </button>
           </NuxtLink>
@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
         data-animate="animate__fadeInUp"
       >
         {{ t('views.home.sections.blogs.title') }}
-        <NuxtLink :to="localePath('/blogs')">
+        <NuxtLink :to="localePath('/showcases')">
           <button
             class="btn btn-outline btn-primary btn-sm"
             type="button"
@@ -160,6 +160,6 @@ onBeforeUnmount(() => {
 </template>
 <style>
 .parallax-img {
-  background-image: url("/assets/home/background.jpg");
+  background-image: url("/assets/home/background.webp");
 }
 </style>

@@ -10,7 +10,7 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#FD5E53',
+          'primary': '#A61103',
           'secondary': '#FE8947',
           'accent': '#E6406D',
           'neutral': '#292433',
@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         'base-light': {
-          'primary': '#FD5E53',
+          'primary': '#A61103',
           'secondary': '#FE8947',
           'accent': '#E6406D',
           'neutral': '#1c1917',

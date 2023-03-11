@@ -10,11 +10,10 @@ defineProps<Props>()
 </script>
 <template>
   <NuxtLink
-    class="opacity-70 font-black px-2 capitalize"
+    class="font-black px-2 capitalize"
     :class="{
-      'border-l-2': active,
-      'border-primary': active,
-      'opacity-100': active,
+      'opacity-70': !active,
+      'border-l-2 border-primary opacity-100': active,
     }
     "
     :to="{

@@ -1,6 +1,5 @@
 <template>
   <link
-    class="p-0"
     href="https://fonts.googleapis.com/css?family=Cookie"
     rel="stylesheet"
   >
@@ -9,10 +8,9 @@
     :href="link"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="buy-me-a-cofee-link"
   >
-    <div
-      class="bmc-button cursor-pointer"
-    >
+    <div class="bmc-button cursor-pointer">
       <img
         src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg"
         alt="Buy me a coffee"

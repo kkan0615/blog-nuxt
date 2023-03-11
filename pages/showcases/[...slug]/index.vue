@@ -13,8 +13,8 @@ import hljs from 'highlight.js'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
-const DefaultNuxtImageHeight = 800
-const DefaultNuxtImageWidth = 500
+const DefaultNuxtImageHeight = 1024
+const DefaultNuxtImageWidth = 576
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()

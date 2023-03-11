@@ -18,6 +18,7 @@ defineProps<Props>()
       :href="href"
       target="_blank"
       rel="noopener noreferrer"
+      :aria-label="tooltip"
     >
       <Icon
         :icon="icon"

@@ -5,8 +5,8 @@ import dayjs from 'dayjs'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
-const DefaultNuxtImageHeight = 800
-const DefaultNuxtImageWidth = 500
+const DefaultNuxtImageHeight = 1024
+const DefaultNuxtImageWidth = 576
 
 const { t } = useI18n()
 
@@ -45,6 +45,7 @@ const props = withDefaults(defineProps<Props>(), {
           fit="fill"
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
+          :width="DefaultNuxtImageAlt"
         />
       </figure>
       <div class="card-body">
