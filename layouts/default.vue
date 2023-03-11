@@ -2,8 +2,6 @@
 import SideMenu from '~/layouts/components/SideMenu.vue'
 import Header from '~/layouts/default/Header.vue'
 import Footer from '~/layouts/components/Footer.vue'
-import BtnsScrollTop from '~/components/btns/ScrollTop'
-
 </script>
 <template>
   <div class="drawer drawer-mobile">
@@ -18,7 +16,7 @@ import BtnsScrollTop from '~/components/btns/ScrollTop'
       class="drawer-content relative min-h-screen flex flex-col"
     >
       <ClientOnly>
-        <BtnsScrollTop />
+        <LazyBtnsScrollTop />
       </ClientOnly>
       <!-- Page content here -->
       <Header />

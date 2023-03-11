@@ -1,6 +1,6 @@
 import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
-import { LocaleCodeList, DefaultLocale, LocaleCodes } from '~/types/locale'
+import { LocaleCodeList, DefaultLocale, LocaleCode } from '~/types/locale'
 
 /** Route list which will be added in sitemap*/
 const routes: string[] = [
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
   const sitemap = new SitemapStream({
     hostname: runtimeConfig.NUXT_PUBLIC_BASE_URL,
   })
-  LocaleCodeList.map((localeCodeEl: LocaleCodes | '') => {
+  LocaleCodeList.map((localeCodeEl: LocaleCode | '') => {
     // There is no locale code for defaultLocale
     if (localeCodeEl === DefaultLocale) {
       localeCodeEl = ''

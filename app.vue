@@ -40,6 +40,7 @@ useHead({
     { name: 'og:image', content: appConfig.profile.image },
     { name: 'language', content:  head.value.htmlAttrs?.lang },
     { name: 'keywords', content: 'blogs showcases contact website' },
+    { name: 'theme-color', content: '#1E1E1E' },
     ...(head.value.meta || []).map(metaEl => {
       return {
         name: metaEl.name,

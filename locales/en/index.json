@@ -97,7 +97,7 @@
       "description": "Welcome to Requiem's blog. This blog is made by Nuxt 3 with Daisy UI based Tailwind CSS \n You can contact with me by clicking bottom contact button",
       "sections": {
         "blogs": {
-          "title": "blogs",
+          "title": "latested blogs",
           "description": "Recent blog list"
         },
         "showcases": {

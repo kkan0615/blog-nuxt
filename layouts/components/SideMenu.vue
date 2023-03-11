@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import packageJson from '@/package.json'
 import MenuItem from '~/layouts/components/MenuItem.vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import Donation from '~/components/advertisements/Donation.vue'
@@ -34,7 +35,7 @@ const route = useRoute()
       </div>
       <!-- @TODO: Change version from package.json after release -->
       <div class="mt-2 badge badge-primary text-white">
-        Beta
+        {{ packageJson.version }}
       </div>
     </div>
     <div class="px-4">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BuyMeACoffee from '~/components/advertisements/BuyMeACoffee.vue'
+import { Icon } from '@iconify/vue'
 
 interface Props {
   sm?: boolean
@@ -19,7 +19,7 @@ const toggleOpen = () => {
 </script>
 <template>
   <button
-    class="bg-amber-500 text-white py-2.5 px-2 rounded w-full"
+    class="bg-amber-500 text-white py-2.5 px-2 rounded w-full font-bold"
     @click="toggleOpen"
   >
     <div
@@ -59,14 +59,17 @@ const toggleOpen = () => {
   >
     <div>
       <div class="flex items-center bg-primary text-white px-2 py-3">
-        <h3 class="text-2xl">
+        <h3 class="text-xl">
           {{ t('components.donations.dialogTitle') }}
         </h3>
         <button
           class="btn btn-sm btn-circle btn-ghost ml-auto"
           @click="toggleOpen"
         >
-          ✕
+          <Icon
+            class="text-xl"
+            icon="material-symbols:close-rounded"
+          />
         </button>
       </div>
       <div class="card">
@@ -76,7 +79,7 @@ const toggleOpen = () => {
           </p>
           <ul class="flex flex-col space-y-4">
             <li class="text-center">
-              <BuyMeACoffee />
+              <LazyAdvertisementsBuyMeACoffee />
             </li>
             <li>
               <span class="text-lg">
