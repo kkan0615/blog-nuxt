@@ -65,19 +65,26 @@ onBeforeUnmount(() => {
   <main>
     <div class="relative h-screen mb-4">
       <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat opacity-30 lg:opacity-60 bg-fixed parallax-img" />
-      <div class="h-full flex justify-center items-center">
-        <div class="max-w-4xl p-4 lg:p-0 flex flex-col">
+      <div class="h-full w-full flex items-center">
+        <div class="max-w-4xl mx-auto w-full p-4 lg:p-0">
           <h1 class="text-4xl lg:text-7xl font-bold animate__animated animate__fadeIn">
             {{ t('views.home.title') }}
           </h1>
           <p class="py-6 text-xl lg:text-2xl animate__animated animate__fadeIn animate__delay-1s">
             {{ t('views.home.description') }}
           </p>
-          <NuxtLink :to="localePath('/contact')">
-            <button class="btn btn-primary swing-in-top-fwd">
-              {{ t('menus.contact') }}
-            </button>
-          </NuxtLink>
+          <div class="space-x-4">
+            <NuxtLink :to="localePath('/contact')">
+              <button class="btn btn-primary swing-in-top-fwd">
+                {{ t('menus.contact') }}
+              </button>
+            </NuxtLink>
+            <NuxtLink :to="localePath('/blogs')">
+              <button class="btn btn-outline swing-in-top-fwd">
+                {{ t('menus.blogs') }}
+              </button>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -87,7 +94,7 @@ onBeforeUnmount(() => {
         data-animate="animate__fadeInUp"
       >
         {{ t('views.home.sections.blogs.title') }}
-        <NuxtLink :to="localePath('/showcases')">
+        <NuxtLink :to="localePath('/blogs')">
           <button
             class="btn btn-outline btn-primary btn-sm"
             type="button"
