@@ -13,12 +13,11 @@ const props = withDefaults(defineProps<Props>(), {
   width: '728',
   height: '90',
   category: 'homegarden',
-  linkId: '944a72bd20583fea60ef9be33c4290a1',
+  linkId: '686606b2c2deb59cde38d093f15ee8ac',
   // 0YX1CCZ4AVME9GG71E82
-  banner: '0VVTXDP4HR01SDK92282'
+  banner: '0VDQ8A4JAV09G23TB8R2'
 })
 const runtimeConfig = useRuntimeConfig()
-
 const src = computed(() =>
 // eslint-disable-next-line max-len
   `//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=${props.category}&banner=${props.banner}&f=ifr&linkID=${props.linkId}&t=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}&tracking_id=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}`
