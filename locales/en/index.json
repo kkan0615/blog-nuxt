@@ -94,7 +94,7 @@
     "home": {
       "Lorem": "Lorem",
       "title": "Requiem Blog",
-      "description": "Welcome to Requiem's blog. This blog is made by Nuxt 3 with Daisy UI based Tailwind CSS \n You can contact with me by clicking bottom contact button",
+      "description": "Welcome to Requiem's blog",
       "sections": {
         "blogs": {
           "title": "latested blogs",
