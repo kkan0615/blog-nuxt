@@ -19,7 +19,7 @@ const toggleOpen = () => {
 </script>
 <template>
   <button
-    class="bg-amber-500 text-white py-2.5 px-2 rounded w-full font-bold"
+    class="bg-[#FF813F] text-white py-2.5 px-2 rounded w-full font-bold"
     @click="toggleOpen"
   >
     <div
@@ -32,9 +32,7 @@ const toggleOpen = () => {
         width="24"
         height="24"
       />
-      <span
-        class="ml-2"
-      >
+      <span class="ml-2">
         {{ t('components.donations.titleSm') }}
       </span>
     </div>

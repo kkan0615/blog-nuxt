@@ -139,18 +139,15 @@ onMounted(() => {
           :value="page"
         />
       </div>
-      <hr
-        class="my-4"
-      >
-      <Categories
-        :categories="page.categories"
-      />
-      <Tags
-        :tags="page.tags"
-      />
-      <BottomNavbar
-        :filepath="page._file"
-      />
+      <hr class="my-4">
+      <Categories :categories="page.categories" />
+      <Tags :tags="page.tags" />
+      <div class="mt-8">
+        <ClientOnly>
+          <LazyAdvertisementsAmazonBanner />
+        </ClientOnly>
+      </div>
+      <BottomNavbar :filepath="page._file" />
     </div>
     <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
       <!--      <client-only>-->

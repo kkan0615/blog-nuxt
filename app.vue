@@ -60,6 +60,22 @@ useHead({
       }
     }),
   ],
+  // script: [
+  //   {
+  //     type: 'text/javascript',
+  //     innerHTML: `
+  //       amzn_assoc_ad_type = "link_enhancement_widget";
+  //       amzn_assoc_tracking_id = "requiemblog-20";
+  //       amzn_assoc_linkid = "4ceba45225ff312b220935a17294cd6a";
+  //       amzn_assoc_placement = "";
+  //       amzn_assoc_marketplace = "amazon";
+  //       amzn_assoc_region = "US";
+  //     `,
+  //   },
+  //   {
+  //     src: 'ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=US'
+  //   }
+  // ]
 })
 </script>
 <style>

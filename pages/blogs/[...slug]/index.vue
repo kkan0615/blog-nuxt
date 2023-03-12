@@ -172,7 +172,12 @@ router.beforeEach((guard) => {
         :filepath="page._file"
       />
       <div class="mt-8">
-        <Donation />
+        <ClientOnly>
+          <LazyAdvertisementsAmazonBanner />
+        </ClientOnly>
+        <div class="mt-2">
+          <Donation />
+        </div>
       </div>
       <h3 class="mt-4 text-xl font-bold opacity-80 capitalize">
         {{ t('labels.furtherReading') }}

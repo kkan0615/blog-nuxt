@@ -2570,10 +2570,10 @@
     node-gyp-build "^4.2.2"
     resolve-from "^5.0.0"
 
-"@vite-pwa/nuxt@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@vite-pwa/nuxt/-/nuxt-0.0.6.tgz#fc3a50c0d81bb63b654f775a885b9fc4bf9b3e5f"
-  integrity sha512-TxIBNz8tBvirHFr3zLXEbWSFDQl1CBsyc+gegD6eVpT4fbMBb3i8Gzzqh6gTssVB+nB/zOXK/ZN1mGZysFPevQ==
+"@vite-pwa/nuxt@0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@vite-pwa/nuxt/-/nuxt-0.0.7.tgz#b8c671e2b3f743b19c334ed5d4e05e6b67de9d91"
+  integrity sha512-7bUTHbameF4GMLQjuyICB761YTC2/Zp6s+rd3hz63Q8lUHP/WUkvOhkoqAoA7CrRPrM85QDeOJKBEvailDb5+w==
   dependencies:
     "@nuxt/kit" "^3.2.0"
     vite-plugin-pwa "^0.14.4"
