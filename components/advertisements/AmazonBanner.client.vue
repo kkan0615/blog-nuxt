@@ -1,10 +1,9 @@
 <script setup lang="ts">
-// https://affiliate-program.amazon.com/home/bannerlinks?ac-ms-src=ac-nav
-// https://affiliate-program.amazon.com/home/bannerlinks/detail?category=homegarden
+// https://associates.amazon.ca/home/bannerlinks?ac-ms-src=ac-nav
 interface Props {
   width?: string
   height?: string
-  category?: 'grocery' | 'homegarden'
+  category?: 'prime'
   linkId?: string
   banner?: string
 }
@@ -12,15 +11,15 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   width: '728',
   height: '90',
-  category: 'homegarden',
-  linkId: '686606b2c2deb59cde38d093f15ee8ac',
-  // 0YX1CCZ4AVME9GG71E82
-  banner: '0VDQ8A4JAV09G23TB8R2'
+  category: 'prime',
+  linkId: 'a79497ce4f17a810840e00b21a263fc9',
+  banner: '1CEWR2JMVGFJ3NFGMGG2'
 })
+
 const runtimeConfig = useRuntimeConfig()
 const src = computed(() =>
 // eslint-disable-next-line max-len
-  `//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=${props.category}&banner=${props.banner}&f=ifr&linkID=${props.linkId}&t=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}&tracking_id=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}`
+  `//ws-na.amazon-adsystem.com/widgets/cm?o=15&p=48&l=ur1&category=${props.category}&banner=${props.banner}&f=ifr&linkID=${props.linkId}&t=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}&tracking_id=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}`
 )
 </script>
 <template>
