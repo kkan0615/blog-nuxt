@@ -21,7 +21,6 @@ const runtimeConfig = useRuntimeConfig()
 const src = computed(() =>
 // eslint-disable-next-line max-len
   `//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=${props.category}&banner=${props.banner}&f=ifr&linkID=${props.linkId}&t=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}&tracking_id=${runtimeConfig.public.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID}`
-
 )
 </script>
 <template>
