@@ -8,7 +8,7 @@ Click [Link](https://requiem-blog.netlify.app/) to see the page
 yarn install
 ````
 
-### Nuxt DevTools (> 3.2.0 not supported yet!)
+### Nuxt DevTools
 ```bash
 npx nuxi@latest devtools enable
 ```
@@ -38,9 +38,14 @@ NUXT_PUBLIC_BASE_URL="PUBLIC URL"
 NUXT_PUBLIC_CA_PUB="GOOGLE CONSOLE KEY"
 ```
 ### app.config.ts
-```text
-github: ""
-```
+| Name                 | Description         |
+|----------------------|---------------------|
+| github               | github links        |
+| blogCategories       | blog categories     |
+| blogTags.programming | Programming tags    |
+| showcaseCategories   | Showcase categories |
+| showcaseTags         | Showcase tags       |
+
 
 ## Packages
 - [tailwindcss](https://tailwindcss.com/)= Tailwind css
@@ -95,7 +100,7 @@ See more detail to click the [Link](https://nuxt.com/docs/guide/directory-struct
 ```
 
 ## Contributors
-Thank you for helping me to make better blog
+Thank you for helping me to make better blog.
 
 ## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
