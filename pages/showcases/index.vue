@@ -90,11 +90,12 @@ const { data: list, refresh } = await useAsyncData('showcases', async () =>
       v-else
       class="flex justify-center items-center h-64"
     >
-      <div
-        class="text-4xl font-bold capitalize"
-      >
+      <div class="text-4xl font-bold capitalize">
         {{ t('commons.placeholders.noSearchData') }}
       </div>
+    </div>
+    <div class="mt-4">
+      <LazyAdvertisementsAmazonBanner />
     </div>
   </div>
 </template>
