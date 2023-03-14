@@ -8,10 +8,11 @@
     "dev": "nuxt dev --port=3005",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "8.0.0-beta.10",
+    "@nuxtjs/i18n": "8.0.0-beta.9",
     "@nuxtjs/tailwindcss": "6.4.0",
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.9.0",
@@ -39,6 +40,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.3",
     "nuxt": "3.2.3",
     "postcss-custom-properties": "^13.1.0",
     "sass": "^1.57.1",

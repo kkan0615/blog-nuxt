@@ -173,7 +173,7 @@ router.beforeEach((guard) => {
       />
       <div class="mt-8">
         <ClientOnly>
-          <LazyAdvertisementsAmazonBanner />
+          <AdvertisementsAmazonBanner />
         </ClientOnly>
         <div class="mt-2">
           <Donation />
