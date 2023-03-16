@@ -54,8 +54,7 @@
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML",
-      "gatsby": "Gatsby"
+      "HTML": "HTML"
     },
     "showcaseCategories": {
       "example": "example",
@@ -66,7 +65,6 @@
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "Typescript",
-      "gatsby": "Gatsby",
       "javaScript": "JavaScript",
       "next": "Next",
       "nuxt": "Nuxt",

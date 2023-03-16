@@ -54,8 +54,7 @@
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML",
-      "gatsby": "Gatsby"
+      "HTML": "HTML"
     },
     "showcaseCategories": {
       "example": "예제",
@@ -66,7 +65,6 @@
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "타입스크립트",
-      "gatsby": "Gatsby",
       "javaScript": "자바스크립트",
       "next": "Next",
       "nuxt": "Nuxt",

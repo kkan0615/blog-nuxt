@@ -18,7 +18,6 @@ export default defineAppConfig({
       'nuxt',
       'MDX',
       'HTML',
-      'gatsby',
     ]
   },
   showcaseCategories: [
@@ -30,7 +29,6 @@ export default defineAppConfig({
   showcaseTags: [
     'node Js',
     'typescript',
-    'gatsby',
     'javaScript',
     'next',
     'nuxt',
