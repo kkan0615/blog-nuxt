@@ -6610,6 +6610,20 @@ nuxt-security@^0.10.2:
     pathe "^1.0.0"
     xss "^1.0.14"
 
+nuxt-simple-sitemap@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nuxt-simple-sitemap/-/nuxt-simple-sitemap-2.0.2.tgz#b26a76ef281201b41307127bbda2400f9711a4c9"
+  integrity sha512-HoRZnQkT+fEQuErTvZqGV3H8tYv+IMc4mbX0STid1NLM0SwqdtpTX7ALdcI7XefUZzOi0do+SG4e77P332jNbQ==
+  dependencies:
+    "@nuxt/kit" "3.3.1"
+    chalk "^5.2.0"
+    defu "^6.1.2"
+    escape-string-regexp "^5.0.0"
+    knitwork "^1.0.0"
+    pathe "^1.1.0"
+    radix3 "^1.0.0"
+    ufo "^1.1.1"
+
 nuxt@3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.3.1.tgz#a4af3cec38bfb65c03798a7bbd38d43c78fce2ea"

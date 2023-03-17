@@ -9,11 +9,13 @@
     "blogs": "blogs",
     "showcases": "showcases",
     "contact": "contact",
+    "request": "request",
     "descriptions": {
       "home": "home",
       "blogs": "Blogs page displays list of Blogs",
       "showcases": "Showcases page displays list of showcase",
-      "contact": "contact"
+      "contact": "contact",
+      "request": "request to create program"
     }
   },
   "tooltips": {

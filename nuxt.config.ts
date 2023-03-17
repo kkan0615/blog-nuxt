@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
+    // 'nuxt-simple-sitemap',
     // 'nuxt-security'
   ],
   runtimeConfig: {
@@ -102,4 +103,8 @@ export default defineNuxtConfig({
     //   ]
     // }
   },
+  // sitemap: {
+  //   // automatically chunk into multiple sitemaps
+  //   sitemaps: true,
+  // },
 })
