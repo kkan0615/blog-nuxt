@@ -71,6 +71,7 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
 - [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
 - [vite-pwa](https://github.com/vite-pwa/nuxt)
+- [@nuxt/devtools](https://github.com/nuxt/devtools)
 
 ### Relative with Content
 - [highlight.js]() - Add highlight for code section
