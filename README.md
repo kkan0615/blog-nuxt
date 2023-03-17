@@ -38,6 +38,11 @@ NUXT_PUBLIC_BASE_URL="PUBLIC URL"
 NUXT_PUBLIC_CA_PUB="GOOGLE CONSOLE KEY"
 NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 ```
+## Features
+- Nuxt pinia store
+- Nuxt Content
+- Nuxt devtools
+
 ### app.config.ts
 | Name                 | Description         |
 |----------------------|---------------------|
