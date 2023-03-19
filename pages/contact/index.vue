@@ -19,7 +19,10 @@ definePageMeta({
 })
 // SEO
 useHead({
-  title: `${t('menus.contact')} | ${t('seo.title')}`,
+  title: t('menus.contact'),
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
+  },
   meta: [
     { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
     ...(head.value.meta || []).map(metaEl => {
