@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
-    // '@nuxt/devtools',
+    '@nuxt/devtools',
     // 'nuxt-simple-sitemap',
     // 'nuxt-security'
   ],
@@ -108,7 +108,7 @@ export default defineNuxtConfig({
   //   // automatically chunk into multiple sitemaps
   //   sitemaps: true,
   // },
-  // devtools: {
-  //   enabled: true,
-  // }
+  devtools: {
+    enabled: process.env.NODE_ENV === 'development',
+  }
 })

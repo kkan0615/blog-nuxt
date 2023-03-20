@@ -28,10 +28,14 @@ useHead({
   },
   meta: [
     // Google search console
+    { name: 'google-site-verification', content: 'u9R2rBecskR2Nejhsg5SuG6Ost-uel7q2IJGjXgddbA' },
     { name: 'application-name', content: t('seo.applicationName') },
     { name: 'description', content: t('seo.description') },
+    { name: 'author', content: 'Requiem' },
+    { name: 'publisher', content: 'Requiem' },
     { name: 'robots', content: 'index, follow' },
     { name: 'target', content: 'all' },
+    { name: 'og:image', content: appConfig.profile.image },
     { name: 'language', content:  head.value.htmlAttrs?.lang },
     { name: 'keywords', content: 'blogs showcases contact website' },
     { name: 'theme-color', content: '#1E1E1E' },
@@ -72,19 +76,19 @@ useHead({
   // ]
 })
 
-useSeoMeta({
-  title: t('seo.title'),
-  googleSiteVerification: 'u9R2rBecskR2Nejhsg5SuG6Ost-uel7q2IJGjXgddbA',
-  charset: 'utf8',
-  contentType: 'text/html; charset=utf-8',
-  applicationName: t('seo.applicationName'),
-  author: appConfig.author,
-  creator: appConfig.author,
-  generator: appConfig.author,
-  description: t('seo.description'),
-  ogImage: 'appConfig.profile.image',
-  ogImageAlt: 'Requiem',
-})
+// useSeoMeta({
+//   title: t('seo.title'),
+//   googleSiteVerification: 'u9R2rBecskR2Nejhsg5SuG6Ost-uel7q2IJGjXgddbA',
+//   charset: 'utf8',
+//   contentType: 'text/html; charset=utf-8',
+//   applicationName: t('seo.applicationName'),
+//   author: appConfig.author,
+//   creator: appConfig.author,
+//   generator: appConfig.author,
+//   description: t('seo.description'),
+//   ogImage: 'appConfig.profile.image',
+//   ogImageAlt: 'Requiem',
+// })
 </script>
 <style>
 .page-enter-active,
