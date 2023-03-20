@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.5-canary.1",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS",
   "scripts": {
@@ -41,7 +41,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
     "husky": "^8.0.3",
-    "nuxt": "3.3.1",
+    "nuxt": "3.2.3",
     "nuxt-simple-sitemap": "^2.0.2",
     "postcss-custom-properties": "^13.1.0",
     "sass": "^1.57.1",
