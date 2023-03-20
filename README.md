@@ -1,5 +1,5 @@
 # Nuxt 3 + Tailwind CSS + DaisyUI Website
-[![Netlify Status](https://api.netlify.com/api/v1/badges/422d41c6-02f0-4ebd-a502-1b1881433080/deploy-status)](https://app.netlify.com/sites/requiem-blog/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1fcf26af-7f44-4e56-abe5-94ae4073f109/deploy-status)](https://app.netlify.com/sites/rqeuiem-blog/deploys)
 
 Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
