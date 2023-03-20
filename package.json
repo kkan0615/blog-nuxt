@@ -5,7 +5,7 @@
   "description": "Nuxt 3 + DaisyUI + TailwindCSS",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port=3005",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
