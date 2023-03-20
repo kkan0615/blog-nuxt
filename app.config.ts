@@ -1,5 +1,4 @@
 export default defineAppConfig({
-  author: 'Requiem',
   github : 'https://github.com/kkan0615/blog-nuxt',
   blogCategories: [
     'example',
@@ -19,6 +18,7 @@ export default defineAppConfig({
       'nuxt',
       'MDX',
       'HTML',
+      'gatsby',
     ]
   },
   showcaseCategories: [
@@ -30,6 +30,7 @@ export default defineAppConfig({
   showcaseTags: [
     'node Js',
     'typescript',
+    'gatsby',
     'javaScript',
     'next',
     'nuxt',

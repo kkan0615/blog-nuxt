@@ -63,10 +63,7 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
 
 // SEO
 useHead({
-  title: page.value.title,
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
-  },
+  title: `${page.value.title} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: page.value.description },
     { name: 'date', content:  dayjs(page.value.date).format('ll') },
@@ -176,7 +173,7 @@ router.beforeEach((guard) => {
       />
       <div class="mt-8">
         <ClientOnly>
-          <AdvertisementsAmazonBanner />
+          <LazyAdvertisementsAmazonBanner />
         </ClientOnly>
         <div class="mt-2">
           <Donation />

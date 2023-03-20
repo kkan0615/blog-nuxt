@@ -24,10 +24,7 @@ definePageMeta({
 
 // SEO
 useHead({
-  title: t('menus.showcases'),
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
-  },
+  title: `${t('menus.showcases')} | ${t('seo.title')}`,
   meta: [
     { name: 'description', content: `${t('menus.descriptions.showcases')} | ${t('seo.applicationName')}` },
     ...(head.value.meta || []).map(metaEl => {

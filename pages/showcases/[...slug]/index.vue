@@ -32,15 +32,12 @@ if (!page.value) {
 }
 // SEO
 useHead({
-  title: page.value.title,
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
-  },
+  title: `${page.value?.title} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: page.value.description },
-    { name: 'date', content: dayjs(page.value.lastUpdated).format('ll') },
+    { name: 'description', content: page.value?.description },
+    { name: 'date', content: dayjs(page.value?.lastUpdated).format('ll') },
     { name: 'keywords', content: `${page.value.tags.join(' ')} ${page.value.categories.join(' ')}` },
-    { name: 'og:image', content: page.value.image
+    { name: 'og:image', content: page.value?.image
       ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
       : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
     { name: 'twitter:image', content: page.value

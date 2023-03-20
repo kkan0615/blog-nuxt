@@ -9,13 +9,11 @@
     "blogs": "블로그",
     "showcases": "쇼케이스",
     "contact": "연락",
-    "request": "요청하기",
     "descriptions": {
       "home": "홈",
       "blogs": "포스트 목록을 볼 수 있는 블로그 페이지입니다.",
       "showcases": "쇼케이스 목록을 볼 수 있는 블로그 페이지입니다.",
-      "contact": "contact",
-      "request": "프로그램 요청하기"
+      "contact": "contact"
     }
   },
   "tooltips": {
@@ -56,7 +54,8 @@
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML"
+      "HTML": "HTML",
+      "gatsby": "Gatsby"
     },
     "showcaseCategories": {
       "example": "예제",
@@ -67,6 +66,7 @@
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "타입스크립트",
+      "gatsby": "Gatsby",
       "javaScript": "자바스크립트",
       "next": "Next",
       "nuxt": "Nuxt",

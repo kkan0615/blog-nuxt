@@ -6,6 +6,3 @@ node_modules
 .output
 .env
 dist
-
-# Local Netlify folder
-.netlify

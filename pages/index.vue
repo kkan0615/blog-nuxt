@@ -110,7 +110,7 @@ onBeforeUnmount(() => {
         v-show="blogList.length !== 0"
         class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
-        <LazyBlogsListBlogCard
+        <BlogsListBlogCard
           v-for="blog in blogList"
           :key="blog._path"
           class="animate__animated"
@@ -147,7 +147,7 @@ onBeforeUnmount(() => {
         v-show="showcaseList.length !== 0"
         class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
-        <LazyShowcasesListShowcaseCard
+        <ShowcasesListShowcaseCard
           v-for="showcase in showcaseList"
           :key="showcase._path"
           :blog="showcase"
