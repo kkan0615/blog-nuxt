@@ -11,12 +11,9 @@ const { data: list, pending } = await useFetch('/api/prices', {
 })
 // SEO
 useHead({
-  title: t('menus.request'),
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
-  },
+  title: `${t('menus.blogs')} | ${t('seo.title')}`,
   meta: [
-    { name: 'description', content: `${t('menus.descriptions.request')} | ${t('seo.applicationName')}` },
+    { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
   ],
 })
 

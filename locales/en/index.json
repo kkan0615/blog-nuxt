@@ -9,13 +9,11 @@
     "blogs": "blogs",
     "showcases": "showcases",
     "contact": "contact",
-    "request": "request",
     "descriptions": {
       "home": "home",
       "blogs": "Blogs page displays list of Blogs",
       "showcases": "Showcases page displays list of showcase",
-      "contact": "contact",
-      "request": "request to create program"
+      "contact": "contact"
     }
   },
   "tooltips": {
@@ -56,7 +54,8 @@
       "next": "Next",
       "nuxt": "Nuxt",
       "MDX": "MDX",
-      "HTML": "HTML"
+      "HTML": "HTML",
+      "gatsby": "Gatsby"
     },
     "showcaseCategories": {
       "example": "example",
@@ -67,6 +66,7 @@
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "Typescript",
+      "gatsby": "Gatsby",
       "javaScript": "JavaScript",
       "next": "Next",
       "nuxt": "Nuxt",

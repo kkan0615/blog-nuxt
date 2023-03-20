@@ -1,5 +1,6 @@
 <template>
   <div>
+    <VitePwaManifest />
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />
@@ -19,6 +20,7 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
+// SEO
 useHead({
   title: t('seo.title'),
   htmlAttrs: {
@@ -75,20 +77,6 @@ useHead({
   //   }
   // ]
 })
-
-// useSeoMeta({
-//   title: t('seo.title'),
-//   googleSiteVerification: 'u9R2rBecskR2Nejhsg5SuG6Ost-uel7q2IJGjXgddbA',
-//   charset: 'utf8',
-//   contentType: 'text/html; charset=utf-8',
-//   applicationName: t('seo.applicationName'),
-//   author: appConfig.author,
-//   creator: appConfig.author,
-//   generator: appConfig.author,
-//   description: t('seo.description'),
-//   ogImage: 'appConfig.profile.image',
-//   ogImageAlt: 'Requiem',
-// })
 </script>
 <style>
 .page-enter-active,

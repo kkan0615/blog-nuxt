@@ -11,8 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
-    // '@nuxt/devtools',
-    // 'nuxt-simple-sitemap',
+    '@vite-pwa/nuxt',
     // 'nuxt-security'
   ],
   runtimeConfig: {
@@ -44,6 +43,52 @@ export default defineNuxtConfig({
       ],
     },
   },
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Requiem blog',
+      short_name: 'Requiem_blog',
+      theme_color: '#1E1E1E',
+      icons: [
+        {
+          src: 'app/logo_color-128.png',
+          sizes: '128x128',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-256.png',
+          sizes: '256x256',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'app/logo_color-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+    },
+    // workbox: {
+    // navigateFallback: '/',
+    //   globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    // },
+    client: {
+      installPrompt: true,
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
+  },
+  // security: {
+  //   corsHandler: false,
+  //   headers: false,
+  // },
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
@@ -104,11 +149,4 @@ export default defineNuxtConfig({
     //   ]
     // }
   },
-  // sitemap: {
-  //   // automatically chunk into multiple sitemaps
-  //   sitemaps: true,
-  // },
-  // devtools: {
-  //   enabled: process.env.NODE_ENV === 'development',
-  // }
 })
