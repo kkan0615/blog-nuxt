@@ -32,7 +32,10 @@ if (!page.value) {
 }
 // SEO
 useHead({
-  title: `${page.value?.title} | ${t('seo.title')}`,
+  title: page.value.title,
+  titleTemplate: (titleChunk) => (
+    titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
+  ),
   meta: [
     { name: 'description', content: page.value?.description },
     { name: 'date', content: dayjs(page.value?.lastUpdated).format('ll') },

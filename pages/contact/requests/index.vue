@@ -11,9 +11,12 @@ const { data: list, pending } = await useFetch('/api/prices', {
 })
 // SEO
 useHead({
-  title: `${t('menus.blogs')} | ${t('seo.title')}`,
+  title: t('menus.requests'),
+  titleTemplate: (titleChunk) => (
+    titleChunk ? `${titleChunk} | ${t('seo.title')}` : t('seo.title')
+  ),
   meta: [
-    { name: 'description', content: `${t('menus.descriptions.blogs')} | ${t('seo.applicationName')}` },
+    { name: 'description', content: `${t('menus.descriptions.requests')} | ${t('seo.applicationName')}` },
   ],
 })
 
