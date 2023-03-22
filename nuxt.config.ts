@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
 import { enMessage } from './locales/en'
 import { koMessage } from './locales/ko'
 import { DefaultLocale } from './types/locale'
@@ -12,7 +11,6 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     '@nuxt/content',
     // '@vite-pwa/nuxt',
-    // 'nuxt-security'
   ],
   runtimeConfig: {
     public:{
@@ -147,6 +145,6 @@ export default defineNuxtConfig({
     //     'javascript',
     //     'typescript',
     //   ]
-    // }
+    // },
   },
 })

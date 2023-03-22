@@ -9,7 +9,9 @@ export default defineNitroConfig({
     }
   ],
   prerender: {
+    crawlLinks: true,
     routes: [
+      '/',
       '/sitemap.xml'
     ]
   }

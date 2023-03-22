@@ -100,11 +100,11 @@
       "sections": {
         "blogs": {
           "title": "latested blogs",
-          "description": "Recent blog list"
+          "description": "Recent posted blogs"
         },
         "showcases": {
           "title": "showcases",
-          "description": "Recent showcase list"
+          "description": "Recent updated showcases"
         }
       }
     },
