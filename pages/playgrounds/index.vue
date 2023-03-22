@@ -14,5 +14,8 @@ const nodeEnv = process.env.NODE_ENV
     <div>
       {{ runtimeConfig.public.NUXT_PUBLIC_BASE_URL }}
     </div>
+    <div style="font-family: 'Lucida Calligraphy', serif;">
+      Roboto
+    </div>
   </div>
 </template>
