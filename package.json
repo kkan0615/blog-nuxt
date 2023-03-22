@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.1.5-canary.1",
+  "version": "0.1.5-canary.2",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS",
   "scripts": {
@@ -20,10 +20,8 @@
     "daisyui": "2.50.1",
     "dayjs": "^1.11.7",
     "highlight.js": "^11.7.0",
-    "nuxt-security": "^0.10.2",
     "rehype-highlight": "^6.0.0",
     "remark-reading-time": "^2.0.1",
-    "vue-gtag": "^2.0.1",
     "vue-gtag-next": "^1.14.0"
   },
   "devDependencies": {
@@ -33,7 +31,6 @@
     "@tailwindcss/typography": "^0.5.8",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.47.0",
-    "@vite-pwa/nuxt": "0.0.7",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^24.0.0",
     "eslint-plugin-import": "^2.25.2",

@@ -1,4 +1,6 @@
 # Nuxt 3 + Tailwind CSS + DaisyUI Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1fcf26af-7f44-4e56-abe5-94ae4073f109/deploy-status)](https://app.netlify.com/sites/requiem-blog/deploys)
+
 Personal blog made by [Nuxt 3](https://nuxt.com/)
 Click [Link](https://requiem-blog.netlify.app/) to see the page
 
@@ -8,16 +10,11 @@ Click [Link](https://requiem-blog.netlify.app/) to see the page
 yarn install
 ````
 
-### Nuxt DevTools
-```bash
-npx nuxi@latest devtools enable
-```
-
-### Development Server
+### Development
 ```bash
 yarn dev
 ```
-The website will be opened with port 3005
+The website will run on port 3005
 
 ### Production
 Build the application for production:
@@ -25,7 +22,7 @@ Build the application for production:
 yarn build
 ```
 
-### Locally preview production build:
+### Preview build:
 ```bash
 yarn preview
 ```
@@ -49,28 +46,31 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 
 
 ## Packages
-- [tailwindcss](https://tailwindcss.com/)= Tailwind css
-- [daisyui](https://daisyui.com/) - Tailwind based UI Framework
-- [theme-change](https://github.com/saadeghi/theme-change) - Change theme with daisyui
-- [pinia](https://nuxt.com/modules/pinia) - Client side State management
-- [@nuxtjs/i18n]() - vueI18n for Nuxt 3
-- [@vueuse/nuxt]() - vueuse for Nuxt 3
-- [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind setting for Nuxt 3
-- [nuxt-security](https://nuxt-security.vercel.app/getting-started/quick-start) - Security config for Nuxt 3
-- [@pinia/nuxt]() - Pinia for Nuxt 3
-- [dayjs]() 
-- [fast-glob]() - Find all files under specific directory
-- ~~[vue-gtag]()~~
-- [vue-gtag-next]()
-- [animate.css]() - Animation list
-- [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
-- [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
-- [vite-pwa](https://github.com/vite-pwa/nuxt)
+### Nuxt Modules
+- [@nuxt/content](https://content.nuxtjs.org/): Content made easy for Vue Developers
+- [@pinia/nuxt]() - Pinia module for Nuxt
+  - [pinia](https://nuxt.com/modules/pinia) - Client side State management
+- [@nuxtjs/i18n]() - vueI18n module for Nuxt 3
+- [@vueuse/nuxt]() - vueuse module for Nuxt 3
+- [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind module for Nuxt 3
 
 ### Relative with Content
 - [highlight.js]() - Add highlight for code section
 - [rehype-highlight]() - Add highlight for code section (not working)
 - [remark-reading-time]() - Add reading time
+
+### ETC
+- [tailwindcss](https://tailwindcss.com/)= Tailwind css
+  - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
+- [daisyui](https://daisyui.com/) - Tailwind based UI Framework
+- [theme-change](https://github.com/saadeghi/theme-change) - Change theme with daisyui
+- [dayjs](https://day.js.org/): 
+- [fast-glob]() - Find all files under specific directory
+- ~~[vue-gtag]()~~
+- [vue-gtag-next]()
+- [animate.css]() - Animation list
+- [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
+- ~~[vite-pwa](https://github.com/vite-pwa/nuxt)~~
 
 ## :file_folder: Folder structure
 See more detail to click the [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
@@ -87,8 +87,8 @@ See more detail to click the [Link](https://nuxt.com/docs/guide/directory-struct
 ├─ server/                      # Server files
 │  ├─ api/                      # API, File name will be path
 │  ├─ public/                   # Data for server
-│  ├─ routes/                   # Generate sitemaps
-├─ .eslintrc.js                 # Eslint.
+│  ├─ routes/                   # Generate page from serverside
+├─ .eslintrc.js                 # Eslint config.
 ├─ .gitignore                   # gitignore.
 ├─ nitro.config.ts              # Nitro build config.
 ├─ app.vue                      # App vue file
