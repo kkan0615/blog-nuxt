@@ -10,7 +10,7 @@ const handleClick = () => {
 </script>
 <template>
   <button
-    class="btn btn-ghost btn-sm px-0"
+    class="btn btn-sm bg-base-300"
     @click="handleClick"
   >
     <Icon
