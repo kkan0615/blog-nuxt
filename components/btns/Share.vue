@@ -19,7 +19,7 @@ const handleShare = async () => {
 </script>
 <template>
   <button
-    class="btn btn-sm btn-ghost"
+    class="btn btn-sm"
     type="button"
     @click="handleShare"
   >

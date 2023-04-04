@@ -10,9 +10,9 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#A61103',
-          'secondary': '#FE8947',
-          'accent': '#E6406D',
+          'primary': '#3A1078',
+          'secondary': '#4E31AA',
+          'accent': '#2F58CD',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
