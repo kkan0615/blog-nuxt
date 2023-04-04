@@ -63,7 +63,7 @@ const isNew = computed(() => {
     >
       <figure
         v-if="!noImage"
-        class="relative rounded"
+        class="relative rounded-t"
       >
         <div
           v-if="isNew"

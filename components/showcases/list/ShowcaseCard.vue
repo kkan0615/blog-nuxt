@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
       class="flex flex-col h-full"
       :to="localePath(blog._path)"
     >
-      <figure class="rounded">
+      <figure class="rounded-t">
         <NuxtImg
           v-if="blog.image && blog.image.path"
           class="aspect-video"
