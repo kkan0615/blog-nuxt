@@ -22,7 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 </script>
 <template>
-  <div class="card rounded bg-base-200 hover:scale-105 transition ease-in-out duration-300">
+  <div class="card rounded bg-base-200/50 hover:scale-105 transition ease-in-out duration-300">
     <NuxtLink
       class="flex flex-col h-full"
       :to="localePath(blog._path)"
