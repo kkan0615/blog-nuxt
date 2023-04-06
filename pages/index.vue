@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
               </button>
             </NuxtLink>
             <NuxtLink :to="localePath('/blogs')">
-              <button class="btn btn-outline swing-in-top-fwd">
+              <button class="btn btn-secondary swing-in-top-fwd">
                 {{ t('menus.blogs') }}
               </button>
             </NuxtLink>
@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.blogs.title') }}
         <NuxtLink :to="localePath('/blogs')">
           <button
-            class="btn btn-outline btn-primary btn-sm"
+            class="btn btn-primary btn-sm"
             type="button"
           >
             {{ t('commons.btns.more') }}
@@ -136,7 +136,7 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.showcases.title') }}
         <NuxtLink :to="localePath('/showcases')">
           <button
-            class="btn btn-outline btn-primary btn-sm"
+            class="btn btn-primary btn-sm"
             type="button"
           >
             {{ t('commons.btns.more') }}
