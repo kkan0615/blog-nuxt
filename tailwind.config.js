@@ -10,9 +10,9 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#3A1078',
-          'secondary': '#4E31AA',
-          'accent': '#2F58CD',
+          'primary': '#E74646',
+          'secondary': '#F0997D',
+          'accent': '#86A3B8',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
@@ -23,9 +23,9 @@ module.exports = {
       },
       {
         'base-light': {
-          'primary': '#3A1078',
-          'secondary': '#4E31AA',
-          'accent': '#2F58CD',
+          'primary': '#E74646',
+          'secondary': '#F0997D',
+          'accent': '#86A3B8',
           'neutral': '#1c1917',
           'base-100': '#fff',
           'info': '#4586E8',
