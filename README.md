@@ -103,6 +103,27 @@ See more detail to click the [Link](https://nuxt.com/docs/guide/directory-struct
 ## Contributors
 Thank you for helping me to make better blog.
 
+[//]: # (max 7 td in each tr)
+[//]: # (<a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Examples">💡</a> )
+[//]: # (<a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Tests">⚠️</a>)
+[//]: # (<a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Ideas, Planning, & Feedback">🤔</a>)
+[//]: # (<a href="https://github.com/kkan0615/blog-nuxt/issues?q=author%3Akkan0615" title="Bug reports">🐛</a>)
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/kkan0615">
+          <img src="https://avatars.githubusercontent.com/u/46660361?v=4?s=64" width="64px;" alt="Youngjin Kwak"/><br /><sub><b>Youngjin Kwak</b></sub>
+        </a><br />
+        <a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Code">💻</a> 
+        <a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Maintenance">🚧</a>
+        <a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Documentation">📖</a> 
+        <a href="https://github.com/kkan0615/blog-nuxt/commits?author=kkan0615" title="Design">🎨</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
