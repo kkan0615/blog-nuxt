@@ -1,8 +1,8 @@
 {
   "private": false,
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Youngjin Kwak",
-  "description": "Nuxt 3 + DaisyUI + TailwindCSS",
+  "description": "Nuxt 3 + DaisyUI + TailwindCSS Personal Blog",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
