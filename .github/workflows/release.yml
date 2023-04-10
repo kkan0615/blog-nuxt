@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - release
+      - main
 
 jobs:
   release-on-push: # https://github.com/marketplace/actions/tag-release-on-push-action
