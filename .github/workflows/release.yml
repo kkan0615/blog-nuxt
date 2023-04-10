@@ -11,5 +11,5 @@ jobs:
     steps:
       - uses: rymndhng/release-on-push-action@master
         with:
-          bump_version_scheme: minor
+          bump_version_scheme: patch
           release_body: "See CHANGELOG.md"
