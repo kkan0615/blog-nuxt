@@ -3,6 +3,7 @@ import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
 import { PostList } from '~/types/post'
+import ShareBtn from '~/components/btns/Share.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -42,7 +43,14 @@ const isNew = computed(() => {
 
 </script>
 <template>
-  <div class="card rounded bg-base-200 hover:scale-105 transition ease-in-out duration-300">
+  <div class="card rounded bg-base-200/50 hover:scale-105 transition ease-in-out duration-300 relative">
+    <div class="absolute right-4 top-40 z-20">
+      <ShareBtn
+        v-if="!dense"
+        :path="localePath(blog._path)"
+        class="btn btn-sm btn-circle btn-primary"
+      />
+    </div>
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
@@ -52,7 +60,7 @@ const isNew = computed(() => {
     >
       <figure
         v-if="!noImage"
-        class="relative rounded"
+        class="relative rounded-t"
       >
         <div
           v-if="isNew"

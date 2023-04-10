@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS",
   "scripts": {

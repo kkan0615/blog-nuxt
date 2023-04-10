@@ -6,6 +6,7 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+const { t } = useI18n()
 
 const handleShare = async () => {
   if (navigator.share) {
@@ -19,10 +20,15 @@ const handleShare = async () => {
 </script>
 <template>
   <button
-    class="btn btn-sm btn-ghost"
+    class="btn btn-sm"
     type="button"
     @click="handleShare"
   >
-    <Icon icon="material-symbols:share" />
+    <span
+      class="tooltip font-normal text-md"
+      :data-tip="t('commons.tooltips.share')"
+    >
+      <Icon icon="material-symbols:share" />
+    </span>
   </button>
 </template>
