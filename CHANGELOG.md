@@ -1,3 +1,13 @@
+## 0.1.8
+### Core Changes
+- Updated Donation Modal
+- Updated Dialog backdrop
+- Fixed error for color of sidebar in layout on mobile
+- Updated share button position in blog card component
+- Updated share button component order of elements
+### Documentation Changes
+- Added new content "CSS any-link pseudo-class selector"
+
 ## 0.1.7 (04-09-2023)
 ### Core Changes
 - Updated share button
