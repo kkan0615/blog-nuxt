@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { useClipboard } from '@vueuse/core'
 interface Props {
   path: string
+  isGhost?: boolean
 }
 
 const props = defineProps<Props>()
@@ -19,16 +19,20 @@ const handleShare = async () => {
 
 </script>
 <template>
-  <button
-    class="btn btn-sm"
-    type="button"
-    @click="handleShare"
+  <div
+    class="tooltip font-normal"
+    :data-tip="t('commons.tooltips.share')"
   >
-    <span
-      class="tooltip font-normal text-md"
-      :data-tip="t('commons.tooltips.share')"
+    <button
+      class="btn btn-sm"
+      :class="{
+        'btn-circle btn-primary': !isGhost,
+        'btn-ghost': isGhost,
+      }"
+      type="button"
+      @click="handleShare"
     >
       <Icon icon="material-symbols:share" />
-    </span>
-  </button>
+    </button>
+  </div>
 </template>

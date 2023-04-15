@@ -25,7 +25,7 @@ const route = useRoute()
     </div>
     <div class="lg:hidden ml-auto">
       <ShareBtn
-        class="btn-ghost"
+        is-ghost
         :path="route.path"
       />
     </div>
