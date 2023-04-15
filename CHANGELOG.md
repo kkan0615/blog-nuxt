@@ -1,10 +1,13 @@
 ## 0.1.8
 ### Core Changes
+- Added animation for dialog
 - Updated Donation Modal
 - Updated Dialog backdrop
-- Fixed error for color of sidebar in layout on mobile
 - Updated share button position in blog card component
 - Updated share button component order of elements
+- Updated colors: secondary and accent
+- Remove background color of back button component
+- Fixed error for color of sidebar in layout on mobile
 ### Documentation Changes
 - Added new content "CSS any-link pseudo-class selector"
 
