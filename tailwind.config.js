@@ -11,8 +11,8 @@ module.exports = {
       {
         'base-dark': {
           'primary': '#E74646',
-          'secondary': '#F0997D',
-          'accent': '#86A3B8',
+          'secondary': '#7149C6',
+          'accent': '#FE6244',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
@@ -24,8 +24,8 @@ module.exports = {
       {
         'base-light': {
           'primary': '#E74646',
-          'secondary': '#F0997D',
-          'accent': '#86A3B8',
+          'secondary': '#7149C6',
+          'accent': '#FE6244',
           'neutral': '#1c1917',
           'base-100': '#fff',
           'info': '#4586E8',
