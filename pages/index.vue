@@ -83,7 +83,7 @@ onBeforeUnmount(() => {
               </button>
             </NuxtLink>
             <NuxtLink :to="localePath('/blogs')">
-              <button class="btn btn-secondary swing-in-top-fwd">
+              <button class="btn btn-secondary text-white swing-in-top-fwd">
                 {{ t('menus.blogs') }}
               </button>
             </NuxtLink>
