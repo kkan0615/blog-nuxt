@@ -1,3 +1,7 @@
+## 0.1.9
+### Core Changes
+- Update google console log
+
 ## 0.1.8
 ### Core Changes
 - Added animation for dialog
