@@ -1,3 +1,7 @@
+## 0.2.0
+### Documentation Changes
+- Added new content "Two ways to connect WebSocket in Vue 3"
+
 ## 0.1.9
 ### Core Changes
 - Update google console log
