@@ -1,7 +1,8 @@
 ## 0.2.0
 ### Core Changes
 - Fixed the error to redirect to blog when you click the share button on card
-- Removed feature to add category when you click the blog  
+- Removed feature to add category when you click the blog 
+- Updated version of nuxt
 ### Documentation Changes
 - Added new content "Two ways to connect WebSocket in Vue 3"
 
