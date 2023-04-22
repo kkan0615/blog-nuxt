@@ -91,6 +91,18 @@ const toggleOpen = () => {
                 :height="250"
               />
             </li>
+            <li>
+              <a
+                href="https://www.patreon.com/youngjin_kwak"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://c5.patreon.com/external/logo/become_a_patron_button.png"
+                  alt="Become a Patron!"
+                >
+              </a>
+            </li>
           </ul>
         </div>
       </div>

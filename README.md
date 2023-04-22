@@ -131,6 +131,7 @@ Thank you for helping me to make better blog.
 
 <img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250">
 
+[![](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/youngjin_kwak)
 ## Reference Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
