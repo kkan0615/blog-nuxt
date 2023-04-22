@@ -5,11 +5,12 @@ import { DefaultLocale } from './types/locale'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     // '@vite-pwa/nuxt',
   ],
   runtimeConfig: {
@@ -87,6 +88,11 @@ export default defineNuxtConfig({
   //   corsHandler: false,
   //   headers: false,
   // },
+  colorMode: {
+    preference: 'system', // default theme
+    dataValue: 'theme', // activate data-theme in <html> tag
+    classSuffix: '',
+  },
   i18n: {
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,

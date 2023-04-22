@@ -1,3 +1,9 @@
+## 0.2.1
+### Core Changes
+- Updated version of nuxt/tailwindcss
+- Updated theme select component
+- Added nuxt/color-mode
+
 ## 0.2.0
 ### Core Changes
 - Fixed the error to redirect to blog when you click the share button on card
