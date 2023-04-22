@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { useClipboard } from '@vueuse/core'
 interface Props {
   path: string
+  isGhost?: boolean
 }
 
 const props = defineProps<Props>()
+const { t } = useI18n()
 
 const handleShare = async () => {
   if (navigator.share) {
@@ -18,11 +19,20 @@ const handleShare = async () => {
 
 </script>
 <template>
-  <button
-    class="btn btn-sm btn-ghost"
-    type="button"
-    @click="handleShare"
+  <div
+    class="tooltip font-normal"
+    :data-tip="t('commons.tooltips.share')"
   >
-    <Icon icon="material-symbols:share" />
-  </button>
+    <button
+      class="btn btn-sm"
+      :class="{
+        'btn-circle btn-primary': !isGhost,
+        'btn-ghost': isGhost,
+      }"
+      type="button"
+      @click.prevent="handleShare"
+    >
+      <Icon icon="material-symbols:share" />
+    </button>
+  </div>
 </template>

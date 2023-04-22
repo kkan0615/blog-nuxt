@@ -126,13 +126,13 @@ const handleReset = () => {
           </div>
           <div class="mt-4 flex space-x-4">
             <button
-              class="btn-sm btn-primary rounded-btn"
+              class="btn btn-sm btn-primary rounded-btn"
               type="submit"
             >
               {{ t('commons.btns.search') }}
             </button>
             <button
-              class="btn-sm btn-error btn-outline rounded-btn"
+              class="btn btn-sm btn-error btn-outline rounded-btn"
               type="reset"
             >
               {{ t('commons.btns.reset') }}

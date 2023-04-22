@@ -3,6 +3,7 @@ import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
 import { PostList } from '~/types/post'
+import ShareBtn from '~/components/btns/Share.vue'
 
 const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
 const DefaultNuxtImageAlt = 'NuxtImage'
@@ -42,7 +43,7 @@ const isNew = computed(() => {
 
 </script>
 <template>
-  <div class="card rounded bg-base-200 hover:scale-105 transition ease-in-out duration-300">
+  <div class="card rounded bg-base-200/50 hover:scale-105 transition ease-in-out duration-300">
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
@@ -50,16 +51,22 @@ const isNew = computed(() => {
         query: route.query
       }"
     >
-      <figure
+      <div
         v-if="!noImage"
-        class="relative rounded"
+        class="rounded-t relative"
       >
+        <div class="absolute right-2 -bottom-4 drop-shadow-xl">
+          <ShareBtn
+            :path="localePath(blog._path)"
+          />
+        </div>
         <div
           v-if="isNew"
-          class="badge badge-accent absolute right-2 top-2 shadow-2xl"
+          class="badge badge-accent text-white absolute right-2 top-2 drop-shadow-xl"
         >
           NEW
         </div>
+
         <NuxtImg
           v-if="blog.image && blog.image.path"
           class="aspect-video"
@@ -77,7 +84,7 @@ const isNew = computed(() => {
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
         />
-      </figure>
+      </div>
       <div class="card-body">
         <h2 class="card-title">
           {{ blog.title }}

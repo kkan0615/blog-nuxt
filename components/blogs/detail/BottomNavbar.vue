@@ -24,7 +24,10 @@ const route = useRoute()
       <CopyBtn :path="route.path" />
     </div>
     <div class="lg:hidden ml-auto">
-      <ShareBtn :path="route.path" />
+      <ShareBtn
+        is-ghost
+        :path="route.path"
+      />
     </div>
   </div>
 </template>

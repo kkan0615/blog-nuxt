@@ -13,7 +13,7 @@ defineProps<Props>()
     class="font-black px-2 capitalize"
     :class="{
       'opacity-70': !active,
-      'border-l-2 border-primary opacity-100': active,
+      'border-l-4 border-primary opacity-100': active,
     }
     "
     :to="{

@@ -53,7 +53,7 @@ const toggleOpen = () => {
   </button>
   <dialog
     ref="modalRef"
-    class="bg-base-100 text-base-content rounded p-0"
+    class="animate__animated animate__faster animate__fadeInDown bg-base-100 text-base-content rounded p-0"
   >
     <div>
       <div class="flex items-center bg-primary text-white px-2 py-3">
@@ -65,7 +65,7 @@ const toggleOpen = () => {
           @click="toggleOpen"
         >
           <Icon
-            class="text-xl"
+            class="text-2xl"
             icon="material-symbols:close-rounded"
           />
         </button>
