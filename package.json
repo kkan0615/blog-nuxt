@@ -31,16 +31,20 @@
     "@tailwindcss/typography": "^0.5.8",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "consola": "^3.1.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^24.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.8.0",
-    "nuxt": "^3.3.2",
+    "nuxt": "^3.4.2",
     "postcss-custom-properties": "^13.1.0",
     "sass": "^1.57.1",
     "sitemap": "^7.1.1",
     "typescript": "*"
+  },
+  "resolutions": {
+    "consola": "^3.0.0"
   }
 }
