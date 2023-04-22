@@ -5,6 +5,8 @@
 - Updated version of nuxt
 ### Documentation Changes
 - Added new content "Two ways to connect WebSocket in Vue 3"
+#### Misc Changes
+- Added paypal donation in README.md 
 
 ## 0.1.9
 ### Core Changes
