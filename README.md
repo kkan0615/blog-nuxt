@@ -128,7 +128,7 @@ Thank you for helping me to make better blog.
 ## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
-![Paypal](./public/donations/paypal-qrcode.png)
+<img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250">
 
 ## Reference Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
