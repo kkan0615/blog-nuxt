@@ -1,3 +1,13 @@
+## 0.2.0
+### Core Changes
+- Fixed the error to redirect to blog when you click the share button on card
+- Removed feature to add category when you click the blog 
+- Updated version of nuxt
+### Documentation Changes
+- Added new content "Two ways to connect WebSocket in Vue 3"
+#### Misc Changes
+- Added paypal donation in README.md 
+
 ## 0.1.9
 ### Core Changes
 - Update google console log
@@ -19,10 +29,10 @@
 ### Core Changes
 - Updated share button
 - Added share button in blog
-- Updated card image round
-- Updated color plette
+- Updated round of card image
+- Updated color pallet
 - Update home style
-- Update style of navbars on blogs and showcaeses pages
+- Update style of navbar on blogs and showcases pages
 - Updated layout styles
 ### Documentation Changes
 - Added new content "Typescript Enum vs const Enum"

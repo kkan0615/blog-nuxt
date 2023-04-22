@@ -71,6 +71,7 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [animate.css]() - Animation list
 - [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
 - ~~[vite-pwa](https://github.com/vite-pwa/nuxt)~~
+- [consola](https://github.com/unjs/consola) - Fix the error of consola
 
 ## :file_folder: Folder structure
 See more detail to click the [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
@@ -126,6 +127,8 @@ Thank you for helping me to make better blog.
 
 ## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
+
+<img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250">
 
 ## Reference Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
