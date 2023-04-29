@@ -1,3 +1,9 @@
+## 0.2.2
+### Core Changes
+- Increase font-size for posts
+### Documentation Changes
+- Javascript FormData Object
+
 ## 0.2.1
 ### Core Changes
 - Updated version of nuxt/tailwindcss
