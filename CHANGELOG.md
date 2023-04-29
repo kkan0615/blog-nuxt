@@ -1,6 +1,8 @@
 ## 0.2.2
 ### Core Changes
 - Increase font-size for posts
+- Update version of content
+- Update version of Nuxt
 ### Documentation Changes
 - Javascript FormData Object
 
