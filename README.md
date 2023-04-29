@@ -53,6 +53,7 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [@nuxtjs/i18n]() - vueI18n module for Nuxt 3
 - [@vueuse/nuxt]() - vueuse module for Nuxt 3
 - [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind module for Nuxt 3
+- [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/) - Dark and Light mode with auto detection made easy with Nuxt
 
 ### Relative with Content
 - [highlight.js]() - Add highlight for code section
@@ -130,7 +131,9 @@ Thank you for helping me to make better blog.
 
 <img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250">
 
+[![](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/youngjin_kwak)
 ## Reference Sites
 - [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction)
 - [deployment documentation](https://nuxt.com/docs/getting-started/deployment)
 - [Github - Nuxt](https://github.com/nuxt/nuxt)
+- [Nuxt Tailwind with DaisyUI and color mode.](https://tailwindcss.nuxtjs.org/examples/daisyui)

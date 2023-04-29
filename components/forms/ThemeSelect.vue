@@ -8,21 +8,11 @@ interface Props {
 }
 
 defineProps<Props>()
-const themeCookie = useCookie('theme')
+const colorMode = useColorMode()
 const { t } = useI18n()
 
-const currTheme = ref(themeCookie.value || '')
-
 const handleClick = async (newTheme?: string) => {
-  if (!newTheme) {
-    themeCookie.value = null
-    document.documentElement.setAttribute('data-theme', 'base-dark')
-  } else {
-    themeCookie.value = newTheme
-    document.documentElement.setAttribute('data-theme', newTheme)
-  }
-
-  currTheme.value = newTheme || ''
+  colorMode.preference = newTheme || 'system'
 }
 </script>
 <template>
@@ -43,46 +33,48 @@ const handleClick = async (newTheme?: string) => {
         {{ t('labels.theme') }}
       </span>
     </label>
-    <ul
-      :tabIndex="0"
-      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32"
-    >
-      <li>
-        <button
-          class="w-full capitalize"
-          :class="{
-            'bg-secondary': currTheme === ''
-          }"
-          type="button"
-          @click="() => handleClick('')"
-        >
-          {{ t('labels.themes.default') }}
-        </button>
-      </li>
-      <li>
-        <button
-          class="w-full capitalize"
-          :class="{
-            'bg-secondary': currTheme === 'base-light'
-          }"
-          type="button"
-          @click="() => handleClick('base-light')"
-        >
-          {{ t('labels.themes.light') }}
-        </button>
-      </li>
-      <li>
-        <button
-          class="w-full capitalize"
-          :class="{
-            'bg-secondary': currTheme === 'base-dark'
-          }"
-          type="button"
-          @click="() => handleClick('base-dark')"
-        >
-          {{ t('labels.themes.dark') }}
-        </button>
-      </li>
-    </ul>
+    <client-only>
+      <ul
+        :tabIndex="0"
+        class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32"
+      >
+        <li>
+          <button
+            class="w-full capitalize"
+            :class="{
+              'bg-primary text-white': colorMode.preference === 'system'
+            }"
+            type="button"
+            @click="() => handleClick()"
+          >
+            {{ t('labels.themes.default') }}
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-full capitalize"
+            :class="{
+              'bg-primary text-white': colorMode.preference === 'base-light'
+            }"
+            type="button"
+            @click="() => handleClick('base-light')"
+          >
+            {{ t('labels.themes.light') }}
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-full capitalize"
+            :class="{
+              'bg-primary text-white': colorMode.preference === 'base-dark'
+            }"
+            type="button"
+            @click="() => handleClick('base-dark')"
+          >
+            {{ t('labels.themes.dark') }}
+          </button>
+        </li>
+      </ul>
+    </client-only>
   </div>
 </template>

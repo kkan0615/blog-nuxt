@@ -26,7 +26,6 @@ useHead({
   htmlAttrs: {
     'dir': head.value.htmlAttrs?.dir,
     'lang': head.value.htmlAttrs?.lang,
-    'data-theme': themeCookie.value || '',
   },
   meta: [
     // Google search console
