@@ -156,7 +156,7 @@ router.beforeEach((guard) => {
         />
       </figure>
       <hr class="my-4">
-      <div class="prose max-w-full">
+      <div class="prose prose-lg max-w-full">
         <ContentRenderer
           id="article"
           class="max-w-full"
