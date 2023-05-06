@@ -1,3 +1,7 @@
+## 0.2.3
+- Added new content "Vue 3 + Typescript: Call method in child component from parent"
+- Added open-collective in funding.yml
+
 ## 0.2.2
 ### Core Changes
 - Increase font-size for posts
