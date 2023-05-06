@@ -1,5 +1,4 @@
-## 0.2.3
-- Added new content "Vue 3 + Typescript: Call method in child component from parent"
+## 0.2.2
 - Added open-collective in funding.yml
 
 ## 0.2.2
