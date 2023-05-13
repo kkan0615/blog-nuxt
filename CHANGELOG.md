@@ -1,3 +1,7 @@
+## 0.2.3
+### Core Changes
+- Updated version of Nuxt i18n
+
 ## 0.2.2
 ### Core Changes
 - Increased font-size for posts
