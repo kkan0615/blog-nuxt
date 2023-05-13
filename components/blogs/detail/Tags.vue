@@ -10,6 +10,7 @@ defineProps<Props>()
 
 const route = useRoute()
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 </script>
 <template>

@@ -113,14 +113,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
-    vueI18n: {
-      legacy: false,
-      fallbackLocale: DefaultLocale,
-      messages: {
-        en: enMessage,
-        ko: koMessage,
-      }
-    }
   },
   image: {
     provider: 'netlify',

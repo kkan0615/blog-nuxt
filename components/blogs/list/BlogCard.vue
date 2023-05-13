@@ -25,6 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
 })
 const route = useRoute()
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const timeFromNow = computed(() => {
   const now = dayjs()
@@ -40,7 +41,6 @@ const isNew = computed(() => {
   const targetDate = dayjs(props.blog.date)
   return now.diff(targetDate, 'day') < NewDay
 })
-
 </script>
 <template>
   <div class="card rounded bg-base-200/50 hover:scale-105 transition ease-in-out duration-300">
