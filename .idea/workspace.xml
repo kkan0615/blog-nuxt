@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac30925-a178-4243-93c6-2f02141ef0a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/i18n.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/detail/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Categories.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/detail/Tags.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Tags.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contacts/RequestCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/RequestCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/showcases/detail/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/showcases/detail/Categories.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +61,7 @@
       <workItem from="1683332833544" duration="4303000" />
       <workItem from="1683339564595" duration="1394000" />
       <workItem from="1683926112172" duration="7369000" />
-      <workItem from="1683949545593" duration="544000" />
+      <workItem from="1683949545593" duration="826000" />
     </task>
     <servers />
   </component>

@@ -48,18 +48,16 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 ## Packages
 ### Nuxt Modules
 - [@nuxt/content](https://content.nuxtjs.org/): Content made easy for Vue Developers
-- [@pinia/nuxt]() - Pinia module for Nuxt
-  - [pinia](https://nuxt.com/modules/pinia) - Client side State management
-- [@nuxtjs/i18n]() - vueI18n module for Nuxt 3
+- [@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html) - Pinia module for Nuxt
+  - [pinia](https://nuxt.com/modules/pinia) - Type Safe, Extensible, and Modular by design. Forget you are even using a store.
+- [@nuxtjs/i18n](https://github.com/nuxt-modules/i18n) - vueI18n module for Nuxt 3
 - [@vueuse/nuxt]() - vueuse module for Nuxt 3
 - [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind module for Nuxt 3
 - [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/) - Dark and Light mode with auto detection made easy with Nuxt
-
 ### Relative with Content
 - [highlight.js]() - Add highlight for code section
 - [rehype-highlight]() - Add highlight for code section (not working)
-- [remark-reading-time]() - Add reading time
-
+- [remark-reading-time](https://www.npmjs.com/package/remark-reading-time) - Add reading time
 ### ETC
 - [tailwindcss](https://tailwindcss.com/)= Tailwind css
   - [postcss-custom-properties](https://www.npmjs.com/package/postcss-custom-properties) - Fix ```nuxt Cannot start nuxt: Cannot find module 'postcss-custom-properties'``` error
@@ -69,7 +67,7 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [fast-glob]() - Find all files under specific directory
 - ~~[vue-gtag]()~~
 - [vue-gtag-next]()
-- [animate.css]() - Animation list
+- [animate.css](https://animate.style/) - A library of ready-to-use, cross-browser animations
 - [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
 - ~~[vite-pwa](https://github.com/vite-pwa/nuxt)~~
 - [consola](https://github.com/unjs/consola) - Fix the error of consola
