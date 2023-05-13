@@ -1,13 +1,16 @@
 ## 0.2.2
-- Added open-collective in funding.yml
-
-## 0.2.2
 ### Core Changes
-- Increase font-size for posts
-- Update version of content
-- Update version of Nuxt
+- Increased font-size for posts
+- Updated version of content
+- Updated version of Nuxt
+- Updated version of nuxt/typescript
+- Updated version of nuxt/pinia
 ### Documentation Changes
-- Javascript FormData Object
+- Added new content "Javascript FormData Object"
+- Added new content "Next.js 13 app dir Route handler with Typescript"
+### Misc Changes
+- Added open-collective in funding.yml
+- Added next-logo.jpeg
 
 ## 0.2.1
 ### Core Changes
@@ -22,7 +25,7 @@
 - Updated version of nuxt
 ### Documentation Changes
 - Added new content "Two ways to connect WebSocket in Vue 3"
-#### Misc Changes
+### Misc Changes
 - Added paypal donation in README.md 
 
 ## 0.1.9
@@ -53,7 +56,7 @@
 - Updated layout styles
 ### Documentation Changes
 - Added new content "Typescript Enum vs const Enum"
-#### Misc Changes
+### Misc Changes
 - Added funding
 - Added and Updated i18n labels
 
