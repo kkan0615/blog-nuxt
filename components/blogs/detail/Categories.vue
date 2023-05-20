@@ -9,7 +9,7 @@ defineProps<Props>()
 
 const route = useRoute()
 const { t } = useI18n()
-
+const localePath = useLocalePath()
 </script>
 <template>
   <div class="mt-4 flex items-center space-x-2">

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ac30925-a178-4243-93c6-2f02141ef0a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-05-12-17-30.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/next-logo.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -36,6 +34,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -49,6 +48,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
     </key>
@@ -64,7 +66,12 @@
       <workItem from="1682787175331" duration="1930000" />
       <workItem from="1683332833544" duration="4303000" />
       <workItem from="1683339564595" duration="1394000" />
-      <workItem from="1683926112172" duration="6986000" />
+      <workItem from="1683926112172" duration="7369000" />
+      <workItem from="1683949545593" duration="968000" />
+      <workItem from="1684027272112" duration="19000" />
+      <workItem from="1684112463817" duration="291000" />
+      <workItem from="1684548035652" duration="5295000" />
+      <workItem from="1684602976242" duration="5106000" />
     </task>
     <servers />
   </component>
