@@ -92,24 +92,31 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   i18n: {
-    // lazy: true,
+    lazy: true,
+    // experimental: {
+    //   jsTsFormatResource: true
+    // },
+    precompile: {
+      strictMessage: false,
+      escapeHtml: true
+    },
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
-    // langDir: 'locales',
+    langDir: 'locales',
     locales: [
       {
         code: 'en',
         iso: 'en',
         name: 'English',
-        // file: 'en/index.js',
+        files: ['en/index.json', 'en/common.json'],
       },
       {
         code: 'ko',
         iso: 'ko',
         name: 'Korean',
-        // file: 'ko/index.js',
+        files: ['ko/index.json', 'ko/common.json'],
       },
     ],
     detectBrowserLanguage: {

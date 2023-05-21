@@ -1,5 +1,5 @@
-import common from './common.json'
-import main from './index.json'
+import common from './en/common.json'
+import main from './en/index.json'
 
 export const enMessage = {
   ...main,
@@ -7,7 +7,10 @@ export const enMessage = {
 }
 
 export default defineI18nLocale(locale => {
-  return enMessage
+  return {
+    ...main,
+    ...common,
+  }
 })
 
 // export default enMessage

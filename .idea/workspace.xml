@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ac30925-a178-4243-93c6-2f02141ef0a2" name="Changes" comment="">
+    <list default="true" id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ko/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,60 +21,47 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="lor1wtmn" />
+    <option name="directoryName" value="gvnhbh63" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2P6p1TqEq77UntJjVyeiQkFXir7" />
+  <component name="ProjectId" id="2Q57ggvOH9sPD1CiarteYoK1fMQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\locales" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3ac30925-a178-4243-93c6-2f02141ef0a2" name="Changes" comment="" />
-      <created>1682787173230</created>
+      <changelist id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="" />
+      <created>1684631704419</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682787173230</updated>
-      <workItem from="1682787175331" duration="1930000" />
-      <workItem from="1683332833544" duration="4303000" />
-      <workItem from="1683339564595" duration="1394000" />
-      <workItem from="1683926112172" duration="7369000" />
-      <workItem from="1683949545593" duration="968000" />
-      <workItem from="1684027272112" duration="19000" />
-      <workItem from="1684112463817" duration="291000" />
-      <workItem from="1684548035652" duration="5295000" />
-      <workItem from="1684602976242" duration="5186000" />
-      <workItem from="1684627027947" duration="2596000" />
+      <updated>1684631704419</updated>
+      <workItem from="1684631706503" duration="473000" />
     </task>
     <servers />
   </component>
