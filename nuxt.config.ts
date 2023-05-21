@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { enMessage } from './locales/en'
-import { koMessage } from './locales/ko'
 import { DefaultLocale } from './types/locale'
 
 export default defineNuxtConfig({
@@ -123,6 +121,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
+    vueI18n: './i18n.config.ts'
   },
   image: {
     provider: 'netlify',

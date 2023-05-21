@@ -8,5 +8,9 @@ export default defineI18nConfig(() => ({
   messages: {
     en: enMessage,
     ko: koMessage,
-  }
+  },
+  modifiers: {
+    // @ts-ignore
+    snakeCase: (str: string) => str.split(' ').join('-')
+  },
 }))
