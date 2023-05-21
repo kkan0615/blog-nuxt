@@ -7,10 +7,8 @@
     <list default="true" id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ko/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/ko.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\locales\en" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\locales\ko" />
       <recent name="D:\personalStudy\personal-blog-nuxt\locales" />
     </key>
   </component>
@@ -61,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684631704419</updated>
-      <workItem from="1684631706503" duration="473000" />
+      <workItem from="1684631706503" duration="970000" />
     </task>
     <servers />
   </component>
