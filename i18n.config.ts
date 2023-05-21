@@ -1,12 +1,23 @@
 import { DefaultLocale } from '~/types/locale'
-import { enMessage } from '~/locales/en'
-import { koMessage } from '~/locales/ko'
+// import enMessage from '~/locales/en'
+// import koMessage from '~/locales/ko'
+
+import enCommon from '~/locales/en/common.json'
+import enMain from '~/locales/en/index.json'
+import koCommon from '~/locales/ko/common.json'
+import koMain from '~/locales/ko/index.json'
 
 export default defineI18nConfig(() => ({
   legacy: false,
   fallbackLocale: DefaultLocale,
   messages: {
-    en: enMessage,
-    ko: koMessage,
-  }
+    en: {
+      ...enCommon,
+      ...enMain,
+    },
+    ko: {
+      ...koCommon,
+      ...koMain,
+    },
+  },
 }))

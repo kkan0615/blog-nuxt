@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { enMessage } from './locales/en'
-import { koMessage } from './locales/ko'
 import { DefaultLocale } from './types/locale'
 
 export default defineNuxtConfig({
@@ -94,18 +92,31 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   i18n: {
+    lazy: true,
+    // experimental: {
+    //   jsTsFormatResource: true
+    // },
+    precompile: {
+      strictMessage: false,
+      escapeHtml: true
+    },
     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
+    langDir: 'locales',
     locales: [
       {
         code: 'en',
-        iso: 'en'
+        iso: 'en',
+        name: 'English',
+        files: ['en/index.json', 'en/common.json'],
       },
       {
         code: 'ko',
-        iso: 'ko'
+        iso: 'ko',
+        name: 'Korean',
+        files: ['ko/index.json', 'ko/common.json'],
       },
     ],
     detectBrowserLanguage: {
@@ -113,6 +124,7 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
     },
+    vueI18n: './i18n.config.ts'
   },
   image: {
     provider: 'netlify',

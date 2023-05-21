@@ -56,7 +56,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   if (observer.value) {
-    observer.value.disconnect()
+    observer.value?.disconnect()
     observer.value = null
   }
 })
