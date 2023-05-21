@@ -7,6 +7,8 @@
     <list default="true" id="3ac30925-a178-4243-93c6-2f02141ef0a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/i18n.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +73,7 @@
       <workItem from="1684112463817" duration="291000" />
       <workItem from="1684548035652" duration="5295000" />
       <workItem from="1684602976242" duration="5186000" />
-      <workItem from="1684627027947" duration="1793000" />
+      <workItem from="1684627027947" duration="2596000" />
     </task>
     <servers />
   </component>

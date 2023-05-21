@@ -1,9 +1,13 @@
 import common from './common.json'
 import main from './index.json'
 
-const enMessage = {
+export const enMessage = {
   ...main,
   ...common,
 }
 
-export default enMessage
+export default defineI18nLocale(locale => {
+  return enMessage
+})
+
+// export default enMessage

@@ -1,9 +1,13 @@
 import common from './common.json'
 import main from './index.json'
 
-const koMessage = {
+export const koMessage = {
   ...main,
   ...common,
 }
 
-export default koMessage
+export default defineI18nLocale(locale => {
+  return koMessage
+})
+
+// export default koMessage
