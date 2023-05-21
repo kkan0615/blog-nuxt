@@ -1,7 +1,9 @@
 import common from './common.json'
 import main from './index.json'
 
-export const enMessage = {
+const enMessage = {
   ...main,
   ...common,
 }
+
+export default enMessage

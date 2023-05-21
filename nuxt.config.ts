@@ -98,14 +98,24 @@ export default defineNuxtConfig({
     defaultLocale: DefaultLocale,
     strategy: 'prefix_except_default',
     trailingSlash: false,
+    dynamicRouteParams: true,
+    experimental: {
+      jsTsFormatResource: true
+    },
+    precompile: {
+      strictMessage: false,
+      escapeHtml: true
+    },
     locales: [
       {
         code: 'en',
-        iso: 'en'
+        iso: 'en',
+        name: 'English',
       },
       {
         code: 'ko',
-        iso: 'ko'
+        iso: 'ko',
+        name: 'Korean',
       },
     ],
     detectBrowserLanguage: {
