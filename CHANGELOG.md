@@ -1,9 +1,14 @@
+## 0.2.4
+### Documentation Changes
+- Added new content "Fullscreen API in Typescript"
+
+
 ## 0.2.3
 ### Core Changes
 - Updated version of Nuxt i18n
 ### Documentation Changes
 - Added new content "Javascript FormData Object"
-- File System Access API with Typescript
+- Added new content "File System Access API with Typescript"
 
 ## 0.2.2
 ### Core Changes
