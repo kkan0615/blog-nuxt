@@ -1,7 +1,8 @@
 ## 0.2.4
 ### Documentation Changes
 - Added new content "Fullscreen API in Typescript"
-
+### Misc Changes
+- Cookie privacy page is created, but not done yet
 
 ## 0.2.3
 ### Core Changes
