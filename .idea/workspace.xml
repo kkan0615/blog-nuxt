@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CookiePopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/CookiePopup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/MultiSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/MultiSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/showcases/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/showcases/list/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/components/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/MenuItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685808764268</updated>
-      <workItem from="1685808765912" duration="3664000" />
+      <workItem from="1685808765912" duration="3742000" />
     </task>
     <servers />
   </component>

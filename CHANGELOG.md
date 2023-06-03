@@ -1,4 +1,7 @@
 ## 0.2.4
+### Core Changes
+- Updated all packages to latest
+- Updated design based on Daisy.UI 3.0
 ### Documentation Changes
 - Added new content "Fullscreen API in Typescript"
 ### Misc Changes
