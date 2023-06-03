@@ -28,7 +28,7 @@ const switchLocalePath = useSwitchLocalePath()
     </label>
     <ul
       :tabindex="0"
-      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box max-w-52"
+      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box max-w-52 z-20"
     >
       <li
         v-for="availableLocale in availableLocales"

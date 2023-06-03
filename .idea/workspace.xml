@@ -4,10 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/legals/cookies/index.vue" afterDir="false" />
+    <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-06-02-20-32.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-06-02-20-32.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CookiePopup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/CookiePopup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/MultiSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/MultiSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/showcases/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/showcases/list/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/components/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/MenuItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/home/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,54 +31,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="gvnhbh63" />
+    <option name="directoryName" value="nb86d2jh" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Q57ggvOH9sPD1CiarteYoK1fMQ" />
+  <component name="ProjectId" id="2QhbSPAdavI6XtfRPcnk7u2vObd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\personalStudy\personal-blog-nuxt\locales\en" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\locales\ko" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\locales" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="" />
-      <created>1684631704419</created>
+      <changelist id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="" />
+      <created>1685808764268</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1684631704419</updated>
-      <workItem from="1684631706503" duration="1625000" />
-      <workItem from="1685109142933" duration="1437000" />
-      <workItem from="1685139661840" duration="3971000" />
-      <workItem from="1685206333251" duration="1129000" />
-      <workItem from="1685751898623" duration="4204000" />
-      <workItem from="1685802498990" duration="5240000" />
+      <updated>1685808764268</updated>
+      <workItem from="1685808765912" duration="3664000" />
     </task>
     <servers />
   </component>

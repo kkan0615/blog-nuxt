@@ -18,19 +18,28 @@ const locales = ref<string[]>(((route.query.locales || locale.value) as string).
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
 const tags = ref<string[]>(((route.query.tags || '') as string).split(',').filter((el) => !!el))
 
-const categoryOptions = appConfig.blogCategories.map(category => {
-  return {
-    label: t(`labels.blogCategories.${category}`),
-    value: category,
-  }
-}).sort((a, b) => a.label.localeCompare(b.label))
+const categoryOptions = computed(() => {
+  return appConfig.blogCategories.map(category => {
+    return {
+      label: t(`labels.blogCategories.${category}`),
+      value: category,
+    }
+  }).sort((a, b) => a.label.localeCompare(b.label))
+})
 
 const tagOptions = computed(() => {
   let tags: string[] = []
   let key: keyof typeof appConfig.blogTags
-  for (key in appConfig.blogTags) {
-    if (categories.value.includes(key))
+  console.log('test?', categories.value.length)
+  if (!categories.value.length) {
+    for (key in appConfig.blogTags) {
       tags = [...tags, ...appConfig.blogTags[key]]
+    }
+  } else {
+    for (key in appConfig.blogTags) {
+      if (categories.value.includes(key as string))
+        tags = [...tags, ...appConfig.blogTags[key]]
+    }
   }
 
   return tags.map(tag => {
@@ -54,7 +63,7 @@ const handleUpdateCategories = () => {
     let tagsInFilter: string[] = []
     let key: keyof typeof appConfig.blogTags
     for (key in appConfig.blogTags) {
-      if (categories.value.includes(key))
+      if (categories.value.includes(key as string))
         tagsInFilter = [...tagsInFilter, ...appConfig.blogTags[key]]
     }
     return tagsInFilter.includes(tag)
@@ -86,9 +95,10 @@ const handleReset = () => {
 <template>
   <div
     :tabindex="0"
-    class="collapse collapse-arrow mb-4"
+    class="collapse collapse-arrow"
     :class="{
-      'overflow-visible': toggle
+      'mb-4': !toggle,
+      'overflow-visible': toggle,
     }"
   >
     <input
@@ -100,71 +110,73 @@ const handleReset = () => {
       {{ t('commons.labels.search') }}
     </div>
     <div class="collapse-content px-0 overflow-visible">
-      <nav>
-        <form
-          @submit.prevent="handleSubmit"
-          @reset="handleReset"
+      <form
+        class="py-2"
+        @submit.prevent="handleSubmit"
+        @reset="handleReset"
+      >
+        <div
+          v-if="toggle"
+          class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4"
         >
-          <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
-            <div class="form-control w-full">
-              <label class="label">
-                <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
-              </label>
-              <MultiSelect
-                v-model="locales"
-                :options="localeOptions"
-              />
-            </div>
-            <div class="form-control w-full">
-              <label class="label">
-                <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>
-              </label>
-              <MultiSelect
-                v-model="categories"
-                :options="categoryOptions"
-                :placeholder="t('labels.blogFilter.categories')"
-                @update:model-value="handleUpdateCategories"
-              />
-            </div>
-            <div class="form-control w-full">
-              <label class="label">
-                <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>
-              </label>
-              <MultiSelect
-                v-model="tags"
-                :options="tagOptions"
-                :placeholder="t('labels.blogFilter.tags')"
-                :no-data-placeholder="t('placeholders.noSelectedCategory')"
-              />
-            </div>
-            <div class="form-control w-full">
-              <label class="label">
-                <span class="label-text">{{ t('commons.labels.search') }}</span>
-              </label>
-              <input
-                v-model="search"
-                class="input input-bordered input-sm w-full"
-                type="text"
-                :placeholder="t('commons.placeholders.search')"
-              >
-            </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
+            </label>
+            <MultiSelect
+              v-model="locales"
+              :options="localeOptions"
+            />
           </div>
-          <div class="mt-4 flex space-x-4">
-            <button
-              class="btn btn-sm btn-primary rounded-btn"
-              type="submit"
-            >
-              {{ t('commons.btns.search') }}
-            </button>
-            <button
-              class="btn btn-sm btn-error btn-outline rounded-btn"
-              type="reset"
-            >
-              {{ t('commons.btns.reset') }}
-            </button>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>
+            </label>
+            <MultiSelect
+              v-model="categories"
+              :options="categoryOptions"
+              :placeholder="t('labels.blogFilter.categories')"
+              @update:model-value="handleUpdateCategories"
+            />
           </div>
-        </form>
-      </nav>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>
+            </label>
+            <MultiSelect
+              v-model="tags"
+              :options="tagOptions"
+              :placeholder="t('labels.blogFilter.tags')"
+              :no-data-placeholder="t('placeholders.noSelectedCategory')"
+            />
+          </div>
+          <div class="form-control w-full">
+            <label class="label">
+              <span class="label-text">{{ t('commons.labels.search') }}</span>
+            </label>
+            <input
+              v-model="search"
+              class="input input-bordered input-sm w-full"
+              type="text"
+              :placeholder="t('commons.placeholders.search')"
+            >
+          </div>
+        </div>
+        <div class="md:mt-8 mt-4 flex space-x-4">
+          <button
+            class="btn btn-sm btn-primary rounded-btn"
+            type="submit"
+          >
+            {{ t('commons.btns.search') }}
+          </button>
+          <button
+            class="btn btn-sm btn-error btn-outline rounded-btn"
+            type="reset"
+          >
+            {{ t('commons.btns.reset') }}
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </template>

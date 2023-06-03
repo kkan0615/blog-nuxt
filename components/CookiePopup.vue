@@ -12,20 +12,20 @@ const handleAccept = () => {
 <template>
   <div
     v-if="visible"
-    class="animate__animated animate__fadeIn fixed bottom-2 right-2 z-50 alert shadow-lg max-w-4xl"
+    class="animate__animated animate__fadeIn fixed bottom-2 right-2 z-50 alert shadow-lg max-w-2xl"
   >
-    <div>
+    <div class="flex items-center">
       <NuxtImg
-        class="mr-2"
+        class="mr-4"
         src="/assets/cookie-32x32.png"
         width="32px"
         height="32px"
       />
-      <span>
+      <div>
         {{ t('commons.messages.cookieAccept') }}
-      </span>
+      </div>
     </div>
-    <div class="flex-none">
+    <div>
       <button
         class="btn btn-sm btn-primary"
         @click="handleAccept"

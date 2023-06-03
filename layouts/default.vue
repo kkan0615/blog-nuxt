@@ -4,8 +4,11 @@ import Header from '~/layouts/default/Header.vue'
 import Footer from '~/layouts/components/Footer.vue'
 </script>
 <template>
-  <div class="drawer drawer-mobile">
+  <div class="drawer lg:drawer-open">
     <CookiePopup />
+    <ClientOnly>
+      <LazyBtnsScrollTop />
+    </ClientOnly>
     <input
       id="default-layout-drawer"
       type="checkbox"
@@ -15,9 +18,6 @@ import Footer from '~/layouts/components/Footer.vue'
       id="base-content"
       class="drawer-content relative min-h-screen flex flex-col"
     >
-      <ClientOnly>
-        <LazyBtnsScrollTop />
-      </ClientOnly>
       <!-- Page content here -->
       <Header />
       <div class="flex-grow p-2 lg:p-4">
