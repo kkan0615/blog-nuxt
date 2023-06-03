@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="963582a1-0a2c-4ea6-a367-2ed93500923a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-06-02-20-32.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +61,9 @@
       <updated>1684631704419</updated>
       <workItem from="1684631706503" duration="1625000" />
       <workItem from="1685109142933" duration="1437000" />
-      <workItem from="1685139661840" duration="3948000" />
+      <workItem from="1685139661840" duration="3971000" />
+      <workItem from="1685206333251" duration="1129000" />
+      <workItem from="1685751898623" duration="2761000" />
     </task>
     <servers />
   </component>
