@@ -36,7 +36,7 @@ const handleClick = async (newTheme?: string) => {
     <client-only>
       <ul
         :tabIndex="0"
-        class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32"
+        class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32 z-20"
       >
         <li>
           <button

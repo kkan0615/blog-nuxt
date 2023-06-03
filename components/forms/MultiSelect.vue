@@ -50,7 +50,7 @@ const handleChange = (option: { label: string, value: any }) => {
     </div>
     <div
       :tabIndex="0"
-      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full max-w-lg max-h-64 overflow-y-auto"
+      class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-full max-w-lg max-h-64 overflow-y-auto z-20"
     >
       <!-- Without div ul and li will break flex -->
       <div v-if="options.length">

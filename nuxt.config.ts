@@ -93,9 +93,6 @@ export default defineNuxtConfig({
   },
   i18n: {
     lazy: true,
-    // experimental: {
-    //   jsTsFormatResource: true
-    // },
     precompile: {
       strictMessage: false,
       escapeHtml: true

@@ -2,30 +2,23 @@
 import { Icon } from '@iconify/vue'
 import { onBeforeUnmount, onMounted } from '#imports'
 
-const visible = ref(false)
-const contentDiv = ref<HTMLDivElement | null>(null)
+const isScrolled = ref(false)
 
 onMounted(() => {
-  const found = document.getElementById('base-content')
-  if (found) {
-    contentDiv.value = found as HTMLDivElement
-    contentDiv.value.addEventListener('scroll', handleScroll)
-  }
+  window.addEventListener('scroll', handleScroll)
 })
 
 onBeforeUnmount(() => {
-  if (contentDiv.value)
-    contentDiv.value.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('scroll', handleScroll)
 })
 
 const handleScroll = () => {
-  if (!contentDiv.value) return
-  visible.value = contentDiv.value.scrollTop > 0
+  console.log()
+  isScrolled.value = window.scrollY > 0
 }
 
 const handleClick = () => {
-  if (!contentDiv.value) return
-  contentDiv.value.scrollTo({
+  window.scrollTo({
     top: 0,
     behavior: 'smooth'
   })
@@ -35,7 +28,7 @@ const handleClick = () => {
 <template>
   <div class="fixed bottom-5 right-5 sm:bottom-12 sm:right-12 z-10">
     <button
-      v-if="visible"
+      v-if="isScrolled"
       class="btn btn-circle btn-outline animate__animated animate__fadeIn btn-sm sm:btn-md"
       @click="handleClick"
     >

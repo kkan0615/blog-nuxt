@@ -5,25 +5,18 @@ import MenuItem from '~/layouts/home/MenuItem.vue'
 
 const { t } = useI18n()
 
-const contentDiv = ref<HTMLDivElement | null>(null)
-const top = ref(true)
+const isScrolled = ref(false)
 
 onMounted(() => {
-  const found = document.getElementById('base-content')
-  if (found) {
-    contentDiv.value = found as HTMLDivElement
-    contentDiv.value.addEventListener('scroll', handleScroll)
-  }
+  window.addEventListener('scroll', handleScroll)
 })
 
 onBeforeUnmount(() => {
-  if (contentDiv.value)
-    contentDiv.value.removeEventListener('scroll', handleScroll)
+  window.removeEventListener('scroll', handleScroll)
 })
 
 const handleScroll = () => {
-  if (!contentDiv.value) return
-  top.value = contentDiv.value.scrollTop === 0
+  isScrolled.value = window.scrollY > 0
 }
 
 </script>
@@ -31,7 +24,7 @@ const handleScroll = () => {
   <header
     class="navbar bg-base-300 z-10 fixed top-0 transition duration-500 ease-in-out"
     :class="{
-      'bg-transparent': top,
+      'bg-transparent': !isScrolled,
     }"
   >
     <nav class="max-w-4xl mx-auto flex w-full">
@@ -56,7 +49,7 @@ const handleScroll = () => {
         <MenuItem
           to="/blogs"
         >
-          Blogs
+          blogs
         </MenuItem>
         <MenuItem
           to="/showcases"
