@@ -1,3 +1,10 @@
+## 0.2.5
+### Core Changes
+
+### Documentation Changes
+- Added new content "Fullscreen API in Typescript"
+### Misc Changes
+
 ## 0.2.4
 ### Core Changes
 - Updated all packages to latest
