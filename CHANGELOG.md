@@ -1,9 +1,11 @@
 ## 0.2.5
 ### Core Changes
-
+- Fixed locale errors
 ### Documentation Changes
-- Added new content "Fullscreen API in Typescript"
+- JavaScript Destructing assignment"
 ### Misc Changes
+- Change TOC component name to TableOfContent 
+- Hide "example" in categories
 
 ## 0.2.4
 ### Core Changes

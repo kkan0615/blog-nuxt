@@ -158,7 +158,7 @@ onMounted(() => {
       <!--          article-id="article"-->
       <!--        />-->
       <!--      </client-only>-->
-      <TOC
+      <table-of-content
         article-id="article"
         :toc="page.body.toc"
       />

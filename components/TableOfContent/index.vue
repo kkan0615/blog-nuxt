@@ -87,7 +87,7 @@ onBeforeUnmount(() => {
           v-if="activeId === content.id && content.children"
           class="animate__animated animate__fadeIn space-y-1 mt-1"
         >
-          <TOCItem
+          <table-of-content-item
             v-for="child in content.children"
             :id="child.id"
             :key="child.id"

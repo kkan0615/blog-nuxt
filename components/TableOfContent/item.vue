@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Toc, TocLink } from '@nuxt/content/dist/runtime/types'
+import { TocLink } from '@nuxt/content/dist/runtime/types'
 
 interface Props {
   content: TocLink
@@ -34,7 +34,7 @@ const handleClick = (content: TocLink) => {
       v-if="content.children"
       class="mt-1"
     >
-      <TOCItem
+      <table-of-content-item
         v-for="child in content.children"
         :id="child.id"
         :key="child.id"

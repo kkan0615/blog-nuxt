@@ -7,7 +7,7 @@ interface Props {
 }
 defineProps<Props>()
 
-const { t, locale, availableLocales, locales } = useI18n()
+const { t, locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 </script>
 
@@ -31,17 +31,16 @@ const switchLocalePath = useSwitchLocalePath()
       class="dropdown-content menu p-2 shadow bg-base-100 rounded-box max-w-52 z-20"
     >
       <li
-        v-for="availableLocale in availableLocales"
-        :key="availableLocale"
+        v-for="localeEl in locales"
+        :key="localeEl.code"
       >
         <NuxtLink
           :class="{
-            'bg-secondary': locale === availableLocale,
-            'text-white': locale === availableLocale,
+            'bg-secondary text-white': locale === localeEl.code,
           }"
-          :to="{ path: switchLocalePath(availableLocale) }"
+          :to="{ path: switchLocalePath(localeEl.code) }"
         >
-          {{ t(`commons.labels.languages.${availableLocale}`) }}
+          {{ t(`commons.labels.languages.${localeEl.code}`) }}
         </NuxtLink>
       </li>
     </ul>
