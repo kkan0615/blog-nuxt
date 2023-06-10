@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <updated>1685808764268</updated>
       <workItem from="1685808765912" duration="3760000" />
       <workItem from="1686354832591" duration="5169000" />
-      <workItem from="1686361732710" duration="86000" />
+      <workItem from="1686361732710" duration="3145000" />
     </task>
     <servers />
   </component>
