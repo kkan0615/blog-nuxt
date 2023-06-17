@@ -3,7 +3,7 @@ import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import hljs from 'highlight.js'
 import { useLayoutStore } from '~/stores/layout'
-import type { PostDetail } from '~/types/post'
+import { PostDetail } from '~/types/post'
 import { PostList } from '~/types/post'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
@@ -199,12 +199,7 @@ router.beforeEach((guard) => {
       </div>
     </div>
     <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
-      <!--      <ClientOnly>-->
-      <!--        <TableOfContent-->
-      <!--          article-id="article"-->
-      <!--        />-->
-      <!--      </ClientOnly>-->
-      <TOC
+      <table-of-content
         article-id="article"
         :toc="page.body.toc"
       />

@@ -30,7 +30,7 @@ const categoryOptions = computed(() => {
 const tagOptions = computed(() => {
   let tags: string[] = []
   let key: keyof typeof appConfig.blogTags
-  console.log('test?', categories.value.length)
+
   if (!categories.value.length) {
     for (key in appConfig.blogTags) {
       tags = [...tags, ...appConfig.blogTags[key]]

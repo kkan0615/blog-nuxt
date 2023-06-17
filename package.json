@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS personal blog",
   "scripts": {
@@ -17,7 +17,7 @@
     "@pinia/nuxt": "^0.4.10",
     "@vueuse/nuxt": "^10.1.2",
     "animate.css": "^4.1.1",
-    "daisyui": "3.0.1",
+    "daisyui": "^3.0.22",
     "dayjs": "^1.11.8",
     "highlight.js": "^11.7.0",
     "rehype-highlight": "^6.0.0",
@@ -40,9 +40,9 @@
     "eslint-plugin-n": "^16.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.14.1",
-    "nuxt": "^3.5.2",
+    "nuxt": "3.5.2",
     "postcss-custom-properties": "^13.2.0",
-    "sass": "^1.57.1",
+    "sass": "^1.63.3",
     "sitemap": "^7.1.1",
     "typescript": "5.1.3"
   },
