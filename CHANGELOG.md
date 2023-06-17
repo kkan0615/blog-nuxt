@@ -2,7 +2,8 @@
 ### Core Changes
 - Fixed locale errors
 ### Documentation Changes
-- JavaScript Destructing assignment"
+- Added content "JavaScript Destructing assignment"
+- Added content "JJavaScript at() method"
 ### Misc Changes
 - Change TOC component name to TableOfContent 
 - Hide "example" in categories
