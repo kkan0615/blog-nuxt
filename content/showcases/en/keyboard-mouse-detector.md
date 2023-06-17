@@ -6,6 +6,7 @@ locale: en
 categories: [desktopApp]
 tags: [vue, electron]
 github: 'https://github.com/kkan0615/keyboard-mouse-detector'
+_draft: true
 ---
 
 ## Keyboard mouse detector
