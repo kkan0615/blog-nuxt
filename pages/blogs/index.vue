@@ -140,7 +140,7 @@ const handleClickPagination = async (newPageNum: number) => {
     <div class="mt-4 text-center">
       <LazyAdvertisementsAmazonBanner />
       <Pagination
-        v-if="list.maxPagination"
+        v-if="list?.maxPagination"
         :active-number="Number(route.query.page) || 1"
         :max="list.maxPagination"
         @click="handleClickPagination"
