@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-06-09-18-15.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-06-09-20-01.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-06-16-20-01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/showcases/en/keyboard-mouse-detector.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/showcases/en/keyboard-mouse-detector.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/showcases/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/showcases/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,10 @@
       <workItem from="1685808765912" duration="3760000" />
       <workItem from="1686354832591" duration="5169000" />
       <workItem from="1686361732710" duration="3816000" />
-      <workItem from="1686953626852" duration="3590000" />
+      <workItem from="1686953626852" duration="3793000" />
+      <workItem from="1687481386569" duration="2339000" />
+      <workItem from="1687484729763" duration="31000" />
+      <workItem from="1687484763324" duration="14000" />
     </task>
     <servers />
   </component>
