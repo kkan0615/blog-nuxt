@@ -12,19 +12,19 @@ definePageMeta({
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { data: blogList } = await useAsyncData<PostList[] >('blogs', async () => await queryContent<PostList>('blogs/')
-  .where({
-    _draft: { $not: true },
-    locale: locale.value,
-  })
+  // .where({
+  //   _draft: { $not: true },
+  //   locale: locale.value,
+  // })
   .sort({ date: -1 })
   .limit(LIMIT_CARDS)
   .find())
 
 const { data: showcaseList } = await useAsyncData<PostList[] >('showcases', async () => await queryContent<PostList>('showcases/')
-  .where({
-    _draft: { $not: true },
-    locale: locale.value,
-  })
+  // .where({
+  //   _draft: { $not: true },
+  //   locale: locale.value,
+  // })
   .sort({ date: -1 })
   .limit(LIMIT_CARDS)
   .find())
