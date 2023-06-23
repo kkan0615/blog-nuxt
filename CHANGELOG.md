@@ -1,3 +1,7 @@
+## 0.2.6
+### Core Changes
+- Fix i18n error
+
 ## 0.2.5
 ### Core Changes
 - Fixed locale errors
