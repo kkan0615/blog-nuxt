@@ -115,7 +115,7 @@ const handleClickPagination = async (newPageNum: number) => {
   <div class="max-w-7xl mx-auto">
     <Navbar @search="refresh" />
     <div
-      v-if="data.list && data.list.length > 0"
+      v-if="data?.list && data?.list.length > 0"
       class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:py-4 md:p-0"
     >
       <!--      <ContentList-->
@@ -123,7 +123,7 @@ const handleClickPagination = async (newPageNum: number) => {
       <!--        :query="query"-->
       <!--      >-->
       <BlogCard
-        v-for="blog in data.list"
+        v-for="blog in data?.list || []"
         :key="blog._path"
         :blog="blog"
       />
@@ -140,9 +140,9 @@ const handleClickPagination = async (newPageNum: number) => {
     <div class="mt-4 text-center">
       <LazyAdvertisementsAmazonBanner />
       <Pagination
-        v-if="data.maxPagination"
+        v-if="data?.maxPagination"
         :active-number="Number(route.query.page) || 1"
-        :max="data.maxPagination"
+        :max="data?.maxPagination"
         @click="handleClickPagination"
       />
     </div>

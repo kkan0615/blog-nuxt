@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/i18n.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/i18n.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,8 @@
       <workItem from="1686953626852" duration="3793000" />
       <workItem from="1687481386569" duration="2339000" />
       <workItem from="1687484729763" duration="31000" />
-      <workItem from="1687484763324" duration="14000" />
+      <workItem from="1687484763324" duration="1701000" />
+      <workItem from="1687565776326" duration="1368000" />
     </task>
     <servers />
   </component>

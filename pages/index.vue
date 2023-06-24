@@ -111,7 +111,7 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.blogs.description') }}
       </p>
       <div
-        v-show="blogList.length !== 0"
+        v-show="blogList?.length !== 0"
         class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <BlogsListBlogCard
@@ -123,7 +123,7 @@ onBeforeUnmount(() => {
         />
       </div>
       <p
-        v-show="blogList.length === 0"
+        v-show="blogList?.length === 0"
         class="py-4 text-center"
       >
         {{ t('commons.placeholders.noData') }}
@@ -148,7 +148,7 @@ onBeforeUnmount(() => {
         {{ t('views.home.sections.showcases.description') }}
       </p>
       <div
-        v-show="showcaseList.length !== 0"
+        v-show="showcaseList?.length !== 0"
         class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
       >
         <ShowcasesListShowcaseCard
@@ -160,7 +160,7 @@ onBeforeUnmount(() => {
         />
       </div>
       <p
-        v-show="showcaseList.length === 0"
+        v-show="showcaseList?.length === 0"
         class="py-4 text-center"
       >
         {{ t('commons.placeholders.noData') }}
