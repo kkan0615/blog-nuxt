@@ -1,6 +1,7 @@
 ## 0.2.7
 ### Documentation Changes
 - Added new content "JavaScript console.time()"
+- Added new content "JavaScript 5 ways to deep copy objects"
 
 ## 0.2.6
 ### Core Changes
