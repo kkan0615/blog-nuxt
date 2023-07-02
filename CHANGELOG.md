@@ -1,13 +1,19 @@
+## 0.2.7
+### Documentation Changes
+- Added new content "JavaScript console.time()"
+- Added new content "JavaScript 5 ways to deep copy objects"
+
 ## 0.2.6
 ### Core Changes
 - Fix i18n error
+- Updated all packages to latest
 
 ## 0.2.5
 ### Core Changes
 - Fixed locale errors
 ### Documentation Changes
-- Added content "JavaScript Destructing assignment"
-- Added content "JJavaScript at() method"
+- Added new content "JavaScript Destructing assignment"
+- Added new content "JJavaScript at() method"
 ### Misc Changes
 - Change TOC component name to TableOfContent 
 - Hide "example" in categories
