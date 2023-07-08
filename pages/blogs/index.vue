@@ -6,7 +6,7 @@ import { useLayoutStore } from '~/stores/layout'
 import { PostList } from '~/types/post'
 import { QueryBuilderWhere } from '@nuxt/content/dist/runtime/types'
 
-const displayPosts = 20
+const displayPosts = 16
 
 const router = useRouter()
 const route = useRoute()
