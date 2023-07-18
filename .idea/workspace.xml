@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-15-11-16.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-07-15-11-16.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-15-11-16.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -78,6 +80,8 @@
       <workItem from="1688776627877" duration="4942000" />
       <workItem from="1689433847833" duration="6113000" />
       <workItem from="1689547052833" duration="5913000" />
+      <workItem from="1689560923435" duration="36000" />
+      <workItem from="1689639918262" duration="3046000" />
     </task>
     <servers />
   </component>

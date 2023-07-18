@@ -3,6 +3,7 @@
   "version": "0.2.8",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS personal blog",
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
@@ -40,7 +41,7 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.15.1",
-    "nuxt": "3.6.3",
+    "nuxt": "3.5.3",
     "postcss-custom-properties": "^13.2.1",
     "sass": "^1.63.6",
     "sitemap": "^7.1.1",
