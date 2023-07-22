@@ -1,3 +1,12 @@
+## 0.2.8
+### Core Changes
+- Updated pagination component
+- Fixed undefined issue.
+### Documentation Changes
+- Added new content "Select all text in input on focused"
+- Added new content "Typescript Array Add, Update, Delete elements"
+- Updated date in content "JavaScript 5 ways to deep copy objects"
+
 ## 0.2.7
 ### Documentation Changes
 - Added new content "JavaScript console.time()"

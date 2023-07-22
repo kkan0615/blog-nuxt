@@ -93,7 +93,7 @@ const isNew = computed(() => {
           {{ blog.description }}
         </p>
         <div
-          v-if="blog.categories.length"
+          v-if="blog.categories?.length"
           class="mt-2 card-actions"
         >
           <Icon icon="material-symbols:folder-open-outline-rounded" />
@@ -106,7 +106,7 @@ const isNew = computed(() => {
           </div>
         </div>
         <div
-          v-if="blog.tags.length"
+          v-if="blog.tags?.length"
           class="mt-1 card-actions text-md lg:text-sm"
         >
           <div
@@ -121,7 +121,7 @@ const isNew = computed(() => {
           v-if="!dense"
           class="mt-2 card-actions text-md lg:text-sm"
         >
-          <div>{{ blog.readingTime.text }}</div>
+          <div>{{ blog.readingTime?.text }}</div>
           <div class="ml-auto">
             {{ timeFromNow }}
           </div>
