@@ -1,3 +1,9 @@
+## 0.2.9
+### Core Changes
+- Update donation button
+### Documentation Changes
+- Added new content "Select all text in input on focused"
+
 ## 0.2.8
 ### Core Changes
 - Updated pagination component

@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-23-11-16.md" afterDir="false" />
+    <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TableOfContent/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/TableOfContent/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/advertisements/Donation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/advertisements/Donation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-07-23-11-16.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-23-11-16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,68 +27,43 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="nb86d2jh" />
+    <option name="directoryName" value="zlorisd7" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2QhbSPAdavI6XtfRPcnk7u2vObd" />
+  <component name="ProjectId" id="2Szu0LRNGyR2qyr5MCq77FmVwJi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7976e93d-08af-429d-92c7-ea19d1e176da" name="Changes" comment="" />
-      <created>1685808764268</created>
+      <changelist id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="" />
+      <created>1690161509496</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1685808764268</updated>
-      <workItem from="1685808765912" duration="3760000" />
-      <workItem from="1686354832591" duration="5169000" />
-      <workItem from="1686361732710" duration="3816000" />
-      <workItem from="1686953626852" duration="3793000" />
-      <workItem from="1687481386569" duration="2339000" />
-      <workItem from="1687484729763" duration="31000" />
-      <workItem from="1687484763324" duration="1701000" />
-      <workItem from="1687565776326" duration="3369000" />
-      <workItem from="1688168130738" duration="584000" />
-      <workItem from="1688326358164" duration="7801000" />
-      <workItem from="1688773614992" duration="754000" />
-      <workItem from="1688774479215" duration="67000" />
-      <workItem from="1688774555917" duration="41000" />
-      <workItem from="1688774603890" duration="258000" />
-      <workItem from="1688774870146" duration="944000" />
-      <workItem from="1688776627877" duration="4942000" />
-      <workItem from="1689433847833" duration="6113000" />
-      <workItem from="1689547052833" duration="5913000" />
-      <workItem from="1689560923435" duration="36000" />
-      <workItem from="1689639918262" duration="3095000" />
-      <workItem from="1689993430987" duration="2765000" />
+      <updated>1690161509496</updated>
+      <workItem from="1690161511384" duration="64000" />
+      <workItem from="1690161583872" duration="2051000" />
     </task>
     <servers />
   </component>
