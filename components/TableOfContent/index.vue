@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
       </li>
     </ul>
     <div class="mt-4">
-      <Donation sm />
+      <Donation />
     </div>
   </div>
 </template>

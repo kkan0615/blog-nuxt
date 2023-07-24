@@ -118,7 +118,7 @@ router.beforeEach((guard) => {
     <div class="grow w-1 px-0 md:px-12">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
-        {{ page.title }}
+        {{ page?.title }}
       </h1>
       <div class="flex text-sm mb-2">
         <div>
@@ -178,7 +178,7 @@ router.beforeEach((guard) => {
         <ClientOnly>
           <LazyAdvertisementsAmazonBanner />
         </ClientOnly>
-        <div class="mt-2">
+        <div class="mt-2 block lg:hidden">
           <Donation />
         </div>
       </div>

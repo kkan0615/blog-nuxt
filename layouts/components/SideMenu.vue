@@ -39,7 +39,7 @@ const route = useRoute()
       </div>
     </div>
     <div class="px-4">
-      <Donation sm />
+      <Donation />
     </div>
     <div class="menu">
       <ul class="px-4">
