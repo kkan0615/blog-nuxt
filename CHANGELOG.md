@@ -1,8 +1,11 @@
 ## 0.2.9
 ### Core Changes
+- Added new tags (php and laravel)
 - Update donation button
+- Update layout
 ### Documentation Changes
 - Added new content "Select all text in input on focused"
+- Added new content "Laravel - handling columns and table in migration"
 
 ## 0.2.8
 ### Core Changes

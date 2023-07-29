@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-28-20-41.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logos/laravel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +62,7 @@
       <updated>1690161509496</updated>
       <workItem from="1690161511384" duration="64000" />
       <workItem from="1690161583872" duration="3327000" />
-      <workItem from="1690590140890" duration="4015000" />
+      <workItem from="1690590140890" duration="4147000" />
     </task>
     <servers />
   </component>
