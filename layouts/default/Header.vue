@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { useLayoutStore } from '~/stores/layout'
-import LanguageSelect from '~/components/forms/LanguageSelect'
+import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 
 const layoutStore = useLayoutStore()
 
 </script>
 <template>
-  <header class="navbar bg-base-100">
+  <header class="navbar bg-base-100 md:px-4">
     <label
       for="default-layout-drawer"
       class="btn btn-ghost btn-sm drawer-button lg:hidden"

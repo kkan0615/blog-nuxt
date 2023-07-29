@@ -20,7 +20,7 @@ import Header from '~/layouts/home/Header.vue'
         <slot />
       </div>
     </div>
-    <div class="drawer-side">
+    <div class="drawer-side z-20">
       <label
         for="home-layout-drawer"
         class="drawer-overlay"
