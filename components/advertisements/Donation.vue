@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 
-interface Props {
-  sm?: boolean
-}
-withDefaults(defineProps<Props>(), {
-  sm: false
-})
-
 const { t } = useI18n()
 
 const modalRef = ref<HTMLDialogElement | undefined>(undefined)
@@ -19,37 +12,16 @@ const toggleOpen = () => {
 </script>
 <template>
   <button
-    class="bg-[#FF813F] text-white py-2.5 px-2 rounded w-full font-bold"
+    class="btn w-full btn-outline hover:bg-red-500 hover:text-white group"
     @click="toggleOpen"
   >
-    <div
-      v-if="sm"
-      class="flex items-center justify-center"
-    >
-      <NuxtImg
-        src="/assets/donation-64px.png"
-        alt="Donation"
-        width="24"
-        height="24"
-      />
-      <span class="ml-2">
-        {{ t('components.donations.titleSm') }}
-      </span>
-    </div>
-    <div
-      v-else
-      class="flex items-center justify-center"
-    >
-      <NuxtImg
-        src="/assets/donation-64px.png"
-        alt="Donation"
-        width="32"
-        height="32"
-      />
-      <span class="ml-4 text-2xl">
-        {{ t('components.donations.title') }}
-      </span>
-    </div>
+    <Icon
+      class="text-2xl text-red-500 group-hover:text-white ease-in duration-150"
+      icon="mdi:heart"
+    />
+    <span class="ml-2">
+      {{ t('components.donations.titleSm') }}
+    </span>
   </button>
   <dialog
     ref="modalRef"

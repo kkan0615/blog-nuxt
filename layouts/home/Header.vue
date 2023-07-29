@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import LanguageSelect from '~/components/forms/LanguageSelect'
+import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import MenuItem from '~/layouts/home/MenuItem.vue'
 
 const { t } = useI18n()
@@ -27,10 +27,10 @@ const handleScroll = () => {
       'bg-transparent': !isScrolled,
     }"
   >
-    <nav class="max-w-4xl mx-auto flex w-full">
+    <nav class="max-w-4xl mx-auto flex items-center w-full">
       <label
         for="home-layout-drawer"
-        class="btn btn-ghost btn-sm drawer-button block lg:hidden"
+        class="btn btn-ghost btn-sm drawer-button block lg:hidden px-1 pb-0 pt-1"
       >
         <span class="text-2xl">
           <Icon

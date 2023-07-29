@@ -57,7 +57,9 @@
       "nuxt": "Nuxt",
       "MDX": "MDX",
       "HTML": "HTML",
-      "gatsby": "Gatsby"
+      "gatsby": "Gatsby",
+      "php": "php",
+      "laravel": "Laravel"
     },
     "showcaseCategories": {
       "example": "example",

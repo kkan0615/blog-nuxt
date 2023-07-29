@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { PostList } from '~/types/post'
 import Footer from '~/layouts/components/Footer.vue'
+import { Icon } from '@iconify/vue'
 
 const LIMIT_CARDS = 3
 
@@ -79,13 +80,25 @@ onBeforeUnmount(() => {
           </p>
           <div class="space-x-4">
             <NuxtLink :to="localePath('/contact')">
-              <button class="btn btn-primary swing-in-top-fwd">
-                {{ t('menus.contact') }}
+              <button class="btn btn-primary swing-in-top-fwd rounded-full">
+                <Icon
+                  class="text-xl"
+                  icon="mdi:contact-outline"
+                />
+                <span class="ml-1">
+                  {{ t('menus.contact') }}
+                </span>
               </button>
             </NuxtLink>
             <NuxtLink :to="localePath('/blogs')">
-              <button class="btn btn-secondary text-white swing-in-top-fwd">
-                {{ t('menus.blogs') }}
+              <button class="btn btn-secondary text-white swing-in-top-fwd rounded-full">
+                <Icon
+                  class="text-xl"
+                  icon="mdi:blog-outline"
+                />
+                <span class="ml-1">
+                  {{ t('menus.blogs') }}
+                </span>
               </button>
             </NuxtLink>
           </div>

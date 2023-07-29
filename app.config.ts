@@ -19,6 +19,8 @@ export default defineAppConfig({
       'MDX',
       'HTML',
       'gatsby',
+      'php',
+      'laravel',
     ]
   },
   showcaseCategories: [
