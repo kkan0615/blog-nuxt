@@ -48,7 +48,7 @@ useHead({
     })
   ],
   link: [
-    { rel: 'icon', type: 'image/png', href: 'app/logo_color-128.png' },
+    { rel: 'icon', type: 'image/png', href: '/app/logo_color-128.png' },
     ...(head.value.link || []).map(linkEl => {
       return {
         id: linkEl.id,

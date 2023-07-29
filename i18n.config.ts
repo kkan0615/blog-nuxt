@@ -1,7 +1,7 @@
-import { DefaultLocale } from '~/types/locale'
 // import { enMessage } from '~/locales/en/en'
 // import { koMessage } from '~/locales/ko/ko'
 
+import { DefaultLocale } from '~/types/locale'
 import enCommon from '~/locales/en/common.json'
 import enMain from '~/locales/en/index.json'
 import koCommon from '~/locales/ko/common.json'
