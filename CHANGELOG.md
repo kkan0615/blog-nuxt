@@ -1,11 +1,19 @@
-## 0.2.9
+## 0.3.0
 ### Core Changes
 - Added new tags (php and laravel)
+- Update nuxt version
+- Update nuxt/i18n version
+### Documentation Changes
+- Added new content "Javascript - generate tree from Array"
+- Added new content "Laravel - handling columns and table in migration"
+- Added new content "Javascript - generate tree from Array"
+
+## 0.2.9
+### Core Changes
 - Update donation button
 - Update layout
 ### Documentation Changes
 - Added new content "Select all text in input on focused"
-- Added new content "Laravel - handling columns and table in migration"
 
 ## 0.2.8
 ### Core Changes
