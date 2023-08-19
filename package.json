@@ -3,7 +3,6 @@
   "version": "0.3.0",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS personal blog",
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
