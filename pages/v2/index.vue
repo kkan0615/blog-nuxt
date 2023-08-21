@@ -11,6 +11,7 @@ definePageMeta({
 
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+const runtimeConfig = useRuntimeConfig()
 const { data: blogList } = await useAsyncData<PostList[] >('blogs', async () => await queryContent<PostList>('blogs/')
   .where({
     _draft: { $not: true },
@@ -64,8 +65,23 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <main>
-    <div class="pb-16 pt-32">
-      Main
+    <div class="h-screen relative">
+      <video
+        loop
+        autoplay
+        muted
+        :src="`${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}assets/home/anime-typing.mp4`"
+        class="md:object-fill object-cover w-full h-full"
+      />
+      <div class="z-10 absolute right-6 bottom-6">
+        <button class="btn btn-outline btn-circle text-white">
+          <!--          material-symbols:pause-->
+          <Icon
+            class="text-4xl"
+            icon="mdi:play"
+          />
+        </button>
+      </div>
     </div>
     <section class="max-w-4xl mx-auto px-2 lg:px-0 lg:py-4">
       <div

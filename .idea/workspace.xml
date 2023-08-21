@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/CounterUp.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/homes/TextAnimation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/hoemV2/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/hoemV2/MenuItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layouts/homeV2.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/v2/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/home/anime-typing.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/LanguageSelect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/ThemeSelect.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/v2/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/v2/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/home/hero.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +54,7 @@
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
     </key>
   </component>
@@ -82,7 +77,9 @@
       <workItem from="1692393564842" duration="226000" />
       <workItem from="1692393800572" duration="95000" />
       <workItem from="1692393903347" duration="4269000" />
-      <workItem from="1692404259579" duration="3157000" />
+      <workItem from="1692404259579" duration="3806000" />
+      <workItem from="1692492830732" duration="656000" />
+      <workItem from="1692585889714" duration="1243000" />
     </task>
     <servers />
   </component>
