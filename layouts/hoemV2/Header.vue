@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
-import MenuItem from '~/layouts/home/MenuItem.vue'
 import ThemeSelect from '~/components/forms/ThemeSelect.vue'
+import MenuItem from '~/layouts/hoemV2/MenuItem.vue'
 
 const { t } = useI18n()
 
@@ -39,25 +39,36 @@ const handleScroll = () => {
           />
         </span>
       </label>
-      <div class="text-lg font-bold ml-2">
+      <div
+        class="text-lg font-bold ml-2"
+        :class="{
+          'text-white': !isScrolled,
+        }"
+      >
         {{ t('seo.title') }}
       </div>
       <div class="ml-auto" />
       <div class="space-x-4 hidden lg:flex lg:mr-2">
-        <MenuItem to="/">
+        <MenuItem
+          :is-scrolled="isScrolled"
+          to="/"
+        >
           home
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/blogs"
         >
           blogs
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/showcases"
         >
           showcases
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/contact"
         >
           contact
@@ -66,11 +77,23 @@ const handleScroll = () => {
       <ThemeSelect
         is-icon
         class="hidden lg:block"
+        :class="{
+          'text-white': !isScrolled,
+        }"
+        :content-class="{
+          'text-base-content': !isScrolled,
+        }"
         end
       />
       <LanguageSelect
         is-icon
         class="hidden lg:block"
+        :class="{
+          'text-white': !isScrolled,
+        }"
+        :content-class="{
+          'text-base-content': !isScrolled,
+        }"
         end
       />
     </nav>

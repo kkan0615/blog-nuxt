@@ -6,6 +6,7 @@ interface Props {
   bottom?: boolean
   end?: boolean
   isIcon?: boolean
+  contentClass?: string | Record<string, boolean>
 }
 defineProps<Props>()
 
@@ -48,6 +49,7 @@ const switchLocalePath = useSwitchLocalePath()
     <ul
       :tabindex="0"
       class="dropdown-content menu p-2 shadow bg-base-100 rounded-box max-w-52 z-20"
+      :class="contentClass"
     >
       <li
         v-for="localeEl in locales"

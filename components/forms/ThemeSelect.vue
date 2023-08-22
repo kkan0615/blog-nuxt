@@ -6,6 +6,7 @@ interface Props {
   bottom?: boolean
   end?: boolean
   isIcon?: boolean
+  contentClass?: string | Record<string, boolean>
 }
 
 defineProps<Props>()
@@ -52,6 +53,7 @@ const handleClick = async (newTheme?: string) => {
       <ul
         :tabIndex="0"
         class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32 z-20"
+        :class="contentClass"
       >
         <li>
           <button
