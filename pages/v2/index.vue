@@ -66,12 +66,13 @@ onBeforeUnmount(() => {
 <template>
   <main>
     <HomesHero />
+    <HomesCounts />
     <section class="max-w-4xl mx-auto px-2 lg:px-0 lg:py-4">
       <div
         class="flex items-center animate__animated mb-1"
         data-animate="animate__fadeInUp"
       >
-        <h2 class="text-2xl font-black capitalize ">
+        <h2 class="text-3xl font-black capitalize ">
           {{ t('views.home.sections.blogs.title') }}
         </h2>
         <div class="mx-auto" />
@@ -88,7 +89,7 @@ onBeforeUnmount(() => {
           </button>
         </NuxtLink>
       </div>
-      <p class="text-gray-700 dark:text-gray-400">
+      <p class="text-gray-800 dark:text-gray-300">
         {{ t('views.home.sections.blogs.description') }}
       </p>
       <div

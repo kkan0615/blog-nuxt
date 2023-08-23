@@ -93,9 +93,9 @@ export default defineNuxtConfig({
   },
   i18n: {
     // lazy: true,
-    precompile: {
-      strictMessage: false,
-    },
+    // precompile: {
+    //   strictMessage: false,
+    // },
     // baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_and_default',

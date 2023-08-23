@@ -13,7 +13,6 @@ onBeforeUnmount(() => {
 })
 
 const handleScroll = () => {
-  console.log()
   isScrolled.value = window.scrollY > 0
 }
 
