@@ -2,6 +2,7 @@
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
 import MenuItem from '~/layouts/home/MenuItem.vue'
+import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 
 const { t } = useI18n()
 
@@ -25,6 +26,7 @@ const handleScroll = () => {
     class="navbar bg-base-300 z-10 fixed top-0 transition duration-500 ease-in-out"
     :class="{
       'bg-transparent': !isScrolled,
+      'text-white': !isScrolled,
     }"
   >
     <nav class="max-w-4xl mx-auto flex items-center w-full">
@@ -43,27 +45,51 @@ const handleScroll = () => {
       </div>
       <div class="ml-auto" />
       <div class="space-x-4 hidden lg:flex">
-        <MenuItem to="/">
+        <MenuItem
+          :is-scrolled="isScrolled"
+          to="/"
+        >
           home
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/blogs"
         >
           blogs
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/showcases"
         >
           showcases
         </MenuItem>
         <MenuItem
+          :is-scrolled="isScrolled"
           to="/contact"
         >
           contact
         </MenuItem>
       </div>
-      <LanguageSelect
+      <ThemeSelect
+        is-icon
         class="hidden lg:block"
+        :class="{
+          'text-white': !isScrolled,
+        }"
+        :content-class="{
+          'text-base-content': !isScrolled,
+        }"
+        end
+      />
+      <LanguageSelect
+        is-icon
+        class="hidden lg:block"
+        :class="{
+          'text-white': !isScrolled,
+        }"
+        :content-class="{
+          'text-base-content': !isScrolled,
+        }"
         end
       />
     </nav>

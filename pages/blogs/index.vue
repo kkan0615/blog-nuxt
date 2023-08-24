@@ -58,6 +58,7 @@ useHead({
 
 layoutStore.setHeaderTitle(t('menus.blogs'))
 
+// Get posts
 const { data, refresh } = await useAsyncData<{
   maxPagination: number
   list: PostList[]
@@ -65,9 +66,14 @@ const { data, refresh } = await useAsyncData<{
   const currPageNum = (Number(route.query.page) || 1)
 
   const queryBuilderWhere: QueryBuilderWhere = {
+    // Exclude draft
     _draft: { $not: true },
     title: { $contains: route.query.search as string },
-    locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
+    // locale: { $in: ((route.query.locales || locale.value) as string).split(',').filter((el) => !!el) },
+    locale: { $in: route.query.locales ?
+      (route.query.locales as string).split(',').filter((el) => !!el) :
+      undefined
+    } as any,
     categories: { $in: route.query.categories ?
       (route.query.categories as string).split(',').filter((el) => !!el) :
       undefined
@@ -77,14 +83,15 @@ const { data, refresh } = await useAsyncData<{
       undefined
     } as any,
   }
-
+  // maximum count
   const maxLength = (await queryContent<PostList>('blogs/')
     .where(queryBuilderWhere)
     .only(['_id'])
     .find()).length
-
+  // Posts
   const list = await queryContent<PostList>('blogs/')
     .where(queryBuilderWhere)
+    // Sort by updated date
     .sort({ date: -1 })
     .skip((currPageNum - 1) * displayPosts)
     .limit(displayPosts)

@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
 
 </script>
 <template>
-  <main>
+  <main class="space-y-4">
     <HomesHero />
     <HomesCounts />
     <section class="max-w-4xl mx-auto px-2 lg:px-0 lg:py-4">
@@ -94,7 +94,7 @@ onBeforeUnmount(() => {
       </p>
       <div
         v-show="blogList?.length !== 0"
-        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-0 md:py-4 md:p-0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-8 lg:gap-4 p-0 md:py-4 md:p-0"
       >
         <BlogsListBlogCard
           v-for="blog in blogList"
@@ -111,6 +111,7 @@ onBeforeUnmount(() => {
         {{ t('commons.placeholders.noData') }}
       </p>
     </section>
+    <HomesCategories />
   </main>
 </template>
 <style>

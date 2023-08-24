@@ -14,7 +14,7 @@ const emit = defineEmits<{
 // Collapse checkbox to handle overflow error
 const toggle = ref(true)
 const search = ref(route.query.search)
-const locales = ref<string[]>(((route.query.locales || locale.value) as string).split(',').filter((el) => !!el))
+const locales = ref<string[]>(((route.query.locales || '') as string).split(',').filter((el) => !!el))
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
 const tags = ref<string[]>(((route.query.tags || '') as string).split(',').filter((el) => !!el))
 
@@ -126,6 +126,7 @@ const handleReset = () => {
             <MultiSelect
               v-model="locales"
               :options="localeOptions"
+              :placeholder="t('labels.blogFilter.locales')"
             />
           </div>
           <div class="form-control w-full">

@@ -61,12 +61,12 @@ const handleScroll = () => {
         >
           blogs
         </MenuItem>
-        <MenuItem
-          :is-scrolled="isScrolled"
-          to="/showcases"
-        >
-          showcases
-        </MenuItem>
+        <!--        <MenuItem-->
+        <!--          :is-scrolled="isScrolled"-->
+        <!--          to="/showcases"-->
+        <!--        >-->
+        <!--          showcases-->
+        <!--        </MenuItem>-->
         <MenuItem
           :is-scrolled="isScrolled"
           to="/contact"

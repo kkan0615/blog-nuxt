@@ -65,17 +65,17 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <main>
-    <div class="relative h-screen mb-4">
-      <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat opacity-30 lg:opacity-60 bg-fixed parallax-img" />
+    <div class="relative h-screen mb-4 bg-gray-500">
+      <div class="absolute w-full h-full top-0 left-0 bg-cover bg-center bg-no-repeat opacity-30 lg:opacity-80 bg-fixed parallax-img" />
       <div class="h-full w-full flex items-center">
         <div class="max-w-4xl mx-auto w-full p-4 lg:p-0">
           <h1
-            class="text-4xl lg:text-7xl font-bold animate__animated animate__fadeIn"
+            class="text-4xl lg:text-7xl font-bold animate__animated animate__fadeIn text-white"
             style="font-family: 'Lucida Calligraphy', serif;"
           >
             {{ t('views.home.title') }}
           </h1>
-          <p class="py-6 text-xl lg:text-2xl animate__animated animate__fadeIn animate__delay-1s">
+          <p class="py-6 text-xl lg:text-2xl animate__animated animate__fadeIn animate__delay-1s text-white">
             {{ t('views.home.description') }}
           </p>
           <div class="space-x-4">

@@ -3,6 +3,7 @@
 interface Props {
   to: string
   query?: Record<string, any>
+  isScrolled?: boolean
 }
 
 defineProps<Props>()
@@ -16,7 +17,12 @@ defineProps<Props>()
       query: query
     }"
   >
-    <span class="text-base-content">
+    <span
+      class="text-base-content"
+      :class="{
+        'text-white': !isScrolled,
+      }"
+    >
       <slot />
     </span>
   </NuxtLink>
