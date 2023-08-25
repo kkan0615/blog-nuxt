@@ -3,7 +3,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 </script>
 <template>
-  <div class="card bg-base-300 mb-4">
+  <div class="card bg-base-100 mb-4">
     <div class="card-body">
       <h2 class="card-title capitalize">
         {{ t('views.contact.requestCard.title') }}

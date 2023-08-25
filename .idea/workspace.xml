@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/homes/Categories.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Pagination.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/Pagination.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/contacts/RequestCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/RequestCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Categories.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/homes/Counts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Counts.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homes/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/TextAnimation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/TextAnimation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/hoemV2/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/hoemV2/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/MenuItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/homeV2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/homeV2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/v2/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/v2/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,8 @@
       <workItem from="1692664936187" duration="3679000" />
       <workItem from="1692746451299" duration="4591000" />
       <workItem from="1692827264982" duration="540000" />
-      <workItem from="1692827853409" duration="5486000" />
+      <workItem from="1692827853409" duration="5511000" />
+      <workItem from="1692920107360" duration="7376000" />
     </task>
     <servers />
   </component>

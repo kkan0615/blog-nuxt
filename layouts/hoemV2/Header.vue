@@ -23,9 +23,10 @@ const handleScroll = () => {
 </script>
 <template>
   <header
-    class="navbar bg-base-300 z-10 fixed top-0 transition duration-500 ease-in-out"
+    class="navbar bg-base-100  z-10 fixed top-0 transition duration-500 ease-in-out"
     :class="{
       'bg-transparent': !isScrolled,
+      'shadow-xl': isScrolled,
     }"
   >
     <nav class="max-w-4xl mx-auto flex items-center w-full">

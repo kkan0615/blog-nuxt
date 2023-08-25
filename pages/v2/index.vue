@@ -67,7 +67,7 @@ onBeforeUnmount(() => {
   <main class="space-y-4">
     <HomesHero />
     <HomesCounts />
-    <section class="max-w-4xl mx-auto px-2 lg:px-0 lg:py-4">
+    <section>
       <div
         class="flex items-center animate__animated mb-1"
         data-animate="animate__fadeInUp"
@@ -101,6 +101,7 @@ onBeforeUnmount(() => {
           :key="blog._path"
           class="animate__animated"
           data-animate="animate__fadeIn"
+          dense
           :blog="blog"
         />
       </div>
@@ -114,6 +115,3 @@ onBeforeUnmount(() => {
     <HomesCategories />
   </main>
 </template>
-<style>
-
-</style>

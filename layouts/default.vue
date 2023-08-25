@@ -16,7 +16,7 @@ import Footer from '~/layouts/components/Footer.vue'
     >
     <div
       id="base-content"
-      class="drawer-content relative min-h-screen flex flex-col"
+      class="drawer-content relative min-h-screen flex flex-col bg-base-200/30"
     >
       <!-- Page content here -->
       <Header />

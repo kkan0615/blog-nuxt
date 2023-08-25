@@ -14,14 +14,14 @@ import Footer from '~/layouts/components/Footer.vue'
     >
     <div
       id="base-content"
-      class="drawer-content relative"
+      class="drawer-content relative bg-base-200/50"
     >
       <!-- Page content here -->
       <Header />
       <div>
         <slot />
       </div>
-      <div class="max-w-4xl mx-auto mt-auto">
+      <div class="mt-auto">
         <Footer />
       </div>
     </div>
@@ -34,3 +34,8 @@ import Footer from '~/layouts/components/Footer.vue'
     </div>
   </div>
 </template>
+<style>
+section, footer {
+  @apply max-w-5xl mx-auto px-2 lg:px-0 lg:py-4;
+}
+</style>

@@ -15,6 +15,7 @@ const NewDay = 2
 interface Props {
   blog: PostList
   noImage?: boolean
+  isHideTime?: boolean
   dense?: boolean
 }
 
@@ -43,7 +44,7 @@ const isNew = computed(() => {
 })
 </script>
 <template>
-  <div class="card rounded hover:scale-105 transition ease-in-out duration-300 shadow-xl">
+  <div class="card rounded hover:scale-105 transition ease-in-out duration-300 shadow-xl bg-base-100 rounded-xl">
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
@@ -66,10 +67,9 @@ const isNew = computed(() => {
         >
           NEW
         </div>
-
         <NuxtImg
           v-if="blog.image && blog.image.path"
-          class="aspect-video"
+          class="aspect-video rounded-t-xl"
           :src="blog.image.path"
           :alt="blog.image.alt || DefaultNuxtImageAlt"
           :height="blog.image.height || DefaultNuxtImageHeight"
@@ -79,7 +79,7 @@ const isNew = computed(() => {
         <!-- @TODO: No width and height may generate performance issue -->
         <NuxtImg
           v-else
-          class="aspect-video"
+          class="aspect-video rounded-t-xl"
           preload
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
@@ -92,6 +92,7 @@ const isNew = computed(() => {
         <p v-if="!dense">
           {{ blog.description }}
         </p>
+        <!-- categories -->
         <div
           v-if="blog.categories?.length"
           class="mt-2 card-actions"
@@ -105,6 +106,7 @@ const isNew = computed(() => {
             {{ t(`labels.blogCategories.${category}`) }}
           </div>
         </div>
+        <!-- Tags -->
         <div
           v-if="blog.tags?.length"
           class="mt-1 card-actions text-md lg:text-sm"
@@ -117,8 +119,9 @@ const isNew = computed(() => {
             {{ t(`labels.blogTags.${tag}`) }}
           </div>
         </div>
+        <!-- reading time and published date -->
         <div
-          v-if="!dense"
+          v-if="!isHideTime"
           class="mt-2 card-actions text-md lg:text-sm"
         >
           <div>{{ blog.readingTime?.text }}</div>
