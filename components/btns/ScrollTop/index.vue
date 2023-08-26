@@ -29,6 +29,7 @@ const handleClick = () => {
     <button
       v-if="isScrolled"
       class="btn btn-circle btn-outline animate__animated animate__fadeIn btn-sm sm:btn-md"
+      aria-label="scroll to top button"
       @click="handleClick"
     >
       <span class="text-md sm:text-xl">

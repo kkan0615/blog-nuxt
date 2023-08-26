@@ -30,6 +30,7 @@ const handleShare = async () => {
         'btn-ghost': isGhost,
       }"
       type="button"
+      aria-label="share button"
       @click.prevent="handleShare"
     >
       <Icon icon="material-symbols:share" />

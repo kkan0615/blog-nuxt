@@ -2,13 +2,9 @@
 import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
-import { PostList } from '~/types/post'
+import { PostList, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
 import ShareBtn from '~/components/btns/Share.vue'
 
-const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
-const DefaultNuxtImageAlt = 'NuxtImage'
-const DefaultNuxtImageHeight = 1024
-const DefaultNuxtImageWidth = 576
 // NEW Tag blog
 const NewDay = 2
 

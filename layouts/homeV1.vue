@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import SideMenu from '~/layouts/components/SideMenu.vue'
-import Header from '~/layouts/hoemV2/Header.vue'
-import Footer from '~/layouts/components/Footer.vue'
-
+import Header from '~/layouts/home/Header.vue'
 </script>
 <template>
   <div class="drawer">
@@ -14,15 +12,12 @@ import Footer from '~/layouts/components/Footer.vue'
     >
     <div
       id="base-content"
-      class="drawer-content relative bg-base-200/50"
+      class="drawer-content relative"
     >
       <!-- Page content here -->
       <Header />
       <div>
         <slot />
-      </div>
-      <div class="mt-auto">
-        <Footer />
       </div>
     </div>
     <div class="drawer-side z-20">
@@ -34,8 +29,3 @@ import Footer from '~/layouts/components/Footer.vue'
     </div>
   </div>
 </template>
-<style>
-section, footer {
-  @apply max-w-5xl mx-auto px-2 lg:px-0 lg:py-4;
-}
-</style>

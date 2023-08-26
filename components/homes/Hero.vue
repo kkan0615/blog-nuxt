@@ -49,6 +49,7 @@ const moveToFirstSection = () => {
         <div class="mt-12 text-center">
           <button
             class="btn btn-outline btn-circle text-inherit animate-bounce hover:animate-none"
+            aria-label="move to next section"
             @click="moveToFirstSection"
           >
             <Icon
@@ -63,6 +64,7 @@ const moveToFirstSection = () => {
       <button
         v-if="isPlaying"
         class="btn btn-outline btn-circle text-white"
+        aria-label="pause"
         @click="handlePause"
       >
         <Icon
@@ -73,6 +75,7 @@ const moveToFirstSection = () => {
       <button
         v-else
         class="btn btn-outline btn-circle text-white"
+        aria-label="play"
         @click="handlePlay"
       >
         <Icon

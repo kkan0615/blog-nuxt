@@ -1,5 +1,10 @@
 import { MarkdownParsedContent, ParsedContent } from '@nuxt/content/dist/runtime/types'
 
+export const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
+export const DefaultNuxtImageAlt = 'NuxtImage'
+export const DefaultNuxtImageHeight = 1024
+export const DefaultNuxtImageWidth = 576
+
 export interface PostFrontMatterImage {
   path: string
   alt: string

@@ -3,19 +3,13 @@ import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import hljs from 'highlight.js'
 import { useLayoutStore } from '~/stores/layout'
-import { PostDetail } from '~/types/post'
-import { PostList } from '~/types/post'
+import { PostList, PostDetail, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
-
-const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
-const DefaultNuxtImageAlt = 'NuxtImage'
-const DefaultNuxtImageHeight = 1024
-const DefaultNuxtImageWidth = 576
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
@@ -120,7 +114,7 @@ router.beforeEach((guard) => {
       <h1 class="text-3xl font-bold mb-4">
         {{ page?.title }}
       </h1>
-      <div class="flex text-sm mb-2">
+      <div class="flex mb-4">
         <div>
           <span class="mr-1 capitalize">
             {{ t('views.blogs.slug.posted') }}:
@@ -174,13 +168,13 @@ router.beforeEach((guard) => {
       <BottomNavbar
         :filepath="page._file"
       />
-      <div class="mt-8">
-        <ClientOnly>
-          <LazyAdvertisementsAmazonBanner />
-        </ClientOnly>
-        <div class="mt-2 block lg:hidden">
-          <Donation />
-        </div>
+      <!--      <div class="mt-8 block lg:hidden">-->
+      <!--        <ClientOnly>-->
+      <!--          <LazyAdvertisementsAmazonBanner />-->
+      <!--        </ClientOnly>-->
+      <!--      </div>-->
+      <div class="mt-4 block lg:hidden">
+        <Donation />
       </div>
       <h3 class="mt-4 text-xl font-bold opacity-80 capitalize">
         {{ t('labels.furtherReading') }}

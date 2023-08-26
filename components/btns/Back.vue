@@ -11,6 +11,7 @@ const handleClick = () => {
 <template>
   <button
     class="btn btn-sm btn-ghost"
+    aria-label="back button"
     @click="handleClick"
   >
     <Icon

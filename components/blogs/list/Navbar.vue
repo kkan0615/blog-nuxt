@@ -163,7 +163,7 @@ const handleReset = () => {
             >
           </div>
         </div>
-        <div class="md:mt-8 mt-4 flex space-x-4">
+        <div class="mt-4 flex space-x-4">
           <button
             class="btn btn-sm btn-primary rounded-btn"
             type="submit"

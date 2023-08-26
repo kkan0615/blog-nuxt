@@ -29,6 +29,7 @@ import Footer from '~/layouts/components/Footer.vue'
     </div>
     <div class="drawer-side">
       <label
+        aria-label="drawer"
         for="default-layout-drawer"
         class="drawer-overlay"
       />
