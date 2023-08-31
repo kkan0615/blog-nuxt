@@ -5,32 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/layouts/homeV1/MenuItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/v1/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/Back.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/Back.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/Copy.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/Copy.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/ScrollTop/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/Share.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/Share.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Categories.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/homes/Counts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Counts.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/homes/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/hoemV2/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/homeV1/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/hoemV2/MenuItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/home/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/MenuItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/homeV2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/homeV1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/TextAnimation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/TextAnimation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nitro.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/v2/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/contact/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +100,9 @@
       <workItem from="1692827264982" duration="540000" />
       <workItem from="1692827853409" duration="5511000" />
       <workItem from="1692920107360" duration="7420000" />
-      <workItem from="1693012085674" duration="5643000" />
+      <workItem from="1693012085674" duration="5719000" />
+      <workItem from="1693435607598" duration="1200000" />
+      <workItem from="1693436825568" duration="4262000" />
     </task>
     <servers />
   </component>

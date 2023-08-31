@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useAsyncData, useHead } from '#app'
 import dayjs from 'dayjs'
 import hljs from 'highlight.js'
 import { useLayoutStore } from '~/stores/layout'
@@ -124,7 +123,7 @@ router.beforeEach((guard) => {
           </span>
         </div>
         <div class="ml-auto">
-          {{ page.readingTime.text }}
+          {{ page?.readingTime.text }}
         </div>
       </div>
       <figure>

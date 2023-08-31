@@ -61,15 +61,15 @@ const route = useRoute()
             <span>blogs</span>
           </MenuItem>
         </li>
-        <li>
-          <MenuItem
-            to="/showcases"
-            icon="material-symbols:menu-rounded"
-            :active="route.name.includes('showcases')"
-          >
-            <span>showcases</span>
-          </MenuItem>
-        </li>
+        <!--        <li>-->
+        <!--          <MenuItem-->
+        <!--            to="/showcases"-->
+        <!--            icon="material-symbols:menu-rounded"-->
+        <!--            :active="route.name.includes('showcases')"-->
+        <!--          >-->
+        <!--            <span>showcases</span>-->
+        <!--          </MenuItem>-->
+        <!--        </li>-->
         <li>
           <MenuItem
             to="/contact"

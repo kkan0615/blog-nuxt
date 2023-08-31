@@ -11,6 +11,9 @@ const { t } = useI18n()
       <h2 class="card-title">
         {{ t('views.contact.profileCard.title') }}
       </h2>
+      <p>
+        {{ t('views.contact.profileCard.description') }}
+      </p>
       <div class="mt-2 flex text-3xl space-x-2">
         <ContactLink
           v-if="appConfig.profile.email"

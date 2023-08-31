@@ -125,6 +125,22 @@ export default defineNuxtConfig({
   image: {
     provider: 'netlify',
   },
+  nitro: {
+    preset: process.env.PRESET,
+    serverAssets: [
+      {
+        baseName: 'public',
+        dir: './public'
+      }
+    ],
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/',
+        '/sitemap.xml'
+      ]
+    }
+  },
   content: {
     markdown: {
       toc: {

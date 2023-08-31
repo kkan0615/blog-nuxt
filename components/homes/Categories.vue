@@ -13,7 +13,7 @@ const appConfig = useAppConfig()
       data-animate="animate__fadeInUp"
     >
       <h2 class="text-3xl font-black capitalize ">
-        Blog Categories
+        {{ t('views.home.sections.categories.title') }}
       </h2>
       <div class="mx-auto" />
       <NuxtLink :to="localePath('/blogs')">
@@ -30,7 +30,7 @@ const appConfig = useAppConfig()
       </NuxtLink>
     </div>
     <p class="text-gray-800 dark:text-gray-300 mb-4">
-      Explore all categories in blog
+      {{ t('views.home.sections.categories.description') }}
     </p>
     <div
       v-for="(categoryEl, key) in appConfig.blogTags"

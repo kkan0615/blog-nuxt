@@ -7,7 +7,7 @@ defineProps<Props>()
 
 </script>
 <template>
-  <div class="typewriter">
+  <div class="typewriter max-w-fit mx-auto">
     <h1 class="text-white text-5xl font-bold">
       {{ text }}
     </h1>

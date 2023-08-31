@@ -27,11 +27,11 @@ const { data: postCounts, refresh } = await useAsyncData<string>('posts', async 
     <div class="md:flex md:items-center md:space-x-8 md:space-y-0 space-y-4">
       <div class="grow text-center">
         <div class="text-4xl font-bold">
-          I am glad to see you!
+          {{ t('views.home.sections.aboutMe.hello') }}
         </div>
         <p class="mt-4 text-lg">
-          I will do my best to share my skills with you! 😀 <br>
-          If you would like to contact with me click following button!
+          {{ t('views.home.sections.aboutMe.description1') }}<br>
+          {{ t('views.home.sections.aboutMe.description2') }}
         </p>
         <NuxtLink :to="localePath('/blogs')">
           <button
@@ -46,7 +46,7 @@ const { data: postCounts, refresh } = await useAsyncData<string>('posts', async 
         <div class="grid grid-cols-2 gap-4">
           <div class="stat bg-base-100 shadow rounded">
             <div class="stat-title text-gray-800 dark:text-gray-300 mb-2">
-              Days after start
+              {{ t('views.home.sections.aboutMe.counts.days') }}
             </div>
             <div class="stat-value">
               🎉 {{ days }}
@@ -54,7 +54,7 @@ const { data: postCounts, refresh } = await useAsyncData<string>('posts', async 
           </div>
           <div class="stat bg-base-100 shadow rounded">
             <div class="stat-title text-gray-800 dark:text-gray-300 mb-2">
-              Posts
+              {{ t('views.home.sections.aboutMe.counts.posts') }}
             </div>
             <div class="stat-value">
               📃 {{ postCounts }}

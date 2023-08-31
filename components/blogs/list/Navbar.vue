@@ -93,91 +93,160 @@ const handleReset = () => {
 </script>
 
 <template>
-  <div
-    :tabindex="0"
-    class="collapse collapse-arrow"
-    :class="{
-      'mb-4': !toggle,
-      'overflow-visible': toggle,
-    }"
+  <SearchFilter
+    :title="t('commons.labels.search')"
   >
-    <input
-      v-model="toggle"
-      class="min-h-0"
-      type="checkbox"
+    <form
+      class="grow py-2 flex flex-col"
+      @submit.prevent="handleSubmit"
+      @reset="handleReset"
     >
-    <div class="collapse-title text-xl font-medium capitalize px-0 py-2 min-h-0">
-      {{ t('commons.labels.search') }}
-    </div>
-    <div class="collapse-content px-0 overflow-visible">
-      <form
-        class="py-2"
-        @submit.prevent="handleSubmit"
-        @reset="handleReset"
-      >
-        <div
-          v-if="toggle"
-          class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4"
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4">
+        <div class="form-control w-full">
+          <label class="label">
+            <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
+          </label>
+          <MultiSelect
+            v-model="locales"
+            :options="localeOptions"
+            :placeholder="t('labels.blogFilter.locales')"
+          />
+        </div>
+        <div class="form-control w-full">
+          <label class="label">
+            <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>
+          </label>
+          <MultiSelect
+            v-model="categories"
+            :options="categoryOptions"
+            :placeholder="t('labels.blogFilter.categories')"
+            @update:model-value="handleUpdateCategories"
+          />
+        </div>
+        <div class="form-control w-full">
+          <label class="label">
+            <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>
+          </label>
+          <MultiSelect
+            v-model="tags"
+            :options="tagOptions"
+            :placeholder="t('labels.blogFilter.tags')"
+            :no-data-placeholder="t('placeholders.noSelectedCategory')"
+          />
+        </div>
+        <div class="form-control w-full">
+          <label class="label">
+            <span class="label-text">{{ t('commons.labels.search') }}</span>
+          </label>
+          <input
+            v-model="search"
+            class="input input-bordered input-sm w-full"
+            type="text"
+            :placeholder="t('commons.placeholders.search')"
+          >
+        </div>
+      </div>
+      <div class="lg:mt-4 mt-auto flex space-x-4">
+        <button
+          class="btn lg:btn-sm btn-primary rounded-btn"
+          type="submit"
         >
-          <div class="form-control w-full">
-            <label class="label">
-              <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>
-            </label>
-            <MultiSelect
-              v-model="locales"
-              :options="localeOptions"
-              :placeholder="t('labels.blogFilter.locales')"
-            />
-          </div>
-          <div class="form-control w-full">
-            <label class="label">
-              <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>
-            </label>
-            <MultiSelect
-              v-model="categories"
-              :options="categoryOptions"
-              :placeholder="t('labels.blogFilter.categories')"
-              @update:model-value="handleUpdateCategories"
-            />
-          </div>
-          <div class="form-control w-full">
-            <label class="label">
-              <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>
-            </label>
-            <MultiSelect
-              v-model="tags"
-              :options="tagOptions"
-              :placeholder="t('labels.blogFilter.tags')"
-              :no-data-placeholder="t('placeholders.noSelectedCategory')"
-            />
-          </div>
-          <div class="form-control w-full">
-            <label class="label">
-              <span class="label-text">{{ t('commons.labels.search') }}</span>
-            </label>
-            <input
-              v-model="search"
-              class="input input-bordered input-sm w-full"
-              type="text"
-              :placeholder="t('commons.placeholders.search')"
-            >
-          </div>
-        </div>
-        <div class="mt-4 flex space-x-4">
-          <button
-            class="btn btn-sm btn-primary rounded-btn"
-            type="submit"
-          >
-            {{ t('commons.btns.search') }}
-          </button>
-          <button
-            class="btn btn-sm btn-error btn-outline rounded-btn"
-            type="reset"
-          >
-            {{ t('commons.btns.reset') }}
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+          {{ t('commons.btns.search') }}
+        </button>
+        <button
+          class="btn lg:btn-sm btn-error btn-outline rounded-btn"
+          type="reset"
+        >
+          {{ t('commons.btns.reset') }}
+        </button>
+      </div>
+    </form>
+  </SearchFilter>
+<!--  <div-->
+<!--    :tabindex="0"-->
+<!--    class="collapse collapse-arrow"-->
+<!--    :class="{-->
+<!--      'mb-4': !toggle,-->
+<!--      'overflow-visible': toggle,-->
+<!--    }"-->
+<!--  >-->
+<!--    <input-->
+<!--      v-model="toggle"-->
+<!--      class="min-h-0"-->
+<!--      type="checkbox"-->
+<!--    >-->
+<!--    <div class="collapse-title text-xl font-medium capitalize px-0 py-2 min-h-0">-->
+<!--      {{ t('commons.labels.search') }}-->
+<!--    </div>-->
+<!--    <div class="collapse-content px-0 overflow-visible">-->
+<!--      <form-->
+<!--        class="py-2"-->
+<!--        @submit.prevent="handleSubmit"-->
+<!--        @reset="handleReset"-->
+<!--      >-->
+<!--        <div-->
+<!--          v-if="toggle"-->
+<!--          class="grid grid-cols-1 lg:grid-cols-4 gap-2.5 lg:gap-4"-->
+<!--        >-->
+<!--          <div class="form-control w-full">-->
+<!--            <label class="label">-->
+<!--              <span class="label-text">{{ t('labels.blogFilter.locales') }}</span>-->
+<!--            </label>-->
+<!--            <MultiSelect-->
+<!--              v-model="locales"-->
+<!--              :options="localeOptions"-->
+<!--              :placeholder="t('labels.blogFilter.locales')"-->
+<!--            />-->
+<!--          </div>-->
+<!--          <div class="form-control w-full">-->
+<!--            <label class="label">-->
+<!--              <span class="label-text">{{ t('labels.blogFilter.categories') }}</span>-->
+<!--            </label>-->
+<!--            <MultiSelect-->
+<!--              v-model="categories"-->
+<!--              :options="categoryOptions"-->
+<!--              :placeholder="t('labels.blogFilter.categories')"-->
+<!--              @update:model-value="handleUpdateCategories"-->
+<!--            />-->
+<!--          </div>-->
+<!--          <div class="form-control w-full">-->
+<!--            <label class="label">-->
+<!--              <span class="label-text">{{ t('labels.blogFilter.tags') }}</span>-->
+<!--            </label>-->
+<!--            <MultiSelect-->
+<!--              v-model="tags"-->
+<!--              :options="tagOptions"-->
+<!--              :placeholder="t('labels.blogFilter.tags')"-->
+<!--              :no-data-placeholder="t('placeholders.noSelectedCategory')"-->
+<!--            />-->
+<!--          </div>-->
+<!--          <div class="form-control w-full">-->
+<!--            <label class="label">-->
+<!--              <span class="label-text">{{ t('commons.labels.search') }}</span>-->
+<!--            </label>-->
+<!--            <input-->
+<!--              v-model="search"-->
+<!--              class="input input-bordered input-sm w-full"-->
+<!--              type="text"-->
+<!--              :placeholder="t('commons.placeholders.search')"-->
+<!--            >-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="mt-4 flex space-x-4">-->
+<!--          <button-->
+<!--            class="btn btn-sm btn-primary rounded-btn"-->
+<!--            type="submit"-->
+<!--          >-->
+<!--            {{ t('commons.btns.search') }}-->
+<!--          </button>-->
+<!--          <button-->
+<!--            class="btn btn-sm btn-error btn-outline rounded-btn"-->
+<!--            type="reset"-->
+<!--          >-->
+<!--            {{ t('commons.btns.reset') }}-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </div>-->
+<!--  </div>-->
 </template>

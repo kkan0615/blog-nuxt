@@ -50,6 +50,6 @@ layoutStore.setHeaderTitle(t('menus.contact'))
 <template>
   <div class="max-w-7xl mx-auto">
     <ProfileCard />
-    <RequestCard />
+    <!--    <RequestCard />-->
   </div>
 </template>
