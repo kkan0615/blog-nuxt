@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /playgrounds
-Sitemap: https://requiem-blog.netlify.app/sitemap.xml

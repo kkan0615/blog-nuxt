@@ -44,7 +44,7 @@ useHead({
     })
   ],
   link: [
-    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${route.path}` },
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}${route.path}` },
     ...(head.value.link || []).map(linkEl => {
       return {
         id: linkEl.id,

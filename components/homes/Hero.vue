@@ -47,7 +47,7 @@ const moveToFirstSection = () => {
       loop
       autoplay
       muted
-      :src="`${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}assets/home/anime-typing.mp4`"
+      :src="`${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}assets/home/anime-typing.mp4`"
       class="md:object-fill object-cover w-full h-full absolute opacity-80"
     />
     <div class="h-full w-full flex justify-center items-center absolute">

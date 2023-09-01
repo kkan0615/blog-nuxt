@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/_robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/contacts/ProfileCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homes/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Categories.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homes/Counts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Counts.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/Counts.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/AboutMe.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/homes/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Hero.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/homes/TextAnimation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/TextAnimation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/components/SideMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/components/SideMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nitro.config.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/playgrounds/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/playgrounds/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/showcases/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/showcases/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/sitemap.xml.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/blog-sitemap.xml.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,26 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/layouts/hoemV2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/personalStudy/personal-blog-nuxt/server/routes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
       <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
     </key>
@@ -102,7 +104,11 @@
       <workItem from="1692920107360" duration="7420000" />
       <workItem from="1693012085674" duration="5719000" />
       <workItem from="1693435607598" duration="1200000" />
-      <workItem from="1693436825568" duration="4262000" />
+      <workItem from="1693436825568" duration="5298000" />
+      <workItem from="1693521736324" duration="610000" />
+      <workItem from="1693524828254" duration="37000" />
+      <workItem from="1693524872120" duration="1390000" />
+      <workItem from="1693526273997" duration="5532000" />
     </task>
     <servers />
   </component>

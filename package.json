@@ -42,6 +42,8 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.15.1",
     "nuxt": "^3.7.0",
+    "nuxt-simple-robots": "^3.1.2",
+    "nuxt-simple-sitemap": "^3.2.6",
     "postcss-custom-properties": "^13.3.0",
     "sass": "^1.63.6",
     "sitemap": "^7.1.1",

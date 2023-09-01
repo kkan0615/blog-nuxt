@@ -12,7 +12,7 @@ const nodeEnv = process.env.NODE_ENV
       {{ nodeEnv }}
     </div>
     <div>
-      {{ runtimeConfig.public.NUXT_PUBLIC_BASE_URL }}
+      {{ runtimeConfig.public.NUXT_PUBLIC_SITE_URL }}
     </div>
     <div style="font-family: 'Lucida Calligraphy', serif;">
       Roboto

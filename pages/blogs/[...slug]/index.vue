@@ -65,15 +65,15 @@ useHead({
     { name: 'date', content:  dayjs(page.value.date).format('ll') },
     { name: 'keywords', content: `${page.value.tags.join(' ')} ${page.value.categories.join(' ')}` },
     { name: 'og:image', content: page.value.image
-      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
-      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
+      ? `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}${DefaultNuxtImagePath}` },
     { name: 'twitter:image', content: page.value
-      ? `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${page.value.image}`
-      : `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}${DefaultNuxtImagePath}` },
+      ? `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}${page.value.image}`
+      : `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}${DefaultNuxtImagePath}` },
     { name: 'language', content: page.value.locale }
   ],
   link: [
-    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_BASE_URL}/blogs/${route.params.slug[0]}/${route.params.slug[1]}` },
+    { rel: 'canonical', href: `${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}/blogs/${route.params.slug[0]}/${route.params.slug[1]}` },
   ]
 })
 

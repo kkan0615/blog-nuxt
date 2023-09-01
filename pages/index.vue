@@ -66,7 +66,7 @@ onBeforeUnmount(() => {
 <template>
   <main class="space-y-4">
     <HomesHero />
-    <HomesCounts />
+    <HomesAboutMe />
     <section>
       <div
         class="flex items-center animate__animated mb-1"
