@@ -29,7 +29,7 @@ const handleScroll = () => {
       'shadow-xl': isScrolled,
     }"
   >
-    <nav class="max-w-4xl mx-auto flex items-center w-full">
+    <nav class="max-w-5xl mx-auto flex items-center w-full">
       <label
         for="home-layout-drawer"
         class="btn btn-ghost btn-sm drawer-button block lg:hidden px-1 pb-0 pt-1"

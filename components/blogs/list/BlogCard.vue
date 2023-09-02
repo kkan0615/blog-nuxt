@@ -5,17 +5,15 @@ import dayjs from 'dayjs'
 import { PostList, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
 import ShareBtn from '~/components/btns/Share.vue'
 
-// NEW Tag blog
+// NEW Tag blog, ex) a day ago
 const NewDay = 2
 
-interface Props {
+const props = withDefaults(defineProps<{
   blog: PostList
   noImage?: boolean
   isHideTime?: boolean
   dense?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   blog: () => { return {} as PostList },
   noImage: false,
   dense: false,
@@ -45,7 +43,7 @@ const isNew = computed(() => {
       class="flex flex-col h-full"
       :to="{
         path: localePath(blog._path),
-        query: route.query
+        query: route.query,
       }"
     >
       <div

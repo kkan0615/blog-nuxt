@@ -132,8 +132,6 @@ export default defineNuxtConfig({
       routes: [
         '/',
         '/sitemap.xml',
-        // '/en-sitemap.xml',
-        // '/ko-sitemap-two.xml',
         '/blog-sitemap.xml',
       ]
     }
@@ -145,19 +143,12 @@ export default defineNuxtConfig({
     debug: true,
     disallow: ['/playgrounds', '/v1'],
     sitemap: [
-      // '/en-sitemap.xml',
-      // '/ko-sitemap-two.xml',
       '/sitemap.xml',
       '/blog-sitemap.xml',
     ],
   },
   sitemap: {
     autoI18n: false,
-    // sitemaps: {
-    //   posts: {
-    //     include: ['/blogs/**']
-    //   },
-    // },
   },
   content: {
     markdown: {

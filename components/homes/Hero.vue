@@ -42,14 +42,16 @@ const moveToFirstSection = () => {
 </script>
 <template>
   <div class="h-screen relative bg-black">
+    <!-- Video background -->
     <video
       ref="videoRef"
       loop
       autoplay
       muted
-      :src="`${runtimeConfig.public.NUXT_PUBLIC_SITE_URL}assets/home/anime-typing.mp4`"
+      src="/assets/home/anime-typing.mp4"
       class="md:object-fill object-cover w-full h-full absolute opacity-80"
     />
+    <!-- Content -->
     <div class="h-full w-full flex justify-center items-center absolute">
       <div class="max-w-5xl text-white">
         <HomesTextAnimation text="Hello world" />
@@ -73,6 +75,7 @@ const moveToFirstSection = () => {
         </div>
       </div>
     </div>
+    <!-- Bottom play or pause button -->
     <div class="z-10 absolute right-6 bottom-6">
       <div
         v-if="isPlaying"
