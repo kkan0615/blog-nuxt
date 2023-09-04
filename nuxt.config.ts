@@ -128,12 +128,13 @@ export default defineNuxtConfig({
       }
     ],
     prerender: {
-      crawlLinks: true,
+      // crawlLinks: true,
       routes: [
         // '/',
         '/sitemap.xml',
-        // '/blog-sitemap.xml',
-      ]
+        '/blog-sitemap.xml',
+      ],
+      failOnError: false,
     }
   },
   site: {
@@ -149,6 +150,7 @@ export default defineNuxtConfig({
   },
   sitemap: {
     autoI18n: false,
+    strictNuxtContentPaths: true,
   },
   content: {
     markdown: {
