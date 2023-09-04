@@ -132,7 +132,7 @@ export default defineNuxtConfig({
       routes: [
         // '/',
         '/sitemap.xml',
-        '/blog-sitemap.xml',
+        // '/blog-sitemap.xml',
       ]
     }
   },
