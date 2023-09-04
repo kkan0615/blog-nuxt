@@ -130,7 +130,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: [
-        '/',
+        // '/',
         '/sitemap.xml',
         '/blog-sitemap.xml',
       ]
@@ -140,7 +140,7 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
   robots: {
-    debug: true,
+    debug: false,
     disallow: ['/playgrounds', '/v1'],
     sitemap: [
       '/sitemap.xml',
