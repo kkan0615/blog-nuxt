@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-04-15-27.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/homeV1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/homeV1/Header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/homeV1/MenuItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/v1/index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/personalStudy/personal-blog-nuxt/server/routes",
+    "last_opened_file_path": "D:/personalStudy/personal-blog-nuxt/content/blogs/en",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -47,10 +51,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
       <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
@@ -97,7 +101,8 @@
       <workItem from="1693611906727" duration="5649000" />
       <workItem from="1693625968586" duration="422000" />
       <workItem from="1693848561131" duration="2656000" />
-      <workItem from="1693851331688" duration="3274000" />
+      <workItem from="1693851331688" duration="3794000" />
+      <workItem from="1693855570671" duration="5658000" />
     </task>
     <servers />
   </component>
