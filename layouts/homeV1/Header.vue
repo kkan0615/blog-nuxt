@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import LanguageSelect from '~/components/forms/LanguageSelect.vue'
-import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 import MenuItem from '~/layouts/home/MenuItem.vue'
+import ThemeSelect from '~/components/forms/ThemeSelect.vue'
 
 const { t } = useI18n()
 
@@ -23,19 +23,16 @@ const handleScroll = () => {
 </script>
 <template>
   <header
-    class="navbar bg-base-100  z-10 fixed top-0 transition duration-500 ease-in-out"
+    class="navbar bg-base-300 z-10 fixed top-0 transition duration-500 ease-in-out"
     :class="{
       'bg-transparent': !isScrolled,
-      'shadow-xl': isScrolled,
+      'text-white': !isScrolled,
     }"
   >
-    <nav class="max-w-5xl mx-auto flex items-center w-full">
+    <nav class="max-w-4xl mx-auto flex items-center w-full">
       <label
         for="home-layout-drawer"
         class="btn btn-ghost btn-sm drawer-button block lg:hidden px-1 pb-0 pt-1"
-        :class="{
-          'text-white': !isScrolled,
-        }"
       >
         <span class="text-2xl">
           <Icon
@@ -43,16 +40,11 @@ const handleScroll = () => {
           />
         </span>
       </label>
-      <div
-        class="text-lg font-bold ml-2"
-        :class="{
-          'text-white': !isScrolled,
-        }"
-      >
+      <div class="text-lg font-bold ml-2">
         {{ t('seo.title') }}
       </div>
       <div class="ml-auto" />
-      <div class="space-x-4 hidden lg:flex lg:mr-2">
+      <div class="space-x-4 hidden lg:flex">
         <MenuItem
           :is-scrolled="isScrolled"
           to="/"
@@ -65,12 +57,12 @@ const handleScroll = () => {
         >
           blogs
         </MenuItem>
-        <!--        <MenuItem-->
-        <!--          :is-scrolled="isScrolled"-->
-        <!--          to="/showcases"-->
-        <!--        >-->
-        <!--          showcases-->
-        <!--        </MenuItem>-->
+        <MenuItem
+          :is-scrolled="isScrolled"
+          to="/showcases"
+        >
+          showcases
+        </MenuItem>
         <MenuItem
           :is-scrolled="isScrolled"
           to="/contact"

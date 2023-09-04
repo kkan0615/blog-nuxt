@@ -1,4 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -10,9 +12,9 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#E74646',
-          'secondary': '#7149C6',
-          'accent': '#FE6244',
+          'primary': '#F25C05',
+          'secondary': '#457324',
+          'accent': '#D93D04',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
@@ -23,9 +25,9 @@ module.exports = {
       },
       {
         'base-light': {
-          'primary': '#E74646',
-          'secondary': '#7149C6',
-          'accent': '#FE6244',
+          'primary': '#F25C05',
+          'secondary': '#457324',
+          'accent': '#D93D04',
           'neutral': '#1c1917',
           'base-100': '#fff',
           'info': '#4586E8',

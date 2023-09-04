@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "0.3.0",
+  "version": "2.0.0",
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS personal blog",
   "type": "module",
@@ -9,6 +9,7 @@
     "dev": "nuxt dev --port=3005",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "preview-dev": "nuxt preview --port=3005",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -18,7 +19,7 @@
     "@pinia/nuxt": "^0.4.10",
     "@vueuse/nuxt": "^10.3.0",
     "animate.css": "^4.1.1",
-    "daisyui": "^3.5.1",
+    "daisyui": "^3.6.5",
     "dayjs": "^1.11.9",
     "highlight.js": "^11.7.0",
     "rehype-highlight": "^6.0.0",
@@ -27,8 +28,8 @@
   },
   "devDependencies": {
     "@iconify/vue": "^4.0.2",
-    "@nuxt/content": "2.7.2",
-    "@nuxt/image-edge": "1.0.0-rc.1-28164352.ad7c010",
+    "@nuxt/content": "^2.8.2",
+    "@nuxt/image-edge": "^1.0.0-rc.1-28224985.8423773",
     "@nuxtjs/color-mode": "^3.3.0",
     "@tailwindcss/typography": "^0.5.8",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
@@ -41,7 +42,9 @@
     "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.15.1",
-    "nuxt": "^3.6.5",
+    "nuxt": "^3.7.0",
+    "nuxt-simple-robots": "^3.1.2",
+    "nuxt-simple-sitemap": "^3.2.6",
     "postcss-custom-properties": "^13.3.0",
     "sass": "^1.63.6",
     "sitemap": "^7.1.1",

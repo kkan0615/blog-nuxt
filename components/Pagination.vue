@@ -55,7 +55,7 @@ const handleGo = () => {
   <div class="md:flex md:items-center mr-4 gap-4 text-center">
     <div class="btn-group">
       <button
-        class="btn btn-sm bg-base-300"
+        class="btn btn-sm bg-base-100"
         :class="{
           'btn-disabled': activeNumber === 1
         }"
@@ -66,7 +66,7 @@ const handleGo = () => {
       <button
         v-for="pageNum in pageNums"
         :key="pageNum"
-        class="btn btn-sm bg-base-300"
+        class="btn btn-sm bg-base-100"
         :class="{
           'btn-active': activeNumber === pageNum
         }"
@@ -76,13 +76,13 @@ const handleGo = () => {
       </button>
       <button
         v-if="!pageNums.includes(max)"
-        class="btn btn-sm bg-base-300"
+        class="btn btn-sm bg-base-100"
         @click="() => handleClick(max)"
       >
         ...{{ max }}
       </button>
       <button
-        class="btn btn-sm bg-base-300"
+        class="btn btn-sm bg-base-100"
         :class="{
           'btn-disabled': activeNumber === max
         }"

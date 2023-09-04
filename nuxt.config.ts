@@ -9,17 +9,19 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
+    'nuxt-simple-robots',
+    'nuxt-simple-sitemap',
     // '@vite-pwa/nuxt',
   ],
   runtimeConfig: {
     public:{
       GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
-      NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL,
+      NUXT_PUBLIC_SITE_URL: process.env.NUXT_PUBLIC_SITE_URL,
       CA_PUB: process.env.NUXT_PUBLIC_CA_PUB,
       NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID: process.env.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID
     },
     GOOGLE_ANALYTICS_ID: process.env.NUXT_PUBLIC_GOOGLE_ANALYTICS_ID,
-    NUXT_PUBLIC_BASE_URL: process.env.NUXT_PUBLIC_BASE_URL,
+    NUXT_PUBLIC_SITE_URL: process.env.NUXT_PUBLIC_SITE_URL,
     CA_PUB: process.env.NUXT_PUBLIC_CA_PUB,
     NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID: process.env.NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID
   },
@@ -92,27 +94,19 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   i18n: {
-    // lazy: true,
-    precompile: {
-      strictMessage: false,
-    },
-    // baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
     defaultLocale: DefaultLocale,
     strategy: 'prefix_and_default',
     trailingSlash: false,
-    // langDir: 'locales',
     locales: [
       {
         code: 'en',
         iso: 'en',
         name: 'English',
-        // files: ['en/index.json', 'en/common.json'],
       },
       {
         code: 'ko',
         iso: 'ko',
         name: 'Korean',
-        // files: ['ko/index.json', 'ko/common.json'],
       },
     ],
     detectBrowserLanguage: {
@@ -125,6 +119,37 @@ export default defineNuxtConfig({
   image: {
     provider: 'netlify',
   },
+  nitro: {
+    preset: process.env.PRESET,
+    serverAssets: [
+      {
+        baseName: 'public',
+        dir: './public'
+      }
+    ],
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        // '/',
+        '/sitemap.xml',
+        // '/blog-sitemap.xml',
+      ]
+    }
+  },
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+  },
+  robots: {
+    debug: false,
+    disallow: ['/playgrounds', '/v1'],
+    sitemap: [
+      '/sitemap.xml',
+      '/blog-sitemap.xml',
+    ],
+  },
+  sitemap: {
+    autoI18n: false,
+  },
   content: {
     markdown: {
       toc: {
@@ -134,23 +159,9 @@ export default defineNuxtConfig({
       remarkPlugins: {
         'remark-reading-time': {},
       },
-      rehypePlugins: [
-        // 'rehype-highlight'
-      ]
+      // rehypePlugins: [
+      //   // 'rehype-highlight'
+      // ]
     },
-    // highlight: {
-    //   theme: {
-    //     default: 'github-dark',
-    //     'base-dark': 'github-dark',
-    //     'base-light': 'github-light',
-    //   },
-    //   preload: [
-    //     'c',
-    //     'cpp',
-    //     'java',
-    //     'javascript',
-    //     'typescript',
-    //   ]
-    // },
   },
 })

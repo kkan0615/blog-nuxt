@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-08-04-20-41.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-08-11-22-47.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blogs/ko/ko-2023-01-21-12-08.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/ko/ko-2023-01-21-12-08.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,29 +27,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/personalStudy/personal-blog-nuxt/server/routes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\components\homes" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
     </key>
   </component>
@@ -72,6 +74,30 @@
       <workItem from="1691189854189" duration="53000" />
       <workItem from="1691189954801" duration="4937000" />
       <workItem from="1691808427699" duration="2160000" />
+      <workItem from="1691810605424" duration="95000" />
+      <workItem from="1692393422861" duration="132000" />
+      <workItem from="1692393564842" duration="226000" />
+      <workItem from="1692393800572" duration="95000" />
+      <workItem from="1692393903347" duration="4269000" />
+      <workItem from="1692404259579" duration="3806000" />
+      <workItem from="1692492830732" duration="656000" />
+      <workItem from="1692585889714" duration="1260000" />
+      <workItem from="1692664936187" duration="3679000" />
+      <workItem from="1692746451299" duration="4591000" />
+      <workItem from="1692827264982" duration="540000" />
+      <workItem from="1692827853409" duration="5511000" />
+      <workItem from="1692920107360" duration="7420000" />
+      <workItem from="1693012085674" duration="5719000" />
+      <workItem from="1693435607598" duration="1200000" />
+      <workItem from="1693436825568" duration="5298000" />
+      <workItem from="1693521736324" duration="610000" />
+      <workItem from="1693524828254" duration="37000" />
+      <workItem from="1693524872120" duration="1390000" />
+      <workItem from="1693526273997" duration="6150000" />
+      <workItem from="1693611906727" duration="5649000" />
+      <workItem from="1693625968586" duration="422000" />
+      <workItem from="1693848561131" duration="2656000" />
+      <workItem from="1693851331688" duration="620000" />
     </task>
     <servers />
   </component>

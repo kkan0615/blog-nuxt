@@ -2,23 +2,18 @@
 import { useI18n } from '#imports'
 import { Icon } from '@iconify/vue'
 import dayjs from 'dayjs'
-import { PostList } from '~/types/post'
+import { PostList, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
 import ShareBtn from '~/components/btns/Share.vue'
 
-const DefaultNuxtImagePath = '/assets/blog-no-image.jpg'
-const DefaultNuxtImageAlt = 'NuxtImage'
-const DefaultNuxtImageHeight = 1024
-const DefaultNuxtImageWidth = 576
-// NEW Tag blog
+// NEW Tag blog, ex) a day ago
 const NewDay = 2
 
-interface Props {
+const props = withDefaults(defineProps<{
   blog: PostList
   noImage?: boolean
+  isHideTime?: boolean
   dense?: boolean
-}
-
-const props = withDefaults(defineProps<Props>(), {
+}>(), {
   blog: () => { return {} as PostList },
   noImage: false,
   dense: false,
@@ -43,12 +38,12 @@ const isNew = computed(() => {
 })
 </script>
 <template>
-  <div class="card rounded bg-base-200/50 hover:scale-105 transition ease-in-out duration-300">
+  <div class="card rounded hover:scale-105 transition ease-in-out duration-300 shadow-xl bg-base-100 rounded-xl">
     <NuxtLink
       class="flex flex-col h-full"
       :to="{
         path: localePath(blog._path),
-        query: route.query
+        query: route.query,
       }"
     >
       <div
@@ -66,10 +61,9 @@ const isNew = computed(() => {
         >
           NEW
         </div>
-
         <NuxtImg
           v-if="blog.image && blog.image.path"
-          class="aspect-video"
+          class="aspect-video rounded-t-xl"
           :src="blog.image.path"
           :alt="blog.image.alt || DefaultNuxtImageAlt"
           :height="blog.image.height || DefaultNuxtImageHeight"
@@ -79,7 +73,7 @@ const isNew = computed(() => {
         <!-- @TODO: No width and height may generate performance issue -->
         <NuxtImg
           v-else
-          class="aspect-video"
+          class="aspect-video rounded-t-xl"
           preload
           :src="DefaultNuxtImagePath"
           :alt="DefaultNuxtImageAlt"
@@ -92,6 +86,7 @@ const isNew = computed(() => {
         <p v-if="!dense">
           {{ blog.description }}
         </p>
+        <!-- categories -->
         <div
           v-if="blog.categories?.length"
           class="mt-2 card-actions"
@@ -105,6 +100,7 @@ const isNew = computed(() => {
             {{ t(`labels.blogCategories.${category}`) }}
           </div>
         </div>
+        <!-- Tags -->
         <div
           v-if="blog.tags?.length"
           class="mt-1 card-actions text-md lg:text-sm"
@@ -117,8 +113,9 @@ const isNew = computed(() => {
             {{ t(`labels.blogTags.${tag}`) }}
           </div>
         </div>
+        <!-- reading time and published date -->
         <div
-          v-if="!dense"
+          v-if="!isHideTime"
           class="mt-2 card-actions text-md lg:text-sm"
         >
           <div>{{ blog.readingTime?.text }}</div>

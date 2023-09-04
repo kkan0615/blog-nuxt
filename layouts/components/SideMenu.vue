@@ -14,7 +14,7 @@ const route = useRoute()
 </script>
 <template>
   <!-- "menu class" is moved to middle -->
-  <div class="flex flex-col w-64 h-full bg-base-200">
+  <div class="flex flex-col w-64 h-full bg-base-100">
     <AnimatedOctocats />
     <div class="text-center p-4 mt-4">
       <div class="avatar flex justify-center mb-4">
@@ -61,15 +61,15 @@ const route = useRoute()
             <span>blogs</span>
           </MenuItem>
         </li>
-        <li>
-          <MenuItem
-            to="/showcases"
-            icon="material-symbols:menu-rounded"
-            :active="route.name.includes('showcases')"
-          >
-            <span>showcases</span>
-          </MenuItem>
-        </li>
+        <!--        <li>-->
+        <!--          <MenuItem-->
+        <!--            to="/showcases"-->
+        <!--            icon="material-symbols:menu-rounded"-->
+        <!--            :active="route.name.includes('showcases')"-->
+        <!--          >-->
+        <!--            <span>showcases</span>-->
+        <!--          </MenuItem>-->
+        <!--        </li>-->
         <li>
           <MenuItem
             to="/contact"

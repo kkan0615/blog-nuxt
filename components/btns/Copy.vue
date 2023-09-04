@@ -17,6 +17,7 @@ const handleCopyLink = async () => {
   <button
     class="btn btn-sm btn-ghost"
     type="button"
+    aria-label="copy button"
     @click="handleCopyLink"
   >
     <Icon

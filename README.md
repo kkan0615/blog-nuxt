@@ -31,7 +31,7 @@ yarn preview
 ### .env
 ```text
 NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GOOGLE ANALYTICS KEY"
-NUXT_PUBLIC_BASE_URL="PUBLIC URL"
+NUXT_PUBLIC_SITE_URL="PUBLIC URL"
 NUXT_PUBLIC_CA_PUB="GOOGLE CONSOLE KEY"
 NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 ```
@@ -88,7 +88,7 @@ See more detail to click the [Link](https://nuxt.com/docs/guide/directory-struct
 │  ├─ api/                      # API, File name will be path
 │  ├─ public/                   # Data for server
 │  ├─ routes/                   # Generate page from serverside
-├─ .eslintrc.js                 # Eslint config.
+├─ .eslintrc.cjs                 # Eslint config.
 ├─ .gitignore                   # gitignore.
 ├─ nitro.config.ts              # Nitro build config.
 ├─ app.vue                      # App vue file

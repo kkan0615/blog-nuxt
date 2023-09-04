@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Requiem blog",
-    "applicationName": "Requiem blog",
+    "title": "Youngjin's blog",
+    "applicationName": "Youngjin's blog",
     "description": "Thank you for visiting my blog"
   },
   "menus": {
@@ -100,6 +100,18 @@
       "title": "Requiem Blog",
       "description": "Welcome to Requiem's blog",
       "sections": {
+        "hero": {
+          "welcome": "Welcome to Youngjin's Blog"
+        },
+        "aboutMe": {
+          "hello": "I am glad to see you!",
+          "description1": "I will do my best to share my skills with you! 😀",
+          "description2": "If you would like to contact with me click following button!\n\n",
+          "counts": {
+            "days": "Days After start",
+            "posts": "Posts"
+          }
+        },
         "blogs": {
           "title": "latested blogs",
           "description": "Recent posted blogs"
@@ -107,12 +119,17 @@
         "showcases": {
           "title": "showcases",
           "description": "Recent updated showcases"
+        },
+        "categories": {
+          "title": "Blog Categories",
+          "description": "Explore all categories in blog"
         }
       }
     },
     "contact": {
       "profileCard": {
-        "title": "Profile"
+        "title": "Profile",
+        "description": "Click one of icons to contact with me"
       },
       "requestCard": {
         "title": "request software",

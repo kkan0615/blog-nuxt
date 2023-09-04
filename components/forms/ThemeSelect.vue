@@ -5,6 +5,8 @@ interface Props {
   top?: boolean
   bottom?: boolean
   end?: boolean
+  isIcon?: boolean
+  contentClass?: string | Record<string, boolean>
 }
 
 defineProps<Props>()
@@ -25,18 +27,33 @@ const handleClick = async (newTheme?: string) => {
     }"
   >
     <label
+      v-if="!isIcon"
       :tabIndex="0"
-      class="btn btn-ghost"
+      class="btn btn-ghost btn-sm"
     >
-      <Icon icon="mdi:theme-light-dark" />
-      <span class="ml-2">
+      <Icon
+        icon="mdi:theme-light-dark"
+        class="mr-2"
+      />
+      <span>
         {{ t('labels.theme') }}
       </span>
+    </label>
+    <label
+      v-else
+      :tabIndex="0"
+      class="btn btn-ghost btn-sm"
+    >
+      <Icon
+        class="text-lg"
+        icon="mdi:theme-light-dark"
+      />
     </label>
     <client-only>
       <ul
         :tabIndex="0"
         class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-32 z-20"
+        :class="contentClass"
       >
         <li>
           <button

@@ -1,3 +1,6 @@
+## 2.0.0
+- Update to V2
+
 ## 0.3.0
 ### Core Changes
 - Added new tags (php and laravel)
@@ -24,7 +27,7 @@
 - Added new content "Typescript Array Add, Update, Delete elements"
 - Updated date in content "JavaScript 5 ways to deep copy objects"
 
-## 0.2.7
+## 0.2.7s
 ### Documentation Changes
 - Added new content "JavaScript console.time()"
 - Added new content "JavaScript 5 ways to deep copy objects"

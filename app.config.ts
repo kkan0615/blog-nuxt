@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  startedAt: '2023-01-13',
   github : 'https://github.com/kkan0615/blog-nuxt',
   blogCategories: [
     // 'example',
