@@ -33,6 +33,12 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      meta: [
+        {
+          name: 'naver-site-verification',
+          content: process.env.NUXT_PUBLIC_NAVER_SEARCH,
+        }
+      ],
       script: [
         {
           async: true,
