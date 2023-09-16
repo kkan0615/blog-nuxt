@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,37 +26,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/personalStudy/personal-blog-nuxt/server/routes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\personalStudy\\personal-blog-nuxt\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
       <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\homes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -97,7 +96,14 @@
       <workItem from="1693611906727" duration="5649000" />
       <workItem from="1693625968586" duration="422000" />
       <workItem from="1693848561131" duration="2656000" />
-      <workItem from="1693851331688" duration="2916000" />
+      <workItem from="1693851331688" duration="3794000" />
+      <workItem from="1693855570671" duration="6326000" />
+      <workItem from="1694215862797" duration="2557000" />
+      <workItem from="1694270727643" duration="9702000" />
+      <workItem from="1694486482035" duration="1053000" />
+      <workItem from="1694487822637" duration="284000" />
+      <workItem from="1694714115693" duration="6000" />
+      <workItem from="1694825992390" duration="4566000" />
     </task>
     <servers />
   </component>

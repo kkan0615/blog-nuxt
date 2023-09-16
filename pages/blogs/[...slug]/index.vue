@@ -81,7 +81,7 @@ layoutStore.setHeaderTitle(t('menus.blogs'))
 
 onMounted(() => {
   // Code block highlight
-  hljs.highlightAll()
+  // hljs.highlightAll()
   // When user enter the page with hash, scroll down to hash
   if (route.hash) {
     const contentDiv = document.getElementById('base-content')

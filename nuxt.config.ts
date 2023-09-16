@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DefaultLocale } from './types/locale'
+import hljs from 'highlight.js'
 
 export default defineNuxtConfig({
   modules: [
@@ -33,6 +34,12 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      meta: [
+        {
+          name: 'naver-site-verification',
+          content: process.env.NUXT_PUBLIC_NAVER_SEARCH,
+        }
+      ],
       script: [
         {
           async: true,
@@ -153,6 +160,13 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   content: {
+    // https://github.com/shikijs/shiki/blob/main/docs/themes.md
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'material-theme-palenight',
+      }
+    },
     markdown: {
       toc: {
         depth: 5, searchDepth: 5
@@ -161,9 +175,6 @@ export default defineNuxtConfig({
       remarkPlugins: {
         'remark-reading-time': {},
       },
-      // rehypePlugins: [
-      //   // 'rehype-highlight'
-      // ]
     },
   },
 })
