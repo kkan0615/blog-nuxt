@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="" />
+    <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/content/ProseCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/ProseCode.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-09-08-19-27.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-08-19-27.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,11 +60,11 @@
       <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\homes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -99,6 +109,9 @@
       <workItem from="1694215862797" duration="2557000" />
       <workItem from="1694270727643" duration="9702000" />
       <workItem from="1694486482035" duration="1053000" />
+      <workItem from="1694487822637" duration="284000" />
+      <workItem from="1694714115693" duration="6000" />
+      <workItem from="1694825992390" duration="4391000" />
     </task>
     <servers />
   </component>

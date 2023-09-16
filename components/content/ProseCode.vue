@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import hljs from 'highlight.js'
 import { Icon } from '@iconify/vue'
 import { useClipboard } from '@vueuse/core'
 
@@ -22,8 +21,8 @@ const handleCopy = () => {
 </script>
 
 <template>
-  <div class="max-w-full">
-    <div class="code-container max-w-full overflow-x-auto">
+  <div class="max-w-full ">
+    <div class="code-container max-w-full overflow-x-auto rounded">
       <div class="flex items-center p-1 pl-3">
         <div class="mr-auto uppercase text-sm">
           {{ language }}
@@ -52,16 +51,16 @@ const handleCopy = () => {
           </button>
         </div>
       </div>
-      <!--      <div class="whitespace-pre-wrap">-->
-      <slot />
-      <!--      </div>-->
+      <div class="px-3 pb-2">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
 .code-container {
-  background: #1a1b26;
+  @apply bg-white dark:bg-[#292D3E];
 
   pre {
     @apply my-0 p-0;

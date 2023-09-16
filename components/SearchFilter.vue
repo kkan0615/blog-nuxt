@@ -18,6 +18,7 @@ const toggleDialog = () => {
 }
 </script>
 <template>
+  <!-- Desktop -->
   <div
     :tabindex="0"
     class="lg:grid hidden collapse collapse-arrow"
@@ -38,9 +39,10 @@ const toggleDialog = () => {
       <slot />
     </div>
   </div>
+  <!-- Mobile -->
   <!-- Open the modal using ID.showModal() method -->
   <button
-    class="block lg:hidden btn btn-primary inline-flex items-center"
+    class="block lg:hidden btn btn-primary inline-flex items-center my-4"
     @click="toggleDialog"
   >
     <Icon

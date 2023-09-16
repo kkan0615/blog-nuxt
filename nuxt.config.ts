@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DefaultLocale } from './types/locale'
+import hljs from 'highlight.js'
 
 export default defineNuxtConfig({
   modules: [
@@ -159,6 +160,17 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   content: {
+    highlight: {
+      // theme: 'material-theme-palenight',
+      // Theme used in all color schemes.
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'material-theme-palenight',
+      }
+    },
     markdown: {
       toc: {
         depth: 5, searchDepth: 5
