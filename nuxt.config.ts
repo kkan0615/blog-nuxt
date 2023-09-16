@@ -175,9 +175,6 @@ export default defineNuxtConfig({
       remarkPlugins: {
         'remark-reading-time': {},
       },
-      // rehypePlugins: [
-      //   // 'rehype-highlight'
-      // ]
     },
   },
 })
