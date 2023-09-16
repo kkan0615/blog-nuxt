@@ -160,14 +160,10 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   content: {
+    // https://github.com/shikijs/shiki/blob/main/docs/themes.md
     highlight: {
-      // theme: 'material-theme-palenight',
-      // Theme used in all color schemes.
-      // OR
       theme: {
-        // Default theme (same as single string)
         default: 'github-light',
-        // Theme used if `html.dark`
         dark: 'material-theme-palenight',
       }
     },
