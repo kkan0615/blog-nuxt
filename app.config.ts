@@ -19,7 +19,6 @@ export default defineAppConfig({
       'nuxt',
       'MDX',
       'HTML',
-      'gatsby',
       'php',
       'laravel',
     ]
@@ -33,7 +32,6 @@ export default defineAppConfig({
   showcaseTags: [
     'node Js',
     'typescript',
-    'gatsby',
     'javaScript',
     'next',
     'nuxt',

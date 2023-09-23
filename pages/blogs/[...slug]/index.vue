@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import hljs from 'highlight.js'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList, PostDetail, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
@@ -21,8 +20,6 @@ const { data: page, error } = await useAsyncData<PostDetail>('page-data', async 
   await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`)
     .findOne()
 )
-/* slug parameter return array like [en, en-1010100] */
-// const page = await queryContent<PostDetail>(`/blogs/${route.params.slug[0]}/${route.params.slug[1]}`).findOne()
 /* Error handling - 404 */
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
@@ -164,18 +161,16 @@ router.beforeEach((guard) => {
         :categories="page.categories"
         :tags="page.tags"
       />
+      <!-- Additional bottom data -->
       <BottomNavbar
         :filepath="page._file"
       />
-      <!--      <div class="mt-8 block lg:hidden">-->
-      <!--        <ClientOnly>-->
-      <!--          <LazyAdvertisementsAmazonBanner />-->
-      <!--        </ClientOnly>-->
-      <!--      </div>-->
+      <!-- Donation -->
       <div class="mt-4 block lg:hidden">
         <Donation />
       </div>
-      <h3 class="mt-4 text-xl font-bold opacity-80 capitalize">
+      <!-- More blog posts -->
+      <h3 class="mt-4 text-xl font-bold opacity-80 capitalize mb-4 md:mb-0">
         {{ t('labels.furtherReading') }}
       </h3>
       <div
@@ -186,7 +181,6 @@ router.beforeEach((guard) => {
           v-for="blog in similarBlogs"
           :key="blog._path"
           dense
-          no-image
           :blog="blog"
         />
       </div>

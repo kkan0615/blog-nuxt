@@ -1,5 +1,9 @@
-## 2.0.0
-- Update to V2
+## 1.0.2
+- Added new content
+- Delete highlights
+
+## 1.0.0
+- Update to new version
 
 ## 0.3.0
 ### Core Changes

@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-22-20-10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/showcases/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/libs/tokyo-night-dark.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/libs/tokyo-night-light.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/libs/tomorrow-night-blue.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/libs/tomorrow-night-bright.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +117,8 @@
       <workItem from="1694486482035" duration="1053000" />
       <workItem from="1694487822637" duration="284000" />
       <workItem from="1694714115693" duration="6000" />
-      <workItem from="1694825992390" duration="4566000" />
+      <workItem from="1694825992390" duration="5224000" />
+      <workItem from="1695426687469" duration="4975000" />
     </task>
     <servers />
   </component>

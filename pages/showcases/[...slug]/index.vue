@@ -3,7 +3,6 @@ import dayjs from 'dayjs'
 import { Icon } from '@iconify/vue'
 import { useLayoutStore } from '~/stores/layout'
 import { PostDetail } from '~/types/post'
-import hljs from 'highlight.js'
 import BottomNavbar from '~/components/showcases/detail/BottomNavbar.vue'
 import Tags from '~/components/showcases/detail/Tags.vue'
 import Categories from '~/components/showcases/detail/Categories.vue'
@@ -55,8 +54,6 @@ useHead({
 layoutStore.setHeaderTitle(t('menus.showcases'))
 
 onMounted(() => {
-  // Code block highlight
-  hljs.highlightAll()
   // When user enter the page with hash, scroll down to hash
   if (route.hash) {
     const contentDiv = document.getElementById('base-content')

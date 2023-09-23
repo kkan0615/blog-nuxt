@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DefaultLocale } from './types/locale'
-import hljs from 'highlight.js'
 
 export default defineNuxtConfig({
   modules: [
@@ -30,7 +29,6 @@ export default defineNuxtConfig({
     'animate.css',
     '~/styles/global.scss',
     '~/styles/libs/animate.css',
-    '~/styles/libs/tokyo-night-dark.min.css',
   ],
   app: {
     head: {
