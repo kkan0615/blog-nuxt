@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
+    '@nuxt/devtools',
     // '@vite-pwa/nuxt',
   ],
   runtimeConfig: {
@@ -164,7 +165,8 @@ export default defineNuxtConfig({
         default: 'github-light',
         dark: 'material-theme-palenight',
       }
-    },
+      ,
+      preload: ['java'] },
     markdown: {
       toc: {
         depth: 5, searchDepth: 5
@@ -175,4 +177,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  devtools: {
+    enable: true
+  }
 })
