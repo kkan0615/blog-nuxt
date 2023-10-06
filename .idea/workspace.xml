@@ -5,9 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-29-20-31.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-10-06-17-02.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logos/algorithm-logo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/content/ProseImg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/ProseImg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2022-09-24-11-51.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2022-09-24-11-51.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2022-10-01-12-05.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2022-10-01-12-05.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2022-10-29-12-03.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2022-10-29-12-03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-01-14-20-41.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-01-14-20-41.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-02-04-14-53.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-02-04-14-53.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-02-10-20-54.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-02-10-20-54.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-02-17-20-41.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-02-17-20-41.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-02-24-20-35.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-02-24-20-35.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-03-25-13-00.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-03-25-13-00.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-03-31-18-50.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-03-31-18-50.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-04-07-16-05.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-04-07-16-05.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-04-29-11-12.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-04-29-11-12.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-05-12-17-30.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-05-12-17-30.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-05-19-22-00.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-05-19-22-00.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-05-26-10-00.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-05-26-10-00.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-06-16-20-01.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-06-16-20-01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-07-02-15-35.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-02-15-35.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-07-15-11-16.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-15-11-16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-07-23-11-16.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-07-23-11-16.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-08-04-20-41.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-08-04-20-41.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-08-11-22-47.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-08-11-22-47.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-09-29-20-31.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-29-20-31.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/ko/ko-2023-03-03-20-36.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/ko/ko-2023-03-03-20-36.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/ko/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ko/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -56,11 +87,11 @@
       <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\homes" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -110,7 +141,8 @@
       <workItem from="1694825992390" duration="5224000" />
       <workItem from="1695426687469" duration="5454000" />
       <workItem from="1696033461011" duration="4954000" />
-      <workItem from="1696044909039" duration="912000" />
+      <workItem from="1696044909039" duration="986000" />
+      <workItem from="1696625119058" duration="5358000" />
     </task>
     <servers />
   </component>

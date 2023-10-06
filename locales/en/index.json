@@ -59,7 +59,8 @@
       "html": "HTML",
       "HTML": "HTML",
       "php": "php",
-      "laravel": "Laravel"
+      "laravel": "Laravel",
+      "algorithm": "Algorithm"
     },
     "showcaseCategories": {
       "example": "example",

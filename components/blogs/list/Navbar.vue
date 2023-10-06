@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { LocaleCodeList } from '~/types/locale'
 import MultiSelect from '~/components/forms/MultiSelect.vue'
+import SearchFilter from '~/components/SearchFilter.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -12,7 +13,7 @@ const emit = defineEmits<{
 }>()
 
 // Collapse checkbox to handle overflow error
-const toggle = ref(true)
+const searchFilterRef = ref<InstanceType<typeof SearchFilter> | null>(null)
 const search = ref(route.query.search)
 const locales = ref<string[]>(((route.query.locales || '') as string).split(',').filter((el) => !!el))
 const categories = ref<string[]>(((route.query.categories || '') as string).split(',').filter((el) => !!el))
@@ -82,6 +83,8 @@ const handleSubmit = async () => {
   })
 
   emit('search')
+  console.log(searchFilterRef.value)
+  searchFilterRef.value?.closeDialog()
 }
 
 const handleReset = () => {
@@ -94,6 +97,7 @@ const handleReset = () => {
 
 <template>
   <SearchFilter
+    ref="searchFilterRef"
     :title="t('commons.labels.search')"
   >
     <form
