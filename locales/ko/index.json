@@ -58,7 +58,6 @@
       "MDX": "MDX",
       "html": "HTML",
       "HTML": "HTML",
-      "gatsby": "Gatsby",
       "php": "php",
       "laravel": "Laravel"
     },
@@ -71,7 +70,6 @@
     "showcaseTags": {
       "node Js": "Node Js",
       "typescript": "타입스크립트",
-      "gatsby": "Gatsby",
       "javaScript": "자바스크립트",
       "next": "Next",
       "nuxt": "Nuxt",

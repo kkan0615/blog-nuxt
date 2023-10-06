@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { DefaultLocale } from './types/locale'
-import hljs from 'highlight.js'
 
 export default defineNuxtConfig({
   modules: [
@@ -12,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-simple-robots',
     'nuxt-simple-sitemap',
+    '@nuxt/devtools',
     // '@vite-pwa/nuxt',
   ],
   runtimeConfig: {
@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     'animate.css',
     '~/styles/global.scss',
     '~/styles/libs/animate.css',
-    '~/styles/libs/tokyo-night-dark.min.css',
   ],
   app: {
     head: {
@@ -166,7 +165,8 @@ export default defineNuxtConfig({
         default: 'github-light',
         dark: 'material-theme-palenight',
       }
-    },
+      ,
+      preload: ['java'] },
     markdown: {
       toc: {
         depth: 5, searchDepth: 5
@@ -177,4 +177,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  devtools: {
+    enable: true
+  }
 })
