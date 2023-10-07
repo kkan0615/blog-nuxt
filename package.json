@@ -4,7 +4,11 @@
   "author": "Youngjin Kwak",
   "description": "Nuxt 3 + DaisyUI + TailwindCSS personal blog",
   "type": "module",
+  "license": "MIT",
   "scripts": {
+    "db-generate": "drizzle-kit generate:pg",
+    "db-push": "drizzle-kit push:pg",
+    "build-dev": "drizzle-kit generate:pg && nuxt build",
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
     "generate": "nuxt generate",

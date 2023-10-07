@@ -1,9 +1,14 @@
 import type { Config } from 'drizzle-kit'
+import * as dotenv from 'dotenv'
 
+dotenv.config({
+  path: '.env',
+})
 export default {
-  schema: './src/db/schema.ts',
-  out: './drizzle',
+  schema: './db/schema.ts',
+  out: './.drizzle',
+  driver: 'pg',
   dbCredentials: {
-    connectionString: 'postgres://postgres:postgres0615@@localhost:5432/express_study_api2',
+    connectionString: process.env.DRIZZLE_DATABASE_URL,
   }
 } satisfies Config
