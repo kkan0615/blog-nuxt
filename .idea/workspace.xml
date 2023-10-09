@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/vue-gtag.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/vue-gtag.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,9 @@
       <workItem from="1696044909039" duration="986000" />
       <workItem from="1696625119058" duration="6088000" />
       <workItem from="1696635676236" duration="4328000" />
-      <workItem from="1696644461783" duration="2725000" />
+      <workItem from="1696644461783" duration="3271000" />
+      <workItem from="1696738571165" duration="191000" />
+      <workItem from="1696807164398" duration="2287000" />
     </task>
     <servers />
   </component>
