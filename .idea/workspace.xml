@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/models/comments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/0000_chief_tomorrow_man.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/meta/0000_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/meta/_journal.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/server/api/posts/[id]/comments&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -51,6 +53,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments" />
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
@@ -116,7 +119,9 @@
       <workItem from="1696635676236" duration="4328000" />
       <workItem from="1696644461783" duration="3271000" />
       <workItem from="1696738571165" duration="191000" />
-      <workItem from="1696807164398" duration="2287000" />
+      <workItem from="1696807164398" duration="2306000" />
+      <workItem from="1696882581369" duration="3799000" />
+      <workItem from="1696902899740" duration="834000" />
     </task>
     <servers />
   </component>
