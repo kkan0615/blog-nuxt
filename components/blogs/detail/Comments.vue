@@ -1,15 +1,24 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
+import { CommentSelect } from '~/types/models/comments'
 
-interface Props {
-
-}
-
-defineProps<Props>()
+defineProps<{
+  postId: string
+  comments: CommentSelect[]
+}>()
 
 </script>
 <template>
-  <div>
-    Comment list
+  <div class="mt-4">
+    <client-only>
+      <blogs-detail-comment-form
+        :post-id="postId"
+      />
+    </client-only>
+    <div
+      v-for="commentEl in comments"
+      :key="commentEl.id"
+    >
+      {{ commentEl }}
+    </div>
   </div>
 </template>

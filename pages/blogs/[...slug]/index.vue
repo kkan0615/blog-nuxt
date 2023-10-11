@@ -8,6 +8,8 @@ import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
+import { CommentSelect } from '~/types/models/comments'
+import { Toc } from '@nuxt/content/dist/runtime/types'
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
@@ -50,6 +52,9 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
 
   return list.filter(blog => blog._id !== page.value?._id).slice(0, 3)
 })
+
+const { data: comments, pending: commentsPending, error: commentsError, refresh: refreshComments }
+    = await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
 
 // SEO
 useHead({
@@ -104,7 +109,7 @@ router.beforeEach((guard) => {
 
 </script>
 <template>
-  <div class="max-w-5xl mx-auto flex">
+  <div class="max-w-5xl mx-auto flex p-2 lg:p-4">
     <div class="grow w-1 px-0 md:px-12">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
@@ -184,11 +189,18 @@ router.beforeEach((guard) => {
           :blog="blog"
         />
       </div>
+      <blogs-detail-comments
+        v-if="!!page?._id"
+        :post-id="page._id"
+        :comments="comments || []"
+      />
     </div>
-    <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
+    <div
+      class="shrink sticky top-4 h-1 w-52 hidden lg:block"
+    >
       <table-of-content
         article-id="article"
-        :toc="page.body.toc"
+        :toc="page?.body.toc || {} as Toc"
       />
     </div>
   </div>

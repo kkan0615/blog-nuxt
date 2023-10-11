@@ -1,0 +1,141 @@
+<script setup lang="ts">
+import { CommentInsert, CommentSelect } from '~/types/models/comments'
+import { toTypedSchema } from '@vee-validate/zod'
+import { z } from 'zod'
+import { useField, useForm } from 'vee-validate'
+import { useStorage } from '@vueuse/core'
+
+const props = defineProps<{
+  postId: string
+  comment?: CommentSelect
+}>()
+
+const commentName = useStorage('comment-nickName', '')
+
+const validationSchema = toTypedSchema(
+  z.object({
+    nickName: z.string({
+      required_error: 'Name required'
+    })
+      .max(255, {
+        message: 'Maximum for Name is 255'
+      })
+      .trim().min(1, {
+        message: 'Name required'
+      }),
+    password: z.string({
+      required_error: 'Password required'
+    })
+      .max(255, {
+        message: 'Maximum for Password is 255'
+      })
+      .trim().min(1, {
+        message: 'Password required'
+      }),
+    content: z.string({
+      required_error: 'content required'
+    })
+      .max(255, {
+        message: 'Maximum for Content is 255'
+      })
+      .trim().min(1, {
+        message: 'content required'
+      }),
+    isSecret: z.boolean().default(false)
+  })
+)
+
+const { handleSubmit, errors, isSubmitting, resetForm } = useForm({
+  validationSchema,
+})
+
+const { value: nickName } = useField('nickName')
+const { value: password } = useField('password')
+const { value: content } = useField<string>('content')
+const { value: isSecret } = useField('isSecret')
+
+const onSubmit = handleSubmit(async (values) => {
+  console.log(values)
+
+  // Create new post
+  if (!props.comment) {
+    await $fetch(`/api/posts/${props.postId}/comments`, {
+      method: 'POST',
+      body: {
+        nickname: values.nickName,
+        password: values.password,
+        content: values.content,
+      }
+    })
+  }
+
+  resetForm()
+})
+
+</script>
+<template>
+  <form @submit.prevent="onSubmit">
+    <div class="flex gap-x-2 mb-3 w-full">
+      <div class="form-control grow">
+        <input
+          v-model="nickName"
+          type="text"
+          placeholder="Name"
+          class="input input-bordered input-sm"
+          :class="{
+            'input-error': !!errors.nickName
+          }"
+        >
+        <label
+          v-if="!!errors.nickName"
+          class="label"
+        >
+          <span class="label-text-alt text-error">{{ errors.nickName }}</span>
+        </label>
+      </div>
+      <div class="form-control grow">
+        <input
+          v-model="password"
+          placeholder="Password"
+          type="password"
+          class="input input-bordered input-sm"
+          :class="{
+            'input-error': !!errors.password
+          }"
+        >
+        <label
+          v-if="!!errors.password"
+          class="label"
+        >
+          <span class="label-text-alt text-error">{{ errors.password }}</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-control">
+      <textarea
+        v-model="content"
+        class="textarea textarea-bordered"
+        rows="4"
+        :class="{
+          'textarea-error': !!errors.content
+        }"
+        placeholder="Content"
+      />
+      <label
+        v-if="!!errors.content"
+        class="label"
+      >
+        <span class="label-text-alt text-error">{{ errors.content }}</span>
+      </label>
+    </div>
+    <div class="py-2">
+      <button class="btn btn-sm btn-loading">
+        <span
+          v-if="isSubmitting"
+          class="loading loading-spinner loading-sm"
+        />
+        <span v-else>Submit</span>
+      </button>
+    </div>
+  </form>
+</template>

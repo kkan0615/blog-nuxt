@@ -20,7 +20,7 @@ import Footer from '~/layouts/components/Footer.vue'
     >
       <!-- Page content here -->
       <Header />
-      <div class="flex-grow p-2 lg:p-4">
+      <div class="flex-grow">
         <slot />
       </div>
       <div class="px-2 mt-auto">

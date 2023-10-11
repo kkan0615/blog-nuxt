@@ -1,16 +1,24 @@
 import { defineEventHandler } from 'h3'
 import db from '~/db'
-import { comments } from '~/db/schema'
-import { eq } from 'drizzle-orm'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
-
   const postId = getRouterParam(event, 'id')
-  const list = await db.select().from(comments).where(eq(comments.postId, postId as string))
-  // const list = await db.query.comments.findMany({
-  //   where: eq(comments.postId, postId)
-  // })
-
+  if (!postId) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Post Id is empty',
+    })
+  }
+  const list = await db.query.comments.findMany({
+    columns: {
+      id: true,
+      nickname: true,
+      content: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+    where: (comments, { eq }) => (eq(comments.postId, postId))
+  })
   return list
 })

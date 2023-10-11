@@ -36,7 +36,7 @@ defineExpose({
   <!-- Desktop -->
   <div
     :tabindex="0"
-    class="lg:grid hidden collapse collapse-arrow"
+    class="lg:grid hidden collapse collapse-arrow p-2 lg:p-4"
     :class="{
       'mb-4': !isCollapseOpen,
       'overflow-visible': isCollapseOpen,
