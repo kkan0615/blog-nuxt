@@ -5,8 +5,6 @@ import { CommentInsert } from '~/types/models/comments'
 
 export default defineEventHandler(async (event) => {
   const postId = getRouterParam(event, 'id')
-  // const ip = req.headers['x-forwarded-for'].split(',').pop() ||
-  //   req.connection.remoteAddress
   if (!postId) {
     throw createError({
       statusCode: 400,

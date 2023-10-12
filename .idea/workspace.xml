@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.delete.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/0000_curvy_kat_farrell.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/meta/0000_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.drizzle/meta/_journal.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-03-31-18-50.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-03-31-18-50.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/models/comments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/models/comments.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/server/api/posts/[id]/comments&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/server/api/posts/[id]/comments/[commentId]&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -59,11 +58,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments" />
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]" />
@@ -130,7 +129,10 @@
       <workItem from="1696902899740" duration="834000" />
       <workItem from="1696904251302" duration="11000" />
       <workItem from="1696980720623" duration="3203000" />
-      <workItem from="1696984710170" duration="3558000" />
+      <workItem from="1696984710170" duration="4176000" />
+      <workItem from="1697062186190" duration="2499000" />
+      <workItem from="1697065888069" duration="3394000" />
+      <workItem from="1697069343108" duration="1642000" />
     </task>
     <servers />
   </component>

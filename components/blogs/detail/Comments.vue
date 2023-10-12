@@ -14,11 +14,13 @@ defineProps<{
         :post-id="postId"
       />
     </client-only>
-    <div
-      v-for="commentEl in comments"
-      :key="commentEl.id"
-    >
-      {{ commentEl }}
+    <div class="space-y-3">
+      <blogs-detail-comment
+        v-for="commentEl in comments"
+        :key="commentEl.id"
+        :post-id="postId"
+        :comment="commentEl"
+      />
     </div>
   </div>
 </template>

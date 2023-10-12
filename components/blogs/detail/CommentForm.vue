@@ -4,10 +4,15 @@ import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
 import { useField, useForm } from 'vee-validate'
 import { useStorage } from '@vueuse/core'
+import { Icon } from '@iconify/vue'
 
 const props = defineProps<{
   postId: string
   comment?: CommentSelect
+}>()
+const emits = defineEmits<{
+  (e: 'success'): void
+  (e: 'cancel'): void
 }>()
 
 const commentName = useStorage('comment-nickName', '')
@@ -69,12 +74,40 @@ const onSubmit = handleSubmit(async (values) => {
     })
   }
 
+  emits('success')
   resetForm()
 })
 
+const handleCancel = () => {
+  emits('cancel')
+}
 </script>
 <template>
   <form @submit.prevent="onSubmit">
+    <div
+      v-if="comment"
+      class="mb-2 font-bold flex"
+    >
+      <div>
+        Edit
+      </div>
+      <div class="mx-auto" />
+      <div
+        class="tooltip"
+        data-tip="Cancel"
+      >
+        <button
+          class="btn btn-sm px-2 btn-ghost text-error"
+          type="button"
+          @click="handleCancel"
+        >
+          <Icon
+            icon="mdi:close"
+            class="text-lg"
+          />
+        </button>
+      </div>
+    </div>
     <div class="flex gap-x-2 mb-3 w-full">
       <div class="form-control grow">
         <input
@@ -129,7 +162,10 @@ const onSubmit = handleSubmit(async (values) => {
       </label>
     </div>
     <div class="py-2">
-      <button class="btn btn-sm btn-loading">
+      <button
+        class="btn btn-sm btn-loading"
+        type="submit"
+      >
         <span
           v-if="isSubmitting"
           class="loading loading-spinner loading-sm"
