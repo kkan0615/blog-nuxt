@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.delete.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.drizzle/0000_curvy_kat_farrell.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.drizzle/meta/0000_snapshot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.drizzle/meta/_journal.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/blogs/detail/DeleteCommentDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/list/BlogCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.delete.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/delete/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +61,11 @@
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]\delete" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -132,11 +128,25 @@
       <workItem from="1696984710170" duration="4176000" />
       <workItem from="1697062186190" duration="2499000" />
       <workItem from="1697065888069" duration="3394000" />
-      <workItem from="1697069343108" duration="1642000" />
+      <workItem from="1697069343108" duration="1670000" />
+      <workItem from="1697152559102" duration="1239000" />
+      <workItem from="1697153928037" duration="1733000" />
+      <workItem from="1697155675282" duration="2534000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

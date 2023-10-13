@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { CommentSelect } from '~/types/models/comments'
 import dayjs from 'dayjs'
 import { Icon } from '@iconify/vue'
+import { CommentSelect } from '~/types/models/comments'
 
 const props = defineProps<{
   postId: string
   comment: CommentSelect
+}>()
+
+const emits = defineEmits<{
+  (e: 'refresh'): void
 }>()
 
 const isEdit = ref(false)
@@ -25,15 +29,15 @@ const handleEdit = () => {
 
 const handleEditSuccess = () => {
   isEdit.value = false
+  emits('refresh')
 }
 
 const handleEditCancel = () => {
   isEdit.value = false
 }
 
-const handleDelete = () => {
-  const password = prompt('Type password')
-  console.log('password', password)
+const handleDeleteSuccess = () => {
+  emits('refresh')
 }
 </script>
 <template>
@@ -67,20 +71,11 @@ const handleDelete = () => {
               />
             </button>
           </div>
-          <div
-            class="tooltip"
-            data-tip="delete"
-          >
-            <button
-              class="btn btn-sm btn-ghost px-2 text-error"
-              @click="handleDelete"
-            >
-              <Icon
-                icon="mdi:delete"
-                class="text-lg"
-              />
-            </button>
-          </div>
+          <blogs-detail-delete-comment-dialog
+            :post-id="postId"
+            :comment-id="comment.id"
+            @success="handleDeleteSuccess"
+          />
         </div>
       </div>
       <div>

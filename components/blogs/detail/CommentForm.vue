@@ -10,6 +10,7 @@ const props = defineProps<{
   postId: string
   comment?: CommentSelect
 }>()
+
 const emits = defineEmits<{
   (e: 'success'): void
   (e: 'cancel'): void
@@ -59,12 +60,32 @@ const { value: password } = useField('password')
 const { value: content } = useField<string>('content')
 const { value: isSecret } = useField('isSecret')
 
+const isVisiblePassword = ref(false)
+
+onMounted(() => {
+  console.log(props.comment)
+  if (props.comment) {
+    nickName.value = props.comment.nickname
+    content.value = props.comment.content
+    isSecret.value = props.comment.isSecret
+  }
+})
+
 const onSubmit = handleSubmit(async (values) => {
   console.log(values)
 
   // Create new post
   if (!props.comment) {
     await $fetch(`/api/posts/${props.postId}/comments`, {
+      method: 'POST',
+      body: {
+        nickname: values.nickName,
+        password: values.password,
+        content: values.content,
+      }
+    })
+  } else {
+    await $fetch(`/api/posts/${props.postId}/comments/${props.comment.id}`, {
       method: 'POST',
       body: {
         nickname: values.nickName,
@@ -127,15 +148,31 @@ const handleCancel = () => {
         </label>
       </div>
       <div class="form-control grow">
-        <input
-          v-model="password"
-          placeholder="Password"
-          type="password"
-          class="input input-bordered input-sm"
-          :class="{
-            'input-error': !!errors.password
-          }"
-        >
+        <div class="join">
+          <input
+            v-model="password"
+            :type="isVisiblePassword ? 'text' : 'password'"
+            class="input input-bordered input-sm join-item grow"
+            :class="{
+              'input-error': !!errors.password
+            }"
+          >
+          <button
+            class="btn btn-sm join-item"
+            @click="isVisiblePassword = !isVisiblePassword"
+          >
+            <Icon
+              v-if="isVisiblePassword"
+              icon="material-symbols:visibility-off"
+              class="text-lg"
+            />
+            <Icon
+              v-else
+              icon="material-symbols:visibility"
+              class="text-lg"
+            />
+          </button>
+        </div>
         <label
           v-if="!!errors.password"
           class="label"

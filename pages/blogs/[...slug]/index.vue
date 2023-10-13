@@ -107,6 +107,10 @@ router.beforeEach((guard) => {
   })
 })
 
+const handleRefreshComments = () => {
+  refreshComments()
+}
+
 </script>
 <template>
   <div class="max-w-5xl mx-auto flex p-2 lg:p-4">
@@ -193,6 +197,7 @@ router.beforeEach((guard) => {
         v-if="!!page?._id"
         :post-id="page._id"
         :comments="comments || []"
+        @refresh="handleRefreshComments"
       />
     </div>
     <div

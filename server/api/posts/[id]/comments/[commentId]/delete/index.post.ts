@@ -8,10 +8,10 @@ interface Query {
 }
 
 export default defineEventHandler(async (event) => {
-  let commentId = getRouterParam(event, 'commentId')
-  const query = getQuery<Query>(event)
+  const commentId = getRouterParam(event, 'commentId')
+  const body = await readBody(event)
 
-  if (!commentId || !Number(commentId) || !query.password ) {
+  if (!commentId || !Number(commentId)) {
     throw createError({
       statusCode: 400,
       statusMessage: 'required query is missing',
@@ -27,6 +27,14 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'NOT FOUND',
     })
   }
+  console.log(commentById.password, body.password)
+  if (commentById.password !== body.password) {
+    throw createError({
+      statusCode: 402,
+      statusMessage: 'PASSWORD NOT MATCHED',
+    })
+  }
+
   const deleted = await db.update(comments).set({
     deletedAt: new Date(),
   }).where(eq(comments.id, Number(commentId)))

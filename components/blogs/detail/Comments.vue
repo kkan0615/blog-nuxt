@@ -6,12 +6,21 @@ defineProps<{
   comments: CommentSelect[]
 }>()
 
+const emits = defineEmits<{
+  (e: 'refresh'): void
+}>()
+
+const handleRefresh = () => {
+  emits('refresh')
+}
+
 </script>
 <template>
   <div class="mt-4">
     <client-only>
       <blogs-detail-comment-form
         :post-id="postId"
+        @success="handleRefresh"
       />
     </client-only>
     <div class="space-y-3">
@@ -20,6 +29,7 @@ defineProps<{
         :key="commentEl.id"
         :post-id="postId"
         :comment="commentEl"
+        @refresh="handleRefresh"
       />
     </div>
   </div>

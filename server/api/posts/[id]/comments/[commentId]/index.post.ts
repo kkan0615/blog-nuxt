@@ -4,7 +4,7 @@ import { comments } from '~/db/schema'
 import { eq } from 'drizzle-orm'
 
 export default defineEventHandler(async (event) => {
-  let commentId = getRouterParam(event, 'commentId')
+  const commentId = getRouterParam(event, 'commentId')
   const body = await readBody(event)
 
   if (!commentId || !Number(commentId) ) {
@@ -23,6 +23,13 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'NOT FOUND',
     })
   }
+  if (commentById.password !== body.password) {
+    throw createError({
+      statusCode: 402,
+      statusMessage: 'PASSWORD NOT MATCHED',
+    })
+  }
+
   const updated = await db.update(comments).set({
     updatedAt: new Date(),
     nickname: body.nickname,
