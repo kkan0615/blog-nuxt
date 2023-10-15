@@ -16,13 +16,7 @@ const handleRefresh = () => {
 
 </script>
 <template>
-  <div class="mt-4">
-    <client-only>
-      <blogs-detail-comment-form
-        :post-id="postId"
-        @success="handleRefresh"
-      />
-    </client-only>
+  <div class="mt-2">
     <div class="space-y-3">
       <blogs-detail-comment
         v-for="commentEl in comments"

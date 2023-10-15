@@ -12,9 +12,9 @@ export default defineEventHandler(async (event) => {
     })
   }
   // @ts-ignore: Object is possibly 'null'.
-  const ipAddress = event.headers.get('x-forwarded-for').split(',').pop() // || event.req.connection.remoteAddress
+  // console.log(event.req.connection.remoteAddress)
+  const ipAddress = '123.123' // event.headers.get('x-forwarded-for').split(',').pop() // || event.req.connection.remoteAddress
   const body = await readBody(event)
-  console.log(ipAddress, body)
   // @TODO: Add bcrypt
   const newComment: CommentInsert = {
     ...body,
@@ -23,6 +23,6 @@ export default defineEventHandler(async (event) => {
   }
 
   const inserted = await db.insert(comments).values(newComment)
-  console.log(inserted)
+  console.log(inserted, inserted)
   return inserted
 })

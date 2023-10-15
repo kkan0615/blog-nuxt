@@ -2,14 +2,14 @@
 import dayjs from 'dayjs'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList, PostDetail, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
+import { CommentSelect } from '~/types/models/comments'
+import { Toc } from '@nuxt/content/dist/runtime/types'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
 import Donation from '~/components/advertisements/Donation.vue'
 import Back from '~/components/btns/Back.vue'
 import BlogCard from '~/components/blogs/list/BlogCard.vue'
-import { CommentSelect } from '~/types/models/comments'
-import { Toc } from '@nuxt/content/dist/runtime/types'
 
 const runtimeConfig = useRuntimeConfig()
 const route = useRoute()
@@ -54,7 +54,8 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
 })
 
 const { data: comments, pending: commentsPending, error: commentsError, refresh: refreshComments }
-    = await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
+= await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
+// = useAsyncData('comments', async () => await $fetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`))
 
 // SEO
 useHead({
@@ -193,6 +194,18 @@ const handleRefreshComments = () => {
           :blog="blog"
         />
       </div>
+      <div class="flex">
+        <div class="text-lg font-bold">
+          Comments ({{ comments?.length || 0 }})
+        </div>
+      </div>
+      <!--      <client-only>-->
+      <blogs-detail-comment-form
+        v-if="!!page?._id"
+        :post-id="page._id"
+        @success="handleRefreshComments"
+      />
+      <!--      </client-only>-->
       <blogs-detail-comments
         v-if="!!page?._id"
         :post-id="page._id"

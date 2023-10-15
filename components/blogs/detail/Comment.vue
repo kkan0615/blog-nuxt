@@ -5,7 +5,7 @@ import { CommentSelect } from '~/types/models/comments'
 
 const props = defineProps<{
   postId: string
-  comment: CommentSelect
+  comment: CommentSelect & { children?: CommentSelect[] }
 }>()
 
 const emits = defineEmits<{
@@ -13,6 +13,7 @@ const emits = defineEmits<{
 }>()
 
 const isEdit = ref(false)
+const isReplyOpen = ref(false)
 
 const updatedAtFromNow = computed(() => {
   const now = dayjs()
@@ -39,18 +40,38 @@ const handleEditCancel = () => {
 const handleDeleteSuccess = () => {
   emits('refresh')
 }
+
+const handleReply = () => {
+  isReplyOpen.value = !isReplyOpen.value
+}
+
+const handleReplaySuccess = () => {
+  isReplyOpen.value = false
+  emits('refresh')
+}
+
+const handleReplyCancel = () => {
+  isReplyOpen.value = false
+}
+
+const handleRefresh = () => {
+  emits('refresh')
+}
 </script>
 <template>
-  <div class="border rounded p-3">
-    <client-only v-if="isEdit">
-      <blogs-detail-comment-form
-        :post-id="postId"
-        :comment="comment"
-        @success="handleEditSuccess"
-        @cancel="handleEditCancel"
-      />
-    </client-only>
-    <div v-else>
+  <client-only v-if="isEdit">
+    <blogs-detail-comment-form
+      :post-id="postId"
+      :comment="comment"
+      @success="handleEditSuccess"
+      @cancel="handleEditCancel"
+    />
+  </client-only>
+  <div
+    v-else
+    class="card bg-base-100"
+  >
+    <div class="card-body p-2">
       <div class="flex">
         <div class="text-lg">
           {{ comment.nickname }}
@@ -81,10 +102,31 @@ const handleDeleteSuccess = () => {
       <div>
         {{ comment.content }}
       </div>
-      <div>
+      <div class="flex">
         <div class="text-sm">
           {{ updatedAtFromNow }}
         </div>
+        <button
+          class="ml-2 btn btn-xs btn-ghost"
+          @click="handleReply"
+        >
+          Reply
+        </button>
+      </div>
+      <div class="pl-2">
+        <blogs-detail-comment-form
+          v-if="isReplyOpen"
+          :post-id="postId"
+          :parent-id="comment.id"
+          @success="handleReplaySuccess"
+          @cancel="handleReplyCancel"
+        />
+        <blogs-detail-comments
+          v-if="comment.children && !!comment.children.length"
+          :post-id="postId"
+          :comments="comment.children"
+          @refresh="handleRefresh"
+        />
       </div>
     </div>
   </div>

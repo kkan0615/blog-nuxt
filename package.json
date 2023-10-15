@@ -9,7 +9,7 @@
     "db-generate": "drizzle-kit generate:pg",
     "db-push": "drizzle-kit push:pg",
     "build-dev": "drizzle-kit generate:pg && nuxt build",
-    "build": "nuxt build",
+    "build": "drizzle-kit push:pg & nuxt build",
     "dev": "nuxt dev --port=3005",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -17,6 +17,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.6.0",
     "@nuxtjs/i18n": "8.0.0-rc.2",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.10",

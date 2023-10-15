@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/blogs/detail/DeleteCommentDialog.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Comment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/CommentForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/blogs/detail/Comments.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.delete.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/delete/index.post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/[commentId]/index.post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.get.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/posts/[id]/comments/index.post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +132,9 @@
       <workItem from="1697069343108" duration="1670000" />
       <workItem from="1697152559102" duration="1239000" />
       <workItem from="1697153928037" duration="1733000" />
-      <workItem from="1697155675282" duration="2534000" />
+      <workItem from="1697155675282" duration="3156000" />
+      <workItem from="1697328047188" duration="2658000" />
+      <workItem from="1697330795058" duration="6696000" />
     </task>
     <servers />
   </component>

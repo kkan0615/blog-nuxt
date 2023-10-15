@@ -4,7 +4,7 @@ import { comments } from '~/db/schema'
 import { and, desc, eq, isNull } from 'drizzle-orm'
 
 export default defineEventHandler(async (event) => {
-  const query = getQuery(event)
+  // const query = getQuery(event)
   const postId = getRouterParam(event, 'id')
   if (!postId) {
     throw createError({
@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
 
   const list = await db.select({
     id: comments.id,
+    commentId: comments.commentId,
     nickname: comments.nickname,
     content: comments.content,
     createdAt: comments.createdAt,
@@ -28,5 +29,12 @@ export default defineEventHandler(async (event) => {
       )
     )
     .orderBy(desc(comments.updatedAt))
-  return list
+  console.log(list)
+  const genTree = (array: any[], parentId: any) =>
+    array.filter(element => element.commentId === parentId)
+      .map(element => ({ ...element, children: genTree(array, element.id) }))
+
+  const treeList = genTree(list, null)
+  console.log(treeList)
+  return treeList
 })

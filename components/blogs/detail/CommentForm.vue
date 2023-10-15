@@ -8,6 +8,7 @@ import { Icon } from '@iconify/vue'
 
 const props = defineProps<{
   postId: string
+  parentId?: CommentSelect['commentId']
   comment?: CommentSelect
 }>()
 
@@ -63,7 +64,6 @@ const { value: isSecret } = useField('isSecret')
 const isVisiblePassword = ref(false)
 
 onMounted(() => {
-  console.log(props.comment)
   if (props.comment) {
     nickName.value = props.comment.nickname
     content.value = props.comment.content
@@ -82,6 +82,7 @@ const onSubmit = handleSubmit(async (values) => {
         nickname: values.nickName,
         password: values.password,
         content: values.content,
+        commentId: props.parentId,
       }
     })
   } else {
@@ -104,111 +105,116 @@ const handleCancel = () => {
 }
 </script>
 <template>
-  <form @submit.prevent="onSubmit">
-    <div
-      v-if="comment"
-      class="mb-2 font-bold flex"
+  <div class="card bg-base-100">
+    <form
+      class="card-body p-2"
+      @submit.prevent="onSubmit"
     >
-      <div>
-        Edit
-      </div>
-      <div class="mx-auto" />
       <div
-        class="tooltip"
-        data-tip="Cancel"
+        v-if="comment"
+        class="mb-2 font-bold flex"
       >
-        <button
-          class="btn btn-sm px-2 btn-ghost text-error"
-          type="button"
-          @click="handleCancel"
+        <div>
+          Edit
+        </div>
+        <div class="mx-auto" />
+        <div
+          class="tooltip"
+          data-tip="Cancel"
         >
-          <Icon
-            icon="mdi:close"
-            class="text-lg"
-          />
-        </button>
-      </div>
-    </div>
-    <div class="flex gap-x-2 mb-3 w-full">
-      <div class="form-control grow">
-        <input
-          v-model="nickName"
-          type="text"
-          placeholder="Name"
-          class="input input-bordered input-sm"
-          :class="{
-            'input-error': !!errors.nickName
-          }"
-        >
-        <label
-          v-if="!!errors.nickName"
-          class="label"
-        >
-          <span class="label-text-alt text-error">{{ errors.nickName }}</span>
-        </label>
-      </div>
-      <div class="form-control grow">
-        <div class="join">
-          <input
-            v-model="password"
-            :type="isVisiblePassword ? 'text' : 'password'"
-            class="input input-bordered input-sm join-item grow"
-            :class="{
-              'input-error': !!errors.password
-            }"
-          >
           <button
-            class="btn btn-sm join-item"
-            @click="isVisiblePassword = !isVisiblePassword"
+            class="btn btn-sm px-2 btn-ghost text-error"
+            type="button"
+            @click="handleCancel"
           >
             <Icon
-              v-if="isVisiblePassword"
-              icon="material-symbols:visibility-off"
-              class="text-lg"
-            />
-            <Icon
-              v-else
-              icon="material-symbols:visibility"
+              icon="mdi:close"
               class="text-lg"
             />
           </button>
         </div>
+      </div>
+      <div class="flex gap-x-2 mb-3 w-full">
+        <div class="form-control grow">
+          <input
+            v-model="nickName"
+            type="text"
+            placeholder="Name"
+            class="input input-bordered input-sm"
+            :class="{
+              'input-error': !!errors.nickName
+            }"
+          >
+          <label
+            v-if="!!errors.nickName"
+            class="label"
+          >
+            <span class="label-text-alt text-error">{{ errors.nickName }}</span>
+          </label>
+        </div>
+        <div class="form-control grow">
+          <div class="join">
+            <input
+              v-model="password"
+              :type="isVisiblePassword ? 'text' : 'password'"
+              class="input input-bordered input-sm join-item grow"
+              :class="{
+                'input-error': !!errors.password
+              }"
+            >
+            <button
+              class="btn btn-sm join-item"
+              @click="isVisiblePassword = !isVisiblePassword"
+            >
+              <Icon
+                v-if="isVisiblePassword"
+                icon="material-symbols:visibility-off"
+                class="text-lg"
+              />
+              <Icon
+                v-else
+                icon="material-symbols:visibility"
+                class="text-lg"
+              />
+            </button>
+          </div>
+          <label
+            v-if="!!errors.password"
+            class="label"
+          >
+            <span class="label-text-alt text-error">{{ errors.password }}</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-control">
+        <textarea
+          v-model="content"
+          class="textarea textarea-bordered"
+          rows="4"
+          :class="{
+            'textarea-error': !!errors.content
+          }"
+          placeholder="Content"
+        />
         <label
-          v-if="!!errors.password"
+          v-if="!!errors.content"
           class="label"
         >
-          <span class="label-text-alt text-error">{{ errors.password }}</span>
+          <span class="label-text-alt text-error">{{ errors.content }}</span>
         </label>
       </div>
-    </div>
-    <div class="form-control">
-      <textarea
-        v-model="content"
-        class="textarea textarea-bordered"
-        rows="4"
-        :class="{
-          'textarea-error': !!errors.content
-        }"
-        placeholder="Content"
-      />
-      <label
-        v-if="!!errors.content"
-        class="label"
-      >
-        <span class="label-text-alt text-error">{{ errors.content }}</span>
-      </label>
-    </div>
-    <div class="py-2">
-      <button
-        class="btn btn-sm btn-loading"
-        type="submit"
-      >
-        <span
-          v-if="isSubmitting"
-          class="loading loading-spinner loading-sm"
-        />
-        <span v-else>Submit</span>
-      </button>
-    </div>
-  </form>
+      <div class="py-2">
+        <button
+          class="btn btn-sm btn-loading"
+          type="submit"
+        >
+          <span
+            v-if="isSubmitting"
+            class="loading loading-spinner loading-sm"
+          />
+          <span v-else>Submit</span>
+        </button>
+      </div>
+    </form>
+  </div>
 </template>
