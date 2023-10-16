@@ -163,7 +163,8 @@ export default defineNuxtConfig({
     highlight: {
       theme: {
         default: 'github-light',
-        dark: 'material-theme-palenight',
+        'dark': 'github-dark',
+        'base-dark': 'github-dark',
       }
       ,
       preload: ['java'] },

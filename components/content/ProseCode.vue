@@ -12,6 +12,7 @@ interface Props {
 const props = defineProps<Props>()
 
 const { t } = useI18n()
+const colorMode = useColorMode()
 const { copy, copied, text } = useClipboard()
 
 const handleCopy = () => {
@@ -21,8 +22,14 @@ const handleCopy = () => {
 </script>
 
 <template>
-  <div class="max-w-full ">
-    <div class="code-container max-w-full overflow-x-auto rounded">
+  <div class="max-w-full">
+    <div
+      class="code-container max-w-full overflow-x-auto rounded bg-github-dark-code"
+      :class="{
+        'bg-github-dark-code': colorMode.value.includes('dark'),
+        'bg-white': colorMode.value.includes('light'),
+      }"
+    >
       <div class="flex items-center p-1 pl-3">
         <div class="mr-auto uppercase text-sm">
           {{ language }}
@@ -60,7 +67,7 @@ const handleCopy = () => {
 
 <style lang="scss">
 .code-container {
-  @apply bg-white dark:bg-[#292D3E];
+  //@apply bg-white dark:bg-[#24292e];
 
   pre {
     @apply my-0 p-0;

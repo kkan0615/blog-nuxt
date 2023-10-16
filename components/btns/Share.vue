@@ -11,8 +11,9 @@ const { t } = useI18n()
 const handleShare = async () => {
   if (navigator.share) {
     await navigator.share({
-      title: 'Share',
-      url: `${location.origin}${props.path}`
+      title: t('seo.title'),
+      url: `${location.origin}${props.path}`,
+
     })
   }
 }

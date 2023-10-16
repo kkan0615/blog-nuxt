@@ -11,6 +11,7 @@
 import './libs/dayjs'
 
 const appConfig = useAppConfig()
+const colorMode = useColorMode()
 const { t } = useI18n()
 
 const head = useLocaleHead({
@@ -19,12 +20,14 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
+const preference = computed(() => colorMode.preference)
 // SEO
 useHead({
   title: t('seo.title'),
   htmlAttrs: {
     'dir': head.value.htmlAttrs?.dir,
     'lang': head.value.htmlAttrs?.lang,
+    // 'class': colorMode.value.includes('light') ? 'light' : 'dark',
   },
   meta: [
     // Google search console
