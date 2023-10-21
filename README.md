@@ -29,21 +29,17 @@ yarn preview
 
 ## config
 ### .env
-```text
-NUXT_PUBLIC_GOOGLE_ANALYTICS_ID="GOOGLE ANALYTICS KEY"
-NUXT_PUBLIC_SITE_URL="PUBLIC URL"
-NUXT_PUBLIC_CA_PUB="GOOGLE CONSOLE KEY"
-NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
-```
+Check `.env.example` file in project directory.
 ### app.config.ts
-| Name                 | Description         |
-|----------------------|---------------------|
-| github               | github links        |
-| blogCategories       | blog categories     |
-| blogTags.programming | Programming tags    |
-| showcaseCategories   | Showcase categories |
-| showcaseTags         | Showcase tags       |
-
+| Name                 | Description             |
+|----------------------|-------------------------|
+| startedAt            | First day to start blog |
+| github               | github links            |
+| blogCategories       | blog categories         |
+| blogTags.programming | Programming tags        |
+| showcaseCategories   | Showcase categories     |
+| showcaseTags         | Showcase tags           |
+| profile              | Blog Owner profile      |
 
 ## Packages
 ### Nuxt Modules
@@ -54,9 +50,10 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [@vueuse/nuxt]() - vueuse module for Nuxt 3
 - [@nuxtjs/tailwindcss](https://tailwindcss.nuxt.dev/) - Tailwind module for Nuxt 3
 - [@nuxtjs/color-mode](https://color-mode.nuxtjs.org/) - Dark and Light mode with auto detection made easy with Nuxt
+- [@nuxt/devtools]() - Nuxt devtool. It's currently beta.
+- [nuxt-simple-robots]() - generate robots.txt
+- [nuxt-simple-sitemap]() - generate sitemap
 ### Relative with Content
-- [highlight.js]() - Add highlight for code section
-- [rehype-highlight]() - Add highlight for code section (not working)
 - [remark-reading-time](https://www.npmjs.com/package/remark-reading-time) - Add reading time
 ### ETC
 - [tailwindcss](https://tailwindcss.com/)= Tailwind css
@@ -71,13 +68,17 @@ NUXT_PUBLIC_AMZN_ASSOC_TARCKING_ID="AMAZON ASSOCIATE TRAKING ID"
 - [sitemap](https://github.com/ekalinin/sitemap.js) - Generate sitemap
 - ~~[vite-pwa](https://github.com/vite-pwa/nuxt)~~
 - [consola](https://github.com/unjs/consola) - Fix the error of consola
+- [drizzle-orm]() - ORM
+  - [drizzle-kit]()
 
 ## :file_folder: Folder structure
 See more detail to click the [Link](https://nuxt.com/docs/guide/directory-structure/nuxt)
 ```text
+├─ .github/                     # Files Relative wth Github (GitHub Actions)
 ├─ assets/                      # Assets (Videos, fonts ...)
 ├─ components/                  # Components
 ├─ content/                     # Content ( .md, .mdx ...)
+├─ db/                          # Drizzle ORM Database
 ├─ layouts/                     # Layouts
 ├─ locales/                     # i18n locales files
 ├─ node_modules/                # node modules
@@ -86,9 +87,12 @@ See more detail to click the [Link](https://nuxt.com/docs/guide/directory-struct
 ├─ public/                      # Assets (images ...)
 ├─ server/                      # Server files
 │  ├─ api/                      # API, File name will be path
-│  ├─ public/                   # Data for server
+│  ├─ public/                   # Public Data for server
 │  ├─ routes/                   # Generate page from serverside
-├─ .eslintrc.cjs                 # Eslint config.
+├─ stores/                      # Pinia store
+├─ styles/                      # CSS Files
+├─ types/                       # Typescript handler (Types, class, Interface, declare and constant variables ...)
+├─ .eslintrc.cjs                # Eslint config.
 ├─ .gitignore                   # gitignore.
 ├─ nitro.config.ts              # Nitro build config.
 ├─ app.vue                      # App vue file
