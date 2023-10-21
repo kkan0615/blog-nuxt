@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-10-20-17-02.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/btns/Share.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/btns/Share.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/ProseCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/ProseCode.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layouts/home/MenuItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/home/MenuItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +34,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/server/api/posts/[id]/comments/[commentId]&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/personalStudy/personal-blog-nuxt/content/blogs/en&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -51,9 +49,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
     </key>
@@ -131,7 +129,10 @@
       <workItem from="1697155675282" duration="3156000" />
       <workItem from="1697328047188" duration="2658000" />
       <workItem from="1697330795058" duration="6716000" />
-      <workItem from="1697404531304" duration="7750000" />
+      <workItem from="1697404531304" duration="7811000" />
+      <workItem from="1697588959506" duration="18000" />
+      <workItem from="1697848820277" duration="554000" />
+      <workItem from="1697849385438" duration="4009000" />
     </task>
     <servers />
   </component>

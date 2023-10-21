@@ -14,11 +14,11 @@ module.exports = {
       {
         'base-dark': {
           'primary': '#F2CB05',
-          'primary-content': '#F2F2F2',
+          // 'primary-content': '#F2F2F2',
           'secondary': '#F2B705',
-          'secondary-content': '#fff',
+          // 'secondary-content': '#fff',
           'accent': '#D92414',
-          'accent-content': '#fff',
+          // 'accent-content': '#fff',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
@@ -30,11 +30,11 @@ module.exports = {
       {
         'base-light': {
           'primary': '#F2CB05',
-          'primary-content': '#F2F2F2',
+          // 'primary-content': '#F2F2F2',
           'secondary': '#F2B705',
-          'secondary-content': '#fff',
+          // 'secondary-content': '#fff',
           'accent': '#D92414',
-          'accent-content': '#fff',
+          // 'accent-content': '#fff',
           'neutral': '#1c1917',
           'base-100': '#fff',
           'info': '#4586E8',

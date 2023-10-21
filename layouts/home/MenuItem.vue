@@ -11,7 +11,7 @@ defineProps<Props>()
 
 <template>
   <NuxtLink
-    class="capitalize font-black"
+    class="capitalize font-black hover:text-primary"
     :class="{
       'text-white': !isScrolled,
     }"
