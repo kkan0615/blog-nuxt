@@ -10,7 +10,7 @@ export const useLayoutStore = defineStore('layout', {
   }),
 
   getters: {
-    // double: (state) => state.n * 2,
+    //
   },
 
   actions: {

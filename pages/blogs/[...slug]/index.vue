@@ -53,9 +53,8 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
   return list.filter(blog => blog._id !== page.value?._id).slice(0, 3)
 })
 
-const { data: comments, pending: commentsPending, error: commentsError, refresh: refreshComments }
-= await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
-// = useAsyncData('comments', async () => await $fetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`))
+// const { data: comments, pending: commentsPending, error: commentsError, refresh: refreshComments }
+// = await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
 
 // SEO
 useHead({
@@ -108,9 +107,9 @@ router.beforeEach((guard) => {
   })
 })
 
-const handleRefreshComments = () => {
-  refreshComments()
-}
+// const handleRefreshComments = () => {
+//   refreshComments()
+// }
 
 </script>
 <template>
@@ -194,24 +193,24 @@ const handleRefreshComments = () => {
           :blog="blog"
         />
       </div>
-      <div class="flex">
-        <div class="text-lg font-bold">
-          Comments ({{ comments?.length || 0 }})
-        </div>
-      </div>
+      <!--      <div class="flex">-->
+      <!--        <div class="text-lg font-bold">-->
+      <!--          Comments ({{ comments?.length || 0 }})-->
+      <!--        </div>-->
+      <!--      </div>-->
       <!--      <client-only>-->
-      <blogs-detail-comment-form
-        v-if="!!page?._id"
-        :post-id="page._id"
-        @success="handleRefreshComments"
-      />
-      <!--      </client-only>-->
-      <blogs-detail-comments
-        v-if="!!page?._id"
-        :post-id="page._id"
-        :comments="comments || []"
-        @refresh="handleRefreshComments"
-      />
+      <!--      <blogs-detail-comment-form-->
+      <!--        v-if="!!page?._id"-->
+      <!--        :post-id="page._id"-->
+      <!--        @success="handleRefreshComments"-->
+      <!--      />-->
+      <!--      &lt;!&ndash;      </client-only>&ndash;&gt;-->
+      <!--      <blogs-detail-comments-->
+      <!--        v-if="!!page?._id"-->
+      <!--        :post-id="page._id"-->
+      <!--        :comments="comments || []"-->
+      <!--        @refresh="handleRefreshComments"-->
+      <!--      />-->
     </div>
     <div
       class="shrink sticky top-4 h-1 w-52 hidden lg:block"
