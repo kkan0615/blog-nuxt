@@ -8,7 +8,7 @@
   "scripts": {
     "db-generate": "drizzle-kit generate:pg",
     "db-push": "drizzle-kit push:pg",
-    "build-dev": "drizzle-kit generate:pg && nuxt build",
+    "build-dev": "drizzle-kit push:pg && nuxt build",
     "build": "drizzle-kit push:pg & nuxt build",
     "dev": "nuxt dev --port=3005",
     "generate": "nuxt generate",
