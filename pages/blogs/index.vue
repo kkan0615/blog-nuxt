@@ -121,37 +121,39 @@ const handleClickPagination = async (newPageNum: number) => {
 <template>
   <div class="max-w-7xl mx-auto">
     <Navbar @search="refresh" />
-    <div
-      v-if="data?.list && data?.list.length > 0"
-      class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:py-4 md:p-0"
-    >
-      <!--      <ContentList-->
-      <!--        v-slot="{ list }"-->
-      <!--        :query="query"-->
-      <!--      >-->
-      <BlogCard
-        v-for="blog in data?.list || []"
-        :key="blog._path"
-        :blog="blog"
-      />
-      <!--      </ContentList>-->
-    </div>
-    <div
-      v-else
-      class="flex justify-center items-center h-64"
-    >
-      <div class="text-4xl font-bold capitalize">
-        {{ t('commons.placeholders.noSearchData') }}
+    <div class="p-2 lg:p-4">
+      <div
+        v-if="data?.list && data?.list.length > 0"
+        class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-0 md:py-4 md:p-0"
+      >
+        <!--      <ContentList-->
+        <!--        v-slot="{ list }"-->
+        <!--        :query="query"-->
+        <!--      >-->
+        <BlogCard
+          v-for="blog in data?.list || []"
+          :key="blog._path"
+          :blog="blog"
+        />
+        <!--      </ContentList>-->
       </div>
-    </div>
-    <div class="mt-4 text-center">
-      <!--      <LazyAdvertisementsAmazonBanner />-->
-      <Pagination
-        v-if="data?.maxPagination"
-        :active-number="Number(route.query.page) || 1"
-        :max="data?.maxPagination"
-        @click="handleClickPagination"
-      />
+      <div
+        v-else
+        class="flex justify-center items-center h-64"
+      >
+        <div class="text-4xl font-bold capitalize">
+          {{ t('commons.placeholders.noSearchData') }}
+        </div>
+      </div>
+      <div class="mt-4 text-center">
+        <!--      <LazyAdvertisementsAmazonBanner />-->
+        <Pagination
+          v-if="data?.maxPagination"
+          :active-number="Number(route.query.page) || 1"
+          :max="data?.maxPagination"
+          @click="handleClickPagination"
+        />
+      </div>
     </div>
   </div>
 </template>

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-09-29-20-31.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/blogs/en/en-2023-10-20-17-02.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/blogs/en/en-2023-10-20-17-02.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,16 +49,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\personalStudy\personal-blog-nuxt\content\blogs\en" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\routes" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\layouts\hoemV2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]\delete" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]" />
+      <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
       <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\pages\v1" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\components\homes" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\public\assets\home" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -110,11 +109,45 @@
       <workItem from="1694825992390" duration="5224000" />
       <workItem from="1695426687469" duration="5454000" />
       <workItem from="1696033461011" duration="4954000" />
-      <workItem from="1696044909039" duration="912000" />
+      <workItem from="1696044909039" duration="986000" />
+      <workItem from="1696625119058" duration="6088000" />
+      <workItem from="1696635676236" duration="4328000" />
+      <workItem from="1696644461783" duration="3271000" />
+      <workItem from="1696738571165" duration="191000" />
+      <workItem from="1696807164398" duration="2306000" />
+      <workItem from="1696882581369" duration="3799000" />
+      <workItem from="1696902899740" duration="834000" />
+      <workItem from="1696904251302" duration="11000" />
+      <workItem from="1696980720623" duration="3203000" />
+      <workItem from="1696984710170" duration="4176000" />
+      <workItem from="1697062186190" duration="2499000" />
+      <workItem from="1697065888069" duration="3394000" />
+      <workItem from="1697069343108" duration="1670000" />
+      <workItem from="1697152559102" duration="1239000" />
+      <workItem from="1697153928037" duration="1733000" />
+      <workItem from="1697155675282" duration="3156000" />
+      <workItem from="1697328047188" duration="2658000" />
+      <workItem from="1697330795058" duration="6716000" />
+      <workItem from="1697404531304" duration="7811000" />
+      <workItem from="1697588959506" duration="18000" />
+      <workItem from="1697848820277" duration="554000" />
+      <workItem from="1697849385438" duration="4046000" />
+      <workItem from="1697859611830" duration="18000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

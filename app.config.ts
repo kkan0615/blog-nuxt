@@ -21,6 +21,7 @@ export default defineAppConfig({
       'HTML',
       'php',
       'laravel',
+      'algorithm',
     ]
   },
   showcaseCategories: [

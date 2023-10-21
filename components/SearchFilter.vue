@@ -10,18 +10,33 @@ const props = defineProps<{
 }>()
 
 const isCollapseOpen = ref(true)
-const modalRef = ref<HTMLDialogElement | undefined>(undefined)
+const modalRef = ref<HTMLDialogElement | null>(null)
 
 const toggleDialog = () => {
   if (modalRef.value)
     modalRef.value.open ? modalRef.value.close() : modalRef.value.showModal()
 }
+
+const openDialog = () => {
+  if (modalRef.value) modalRef.value.showModal()
+}
+
+const closeDialog = () => {
+  if (modalRef.value) modalRef.value.close()
+}
+
+defineExpose({
+  toggleDialog,
+  openDialog,
+  closeDialog,
+})
+
 </script>
 <template>
   <!-- Desktop -->
   <div
     :tabindex="0"
-    class="lg:grid hidden collapse collapse-arrow"
+    class="lg:grid hidden collapse collapse-arrow p-2 lg:p-4"
     :class="{
       'mb-4': !isCollapseOpen,
       'overflow-visible': isCollapseOpen,
@@ -42,7 +57,7 @@ const toggleDialog = () => {
   <!-- Mobile -->
   <!-- Open the modal using ID.showModal() method -->
   <button
-    class="block lg:hidden btn btn-primary inline-flex items-center my-4"
+    class="inline-flex lg:hidden btn btn-primary items-center my-4"
     @click="toggleDialog"
   >
     <Icon

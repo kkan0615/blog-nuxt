@@ -59,7 +59,8 @@
       "html": "HTML",
       "HTML": "HTML",
       "php": "php",
-      "laravel": "Laravel"
+      "laravel": "Laravel",
+      "algorithm": "알고리즘"
     },
     "showcaseCategories": {
       "example": "예제",

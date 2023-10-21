@@ -19,7 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.vueApp.use(VueGtag, {
     property: {
-      id: config.GOOGLE_ANALYTICS_ID
+      id: config.public.GOOGLE_ANALYTICS_ID
     }
   })
 

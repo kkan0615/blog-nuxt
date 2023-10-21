@@ -33,5 +33,8 @@ const refinedSrc = computed(() => {
     :alt="alt"
     :width="width"
     :height="height"
+    :style="{
+      width: width,
+    }"
   />
 </template>

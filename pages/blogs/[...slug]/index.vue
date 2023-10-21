@@ -2,6 +2,8 @@
 import dayjs from 'dayjs'
 import { useLayoutStore } from '~/stores/layout'
 import { PostList, PostDetail, DefaultNuxtImagePath, DefaultNuxtImageAlt, DefaultNuxtImageHeight, DefaultNuxtImageWidth } from '~/types/post'
+import { CommentSelect } from '~/types/models/comments'
+import { Toc } from '@nuxt/content/dist/runtime/types'
 import BottomNavbar from '~/components/blogs/detail/BottomNavbar.vue'
 import Tags from '~/components/blogs/detail/Tags.vue'
 import Categories from '~/components/blogs/detail/Categories.vue'
@@ -50,6 +52,10 @@ const { data: similarBlogs } = await useAsyncData('blogs', async () => {
 
   return list.filter(blog => blog._id !== page.value?._id).slice(0, 3)
 })
+
+const { data: comments, pending: commentsPending, error: commentsError, refresh: refreshComments }
+= await useFetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`)
+// = useAsyncData('comments', async () => await $fetch<CommentSelect[]>(`/api/posts/${page.value._id}/comments`))
 
 // SEO
 useHead({
@@ -102,9 +108,13 @@ router.beforeEach((guard) => {
   })
 })
 
+const handleRefreshComments = () => {
+  refreshComments()
+}
+
 </script>
 <template>
-  <div class="max-w-5xl mx-auto flex">
+  <div class="max-w-5xl mx-auto flex p-2 lg:p-4">
     <div class="grow w-1 px-0 md:px-12">
       <Back />
       <h1 class="text-3xl font-bold mb-4">
@@ -184,11 +194,31 @@ router.beforeEach((guard) => {
           :blog="blog"
         />
       </div>
+      <div class="flex">
+        <div class="text-lg font-bold">
+          Comments ({{ comments?.length || 0 }})
+        </div>
+      </div>
+      <!--      <client-only>-->
+      <blogs-detail-comment-form
+        v-if="!!page?._id"
+        :post-id="page._id"
+        @success="handleRefreshComments"
+      />
+      <!--      </client-only>-->
+      <blogs-detail-comments
+        v-if="!!page?._id"
+        :post-id="page._id"
+        :comments="comments || []"
+        @refresh="handleRefreshComments"
+      />
     </div>
-    <div class="shrink sticky top-4 h-1 w-52 hidden lg:block">
+    <div
+      class="shrink sticky top-4 h-1 w-52 hidden lg:block"
+    >
       <table-of-content
         article-id="article"
-        :toc="page.body.toc"
+        :toc="page?.body.toc || {} as Toc"
       />
     </div>
   </div>

@@ -25,7 +25,7 @@ const localePath = useLocalePath()
 const timeFromNow = computed(() => {
   const now = dayjs()
   const targetDate = dayjs(props.blog.date)
-  if (targetDate.diff(now, 'dates') < 7) {
+  if (now.diff(targetDate, 'days') < 7) {
     return targetDate.fromNow()
   }
   return targetDate.format('ll')

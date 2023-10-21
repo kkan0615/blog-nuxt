@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'label-color': 'rgb(108, 117, 125)'
+        'label-color': 'rgb(108, 117, 125)',
+        'github-dark-code': '#24292e',
       }
     },
   },
@@ -12,9 +13,12 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#F25C05',
-          'secondary': '#457324',
-          'accent': '#D93D04',
+          'primary': '#F2CB05',
+          // 'primary-content': '#F2F2F2',
+          'secondary': '#F2B705',
+          // 'secondary-content': '#fff',
+          'accent': '#D92414',
+          // 'accent-content': '#fff',
           'neutral': '#292433',
           'base-100': '#1E1E1E',
           'info': '#4586E8',
@@ -25,9 +29,12 @@ module.exports = {
       },
       {
         'base-light': {
-          'primary': '#F25C05',
-          'secondary': '#457324',
-          'accent': '#D93D04',
+          'primary': '#F2CB05',
+          // 'primary-content': '#F2F2F2',
+          'secondary': '#F2B705',
+          // 'secondary-content': '#fff',
+          'accent': '#D92414',
+          // 'accent-content': '#fff',
           'neutral': '#1c1917',
           'base-100': '#fff',
           'info': '#4586E8',
