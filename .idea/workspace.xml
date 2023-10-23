@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbee1e44-3852-4c41-bcc7-61d7e69b8e57" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/blogs/list/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/blog-header.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchFilter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/advertisements/Donation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/advertisements/Donation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/AboutMe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/AboutMe.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/Categories.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Categories.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/homes/Hero.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/homes/Hero.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/[...slug]/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores/layout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/stores/layout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/blogs/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/blogs/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +63,11 @@
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\personalStudy\personal-blog-nuxt\public\assets" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]\comments\[commentId]\delete" />
       <recent name="D:\personalStudy\personal-blog-nuxt\server\api\posts\[id]" />
       <recent name="D:\personalStudy\personal-blog-nuxt\public\logos" />
       <recent name="D:\personalStudy\personal-blog-nuxt\components\content" />
-      <recent name="D:\personalStudy\personal-blog-nuxt\pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -135,7 +141,8 @@
       <workItem from="1697848820277" duration="554000" />
       <workItem from="1697849385438" duration="4046000" />
       <workItem from="1697859611830" duration="456000" />
-      <workItem from="1697899114517" duration="2624000" />
+      <workItem from="1697899114517" duration="3355000" />
+      <workItem from="1698020741558" duration="3201000" />
     </task>
     <servers />
   </component>

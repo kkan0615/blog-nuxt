@@ -120,6 +120,7 @@ const handleClickPagination = async (newPageNum: number) => {
 
 <template>
   <div class="max-w-7xl mx-auto">
+    <blogs-list-header />
     <Navbar @search="refresh" />
     <div class="p-2 lg:p-4">
       <div

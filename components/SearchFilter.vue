@@ -57,7 +57,7 @@ defineExpose({
   <!-- Mobile -->
   <!-- Open the modal using ID.showModal() method -->
   <button
-    class="inline-flex lg:hidden btn btn-primary items-center my-4"
+    class="inline-flex lg:hidden btn btn-md btn-primary items-center my-4"
     @click="toggleDialog"
   >
     <Icon

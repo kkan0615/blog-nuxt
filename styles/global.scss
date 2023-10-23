@@ -42,7 +42,20 @@ swing-in-top-fwd {
   animation:swing-in-top-fwd 2s cubic-bezier(.175,.885,.32,1.275) both
 }
 
-
 dialog::backdrop {
   @apply bg-gray-900 opacity-80;
+}
+
+.label-required::after {
+  content: '*';
+  @apply text-red-500 ml-2;
+}
+
+.btn-md {
+  @apply h-10;
+  min-height: initial;
+}
+
+.input-md {
+  @apply h-10 min-h-fit;
 }

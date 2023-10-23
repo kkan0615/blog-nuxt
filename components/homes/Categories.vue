@@ -42,7 +42,7 @@ const appConfig = useAppConfig()
             }
           }"
         >
-          <button class="btn btn-outline rounded-full w-full normal-case">
+          <button class="btn btn-md btn-outline rounded-full w-full normal-case">
             {{ t(`labels.blogTags.${tagEl}`) }}
           </button>
         </NuxtLink>

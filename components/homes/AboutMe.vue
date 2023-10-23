@@ -27,7 +27,7 @@ const days = computed(() => dayjs().diff(dayjs(appConfig.startedAt), 'days').toL
         </p>
         <NuxtLink :to="localePath('/contact')">
           <button
-            class="btn btn-primary mt-4"
+            class="btn btn-md btn-primary mt-4"
             type="button"
           >
             Contact

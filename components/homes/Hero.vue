@@ -60,7 +60,7 @@ const moveToFirstSection = () => {
         </div>
         <div class="mt-12 text-center">
           <button
-            class="btn btn-outline btn-circle text-inherit"
+            class="btn w-14 h-12 btn-outline btn-circle text-inherit"
             :class="{
               'animate-bounce hover:animate-none': isPlaying,
             }"
