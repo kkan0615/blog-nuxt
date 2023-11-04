@@ -13,7 +13,7 @@ module.exports = {
     themes: [
       {
         'base-dark': {
-          'primary': '#F2CB05',
+          'primary': '#FCDC4A',
           // 'primary-content': '#F2F2F2',
           'secondary': '#F2B705',
           // 'secondary-content': '#fff',
@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         'base-light': {
-          'primary': '#F2CB05',
+          'primary': '#FCDC4A',
           // 'primary-content': '#F2F2F2',
           'secondary': '#F2B705',
           // 'secondary-content': '#fff',

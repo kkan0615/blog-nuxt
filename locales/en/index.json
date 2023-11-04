@@ -60,7 +60,8 @@
       "HTML": "HTML",
       "php": "php",
       "laravel": "Laravel",
-      "algorithm": "Algorithm"
+      "algorithm": "Algorithm",
+      "tech": "tech"
     },
     "showcaseCategories": {
       "example": "example",
@@ -127,6 +128,10 @@
       }
     },
     "contact": {
+      "header" : {
+        "title": "Contact",
+        "description": "Contact with me"
+      },
       "profileCard": {
         "title": "Profile",
         "description": "Click one of icons to contact with me"
@@ -140,6 +145,10 @@
     "blogs": {
       "slug": {
         "posted": "posted"
+      },
+      "header" : {
+        "title": "Blogs",
+        "description": "Look around all posts"
       }
     }
   }
