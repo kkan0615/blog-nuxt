@@ -60,7 +60,8 @@
       "HTML": "HTML",
       "php": "php",
       "laravel": "Laravel",
-      "algorithm": "알고리즘"
+      "algorithm": "알고리즘",
+      "tech": "기술"
     },
     "showcaseCategories": {
       "example": "예제",
@@ -127,6 +128,10 @@
       }
     },
     "contact": {
+      "header" : {
+        "title": "연락",
+        "description": "저랑 다양한 방법으로 연락해보세요."
+      },
       "profileCard": {
         "title": "프로필",
         "description": "아래 아이콘 중 하나를 클릭하여 저랑 연락 할 수 있습니다."
@@ -140,6 +145,10 @@
     "blogs": {
       "slug": {
         "posted": "포스팅"
+      },
+      "header" : {
+        "title": "블로그",
+        "description": "Look around all posts"
       }
     }
   }

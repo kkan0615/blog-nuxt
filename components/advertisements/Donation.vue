@@ -12,7 +12,7 @@ const toggleOpen = () => {
 </script>
 <template>
   <button
-    class="btn w-full btn-outline hover:bg-red-500 hover:text-white group"
+    class="btn btn-md w-full btn-outline hover:bg-red-500 hover:text-white group"
     @click="toggleOpen"
   >
     <Icon

@@ -48,8 +48,11 @@ layoutStore.setHeaderTitle(t('menus.contact'))
 
 </script>
 <template>
-  <div class="max-w-7xl mx-auto p-2 lg:p-4">
-    <ProfileCard />
+  <div>
+    <ContactsHeader />
+    <div class="max-w-7xl mx-auto p-2 lg:p-4">
+      <ProfileCard />
     <!--    <RequestCard />-->
+    </div>
   </div>
 </template>

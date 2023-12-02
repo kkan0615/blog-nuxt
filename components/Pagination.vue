@@ -43,11 +43,6 @@ const handleGo = () => {
   }
   inputError.value = ''
   handleClick(enterNum.value)
-  // Scroll to top
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
 }
 
 </script>
