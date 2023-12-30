@@ -1,3 +1,15 @@
 {
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "typescript", "tsx", "jsx"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,15 +1,12 @@
 <script setup lang="ts">
 </script>
 <template>
-  <div>
+  <UContainer>
     Welcome Home
     <UButton
-      icon="i-heroicons-moon-20-solid"
+      icon="i-heroicons-moon"
       label="Test"
       color="primary"
     />
-    <div class="">
-      <UtilsThemeChanger />
-    </div>
-  </div>
+  </UContainer>
 </template>
