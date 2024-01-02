@@ -1,6 +1,9 @@
 <template>
-  <div>
+  <div class="min-h-screen w-full flex flex-col">
     <LayoutsHeader />
-    <slot />
+    <main class="mt-14 py-3 grow">
+      <slot />
+    </main>
+    <LayoutsFooter />
   </div>
 </template>

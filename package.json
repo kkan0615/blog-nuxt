@@ -10,13 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.163",
+    "@nuxt/content": "^2.10.0",
+    "@nuxt/ui": "^2.11.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/i18n": "^8.0.0",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.0",
     "vue": "^3.4.0",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.11.1"
+    "@nuxt/image": "^1.1.0"
   }
 }

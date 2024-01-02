@@ -2,11 +2,7 @@
 </script>
 <template>
   <UContainer>
-    Welcome Home
-    <UButton
-      icon="i-heroicons-moon"
-      label="Test"
-      color="primary"
-    />
+    <p>{{ $t('welcome') }}</p>
+    <UButton icon="i-heroicons-rocket-launch" label="Get Started" />
   </UContainer>
 </template>
