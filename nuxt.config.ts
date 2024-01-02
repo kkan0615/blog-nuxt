@@ -26,6 +26,9 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: false,
+    markdown: {
+      remarkPlugins: ['remark-reading-time'],
+    },
   },
   devtools: { enabled: true },
   // devServer: {

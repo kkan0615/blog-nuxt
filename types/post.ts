@@ -5,4 +5,10 @@ export interface CustomParsedContent extends ParsedContent {
   description: string
   categories: string[]
   tags: string[]
+  readingTime: {
+    minutes: number
+    text: string
+    time: number
+    words: number
+  }
 }
