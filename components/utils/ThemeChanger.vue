@@ -43,26 +43,20 @@ const changeColorMode = (newColorMode: string) => {
 </script>
 <template>
   <UPopover mode="hover">
-    <UButton
-      color="white"
-      :icon="iconMap[colorMode.preference]"
-      square
-      variants="ghost"
-    />
+    <UButton color="white" :icon="iconMap[colorMode.preference]" square variants="ghost" />
     <template #panel>
-      <div class="py-2 w-40">
-        <ul class="flex flex-col">
-          <UButton
-            v-for="itemEl in items"
-            :key="itemEl.label"
-            class="w-full hover:bg-gray-100 hover:dark:bg-gray-800"
-            :color="itemEl.value === colorMode.preference ? 'primary' : 'white'"
-            variant="ghost"
-            :icon="itemEl.icon"
-            :label="itemEl.label"
-            @click="itemEl.click"
-          />
-        </ul>
+      <div class="w-40">
+        <UiList>
+          <!-- <UButton v-for="itemEl in items" :key="itemEl.label" class="w-full hover:bg-gray-100 hover:dark:bg-gray-800"
+            :color="itemEl.value === colorMode.preference ? 'primary' : 'white'" variant="ghost" :icon="itemEl.icon"
+            :label="itemEl.label" @click="itemEl.click" /> -->
+
+          <UiListItem class="flex items-center cursor-pointer" v-for="itemEl in items" :key="itemEl.label"
+            :isActive="itemEl.value === colorMode.preference" @click="itemEl.click">
+            <UIcon class="mr-3" :name="itemEl.icon"></UIcon>
+            {{ itemEl.label }}
+          </UiListItem>
+        </UiList>
       </div>
     </template>
   </UPopover>

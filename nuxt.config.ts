@@ -5,9 +5,10 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image',
     '@nuxt/content',
+    '@nuxtjs/google-fonts',
   ],
   ui: {
-    icons: ['heroicons', 'simple-icons']
+    icons: 'all',
   },
   i18n: {
     strategy: 'prefix_and_default',
@@ -30,7 +31,13 @@ export default defineNuxtConfig({
       remarkPlugins: ['remark-reading-time'],
     },
   },
-  devtools: { enabled: true },
+  googleFonts: {
+    families: {
+      Roboto: true,
+      'Noto Sans': true,
+    }
+  }
+  // devtools: { enabled: true },
   // devServer: {
   //   port: 3005
   // },

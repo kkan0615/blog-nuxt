@@ -1,16 +1,36 @@
 {
   "root": true,
-  "extends": ["@nuxtjs/eslint-config-typescript"],
+  "extends": [
+    "@nuxtjs/eslint-config-typescript"
+  ],
   "rules": {
     "vue/multi-word-component-names": "off",
     "vue/no-multiple-template-root": "off",
     // For Coding
-    "quotes": ["error", "single"], // "" => ""
-    "semi": ["error", "never"], // semicolon
+    "quotes": [
+      "error",
+      "single"
+    ], // "" => ""
+    "semi": [
+      "error",
+      "never"
+    ], // semicolon
     "no-empty": "error", // No empty in bracket
-    "indent": [ "error", 2, { "SwitchCase" : 1 } ],
-    "comma-dangle": ["error", "only-multiline"], // Ex) { a, b, }
-    "object-curly-spacing": ["error", "always"], // Space between { },
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ], // Ex) { a, b, }
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ], // Space between { },
     "no-multi-spaces": "error", // Ex) var a =  1 => var a = 1
     "no-unused-vars": "off",
     "space-before-blocks": "error", // Ex) if (a){ => if (a) {
