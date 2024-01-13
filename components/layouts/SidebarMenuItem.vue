@@ -6,8 +6,8 @@ const props = defineProps<{
   activeKey: string
 }>()
 
-const localePath = useLocalePath()
 const route = useRoute()
+const localePath = useLocalePath()
 
 const isActive = computed(() => {
   if (!route.name?.toString()) { return false }
@@ -20,13 +20,17 @@ const isActive = computed(() => {
 </script>
 <template>
   <li
-    class="text-sm/6 font-semibold flex items-center gap-1 hover:text-primary capitalize"
-    :class="{
-      'text-primary': isActive,
-    }"
+    class="text-lg flex items-center gap-1 hover:text-primary capitalize py-1.5"
   >
-    <NuxtLink :to="localePath(to)">
-      <slot />
-    </NuxtLink>
+    <div
+      class="px-3"
+      :class="{
+        'border-l-4 border-primary-500 text-primary !px-1.5': isActive,
+      }"
+    >
+      <NuxtLink :to="localePath(to)">
+        <slot />
+      </NuxtLink>
+    </div>
   </li>
 </template>

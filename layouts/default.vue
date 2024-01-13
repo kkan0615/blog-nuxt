@@ -1,7 +1,8 @@
 <template>
   <div class="min-h-screen w-full flex flex-col">
     <LayoutsHeader />
-    <main class="mt-14 py-3 grow">
+    <LayoutsSidebar />
+    <main class="grow">
       <slot />
     </main>
     <LayoutsFooter />

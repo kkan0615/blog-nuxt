@@ -1,5 +1,8 @@
+<script setup lang="ts">
+const route = useRoute()
+</script>
 <template>
-  <div>
-    Slug:
-  </div>
+  <UContainer class="mt-14 py-3">
+    Slug: {{ route.params.slug }}
+  </UContainer>
 </template>

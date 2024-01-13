@@ -6,7 +6,7 @@ console.log(data.value)
 
 </script>
 <template>
-  <UContainer>
+  <UContainer class="mt-14 py-3">
     <div class="flex space-x-2">
       <div class="flex-1 grid grid-cols-3">
         <CardsBlog
