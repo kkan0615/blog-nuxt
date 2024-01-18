@@ -7,7 +7,7 @@ const appConfig = useAppConfig()
       <h3>Test</h3>
       <div class="ml-auto flex items-center">
         <UTooltip text="Repository">
-          <NuxtLink :to="appConfig.links.github" target="_blank">
+          <NuxtLink :to="appConfig.links.repository" target="_blank">
             <UButton
               icon="i-simple-icons-github"
               size="sm"

@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import type { CustomParsedContent } from '@/types/post'
 
+const { t } = useI18n()
 const { data } = await useAsyncData('blogs', async () => await queryContent<CustomParsedContent>('blogs/').find())
-console.log(data.value)
+
+useSeoMeta({
+  title: t('seo.blogs.title')
+})
 
 </script>
 <template>

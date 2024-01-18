@@ -3,10 +3,14 @@ export default defineAppConfig({
     primary: 'blue',
     gray: 'stone'
   },
+  seo: {
+    title: 'Youngjin'
+  },
   info: {
     name: 'Youngjin Blog'
   },
   links: {
-    github: 'https://github.com/kkan0615/blog-nuxt',
+    repository: 'https://github.com/kkan0615/blog-nuxt',
+    github: 'https://github.com/kkan0615',
   }
 })

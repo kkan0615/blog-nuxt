@@ -8,22 +8,26 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
   ],
   ui: {
-    icons: 'all',
+    icons: ['simple-icons', 'heroicons'],
   },
   i18n: {
-    strategy: 'prefix_and_default',
-    defaultLocale: 'en',
     locales: [
       {
         code: 'en',
-        name: 'English'
+        name: 'English',
+        file: 'en.ts'
       },
       {
         code: 'ko',
-        name: '한국어'
+        name: '한국어',
+        file: 'ko.ts',
       },
     ],
-    vueI18n: './i18n.config.ts' // if you are using custom path, default
+    strategy: 'prefix_and_default',
+    lazy: true,
+    langDir: 'locales',
+    defaultLocale: 'en',
+    // vueI18n: './i18n.config.ts' // if you are using custom path, default
   },
   content: {
     documentDriven: false,

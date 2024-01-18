@@ -51,9 +51,14 @@ const changeColorMode = (newColorMode: string) => {
             :color="itemEl.value === colorMode.preference ? 'primary' : 'white'" variant="ghost" :icon="itemEl.icon"
             :label="itemEl.label" @click="itemEl.click" /> -->
 
-          <UiListItem class="flex items-center cursor-pointer" v-for="itemEl in items" :key="itemEl.label"
-            :isActive="itemEl.value === colorMode.preference" @click="itemEl.click">
-            <UIcon class="mr-3" :name="itemEl.icon"></UIcon>
+          <UiListItem
+            v-for="itemEl in items"
+            :key="itemEl.label"
+            class="flex items-center cursor-pointer"
+            :is-active="itemEl.value === colorMode.preference"
+            @click="itemEl.click"
+          >
+            <UIcon class="mr-3" :name="itemEl.icon" />
             {{ itemEl.label }}
           </UiListItem>
         </UiList>
