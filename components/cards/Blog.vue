@@ -51,7 +51,7 @@ const publishedAt = computed(() => props.content.date)
       </div>
       <hr>
       <div class="p-3 flex justify-end">
-        Actions
+        <UtilsShare :url="content._path || ''" />
       </div>
     </div>
   </NuxtLink>

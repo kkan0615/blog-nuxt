@@ -20,6 +20,10 @@ export default defineI18nLocale((locale) => {
         Throughout my career, I have been involved in the complete software development life cycle, from conceptualization and system architecture to coding, testing, and deployment.
       `
     },
+    labels: {
+      more: 'more',
+      categories: 'categories',
+    },
     welcome: 'Welcome',
   }
 })

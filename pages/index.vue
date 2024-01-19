@@ -8,6 +8,7 @@ useSeoMeta({
 <template>
   <HomesHero />
   <HomesAboutMe />
+  <HomesBlogs />
   <UContainer>
     <p>{{ $t('welcome') }}</p>
     <UButton icon="i-heroicons-rocket-launch" label="Get Started" />

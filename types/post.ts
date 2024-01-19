@@ -12,3 +12,5 @@ export interface CustomParsedContent extends ParsedContent {
     words: number
   }
 }
+
+export const DefaultLimit = 20
