@@ -13,6 +13,11 @@ Head 1
 Head 2
 ### Heading 3
 Head 3
+#### Heading 4
+Head 4
+##### Heading 5
+Head 5
+
 Some text
 
 # List

@@ -4,7 +4,7 @@ const appConfig = useAppConfig()
 <template>
   <footer class="py-3 border-t-2">
     <UContainer class="flex items-center">
-      <h3>Test</h3>
+      <h3>Free open source project made by Youngjin</h3>
       <div class="ml-auto flex items-center">
         <UTooltip text="Repository">
           <NuxtLink :to="appConfig.links.repository" target="_blank">

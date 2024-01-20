@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import type { ButtonSize } from '@nuxt/ui/dist/runtime/types'
 import { useClipboard } from '@vueuse/core'
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   url: string
-}>()
+  size: ButtonSize
+}>(), {
+  size: 'sm'
+})
 
 const { copy, isSupported } = useClipboard()
 
@@ -20,6 +24,7 @@ const handleCopyURL = async () => {
         icon="i-lucide-link"
         color="white"
         variant="outline"
+        :size="size"
         @click.prevent.stop="handleCopyURL"
       />
     </UTooltip>

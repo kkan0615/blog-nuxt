@@ -31,7 +31,16 @@ export default defineNuxtConfig({
   },
   content: {
     documentDriven: false,
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
+    },
     markdown: {
+      toc: {
+        depth: 5, searchDepth: 5
+      },
       remarkPlugins: ['remark-reading-time'],
     },
   },
@@ -40,7 +49,7 @@ export default defineNuxtConfig({
       Roboto: true,
       'Noto Sans': true,
     }
-  }
+  },
   // devtools: { enabled: true },
   // devServer: {
   //   port: 3005
