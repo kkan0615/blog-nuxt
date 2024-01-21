@@ -13,4 +13,4 @@ export interface CustomParsedContent extends ParsedContent {
   }
 }
 
-export const DefaultLimit = 20
+export const DefaultLimit = 18 // (6 * 3)

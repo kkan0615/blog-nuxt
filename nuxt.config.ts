@@ -1,12 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/i18n',
     '@nuxt/image',
-    '@nuxt/content',
     '@nuxtjs/google-fonts',
   ],
+  css: ['~/assets/scss/main.scss'],
   ui: {
     icons: ['simple-icons', 'heroicons', 'lucide'],
   },
@@ -30,12 +31,15 @@ export default defineNuxtConfig({
     // vueI18n: './i18n.config.ts' // if you are using custom path, default
   },
   content: {
-    documentDriven: false,
+    // documentDriven: false,
     highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark',
-      },
+      // theme: {
+      //   default: 'github-light',
+      //   // light: 'github-light',
+      //   dark: 'github-dark',
+      // },
+      theme: 'github-dark',
+      // preload: ['js', 'ts', 'tex', 'md', 'yaml', 'javascript', 'typescript', 'css', 'scss', 'sass', 'html', 'vue', 'vue-html'],
     },
     markdown: {
       toc: {
@@ -45,6 +49,8 @@ export default defineNuxtConfig({
     },
   },
   googleFonts: {
+    display: 'swap',
+    download: true,
     families: {
       Roboto: true,
       'Noto Sans': true,

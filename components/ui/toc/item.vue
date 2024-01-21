@@ -11,7 +11,11 @@ defineProps<{
     v-for="linkEl in links"
     :key="linkEl.id"
   >
-    {{ linkEl.text }}
+    <NuxtLink
+      :to="`#${linkEl.id}`"
+    >
+      {{ linkEl.text }}
+    </NuxtLink>
     <ul
       v-if="linkEl.children"
       class="pl-3"

@@ -10,13 +10,18 @@ const publishedAt = computed(() => props.content.date)
 </script>
 <template>
   <NuxtLink
+    class="h-full"
     :to="localePath(content._path || '')"
   >
-    <div class="border rounded-2xl">
-      <div class="aspect-video">
-        <img src="https://picsum.photos/300/200" :alt="content.title" class="w-full rounded-t-2xl">
+    <div class="h-full flex flex-col border rounded-2xl">
+      <div class="aspect-video overflow-hidden rounded-t-2xl">
+        <img
+          src="https://picsum.photos/300/200"
+          :alt="content.title"
+          class="w-full h-full hover:scale-125 transition duration-200 cursor-pointer"
+        >
       </div>
-      <div class="p-3">
+      <div class="p-3 flex-1 flex flex-col">
         <div class="space-x-2 mb-1">
           <UBadge
             v-for="categoryEl in content.categories"
@@ -40,7 +45,7 @@ const publishedAt = computed(() => props.content.date)
         <p class="line-clamp-2 mb-3">
           {{ content.description }}
         </p>
-        <div class="w-full flex items-center justify-between text-sm">
+        <div class="mt-auto w-full flex items-center justify-between text-sm">
           <div class="opacity-75">
             {{ publishedAt }}
           </div>

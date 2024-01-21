@@ -31,6 +31,16 @@ const test = 'abc'
 console.log(test)
 ```
 
+## Code 2
+```javascript
+export default () => {
+  console.log('Code block')
+}
+```
+## Inline
+Inline `code` block
+
+
 # Image
 ![random image 1](https://picsum.photos/1280/720)
 
