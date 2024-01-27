@@ -9,22 +9,14 @@ useSeoMeta({
 })
 </script>
 <template>
-  <UContainer class="mt-14 py-3 lg:flex">
+  <UContainer
+    v-if="page"
+    class="mt-14 py-3 lg:flex"
+  >
     <div class="lg:flex-1 lg:mr-10">
-      <div class="mb-8">
-        <h1 class="text-5xl font-bold mb-1">
-          {{ page?.title }}
-        </h1>
-        <div class="flex">
-          <div class="text-stone-500">
-            {{ page?.date }}
-          </div>
-          <div class="mx-auto" />
-          <div class="text-stone-500">
-            {{ page?.readingTime.text }}
-          </div>
-        </div>
-      </div>
+      <BlogsHeader
+        :content="page"
+      />
       <article
         v-if="page"
         class="prose max-w-full"
@@ -42,7 +34,7 @@ useSeoMeta({
       />
     </div>
     <div class="lg:block hidden w-60">
-      <div class="sticky top-14">
+      <div class="sticky top-16">
         <UiToc
           :toc="page?.body?.toc"
         />

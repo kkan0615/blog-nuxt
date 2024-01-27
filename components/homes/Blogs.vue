@@ -9,7 +9,7 @@ const { data } = await useAsyncData('blogs', async () => await queryContent<Cust
   <section class="py-10 lg:py-20">
     <UContainer>
       <div class="flex justify-between">
-        <h2 class="text-3xl font-bold lg:mb-8 mb-4 ">
+        <h2 class="text-3xl font-bold lg:mb-8 mb-4">
           Recent posts
         </h2>
         <NuxtLink :to="localePath('/blogs')">
@@ -26,7 +26,7 @@ const { data } = await useAsyncData('blogs', async () => await queryContent<Cust
           </UTooltip>
         </NuxtLink>
       </div>
-      <div class="grid grid-cols-3">
+      <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
         <CardsBlog
           v-for="dataEl in data"
           :key="dataEl._id"

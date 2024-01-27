@@ -15,11 +15,18 @@ const publishedAt = computed(() => props.content.date)
   >
     <div class="h-full flex flex-col border rounded-2xl">
       <div class="aspect-video overflow-hidden rounded-t-2xl">
-        <img
-          src="https://picsum.photos/300/200"
-          :alt="content.title"
+        <NuxtImg
+          v-if="content.image.path"
           class="w-full h-full hover:scale-125 transition duration-200 cursor-pointer"
-        >
+          :alt="content.title"
+          :src="content.image.path"
+        />
+        <NuxtImg
+          v-else
+          class="w-full h-full hover:scale-125 transition duration-200 cursor-pointer"
+          :alt="content.title"
+          src="/blogs/no-image.jpg"
+        />
       </div>
       <div class="p-3 flex-1 flex flex-col">
         <div class="space-x-2 mb-1">

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { QueryBuilderWhere } from '@nuxt/content/dist/runtime/types'
 import type { CustomParsedContent } from '@/types/post'
 import { DefaultLimit } from '@/types/post'
 
@@ -6,18 +7,31 @@ const { t } = useI18n()
 const router = useRouter()
 const route = useRoute()
 
-const { data: contents, refresh } = await useAsyncData('contents', async () =>
-  await queryContent<CustomParsedContent>('blogs/')
+const { data: contents, refresh } = await useAsyncData('contents', async () => {
+  // @TODO: Merge duplicate where
+  const queryWhere: QueryBuilderWhere = {
+    categories: { $contains: route.query.category as string },
+    tags: { $contains: route.query.tag as string },
+  }
+  return await queryContent<CustomParsedContent>('blogs/')
+    .where(queryWhere)
     .sort({
-      // updatedAt: '',
+      date: -1
     })
     .limit(DefaultLimit)
     .skip(((Number(route.query.page) || 1) - 1) * DefaultLimit)
     .find()
-)
-const { data: counts } = await useAsyncData('counts', async () => (
-  (await queryContent<CustomParsedContent>('blogs/').only(['_id']).count())
-))
+})
+const { data: counts } = await useAsyncData('counts', async () => {
+  // @TODO: Merge duplicate where
+  const queryWhere: QueryBuilderWhere = {
+    categories: { $contains: route.query.category as string },
+    tags: { $contains: route.query.tag as string },
+  }
+  return await queryContent<CustomParsedContent>('blogs/')
+    .where(queryWhere)
+    .only(['_id']).count()
+})
 
 const { data: categories } = await useAsyncData('categories', async () => (
   [...new Set((await queryContent<CustomParsedContent>('blogs/').only(['categories']).find()).map(el => el.categories).flat())]
@@ -41,7 +55,7 @@ const handleUpdatePagination = async (newPage: number) => {
 </script>
 <template>
   <UContainer class="mt-14 py-3">
-    <div class="lg:flex lg:space-x-2">
+    <div class="lg:flex lg:space-x-3">
       <div class="lg:flex-1">
         <h3 class="font-bold mb-4">
           Total: <span class="text-primary-500">{{ counts }}</span>

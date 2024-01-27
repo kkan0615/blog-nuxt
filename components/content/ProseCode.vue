@@ -13,38 +13,35 @@ const props = defineProps<Props>()
 const { copy, copied } = useClipboard()
 
 const handleCopy = () => {
-  console.log(props)
-
   copy(props.code)
 }
 
 </script>
 
 <template>
-  <div class="max-w-full">
+  <div class="max-w-full py-2 text-white bg-[#24292e] rounded-lg">
     <div class="code-container max-w-full overflow-x-auto rounded">
-      <div class="flex items-center">
-        <div class="mr-auto uppercase text-sm">
+      <div class="flex items-center px-4 mb-1">
+        <div class="mr-auto uppercase text-xs">
           {{ language }}
         </div>
         <UTooltip text="Copy">
           <UButton
             :icon="copied ? 'i-heroicons-check-16-solid' : 'i-heroicons-clipboard'"
+            size="xs"
             color="white"
             variant="ghost"
             @click="handleCopy"
           />
         </UTooltip>
       </div>
-      <div>
-        <slot />
-      </div>
+      <slot />
     </div>
   </div>
 </template>
 
 <style>
 .code-container pre {
-  @apply my-0;
+  @apply my-0 py-0;
 }
 </style>
