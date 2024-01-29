@@ -14,7 +14,8 @@ defineProps<{
   >
     <NuxtLink
       :class="{
-        'text-primary': linkEl.id === activeId
+        'text-stone-500': linkEl.id !== activeId,
+        'text-primary font-semibold': linkEl.id === activeId,
       }"
       :to="`#${linkEl.id}`"
     >

@@ -11,7 +11,11 @@ export const Menus: Menu[] = [
     to: '/blogs'
   },
   {
-    key: 'aboutMe',
+    key: 'about-me',
     to: '/about-me'
   },
+  // {
+  //   key: 'thanks',
+  //   to: '/thanks'
+  // },
 ]

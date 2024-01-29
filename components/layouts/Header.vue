@@ -28,9 +28,7 @@ const localePath = useLocalePath()
           :key="menuEl.key"
           :to="menuEl.to"
           :active-key="menuEl.key"
-        >
-          {{ menuEl.key }}
-        </LayoutsMenuItem>
+        />
       </ul>
       <div class="flex items-center space-x-2">
         <UtilsThemeChanger />

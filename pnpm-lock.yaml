@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  change-case:
+    specifier: ^5.4.2
+    version: 5.4.2
   tailwindcss-animated:
     specifier: ^1.0.1
     version: 1.0.1(tailwindcss@3.4.1)
@@ -24,7 +27,7 @@ devDependencies:
     version: 1.0.0-rc.3(rollup@4.9.5)
   '@nuxt/ui':
     specifier: ^2.12.3
-    version: 2.12.3(nuxt@3.9.3)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)
+    version: 2.12.3(change-case@5.4.2)(nuxt@3.9.3)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)
   '@nuxtjs/eslint-config-typescript':
     specifier: ^12.1.0
     version: 12.1.0(eslint@8.56.0)(typescript@5.3.3)
@@ -1622,7 +1625,7 @@ packages:
     resolution: {integrity: sha512-5gc02Pu1HycOVUWJ8aYsWeeXcSTPe8iX8+KIrhyEtEoOSkY0eMBuo0ssljB8wALuEmepv31DlYe5gpiRwkjESA==}
     dev: true
 
-  /@nuxt/ui@2.12.3(nuxt@3.9.3)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15):
+  /@nuxt/ui@2.12.3(change-case@5.4.2)(nuxt@3.9.3)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15):
     resolution: {integrity: sha512-F/eoqU8pTBVCdJ1QHvWKZjXHVNNV6Q1SCgPRWJyNnfbnIi97a50/aiHVJZfvr0zp3FQKa/ogWTITF5Vxss5TtA==}
     engines: {node: '>=v16.20.2'}
     dependencies:
@@ -1639,7 +1642,7 @@ packages:
       '@tailwindcss/forms': 0.5.7(tailwindcss@3.4.1)
       '@tailwindcss/typography': 0.5.10(tailwindcss@3.4.1)
       '@vueuse/core': 10.7.2(vue@3.4.15)
-      '@vueuse/integrations': 10.7.2(fuse.js@6.6.2)(vue@3.4.15)
+      '@vueuse/integrations': 10.7.2(change-case@5.4.2)(fuse.js@6.6.2)(vue@3.4.15)
       '@vueuse/math': 10.7.2(vue@3.4.15)
       defu: 6.1.4
       fuse.js: 6.6.2
@@ -3001,7 +3004,7 @@ packages:
       vue: 3.4.15(typescript@5.3.3)
     dev: true
 
-  /@vueuse/integrations@10.7.2(fuse.js@6.6.2)(vue@3.4.15):
+  /@vueuse/integrations@10.7.2(change-case@5.4.2)(fuse.js@6.6.2)(vue@3.4.15):
     resolution: {integrity: sha512-+u3RLPFedjASs5EKPc69Ge49WNgqeMfSxFn+qrQTzblPXZg6+EFzhjarS5edj2qAf6xQ93f95TUxRwKStXj/sQ==}
     peerDependencies:
       async-validator: '*'
@@ -3044,6 +3047,7 @@ packages:
     dependencies:
       '@vueuse/core': 10.7.2(vue@3.4.15)
       '@vueuse/shared': 10.7.2(vue@3.4.15)
+      change-case: 5.4.2
       fuse.js: 6.6.2
       vue-demi: 0.14.6(vue@3.4.15)
     transitivePeerDependencies:
@@ -3647,6 +3651,9 @@ packages:
       snake-case: 3.0.4
       tslib: 2.6.2
     dev: true
+
+  /change-case@5.4.2:
+    resolution: {integrity: sha512-WB3UiTDpT+vrTilAWaJS4gaIH/jc1He4H9f6erQvraUYas90uWT0JOYFkG1imdNv710XJ6gJvqynrgOHc4ihDA==}
 
   /char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}

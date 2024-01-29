@@ -4,10 +4,17 @@ export default defineI18nLocale((locale) => {
     seo: {
       homes: {
         title: '홈',
+        menuName: '홈',
         description: '',
       },
       blogs: {
         title: '블로그',
+        menuName: '블로그',
+        description: '',
+      },
+      aboutMe: {
+        title: 'About me',
+        menuName: 'About me',
         description: '',
       }
     },

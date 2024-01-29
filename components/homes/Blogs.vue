@@ -2,7 +2,13 @@
 import type { CustomParsedContent } from '@/types/post'
 const localePath = useLocalePath()
 
-const { data } = await useAsyncData('blogs', async () => await queryContent<CustomParsedContent>('blogs/').limit(3).find())
+const { data } = await useAsyncData('blogs', async () => await queryContent<CustomParsedContent>('blogs/')
+  .sort({
+    date: -1,
+  })
+  .limit(3)
+  .find()
+)
 </script>
 
 <template>

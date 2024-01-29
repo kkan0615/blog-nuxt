@@ -16,15 +16,23 @@ const handlePause = () => {
 }
 </script>
 <template>
-  <section class="h-screen relative">
+  <section class="h-screen relative flex items-center justify-center">
     <video
       ref="videoRef"
       :autoplay="isPlaying"
       loop
       muted
       src="/homes/anime-typing.mp4"
-      class="md:object-fill object-cover w-full h-full absolute opacity-80"
+      class="md:object-fill object-cover w-full h-full absolute opacity-80 -z-10"
     />
+    <div class="text-white z-10 text-center">
+      <h1 class="mb-4 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-6xl font-bold">
+        Hello World
+      </h1>
+      <p class="text-xl">
+        Welcome to Youngjin Blog
+      </p>
+    </div>
     <UTooltip
       v-if="isPlaying"
       class="absolute bottom-4 right-4 z-5"

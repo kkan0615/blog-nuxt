@@ -8,7 +8,7 @@ const appConfig = useAppConfig()
       <h2 class="text-3xl font-bold text-center lg:mb-16 mb-6 ">
         About me
       </h2>
-      <div class="lg:flex space-x-12">
+      <div class="lg:flex lg:space-x-12">
         <div class="lg:w-1/3 w-full">
           <div class="bg-stone-100 rounded-full h-auto aspect-square flex p-4 lg:mb-0 mb-5 border-4 border-primary-500 shadow-xl">
             <NuxtImg src="/me/me.svg" alt="me" />

@@ -34,9 +34,7 @@ const { isOpenSideBar, toggleIsOpenSideBar } = useLayout()
           :key="menuEl.key"
           :to="menuEl.to"
           :active-key="menuEl.key"
-        >
-          {{ menuEl.key }}
-        </LayoutsSidebarMenuItem>
+        />
       </ul>
     </div>
   </USlideover>
