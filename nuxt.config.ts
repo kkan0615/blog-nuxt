@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/google-fonts',
     'nuxt-simple-robots',
+    '@nuxtjs/sitemap',
   ],
   css: ['~/assets/scss/main.scss'],
   ui: {
@@ -57,7 +58,10 @@ export default defineNuxtConfig({
       'Noto Sans': true,
     }
   },
-  site: { indexable: true }
+  site: {
+    indexable: true,
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+  },
   // devtools: { enabled: true },
   // devServer: {
   //   port: 3005

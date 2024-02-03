@@ -37,6 +37,10 @@ const { data: categories } = await useAsyncData('categories', async () => (
   [...new Set((await queryContent<CustomParsedContent>('blogs/').only(['categories']).find()).map(el => el.categories).flat())]
 ))
 
+const { data: tags } = await useAsyncData('tags', async () => (
+  [...new Set((await queryContent<CustomParsedContent>('blogs/').only(['tags']).find()).map(el => el.tags).flat())]
+))
+
 const currPage = computed(() => Number(route.query.page) || 1)
 
 useSeoMeta({
@@ -55,7 +59,7 @@ const handleUpdatePagination = async (newPage: number) => {
 </script>
 <template>
   <UContainer class="mt-14 py-3">
-    <div class="lg:flex lg:space-x-3">
+    <div class="lg:flex lg:space-x-8">
       <div class="lg:flex-1">
         <h3 class="font-bold mb-4">
           Total: <span class="text-primary-500">{{ counts }}</span>
@@ -74,28 +78,10 @@ const handleUpdatePagination = async (newPage: number) => {
           @update:model-value="handleUpdatePagination"
         />
       </div>
-      <div class="w-60 lg:block hidden">
-        <ul>
-          <li class="capitalize font-semibold mb-0.5">
-            {{ $t('labels.categories') }}
-          </li>
-          <NuxtLink
-            v-for="categoryEl in categories"
-            :key="categoryEl"
-            class="text-sm capitalize hover:underline"
-            :to="{
-              path: route.path,
-              query: {
-                category: categoryEl,
-              }
-            }"
-          >
-            <li>
-              {{ categoryEl }}
-            </li>
-          </NuxtLink>
-        </ul>
-      </div>
+      <BlogsListNavigator
+        :categories="categories || []"
+        :tags="tags || []"
+      />
     </div>
   </UContainer>
 </template>

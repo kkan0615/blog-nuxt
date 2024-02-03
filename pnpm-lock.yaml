@@ -37,6 +37,9 @@ devDependencies:
   '@nuxtjs/i18n':
     specifier: ^8.0.0
     version: 8.0.0(rollup@4.9.5)(vue-router@4.2.5)(vue@3.4.15)
+  '@nuxtjs/sitemap':
+    specifier: ^5.1.0
+    version: 5.1.0(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.15)(change-case@5.4.2)(h3@1.10.0)(nuxt@3.9.3)(postcss@8.4.33)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)(webpack@5.90.1)
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -2048,6 +2051,54 @@ packages:
       - supports-color
     dev: true
 
+  /@nuxtjs/sitemap@5.1.0(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.15)(change-case@5.4.2)(h3@1.10.0)(nuxt@3.9.3)(postcss@8.4.33)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)(webpack@5.90.1):
+    resolution: {integrity: sha512-F7fAAdzHLJsca0CBJEvZD6Jbl5mZ/egMFJqDjdUByTsaPAygP+FcXhV/lycAtwDMNWThwyZaV3zKyRl2yxX3BQ==}
+    dependencies:
+      '@nuxt/devtools-kit': 1.0.8(nuxt@3.9.3)(rollup@4.9.5)(vite@5.0.12)
+      '@nuxt/devtools-ui-kit': 1.0.8(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.15)(change-case@5.4.2)(nuxt@3.9.3)(postcss@8.4.33)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)(webpack@5.90.1)
+      '@nuxt/kit': 3.10.0(rollup@4.9.5)
+      '@vueuse/core': 10.7.2(vue@3.4.15)
+      chalk: 5.3.0
+      defu: 6.1.4
+      floating-vue: 5.2.2(@nuxt/kit@3.10.0)(vue@3.4.15)
+      h3-compression: 0.3.2(h3@1.10.0)
+      nuxt-site-config: 2.2.9(@nuxt/devtools@1.0.8)(@vue/compiler-core@3.4.15)(change-case@5.4.2)(nuxt@3.9.3)(postcss@8.4.33)(rollup@4.9.5)(vite@5.0.12)(vue@3.4.15)(webpack@5.90.1)
+      nuxt-site-config-kit: 2.2.9(rollup@4.9.5)(vue@3.4.15)
+      ofetch: 1.3.3
+      pathe: 1.1.2
+      pkg-types: 1.0.3
+      radix3: 1.1.0
+      semver: 7.5.4
+      shiki: 1.0.0-beta.2
+      sirv: 2.0.4
+      site-config-stack: 2.2.9(vue@3.4.15)
+      ufo: 1.3.2
+    transitivePeerDependencies:
+      - '@nuxt/devtools'
+      - '@unocss/webpack'
+      - '@vue/compiler-core'
+      - '@vue/composition-api'
+      - async-validator
+      - axios
+      - change-case
+      - drauu
+      - fuse.js
+      - h3
+      - idb-keyval
+      - jwt-decode
+      - nprogress
+      - nuxt
+      - postcss
+      - qrcode
+      - rollup
+      - sortablejs
+      - supports-color
+      - universal-cookie
+      - vite
+      - vue
+      - webpack
+    dev: true
+
   /@nuxtjs/tailwindcss@6.11.0(rollup@4.9.5):
     resolution: {integrity: sha512-uZkhV+O4oiAuOsy7VR1P5FMg1kMFOKPrxA9cYtwqpXSy6T4YAmGP0y4ekfvvuWW9903lVsd9cPvCC39ZJhnldw==}
     dependencies:
@@ -2580,6 +2631,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@shikijs/core@1.0.0-beta.2:
+    resolution: {integrity: sha512-H0r+V4/47hXZzFW2qXRqjLwNtiUE5bQankMw2m2RE1hLgHSjp/skyBZYDXjhG9y7ei3sIZAj8s4vx31EzxxrhQ==}
+    dev: true
 
   /@shikijs/core@1.0.0-beta.3:
     resolution: {integrity: sha512-SCwPom2Wn8XxNlEeqdzycU93SKgzYeVsedjqDsgZaz4XiiPpZUzlHt2NAEQTwTnPcHNZapZ6vbkwJ8P11ggL3Q==}
@@ -6161,6 +6216,14 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       duplexer: 0.1.2
+    dev: true
+
+  /h3-compression@0.3.2(h3@1.10.0):
+    resolution: {integrity: sha512-B+yCKyDRnO0BXSfjAP4tCXJgJwmnKp3GyH5Yh66mY9KuOCrrGQSPk/gBFG2TgH7OyB/6mvqNZ1X0XNVuy0qRsw==}
+    peerDependencies:
+      h3: ^1.6.0
+    dependencies:
+      h3: 1.10.0
     dev: true
 
   /h3@1.10.0:
@@ -10392,6 +10455,12 @@ packages:
   /shiki-es@0.14.0:
     resolution: {integrity: sha512-e+/aueHx0YeIEut6RXC6K8gSf0PykwZiHD7q7AHtpTW8Kd8TpFUIWqTwhAnrGjOyOMyrwv+syr5WPagMpDpVYQ==}
     deprecated: Please migrate to https://github.com/antfu/shikiji
+    dev: true
+
+  /shiki@1.0.0-beta.2:
+    resolution: {integrity: sha512-hPJcD6F5BRp2yfeBcERqQIVeEPjE2g+r5MVq/tonz2SxT6o79e84Y9iW+a5TyGXWtXAKiW5jd4lGevJ4yIUixA==}
+    dependencies:
+      '@shikijs/core': 1.0.0-beta.2
     dev: true
 
   /shiki@1.0.0-beta.3:

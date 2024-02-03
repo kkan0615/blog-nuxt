@@ -43,7 +43,7 @@ const handleNext = () => {
     </div>
     <div class="absolute bottom-4">
       <UTooltip
-        text="Next"
+        text="Scroll Down"
       >
         <UButton
           class="rounded-full animate-bounce"

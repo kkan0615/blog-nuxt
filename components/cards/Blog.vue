@@ -16,7 +16,7 @@ const publishedAt = computed(() => props.content.date)
     <div class="h-full flex flex-col border rounded-2xl">
       <div class="aspect-video overflow-hidden rounded-t-2xl">
         <NuxtImg
-          v-if="content.image.path"
+          v-if="content.image?.path"
           class="w-full h-full hover:scale-125 transition duration-200 cursor-pointer"
           :alt="content.title"
           :src="content.image.path"
@@ -33,7 +33,7 @@ const publishedAt = computed(() => props.content.date)
           <UBadge
             v-for="categoryEl in content.categories"
             :key="categoryEl"
-            :label="categoryEl"
+            :label="$t(`categories.${categoryEl}`)"
             color="primary"
           />
         </div>
@@ -41,7 +41,7 @@ const publishedAt = computed(() => props.content.date)
           <UBadge
             v-for="tagEl in content.tags"
             :key="tagEl"
-            :label="`#${tagEl}`"
+            :label="`#${$t(`tags.${tagEl}`)}`"
             size="xs"
             color="white"
           />

@@ -25,10 +25,15 @@ export default <Partial<Config>>{
           '100%': {
             borderColor: 'white'
           }
-        }
+        },
+        border: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
       animation: {
-        typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite'
+        typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite',
+        border: 'border 4s ease infinite',
       }
     },
   },

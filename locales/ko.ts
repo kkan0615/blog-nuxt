@@ -30,8 +30,30 @@ export default defineI18nLocale((locale) => {
     },
     labels: {
       more: '더보기',
+      categories: '카테고리',
+      tags: '태그',
+      pause: '일시정지',
+      play: '재생'
+    },
+    categories: {
+      programming: '프로그래밍'
+    },
+    tags: {
+      html: 'HTML',
+      javaScript: '자바스크립트',
+      node: 'Node.js',
+      vue: 'Vue',
+      nuxt: 'Nuxt',
+      css: 'CSS',
+      typescript: '타입스크립트',
+      getStarted: 'Get Started',
+      next: 'Next.js',
+      react: 'React',
+      php: 'PHP',
+      laravel: 'Laravel',
+      algorithm: '알고리즘',
+      tech: '기술',
     },
     welcome: '안녕하세요',
-    categories: '카테고리',
   }
 })

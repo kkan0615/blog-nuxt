@@ -31,6 +31,28 @@ export default defineI18nLocale((locale) => {
     labels: {
       more: 'more',
       categories: 'categories',
+      tags: 'tags',
+      pause: 'pause',
+      play: 'play'
+    },
+    categories: {
+      programming: 'Programming'
+    },
+    tags: {
+      html: 'HTML',
+      javaScript: 'JavaScript',
+      node: 'Node.js',
+      vue: 'Vue',
+      nuxt: 'Nuxt',
+      css: 'CSS',
+      typescript: 'Typescript',
+      getStarted: 'Get Started',
+      next: 'Next.js',
+      react: 'React',
+      php: 'PHP',
+      laravel: 'Laravel',
+      algorithm: 'Algorithm',
+      tech: 'Technical',
     },
     welcome: 'Welcome',
   }
