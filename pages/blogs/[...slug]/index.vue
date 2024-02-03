@@ -5,7 +5,8 @@ const route = useRoute()
 const { data: page } = await useAsyncData('content', () => queryContent<CustomParsedContent>(`/blogs/${(route.params.slug as string[]).join('/')}`).findOne())
 
 useSeoMeta({
-  title: page.value?.title || ''
+  title: page.value?.title || '',
+  description: page.value?.description || ''
 })
 </script>
 <template>

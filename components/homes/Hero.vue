@@ -14,6 +14,14 @@ const handlePause = () => {
   videoRef.value?.pause()
   isPlaying.value = false
 }
+
+const handleNext = () => {
+  // 58 is equal to navbar height
+  window.scrollTo({
+    top: window.innerHeight - 58,
+    behavior: 'smooth',
+  })
+}
 </script>
 <template>
   <section class="h-screen relative flex items-center justify-center">
@@ -32,6 +40,20 @@ const handlePause = () => {
       <p class="text-xl">
         Welcome to Youngjin Blog
       </p>
+    </div>
+    <div class="absolute bottom-4">
+      <UTooltip
+        text="Next"
+      >
+        <UButton
+          class="rounded-full animate-bounce"
+          size="xl"
+          icon="i-heroicons-chevron-down-16-solid"
+          color="white"
+          variant="solid"
+          @click="handleNext"
+        />
+      </UTooltip>
     </div>
     <UTooltip
       v-if="isPlaying"

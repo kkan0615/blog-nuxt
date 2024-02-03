@@ -12,5 +12,6 @@ export default defineAppConfig({
   links: {
     repository: 'https://github.com/kkan0615/blog-nuxt',
     github: 'https://github.com/kkan0615',
+    email: 'kkan0615@gmail.com'
   }
 })

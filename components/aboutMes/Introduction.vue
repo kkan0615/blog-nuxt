@@ -12,7 +12,10 @@ const appConfig = useAppConfig()
           </div>
         </div>
         <div class="lg:w-2/3 w-full">
-          <h3 class="text-4xl font-medium mb-4">
+          <h2 class="text-4xl font-bold mb-4">
+            {{ $t('me.name') }}
+          </h2>
+          <h3 class="text-3xl font-medium mb-12">
             {{ $t('me.position') }}
           </h3>
           <p class="lg:mb-12 mb-4">
@@ -34,6 +37,17 @@ const appConfig = useAppConfig()
               <NuxtLink :to="appConfig.links.github" target="_blank">
                 <UButton
                   icon="i-simple-icons-linkedin"
+                  size="md"
+                  color="white"
+                  square
+                  variant="outline"
+                />
+              </NuxtLink>
+            </UTooltip>
+            <UTooltip text="Email">
+              <NuxtLink :to="appConfig.links.email" target="_blank">
+                <UButton
+                  icon="i-lucide-mail"
                   size="md"
                   color="white"
                   square

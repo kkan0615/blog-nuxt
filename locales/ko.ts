@@ -19,7 +19,8 @@ export default defineI18nLocale((locale) => {
       }
     },
     me: {
-      position: 'Full Stack Developer',
+      name: '곽영진',
+      position: '풀스택 개발자',
       description: `
         Hello, my name is Youngjin Kwak.
         I am a professional Full Stack Developer with 4 years of experience in designing and implementing software solutions. My technical expertise spans both front-end and back-end development,

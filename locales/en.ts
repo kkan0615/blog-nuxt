@@ -19,6 +19,7 @@ export default defineI18nLocale((locale) => {
       }
     },
     me: {
+      name: 'Youngjin Kwak',
       position: 'Full Stack Developer',
       description: `
         Hello, my name is Youngjin Kwak.
