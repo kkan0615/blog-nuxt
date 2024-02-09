@@ -35,9 +35,9 @@ export default <Partial<Config>>{
         typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite',
         border: 'border 4s ease infinite',
       },
-      plugins: [
-        require('tailwindcss-animated')
-      ],
     },
   },
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }

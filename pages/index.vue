@@ -6,6 +6,7 @@ useSeoMeta({
 })
 </script>
 <template>
+  <UtilsAnimationObserver />
   <HomesHero />
   <HomesAboutMe />
   <HomesBlogs />

@@ -65,10 +65,15 @@ useSeoMeta({
 })
 
 const handleUpdatePagination = async (newPage: number) => {
-  await router.push({
+  await router.replace({
     query: {
+      ...route.query,
       page: newPage,
     }
+  })
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
   })
   await refresh()
 }
@@ -76,6 +81,7 @@ const handleUpdatePagination = async (newPage: number) => {
 </script>
 <template>
   <UContainer class="mt-14 py-3">
+    <UtilsAnimationObserver />
     <div class="lg:flex lg:space-x-8">
       <div class="lg:flex-1">
         <BlogsListHeader class="mb-4" />
