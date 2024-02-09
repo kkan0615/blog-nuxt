@@ -33,7 +33,13 @@ export default defineI18nLocale((locale) => {
       categories: 'categories',
       tags: 'tags',
       pause: 'pause',
-      play: 'play'
+      play: 'play',
+      orders: {
+        new: 'new',
+        old: 'old',
+        titleAsc: 'title ascending',
+        titleDesc: 'title descending'
+      }
     },
     categories: {
       programming: 'Programming'

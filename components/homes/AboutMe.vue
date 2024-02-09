@@ -4,7 +4,7 @@ const appConfig = useAppConfig()
 </script>
 <template>
   <section class="py-10 lg:py-20">
-    <UContainer class="max-w-5xl">
+    <UContainer>
       <h2 class="text-3xl font-bold text-center lg:mb-16 mb-6 ">
         About me
       </h2>

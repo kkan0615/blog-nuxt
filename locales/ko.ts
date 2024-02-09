@@ -33,7 +33,13 @@ export default defineI18nLocale((locale) => {
       categories: '카테고리',
       tags: '태그',
       pause: '일시정지',
-      play: '재생'
+      play: '재생',
+      orders: {
+        new: '최신순',
+        old: '오래된 순',
+        titleAsc: '제목 오름차순',
+        titleDesc: '제목 내림차순'
+      }
     },
     categories: {
       programming: '프로그래밍'

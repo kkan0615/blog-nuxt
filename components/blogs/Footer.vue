@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   url: string
   categories: string[]
   tags: string[]
@@ -28,7 +28,8 @@ const localePath = useLocalePath()
         }"
       >
         <UBadge
-          :label="categoryEl"
+          class="dark:!text-white"
+          :label="$t(`categories.${categoryEl}`)"
         />
       </NuxtLink>
     </div>
@@ -51,8 +52,8 @@ const localePath = useLocalePath()
         }"
       >
         <UBadge
+          class="dark:!text-white"
           color="primary"
-          :label="`#${tagEl}`"
         />
       </NuxtLink>
     </div>

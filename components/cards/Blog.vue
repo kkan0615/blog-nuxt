@@ -33,6 +33,7 @@ const publishedAt = computed(() => props.content.date)
           <UBadge
             v-for="categoryEl in content.categories"
             :key="categoryEl"
+            class="dark:!text-white"
             :label="$t(`categories.${categoryEl}`)"
             color="primary"
           />

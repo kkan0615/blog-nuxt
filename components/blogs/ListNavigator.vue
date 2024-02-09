@@ -6,12 +6,32 @@ defineProps<{
 
 const route = useRoute()
 
-const handleClick = () => {
-  refreshNuxtData('contents')
+const handleClick = async () => {
+  await refreshNuxtData('counts')
+  await refreshNuxtData('contents')
 }
+
 </script>
 <template>
   <div class="w-60 lg:block hidden">
+    <div>
+      <NuxtLink
+        :to="{
+          path: route.path,
+          replace: true,
+        }"
+        @click="handleClick"
+      >
+        <UButton
+          class="px-0"
+          icon="i-mdi-remove"
+          color="white"
+          variant="link"
+          label="Reset Option"
+          @click="handleClick"
+        />
+      </NuxtLink>
+    </div>
     <h6 class="capitalize font-semibold mb-1 inline-flex items-center gap-2">
       <UIcon
         name="i-heroicons-bookmark-square"
@@ -28,7 +48,8 @@ const handleClick = () => {
           query: {
             ...route.query,
             category: categoryEl,
-          }
+          },
+          replace: true,
         }"
         @click="handleClick"
       >
@@ -54,13 +75,15 @@ const handleClick = () => {
           query: {
             ...route.query,
             tag: tagEl,
-          }
+          },
+          replace: true,
         }"
         @click="handleClick"
       >
-        <UBadge>
-          #{{ $t(`tags.${tagEl}`) }}
-        </UBadge>
+        <UBadge
+          class="dark:!text-white"
+          :label="`#${$t(`tags.${tagEl}`)}`"
+        />
       </NuxtLink>
     </ul>
   </div>

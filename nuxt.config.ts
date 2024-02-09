@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   ],
   css: ['~/assets/scss/main.scss'],
   ui: {
-    icons: ['simple-icons', 'heroicons', 'lucide'],
+    icons: ['simple-icons', 'heroicons', 'lucide', 'mdi'],
   },
   i18n: {
     locales: [
