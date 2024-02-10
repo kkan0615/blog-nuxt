@@ -94,6 +94,7 @@ const handleUpdatePagination = async (newPage: number) => {
             v-for="contentEl in contents"
             :key="contentEl._id"
             :content="contentEl"
+            data-animate="animate-fade-down"
           />
         </div>
         <UPagination
@@ -103,10 +104,12 @@ const handleUpdatePagination = async (newPage: number) => {
           @update:model-value="handleUpdatePagination"
         />
       </div>
-      <BlogsListNavigator
-        :categories="categories || []"
-        :tags="tags || []"
-      />
+      <div class="w-60 lg:block hidden">
+        <BlogsListNavigator
+          :categories="categories || []"
+          :tags="tags || []"
+        />
+      </div>
     </div>
   </UContainer>
 </template>

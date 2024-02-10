@@ -34,10 +34,17 @@ const { data } = await useAsyncData('blogs', async () => await queryContent<Cust
       </div>
       <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
         <CardsBlog
-          v-for="dataEl in data"
+          v-for="(dataEl, index) in data"
           :key="dataEl._id"
           :content="dataEl"
+          data-animate="animate-fade-down"
+          :class="{
+            'lg:animate-delay-[200ms]': index === 0,
+            'lg:animate-delay-[400ms]': index === 1,
+            'lg:animate-delay-[600ms]': index === 2,
+          }"
         />
+        <!-- :style="`animation-delay:${200 * (index + 1)}ms;`" -->
       </div>
     </UContainer>
   </section>

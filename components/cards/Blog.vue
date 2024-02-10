@@ -12,7 +12,6 @@ const publishedAt = computed(() => props.content.date)
   <NuxtLink
     class="h-full"
     :to="localePath(content._path || '')"
-    data-animate="animate-fade-down"
   >
     <div class="h-full flex flex-col border rounded-2xl">
       <div class="aspect-video overflow-hidden rounded-t-2xl">

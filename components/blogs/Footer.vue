@@ -54,6 +54,7 @@ const localePath = useLocalePath()
         <UBadge
           class="dark:!text-white"
           color="primary"
+          :label="`#${$t(`tags.${tagEl}`)}`"
         />
       </NuxtLink>
     </div>

@@ -28,7 +28,7 @@ const localePath = useLocalePath()
       :alt="content.title"
       src="/blogs/no-image.jpg"
     />
-    <h1 class="text-5xl font-bold mb-4">
+    <h1 class="text-5xl mt-8 font-bold mb-4">
       {{ content?.title }}
     </h1>
     <div class="flex">

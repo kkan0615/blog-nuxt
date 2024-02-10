@@ -34,6 +34,7 @@ export default defineI18nLocale((locale) => {
       tags: 'tags',
       pause: 'pause',
       play: 'play',
+      hireMe: 'hire me',
       orders: {
         new: 'new',
         old: 'old',

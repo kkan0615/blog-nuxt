@@ -9,12 +9,17 @@ const route = useRoute()
 const handleClick = async () => {
   await refreshNuxtData('counts')
   await refreshNuxtData('contents')
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
 }
 
 </script>
 <template>
-  <div class="w-60 lg:block hidden">
-    <div>
+  <div class="sticky top-16">
+    <div class="mb-3">
       <NuxtLink
         :to="{
           path: route.path,
@@ -32,7 +37,7 @@ const handleClick = async () => {
         />
       </NuxtLink>
     </div>
-    <h6 class="capitalize font-semibold mb-1 inline-flex items-center gap-2">
+    <h6 class="text-lg capitalize font-semibold mb-1 inline-flex items-center gap-2">
       <UIcon
         name="i-heroicons-bookmark-square"
       />
@@ -42,7 +47,7 @@ const handleClick = async () => {
       <NuxtLink
         v-for="categoryEl in categories"
         :key="categoryEl"
-        class="text-sm capitalize hover:underline"
+        class="capitalize hover:underline"
         :to="{
           path: route.path,
           query: {
@@ -58,7 +63,7 @@ const handleClick = async () => {
         </li>
       </NuxtLink>
     </ul>
-    <h6 class="capitalize font-semibold mb-2 inline-flex items-center gap-2">
+    <h6 class="text-lg capitalize font-semibold mb-3 inline-flex items-center gap-2">
       <UIcon
         color="primary"
         name="i-heroicons-tag"

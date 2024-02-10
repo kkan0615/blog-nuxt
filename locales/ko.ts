@@ -34,6 +34,7 @@ export default defineI18nLocale((locale) => {
       tags: '태그',
       pause: '일시정지',
       play: '재생',
+      hireMe: '고용하기',
       orders: {
         new: '최신순',
         old: '오래된 순',

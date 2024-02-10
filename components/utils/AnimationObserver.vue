@@ -19,9 +19,9 @@ const initAnimateObserver = () => {
     entries.forEach((entry) => {
       const intersecting = entry.isIntersecting
       if (intersecting) {
-        const animate = entry.target.getAttribute('data-animate')
-        if (animate) {
-          entry.target.classList.add(animate)
+        const animates = entry.target.getAttribute('data-animate')?.split(' ') || []
+        if (animates.length) {
+          animates.map(animateEl => entry.target.classList.add(animateEl))
           observer.unobserve(entry.target)
         }
       }
