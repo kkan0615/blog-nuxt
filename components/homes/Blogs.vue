@@ -19,7 +19,7 @@ const { data } = await useAsyncData('blogs', async () => await queryContent<Cust
           Recent posts
         </h2>
         <NuxtLink :to="localePath('/blogs')">
-          <UTooltip text="Look more posts">
+          <UTooltip class="uppercase" :text="$t('labels.lookMorePosts')">
             <UButton
               class="capitalize"
               color="primary"

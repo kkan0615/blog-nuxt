@@ -1,6 +1,6 @@
 <template>
   <div class="mt-14 py-3">
     <AboutMesIntroduction />
-    <AboutMesExperience />
+    <AboutMesExperienceSection />
   </div>
 </template>

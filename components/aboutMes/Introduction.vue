@@ -6,7 +6,8 @@ const appConfig = useAppConfig()
   <section class="py-10 lg:py-20">
     <UContainer class="max-w-5xl">
       <div class="lg:flex lg:space-x-12">
-        <div class="lg:w-1/3 w-full">
+        <div class="lg:w-1/3 w-full lg:mb-0 mb-8">
+          <!-- Image -->
           <div class="flex w-full flex-row items-center justify-center">
             <div class="w-full animate-border inline-block rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-primary bg-[length:400%_400%] p-1">
               <NuxtImg src="/me/me.jfif" alt="me" class="h-auto w-full rounded-2xl" />

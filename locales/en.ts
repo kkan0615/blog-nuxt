@@ -35,6 +35,11 @@ export default defineI18nLocale((locale) => {
       pause: 'pause',
       play: 'play',
       hireMe: 'hire me',
+      lookMorePosts: 'look more posts',
+      locales: {
+        en: 'English',
+        ko: '한국어'
+      },
       orders: {
         new: 'new',
         old: 'old',

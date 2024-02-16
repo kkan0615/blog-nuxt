@@ -14,7 +14,13 @@ const publishedAt = computed(() => props.content.date)
     :to="localePath(content._path || '')"
   >
     <div class="h-full flex flex-col border rounded-2xl">
-      <div class="aspect-video overflow-hidden rounded-t-2xl">
+      <div class="aspect-video overflow-hidden rounded-t-2xl relative">
+        <UBadge
+          v-if="content._locale"
+          class="absolute top-3 right-2 dark:text-white"
+          :label="$t(`labels.locales.${content._locale}`)"
+          color="red"
+        />
         <NuxtImg
           v-if="content.image?.path"
           class="w-full h-full hover:scale-125 transition duration-200 cursor-pointer"
