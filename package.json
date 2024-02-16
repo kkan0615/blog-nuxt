@@ -22,6 +22,7 @@
     "@nuxtjs/sitemap": "^5.1.0",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.3",
+    "nuxt-gtag": "^1.2.0",
     "nuxt-simple-robots": "4.0.0-rc.14",
     "remark-reading-time": "^2.0.1",
     "sass": "^1.70.0",
