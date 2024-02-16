@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
   // gtag: {
-  //   id: 'G-XXXXXXXXXX'
+  //   id: 'G-6DSTCH7H2C'
   // }
   // devtools: { enabled: true },
 })
