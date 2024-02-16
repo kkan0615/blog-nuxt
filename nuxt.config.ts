@@ -63,7 +63,4 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
   // devtools: { enabled: true },
-  // devServer: {
-  //   port: 3005
-  // },
 })
