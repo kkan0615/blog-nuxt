@@ -1,10 +1,6 @@
 <script setup lang="ts">
 const appConfig = useAppConfig()
-// const route = useRoute()
 
-// useSeoMeta({
-//   title: `${route.meta.title} | ${appConfig.seo.title}`,
-// })
 useServerSeoMeta({
   robots: 'index, follow',
 })
@@ -28,6 +24,7 @@ useHead({
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <UNotifications />
   </div>
 </template>
 <style>

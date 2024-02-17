@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import type { DropdownItem } from '@nuxt/ui/dist/runtime/types'
-// : DropdownItem[][]
 const items = [
   {
     label: 'System',
@@ -47,10 +45,6 @@ const changeColorMode = (newColorMode: string) => {
     <template #panel>
       <div class="w-40">
         <UiList>
-          <!-- <UButton v-for="itemEl in items" :key="itemEl.label" class="w-full hover:bg-gray-100 hover:dark:bg-gray-800"
-            :color="itemEl.value === colorMode.preference ? 'primary' : 'white'" variant="ghost" :icon="itemEl.icon"
-            :label="itemEl.label" @click="itemEl.click" /> -->
-
           <UiListItem
             v-for="itemEl in items"
             :key="itemEl.label"

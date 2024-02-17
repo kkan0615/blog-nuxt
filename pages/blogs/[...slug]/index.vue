@@ -29,9 +29,7 @@ useSeoMeta({
         />
       </article>
       <BlogsFooter
-        :url="page?._path || ''"
-        :categories="page?.categories || []"
-        :tags="page?.tags || []"
+        :content="page"
       />
     </div>
     <div class="lg:block hidden w-60">

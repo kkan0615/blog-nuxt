@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import type { CustomParsedContent } from '@/types/post'
 
-defineProps<{
-  url: string
+const props = defineProps<{
+  content: CustomParsedContent
 }>()
+
+const URL = computed(() => props.content?._path || '')
 
 </script>
 <template>
@@ -20,7 +23,11 @@ defineProps<{
     </UTooltip>
     <div class="mx-auto" />
     <UTooltip text="Share to Linkedin">
-      <NuxtLink to="/" target="_blank">
+      <NuxtLink
+        :to="`https://www.linkedin.com/shareArticle?mini=true&u=${URL}&t=${content?.title || ''}`"
+        target="_blank"
+        rel="noopener"
+      >
         <UButton
           icon="i-simple-icons-linkedin"
           color="white"
@@ -31,7 +38,11 @@ defineProps<{
       </NuxtLink>
     </UTooltip>
     <UTooltip text="Share to instagram">
-      <NuxtLink to="/" target="_blank">
+      <NuxtLink
+        :to="`https://www.instagram.com/?u=${URL}&t=${content?.title || ''}`"
+        target="_blank"
+        rel="noopener"
+      >
         <UButton
           icon="i-simple-icons-instagram"
           color="white"
@@ -42,7 +53,11 @@ defineProps<{
       </NuxtLink>
     </UTooltip>
     <UTooltip text="Share to facebook">
-      <NuxtLink to="/" target="_blank">
+      <NuxtLink
+        :to="`https://www.facebook.com/sharer.php?u=${URL}&t=${content?.title || ''}`"
+        target="_blank"
+        rel="noopener"
+      >
         <UButton
           icon="i-simple-icons-facebook"
           color="white"
@@ -53,7 +68,11 @@ defineProps<{
       </NuxtLink>
     </UTooltip>
     <UTooltip text="Share to X">
-      <NuxtLink to="/" target="_blank">
+      <NuxtLink
+        :to="`https://twitter.com/intent/tweet?u=${URL}&t=${content?.title || ''}`"
+        target="_blank"
+        rel="noopener"
+      >
         <UButton
           icon="i-simple-icons-x"
           color="white"
@@ -64,8 +83,9 @@ defineProps<{
       </NuxtLink>
     </UTooltip>
     <UtilsCopyURL
+      v-if="content._path"
       size="xs"
-      :url="url"
+      :url="content._path"
     />
   </div>
 </template>

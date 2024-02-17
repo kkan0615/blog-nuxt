@@ -14,6 +14,16 @@ export default defineNuxtConfig({
   ui: {
     icons: ['simple-icons', 'heroicons', 'lucide', 'mdi'],
   },
+  app: {
+    head: {
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: process.env.NUXT_GOOGLE_SITE_VERIFICATION || ''
+        }
+      ]
+    }
+  },
   i18n: {
     locales: [
       {
