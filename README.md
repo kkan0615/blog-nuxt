@@ -10,6 +10,7 @@
 - [@nuxt/devtools]() - Nuxt devtool. It's currently beta.
 - [nuxt-simple-robots]() - generate robots.txt
 - [nuxt-simple-sitemap]() - generate sitemap
+- [nuxt-gtag](https://github.com/johannschopplich/nuxt-gtag) - Google Analytics
 - [remark-reading-time](https://www.npmjs.com/package/remark-reading-time) - Add reading time
 - [@iconify/json]() - Fix error Icon in Nuxt UI
 - [sass]() - Sass/Scss
