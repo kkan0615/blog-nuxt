@@ -1,4 +1,14 @@
 ## Nuxt 3 + Typescript + Nuxt UI + Blogger
+Blogger made by Nuxt 3
+
+## Getting Started
+```
+pnpm dev
+```
+
+```
+pnpm build
+```
 
 ## Packages
 - [@nuxt/content](https://content.nuxtjs.org/): Content made easy for Vue Developers
@@ -71,7 +81,7 @@ Thank you for helping me to make better blog.
 ## Supports
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/youngjinkwak)
 
-<img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250">
+<!-- <img src="./public/donations/paypal-qrcode.png" alt="paypal" width="250" height="250"> -->
 
 ## Useful Links
 - [Iconify](https://icones.js.org/): Find Icon list

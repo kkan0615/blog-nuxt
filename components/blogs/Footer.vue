@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import type { CustomParsedContent } from '@/types/post'
+
 defineProps<{
-  url: string
-  categories: string[]
-  tags: string[]
+  content: CustomParsedContent
 }>()
 
 const localePath = useLocalePath()
@@ -18,7 +18,7 @@ const localePath = useLocalePath()
         />
       </UTooltip>
       <NuxtLink
-        v-for="categoryEl in categories"
+        v-for="categoryEl in content.categories || []"
         :key="categoryEl"
         :to="{
           path: localePath('/blogs'),
@@ -42,7 +42,7 @@ const localePath = useLocalePath()
         />
       </UTooltip>
       <NuxtLink
-        v-for="tagEl in tags"
+        v-for="tagEl in content.tags || []"
         :key="tagEl"
         :to="{
           path: localePath('/blogs'),
@@ -58,6 +58,6 @@ const localePath = useLocalePath()
         />
       </NuxtLink>
     </div>
-    <BlogsShares :url="url" />
+    <BlogsShares :content="content" />
   </div>
 </template>

@@ -9,7 +9,6 @@ const props = defineProps<{
 }>()
 
 const contents = computed(() => {
-  console.log(locale.value)
   if (!locale.value || locale.value === defaultLocale) {
     return props.experience.contents
   }

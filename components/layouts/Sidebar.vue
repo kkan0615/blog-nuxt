@@ -26,7 +26,7 @@ const { isOpenSideBar, toggleIsOpenSideBar } = useLayout()
         </h1>
       </NuxtLink>
       <ul class="mt-4">
-        <li class="text-sm text-stone-500 mb-2">
+        <li class="text-stone-500 dark:text-stone-300 mb-2">
           Menus
         </li>
         <LayoutsSidebarMenuItem

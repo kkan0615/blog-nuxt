@@ -9,11 +9,16 @@ const props = withDefaults(defineProps<{
   size: 'sm'
 })
 
-const { copy, isSupported } = useClipboard()
+const { copy, isSupported, copied } = useClipboard()
+const toast = useToast()
 
 const handleCopyURL = async () => {
   if (isSupported.value) {
     await copy(`${location.origin}${props.url}`)
+    toast.add({
+      title: 'Successfully copied',
+      color: 'green',
+    })
   }
 }
 </script>
@@ -21,7 +26,7 @@ const handleCopyURL = async () => {
   <div class="flex items-center">
     <UTooltip text="Copy URL">
       <UButton
-        icon="i-lucide-link"
+        :icon="copied ? 'i-heroicons-check-16-solid' : 'i-lucide-link'"
         color="white"
         variant="outline"
         :size="size"

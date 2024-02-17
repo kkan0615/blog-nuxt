@@ -2,7 +2,7 @@
 import { Experiences } from '@/types/me/experience'
 </script>
 <template>
-  <section class="py-10 lg:py-20">
+  <section class="py-10">
     <UContainer class="max-w-5xl">
       <h2 class="text-3xl font-bold mb-6 ">
         Experiences

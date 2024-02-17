@@ -3,7 +3,7 @@ const appConfig = useAppConfig()
 
 </script>
 <template>
-  <section class="py-10 lg:py-20">
+  <section class="py-10">
     <UContainer class="max-w-5xl">
       <div class="lg:flex lg:space-x-12">
         <div class="lg:w-1/3 w-full lg:mb-0 mb-8">
