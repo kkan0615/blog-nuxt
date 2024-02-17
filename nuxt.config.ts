@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-simple-robots',
     '@nuxtjs/sitemap',
-    // 'nuxt-gtag',
+    'nuxt-gtag',
   ],
   css: ['~/assets/scss/main.scss'],
   ui: {
@@ -63,8 +63,8 @@ export default defineNuxtConfig({
     indexable: true,
     url: process.env.NUXT_PUBLIC_SITE_URL,
   },
-  // gtag: {
-  //   id: 'G-XXXXXXXXXX'
-  // }
+  gtag: {
+    id: process.env.GTAG_ID,
+  }
   // devtools: { enabled: true },
 })
