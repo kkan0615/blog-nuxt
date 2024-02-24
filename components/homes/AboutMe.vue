@@ -13,7 +13,7 @@ const localePath = useLocalePath()
         <div class="lg:w-1/3 w-full lg:mb-0 mb-8">
           <div
             class="flex w-full flex-row items-center justify-center"
-            data-animate="animate-flip-down"
+            data-animate="animate-jump-in"
           >
             <div class="w-full animate-border inline-block rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-primary bg-[length:400%_400%] p-1">
               <NuxtImg src="/me/me.jfif" alt="me" class="h-auto w-full rounded-2xl" />

@@ -37,6 +37,7 @@ export default defineI18nLocale((locale) => {
       hireMe: '고용하기',
       lookMorePosts: '게시물 더보기',
       recentPosts: '최근 게시물',
+      resetOption: '옵션 초기화',
       locales: {
         en: 'English',
         ko: '한국어'
@@ -68,5 +69,12 @@ export default defineI18nLocale((locale) => {
       tech: '기술',
     },
     welcome: '안녕하세요',
+    pages: {
+      homes: {
+        popularTags: '인기 태그',
+        popularTagsDesc: '인기있는 모든 태그들을 만나보세요.',
+        popularCategories: '인기 카테고리',
+      }
+    },
   }
 })

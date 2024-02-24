@@ -44,7 +44,6 @@ export default defineNuxtConfig({
     // vueI18n: './i18n.config.ts' // if you are using custom path, default
   },
   content: {
-    // documentDriven: false,
     highlight: {
       // theme: {
       //   default: 'github-light',
@@ -52,7 +51,6 @@ export default defineNuxtConfig({
       //   dark: 'github-dark',
       // },
       theme: 'github-dark',
-      // preload: ['js', 'ts', 'tex', 'md', 'yaml', 'javascript', 'typescript', 'css', 'scss', 'sass', 'html', 'vue', 'vue-html'],
     },
     markdown: {
       toc: {
@@ -72,6 +70,10 @@ export default defineNuxtConfig({
   site: {
     indexable: true,
     url: process.env.NUXT_PUBLIC_SITE_URL,
+  },
+  sitemap: {
+    // https://nuxtseo.com/sitemap/integrations/content
+    strictNuxtContentPaths: true
   },
   gtag: {
     id: process.env.GTAG_ID,

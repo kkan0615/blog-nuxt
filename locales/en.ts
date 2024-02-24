@@ -37,6 +37,7 @@ export default defineI18nLocale((locale) => {
       hireMe: 'hire me',
       lookMorePosts: 'look more posts',
       recentPosts: 'recent posts',
+      resetOption: 'reset option',
       locales: {
         en: 'English',
         ko: '한국어'
@@ -68,5 +69,12 @@ export default defineI18nLocale((locale) => {
       tech: 'Technical',
     },
     welcome: 'Welcome',
+    pages: {
+      homes: {
+        popularTags: 'popular tags',
+        popularTagsDesc: 'Browser all popular tags!',
+        popularCategories: 'popular Categories',
+      }
+    },
   }
 })
