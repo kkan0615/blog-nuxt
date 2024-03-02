@@ -21,6 +21,9 @@ const localePath = useLocalePath()
           </div>
         </div>
         <div class="lg:w-2/3 w-full flex flex-col">
+          <h2 class="text-4xl font-bold mb-4">
+            {{ $t('me.name') }}
+          </h2>
           <h3 class="text-4xl font-medium mb-4">
             {{ $t('me.position') }}
           </h3>
@@ -66,7 +69,7 @@ const localePath = useLocalePath()
             <UButton
               icon="i-lucide-contact-2"
               class="capitalize dark:!text-white"
-              size="md"
+              size="xl"
               :label="$t('labels.hireMe')"
             />
           </NuxtLink>
