@@ -10,4 +10,6 @@ useSeoMeta({
   <HomesHero />
   <HomesAboutMe />
   <HomesBlogs />
+  <!-- <HomesCategories /> -->
+  <HomesTags />
 </template>

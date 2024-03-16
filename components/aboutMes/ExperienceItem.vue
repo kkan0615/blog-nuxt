@@ -36,7 +36,7 @@ const contents = computed(() => {
         <h2
           class="inline-block px-4 py-2 mb-4 text-xs font-medium text-gray-100 bg-gradient-to-r from-blue-500 to-blue-900 dark:from-blue-400 dark:to-blue-500 rounded-3xl dark:text-gray-100"
         >
-          {{ experience.date }} {{ locale }}
+          {{ experience.date }}
         </h2>
         <div
           class="relative flex-1 mb-10"

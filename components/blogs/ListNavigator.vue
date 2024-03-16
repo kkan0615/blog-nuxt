@@ -32,7 +32,7 @@ const handleClick = async () => {
           icon="i-mdi-remove"
           color="white"
           variant="link"
-          label="Reset Option"
+          :label="$t('labels.resetOption')"
           @click="handleClick"
         />
       </NuxtLink>

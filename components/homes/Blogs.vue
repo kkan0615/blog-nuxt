@@ -15,8 +15,12 @@ const { data } = await useAsyncData('blogs', async () => await queryContent<Cust
   <section class="py-10 lg:py-20">
     <UContainer>
       <div class="flex justify-between">
-        <h2 class="text-3xl font-bold capitalize lg:mb-8 mb-4">
+        <h2 class="text-3xl font-bold capitalize lg:mb-8 mb-4 flex items-center">
           {{ $t('labels.recentPosts') }}
+          <UIcon
+            class="ml-4"
+            name="i-mdi-post-outline"
+          />
         </h2>
         <NuxtLink :to="localePath('/blogs')">
           <UTooltip class="uppercase" :text="$t('labels.lookMorePosts')">

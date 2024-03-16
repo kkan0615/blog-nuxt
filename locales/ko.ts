@@ -16,7 +16,11 @@ export default defineI18nLocale((locale) => {
         title: 'About me',
         menuName: 'About me',
         description: '',
-      }
+      },
+      donations: {
+        title: '후원',
+        description: '',
+      },
     },
     me: {
       name: '곽영진',
@@ -37,6 +41,8 @@ export default defineI18nLocale((locale) => {
       hireMe: '고용하기',
       lookMorePosts: '게시물 더보기',
       recentPosts: '최근 게시물',
+      resetOption: '옵션 초기화',
+      donation: '후원하기',
       locales: {
         en: 'English',
         ko: '한국어'
@@ -68,5 +74,16 @@ export default defineI18nLocale((locale) => {
       tech: '기술',
     },
     welcome: '안녕하세요',
+    pages: {
+      homes: {
+        popularTags: '인기 태그',
+        popularTagsDesc: '인기있는 모든 태그들을 만나보세요.',
+        popularCategories: '인기 카테고리',
+      },
+      donations: {
+        thanks1: '후원해주셔 감사합니다.',
+        thanks2: '후원금은 더 나은 블로그를 만드는데 사용될것입니다. (주로 커피에...😄)'
+      }
+    },
   }
 })
