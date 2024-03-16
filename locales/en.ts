@@ -16,7 +16,11 @@ export default defineI18nLocale((locale) => {
         title: 'About me',
         menuName: 'About me',
         description: '',
-      }
+      },
+      donations: {
+        title: 'Donation',
+        description: '',
+      },
     },
     me: {
       name: 'Youngjin Kwak',
@@ -38,6 +42,7 @@ export default defineI18nLocale((locale) => {
       lookMorePosts: 'look more posts',
       recentPosts: 'recent posts',
       resetOption: 'reset option',
+      donation: 'donation',
       locales: {
         en: 'English',
         ko: '한국어'
@@ -74,6 +79,10 @@ export default defineI18nLocale((locale) => {
         popularTags: 'popular tags',
         popularTagsDesc: 'Browser all popular tags!',
         popularCategories: 'popular Categories',
+      },
+      donations: {
+        thanks1: 'Thank you for taking the time to donate. ',
+        thanks2: 'Your support will be used to make better blogger. (mostly for coffee...😄)'
       }
     },
   }
