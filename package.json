@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "change-case": "^5.4.4",
+    "dayjs": "^1.11.10",
     "tailwindcss-animated": "^1.0.1"
   }
 }
