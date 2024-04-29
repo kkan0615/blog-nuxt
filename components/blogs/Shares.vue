@@ -5,11 +5,9 @@ const props = defineProps<{
   content: CustomParsedContent
 }>()
 
-// const URL = computed(() => process.client ? `${window.location.origin}/${props.content?._path || ''}` : '')
 const URL = ref('')
 
 onMounted(() => {
-  console.log('window', window.location.origin)
   URL.value = `${window.location.origin}/${props.content?._path || ''}`
 })
 </script>
