@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
-  "version": "2.0.0-beta",
+  "version": "2.0.5-beta",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port=3005",
