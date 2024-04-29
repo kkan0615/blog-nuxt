@@ -27,7 +27,7 @@ defineProps<{
         />
       </div>
       <div class="p-3 flex-1 flex flex-col">
-        <h2 class="text-lg font-bold">
+        <h2 class="font-bold">
           {{ showcase.title }}
         </h2>
         <p

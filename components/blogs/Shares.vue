@@ -24,7 +24,7 @@ const URL = computed(() => props.content?._path || '')
     <div class="mx-auto" />
     <UTooltip text="Share to Linkedin">
       <NuxtLink
-        :to="`https://www.linkedin.com/shareArticle?mini=true&u=${URL}&t=${content?.title || ''}`"
+        :to="`https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=${URL}`"
         target="_blank"
         rel="noopener"
       >
@@ -37,7 +37,8 @@ const URL = computed(() => props.content?._path || '')
         />
       </NuxtLink>
     </UTooltip>
-    <UTooltip text="Share to instagram">
+    <!-- Instagram doesn't allow to share post -->
+    <!-- <UTooltip text="Share to instagram">
       <NuxtLink
         :to="`https://www.instagram.com/?u=${URL}&t=${content?.title || ''}`"
         target="_blank"
@@ -51,10 +52,10 @@ const URL = computed(() => props.content?._path || '')
           variant="outline"
         />
       </NuxtLink>
-    </UTooltip>
+    </UTooltip> -->
     <UTooltip text="Share to facebook">
       <NuxtLink
-        :to="`https://www.facebook.com/sharer.php?u=${URL}&t=${content?.title || ''}`"
+        :to="`https://www.facebook.com/sharer/sharer.php?u=${URL}%3Bsrc=sdkpreparse`"
         target="_blank"
         rel="noopener"
       >
@@ -69,7 +70,7 @@ const URL = computed(() => props.content?._path || '')
     </UTooltip>
     <UTooltip text="Share to X">
       <NuxtLink
-        :to="`https://twitter.com/intent/tweet?u=${URL}&t=${content?.title || ''}`"
+        :to="`http://twitter.com/share?url=${URL}`"
         target="_blank"
         rel="noopener"
       >
