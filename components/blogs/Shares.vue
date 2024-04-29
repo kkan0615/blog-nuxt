@@ -5,7 +5,7 @@ const props = defineProps<{
   content: CustomParsedContent
 }>()
 
-const URL = computed(() => `${window.location.origin}/${props.content?._path || ''}`)
+const URL = computed(() => window && window.location ? `${window.location.origin}/${props.content?._path || ''}` : '')
 
 </script>
 <template>
