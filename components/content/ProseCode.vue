@@ -9,7 +9,6 @@ interface Props {
 
 const props = defineProps<Props>()
 
-// const colorMode = useColorMode()
 const { copy, copied } = useClipboard()
 
 const handleCopy = () => {
@@ -19,7 +18,7 @@ const handleCopy = () => {
 </script>
 
 <template>
-  <div class="max-w-full py-2 text-white bg-[#24292e] rounded-lg">
+  <div class="max-w-full py-2 text-white bg-[#1f2937] rounded-lg">
     <div class="code-container max-w-full overflow-x-auto rounded">
       <div class="flex items-center px-4 mb-1">
         <div class="mr-auto uppercase text-xs">
@@ -27,6 +26,7 @@ const handleCopy = () => {
         </div>
         <UTooltip text="Copy">
           <UButton
+            class="text-white"
             :icon="copied ? 'i-heroicons-check-16-solid' : 'i-heroicons-clipboard'"
             size="xs"
             color="white"

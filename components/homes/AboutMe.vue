@@ -13,7 +13,7 @@ const localePath = useLocalePath()
         <div class="lg:w-1/3 w-full lg:mb-0 mb-8">
           <div
             class="flex w-full flex-row items-center justify-center"
-            data-animate="animate-flip-down"
+            data-animate="animate-jump-in"
           >
             <div class="w-full animate-border inline-block rounded-2xl bg-white bg-gradient-to-r from-red-500 via-purple-500 to-primary bg-[length:400%_400%] p-1">
               <NuxtImg src="/me/me.jfif" alt="me" class="h-auto w-full rounded-2xl" />
@@ -21,6 +21,9 @@ const localePath = useLocalePath()
           </div>
         </div>
         <div class="lg:w-2/3 w-full flex flex-col">
+          <h2 class="text-4xl font-bold mb-4">
+            {{ $t('me.name') }}
+          </h2>
           <h3 class="text-4xl font-medium mb-4">
             {{ $t('me.position') }}
           </h3>
@@ -66,7 +69,7 @@ const localePath = useLocalePath()
             <UButton
               icon="i-lucide-contact-2"
               class="capitalize dark:!text-white"
-              size="md"
+              size="xl"
               :label="$t('labels.hireMe')"
             />
           </NuxtLink>

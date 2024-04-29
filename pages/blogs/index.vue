@@ -16,7 +16,6 @@ const { data: contents, refresh } = await useAsyncData('contents', async () => {
   if (route.query.search) {
     queryWhere.title = { $contains: route.query.search as string }
   }
-  console.log(queryWhere)
 
   // Set sort
   const querySort: SortFields = {}
